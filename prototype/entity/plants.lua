@@ -79,9 +79,13 @@ local spoilage_sound_trigger = {
 local virentis_tree_particle_effects =
 {
   ["vangrove"] = {
-    crop_2 = "yumako-leaf-particle",
-    trunk_2 = "yumako-branch-particle"
+    leaf_1 = "teflilly-leaf-particle",
+    trunk_1 = "teflilly-branch-particle"
   },
+  ["gnarpod"] = {
+    crop_1 = "sunnycomb-leaf-particle",
+    trunk_1 = "stingfrond-branch-particle",
+  }
   -- ["jellystem"] =     { sap = "jellystem-leaf-particle",
   --                       jellystem = "jellystem-branch-particle"
   --                     },
@@ -147,7 +151,7 @@ local virentis_tree_underwater_things =
   --]]
 }
 
-local function virentis_tree_variations(name, variation_count, per_row, scale_multiplier, width, height, shift,
+local function virentis_tree_variations(name, variation_count, per_row, scale_multiplier, width, height, has_glow, shift,
                                         reflection_shift)
   variation_count = variation_count or 5
   per_row = per_row or 5
@@ -180,6 +184,7 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
   for i = 1, variation_count do
     local x = ((i - 1) % per_row) * width
     local y = math.floor((i - 1) / per_row) * height
+
     ---@type data.TreeVariation
     local variation = {
       trunk                             = {
@@ -195,46 +200,28 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         scale = 0.33 * scale_multiplier
       },
       leaves                            = {
-        layers = {
-          {
-            filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-harvest.png",
-            flags = { "mipmap" },
-            surface = "gleba",
-            width = width,
-            height = height,
-            x = x,
-            y = y,
-            frame_count = 1,
-            shift = shift,
-            scale = 0.33 * scale_multiplier
-          },
-          {
-            filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-glow.png",
-            flags = { "mipmap" },
-            surface = "gleba",
-            width = width,
-            height = height,
-            x = x,
-            y = y,
-            frame_count = 1,
-            shift = shift,
-            scale = 0.33 * scale_multiplier,
-            apply_runtime_tint = true,
-            draw_as_light = true,
-          },
-        }
+        filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-harvest.png",
+        flags = { "mipmap" },
+        surface = "gleba",
+        width = width,
+        height = height,
+        x = x,
+        y = y,
+        frame_count = 1,
+        shift = shift,
+        scale = 0.33 * scale_multiplier
       },
-      -- normal                            = {
-      --   filename = "__space-age__/graphics/entity/plant/" .. name .. "/" .. name .. "-normal.png",
-      --   surface = "virentis",
-      --   width = width,
-      --   height = height,
-      --   x = x,
-      --   y = y,
-      --   frame_count = 1,
-      --   shift = shift,
-      --   scale = 0.33 * scale_multiplier
-      -- },
+      normal                            = {
+        filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-normal.png",
+        surface = "gleba",
+        width = width,
+        height = height,
+        x = x,
+        y = y,
+        frame_count = 1,
+        shift = shift,
+        scale = 0.33 * scale_multiplier
+      },
       shadow                            = {
         frame_count = 2,
         lines_per_file = 1,
@@ -243,7 +230,7 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         surface = "gleba",
         filenames =
         {
-          "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-harvest-shadow.png",
+          "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-shadow.png",
           "__virentis__/graphic/mock/empty.png"
         },
         width = width,
@@ -269,9 +256,9 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
       --   }
       -- } or nil,
 
----@diagnostic disable-next-line: missing-fields
+      ---@diagnostic disable-next-line: missing-fields
       leaf_generation                   = {},
----@diagnostic disable-next-line: missing-fields
+      ---@diagnostic disable-next-line: missing-fields
       branch_generation                 = {},
 
       leaves_when_damaged               = 100,
@@ -283,6 +270,30 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
       branches_when_mined_manually      = 15,
       branches_when_mined_automatically = 8
     }
+
+    if has_glow then
+      variation.leaves =
+      {
+        layers =
+        {
+          variation.leaves,
+          {
+            filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-glow.png",
+            flags = { "mipmap" },
+            surface = "gleba",
+            width = width,
+            height = height,
+            x = x,
+            y = y,
+            frame_count = 1,
+            shift = shift,
+            scale = 0.33 * scale_multiplier,
+            apply_runtime_tint = true,
+            draw_as_light = true
+          }
+        }
+      }
+    end
 
     if sap_particle then -- jellystem
       variation.leaf_generation = {
@@ -630,6 +641,7 @@ local function minor_tints() -- Only for leaves where most if the colour is bake
 end
 
 data:extend({
+  -- Vangrove
   ---@type data.PlantPrototype
   {
     type = "plant",
@@ -641,17 +653,76 @@ data:extend({
     order = "c",
     flags = default_flags,
     growth_ticks = 2 * minute,
-    
+
     harvest_emissions = default_emission,
     healing_per_tick = 1,
     factoriopedia_simulation = virentis_plant_sim("vangrove-tree", "virentis-plain-grass"),
     minable = {
-      mining_particle = "yumako-mining-particle",
+      mining_particle = "hairyclubnub-mining-particle",
       mining_time = 0.5,
       results = {
         {
           type = "item",
           name = "vangrove-fruit",
+          amount = 20,
+        }
+      },
+      mining_trigger = leaf_sound_trigger,
+    },
+    mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-hairyclubnub", 5, 0.5),
+    mined_sound = sound_variations("__space-age__/sound/mining/mined-hairyclubnub", 5, 0.5),
+    max_health = 50,
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -1, -3 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.8,
+    autoplace = {
+      control = "virentis_plants",
+      probability_expression = "0.1 * basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 10, input_scale = 1/3, output_scale = 3}",
+      richness_expression = "random_penalty_at(3, 1)"
+    },
+    variations = virentis_tree_variations("vangrove", 4, 2, 1.3, 640, 560, true, util.by_pixel(80, -50)),
+    colors = minor_tints(),
+    ambient_sounds =
+    {
+      sound =
+      {
+        variations = sound_variations("__space-age__/sound/world/plants/yumako-tree", 6, 0.5),
+        advanced_volume_control =
+        {
+          fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = { 1.5, 100.0 } } }
+        }
+      },
+      radius = 7.5,
+      min_entity_count = 2,
+      max_entity_count = 10,
+      entity_to_sound_ratio = 0.2,
+      average_pause_seconds = 8
+    },
+    map_color = { 255, 255, 255 },
+  },
+  -- Gnarpod
+  ---@type data.PlantPrototype
+  {
+    type = "plant",
+    name = "gnarpod-tree",
+    icon = "__virentis__/graphic/icon/plant/gnarpod-tree.png",
+    icon_size = 256,
+    subgroup = "trees",
+    impact_category = "tree",
+    order = "c",
+    flags = default_flags,
+    growth_ticks = 2 * minute,
+
+    harvest_emissions = default_emission,
+    healing_per_tick = 1,
+    factoriopedia_simulation = virentis_plant_sim("gnarpod-tree", "virentis-plain-grass"),
+    minable = {
+      mining_particle = "teflilly-mining-particle",
+      mining_time = 0.5,
+      results = {
+        {
+          type = "item",
+          name = "gnarpod-fruit",
           amount = 20,
         }
       },
@@ -665,16 +736,16 @@ data:extend({
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.1",
+      probability_expression = "0.1 * basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 20, input_scale = 1/3, output_scale = 3}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("vangrove", 4, 2, 1.3, 640, 560, util.by_pixel(80, -30)),
+    variations = virentis_tree_variations("gnarpod", 6, 3, 1.3, 640, 560, false, util.by_pixel(40, -50)),
     colors = minor_tints(),
     ambient_sounds =
     {
       sound =
       {
-        variations = sound_variations("__space-age__/sound/world/plants/yumako-tree", 6, 0.5),
+        variations = sound_variations("__space-age__/sound/world/plants/teflilly", 6, 0.5),
         advanced_volume_control =
         {
           fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = { 1.5, 100.0 } } }
