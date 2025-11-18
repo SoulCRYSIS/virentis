@@ -1,8 +1,15 @@
 require "prototype.entity.plants"
+require "prototype.entity.machines"
 
 require "prototype.item.crops"
+require "prototype.item.machines"
 
-require "prototype.subgroups"
+require "prototype.recipe.recipe-categories"
+require "prototype.recipe.machines"
+require "prototype.recipe.grinding"
+require "prototype.recipe.trades"
+
+require "prototype.groups"
 require "prototype.tiles"
 require "prototype.autoplace_control"
 require "prototype.planet"

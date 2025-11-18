@@ -230,8 +230,8 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         surface = "gleba",
         filenames =
         {
+          "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-harvest-shadow.png",
           "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-shadow.png",
-          "__virentis__/graphic/mock/empty.png"
         },
         width = width,
         height = height,
@@ -675,11 +675,11 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -1, -3 }, { 1, 0.5 } },
     drawing_box_vertical_extension = 0.8,
-    autoplace = {
-      control = "virentis_plants",
-      probability_expression = "0.1 * basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 10, input_scale = 1/3, output_scale = 3}",
-      richness_expression = "random_penalty_at(3, 1)"
-    },
+    -- autoplace = {
+    --   control = "virentis_plants",
+    --   probability_expression = "0.1 * basis_noise{x = x, y = y, seed0 = map_seed, seed1 = \"vangrove_tree\", input_scale = 1/3, output_scale = 3}",
+    --   richness_expression = "random_penalty_at(3, 1)"
+    -- },
     variations = virentis_tree_variations("vangrove", 4, 2, 1.3, 640, 560, true, util.by_pixel(80, -50)),
     colors = minor_tints(),
     ambient_sounds =
@@ -736,7 +736,7 @@ data:extend({
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.1 * basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 20, input_scale = 1/3, output_scale = 3}",
+      probability_expression = "0.3 * voronoi_cell_id{x = x, y = y, seed0 = map_seed, seed1 = 'gnarpod_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
     variations = virentis_tree_variations("gnarpod", 6, 3, 1.3, 640, 560, false, util.by_pixel(40, -50)),
