@@ -35,4 +35,7 @@
 ],
   "Lua.workspace.checkThirdParty": "ApplyInMemory",
   "editor.tabSize": 2,
+  "files.exclude": {
+    "**/*.blend1": true
+  }
 }
