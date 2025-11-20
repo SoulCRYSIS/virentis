@@ -7,7 +7,7 @@ require "prototype.item.machines"
 require "prototype.recipe.recipe-categories"
 require "prototype.recipe.machines"
 require "prototype.recipe.grinding"
-require "prototype.recipe.trades"
+require "prototype.recipe.trading"
 
 require "prototype.groups"
 require "prototype.tiles"

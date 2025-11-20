@@ -1,15 +1,15 @@
-local function trade_icon(from, to, size)
+local function trade_icon(from, to, size_from, size_to)
   ---@type data.IconData[]
   return {
     {
-      icon = "__virentis__/graphic/icon/" .. from .. ".png",
-      icon_size = size or 256,
+      icon = from,
+      icon_size = size_from,
       scale = 0.7,
       shift = { -48, -48 },
     },
     {
-      icon = "__virentis__/graphic/icon/" .. to .. ".png",
-      icon_size = size or 256,
+      icon = to,
+      icon_size = size_to,
       scale = 0.7,
       shift = { 48, 48 },
     },
@@ -29,7 +29,7 @@ data:extend({
     subgroup = "virentis-trades",
     category = "trading-t1",
     order = "a",
-    icon = trade_icon("gnarpod-fruit", "iron-plate"),
+    icons = trade_icon("__virentis__/graphic/icon/item/gnarpod-fruit.png", "__base__/graphics/icons/iron-plate.png", 256),
     ingredients = {
       { type = "item", name = "gnarpod-fruit", amount = 1 },
     },

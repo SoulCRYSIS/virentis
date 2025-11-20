@@ -85,7 +85,15 @@ local virentis_tree_particle_effects =
   ["gnarpod"] = {
     crop_1 = "sunnycomb-leaf-particle",
     trunk_1 = "stingfrond-branch-particle",
-  }
+  },
+  ["coneflora"] = {
+    crop_1 = "teflilly-leaf-particle",
+    trunk_1 = "teflilly-branch-particle",
+  },
+  ["puffberry"] = {
+    crop_1 = "yumako-leaf-particle",
+    trunk_1 = "yumako-branch-particle",
+  },
   -- ["jellystem"] =     { sap = "jellystem-leaf-particle",
   --                       jellystem = "jellystem-branch-particle"
   --                     },
@@ -675,11 +683,11 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -1, -3 }, { 1, 0.5 } },
     drawing_box_vertical_extension = 0.8,
-    -- autoplace = {
-    --   control = "virentis_plants",
-    --   probability_expression = "0.1 * basis_noise{x = x, y = y, seed0 = map_seed, seed1 = \"vangrove_tree\", input_scale = 1/3, output_scale = 3}",
-    --   richness_expression = "random_penalty_at(3, 1)"
-    -- },
+    autoplace = {
+      control = "virentis_plants",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'vangrove_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      richness_expression = "random_penalty_at(3, 1)"
+    },
     variations = virentis_tree_variations("vangrove", 4, 2, 1.3, 640, 560, true, util.by_pixel(80, -50)),
     colors = minor_tints(),
     ambient_sounds =
@@ -736,10 +744,128 @@ data:extend({
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.3 * voronoi_cell_id{x = x, y = y, seed0 = map_seed, seed1 = 'gnarpod_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'gnarpod_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
     variations = virentis_tree_variations("gnarpod", 6, 3, 1.3, 640, 560, false, util.by_pixel(40, -50)),
+    colors = minor_tints(),
+    ambient_sounds =
+    {
+      sound =
+      {
+        variations = sound_variations("__space-age__/sound/world/plants/teflilly", 6, 0.5),
+        advanced_volume_control =
+        {
+          fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = { 1.5, 100.0 } } }
+        }
+      },
+      radius = 7.5,
+      min_entity_count = 2,
+      max_entity_count = 10,
+      entity_to_sound_ratio = 0.2,
+      average_pause_seconds = 8
+    },
+    map_color = { 255, 255, 255 },
+  },
+  -- Gnarpod
+  ---@type data.PlantPrototype
+  {
+    type = "plant",
+    name = "puffberry-tree",
+    icon = "__virentis__/graphic/icon/plant/puffberry-tree.png",
+    icon_size = 256,
+    subgroup = "trees",
+    impact_category = "tree",
+    order = "c",
+    flags = default_flags,
+    growth_ticks = 2 * minute,
+
+    harvest_emissions = default_emission,
+    healing_per_tick = 1,
+    factoriopedia_simulation = virentis_plant_sim("puffberry-tree", "virentis-plain-grass"),
+    minable = {
+      mining_particle = "yumako-mining-particle",
+      mining_time = 0.5,
+      results = {
+        {
+          type = "item",
+          name = "puffberry-fruit",
+          amount = 20,
+        }
+      },
+      mining_trigger = leaf_sound_trigger,
+    },
+    mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-yumako-tree", 5, 0.5),
+    mined_sound = sound_variations("__space-age__/sound/mining/mined-yumako-tree", 5, 0.5),
+    max_health = 50,
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -1, -3 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.8,
+    autoplace = {
+      control = "virentis_plants",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'puffberry_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      richness_expression = "random_penalty_at(3, 1)"
+    },
+    variations = virentis_tree_variations("puffberry", 6, 3, 1.3, 640, 560, false, util.by_pixel(40, -50)),
+    colors = minor_tints(),
+    ambient_sounds =
+    {
+      sound =
+      {
+        variations = sound_variations("__space-age__/sound/world/plants/yumako-tree", 6, 0.5),
+        advanced_volume_control =
+        {
+          fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = { 1.5, 100.0 } } }
+        }
+      },
+      radius = 7.5,
+      min_entity_count = 2,
+      max_entity_count = 10,
+      entity_to_sound_ratio = 0.2,
+      average_pause_seconds = 8
+    },
+    map_color = { 255, 255, 255 },
+  },
+  -- Gnarpod
+  ---@type data.PlantPrototype
+  {
+    type = "plant",
+    name = "coneflora-tree",
+    icon = "__virentis__/graphic/icon/plant/coneflora-tree.png",
+    icon_size = 256,
+    subgroup = "trees",
+    impact_category = "tree",
+    order = "c",
+    flags = default_flags,
+    growth_ticks = 2 * minute,
+
+    harvest_emissions = default_emission,
+    healing_per_tick = 1,
+    factoriopedia_simulation = virentis_plant_sim("coneflora-tree", "virentis-plain-grass"),
+    minable = {
+      mining_particle = "teflilly-mining-particle",
+      mining_time = 0.5,
+      results = {
+        {
+          type = "item",
+          name = "coneflora-pollen",
+          amount = 20,
+        }
+      },
+      mining_trigger = leaf_sound_trigger,
+    },
+    mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-teflilly", 5, 0.5),
+    mined_sound = sound_variations("__space-age__/sound/mining/mined-teflilly", 5, 0.5),
+    max_health = 50,
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -1, -3 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.8,
+    autoplace = {
+      control = "virentis_plants",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'coneflora_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      richness_expression = "random_penalty_at(3, 1)"
+    },
+    variations = virentis_tree_variations("coneflora", 8, 4, 1.3, 640, 560, false, util.by_pixel(40, -50)),
     colors = minor_tints(),
     ambient_sounds =
     {
