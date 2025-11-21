@@ -3,11 +3,6 @@ data:extend(
   {
     {
       type = "recipe-category",
-      name = "grinding",
-      order = "a"
-    },
-    {
-      type = "recipe-category",
       name = "trading-t1",
       subgroup = "virentis-trades",
       order = "ka"
@@ -23,6 +18,16 @@ data:extend(
       name = "trading-t3",
       subgroup = "virentis-trades",
       order = "kc"
+    },
+    {
+      type = "recipe-category",
+      name = "grinding",
+      order = "a"
+    },
+    {
+      type = "recipe-category",
+      name = "woodworking",
+      order = "a"
     },
   }
 )
