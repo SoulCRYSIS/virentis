@@ -11,5 +11,6 @@ require "prototype.recipe.trading"
 
 require "prototype.groups"
 require "prototype.tiles"
-require "prototype.autoplace_control"
+require "prototype.autoplace_controls"
 require "prototype.planet"
+require "prototype.technologies"

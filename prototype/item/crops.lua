@@ -26,7 +26,6 @@ data:extend({
     type = "item",
     name = "gnarpod-fruit",
     icon = "__virentis__/graphic/icon/item/gnarpod-fruit.png",
-    icon_size = 256,
     subgroup = "virentis-crops",
     order = "a",
     spoil_ticks = 5 * minute,
