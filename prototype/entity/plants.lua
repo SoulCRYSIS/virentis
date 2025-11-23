@@ -649,7 +649,6 @@ local function minor_tints() -- Only for leaves where most if the colour is bake
 end
 
 data:extend({
-  -- Vangrove
   ---@type data.PlantPrototype
   {
     type = "plant",
@@ -708,7 +707,6 @@ data:extend({
     },
     map_color = { 255, 255, 255 },
   },
-  -- Gnarpod
   ---@type data.PlantPrototype
   {
     type = "plant",
@@ -767,7 +765,6 @@ data:extend({
     },
     map_color = { 255, 255, 255 },
   },
-  -- Gnarpod
   ---@type data.PlantPrototype
   {
     type = "plant",
@@ -806,7 +803,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'puffberry_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("puffberry", 6, 3, 1.3, 640, 560, false, util.by_pixel(40, -50)),
+    variations = virentis_tree_variations("puffberry", 6, 3, 1.3, 640, 560, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
     {
@@ -826,7 +823,6 @@ data:extend({
     },
     map_color = { 255, 255, 255 },
   },
-  -- Gnarpod
   ---@type data.PlantPrototype
   {
     type = "plant",
@@ -865,7 +861,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'coneflora_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("coneflora", 8, 4, 1.3, 640, 560, false, util.by_pixel(40, -50)),
+    variations = virentis_tree_variations("coneflora", 8, 4, 1.3, 640, 560, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
     {

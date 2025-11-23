@@ -37,5 +37,18 @@ data:extend(
         { type = "item", name = "iron-plate", amount = 1 },
       },
     },
-
+    {
+      type = "recipe",
+      name = "trade-gnarpod-fruit-to-iron-plate",
+      subgroup = "virentis-trades",
+      category = "trading-t1",
+      order = "a",
+      icons = trade_icon("__virentis__/graphic/icon/item/gnarpod-fruit.png", "__base__/graphics/icons/iron-plate.png"),
+      ingredients = {
+        { type = "item", name = "gnarpod-fruit", amount = 1 },
+      },
+      results = {
+        { type = "item", name = "iron-plate", amount = 1 },
+      },
+    },
   })

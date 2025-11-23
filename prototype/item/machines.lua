@@ -29,5 +29,18 @@ data:extend(
       stack_size = 10,
       default_import_location = "virentis"
     },
+    {
+      type = "item",
+      name = "marketstall",
+      place_result = "marketstall",
+      icon = "__virentis__/graphic/icon/machine/marketstall.png",
+      subgroup = "virentis-machines",
+      order = "a",
+      inventory_move_sound = item_sounds.mechanical_large_inventory_move,
+      pick_sound = item_sounds.mechanical_large_inventory_pickup,
+      drop_sound = item_sounds.mechanical_large_inventory_move,
+      stack_size = 10,
+      default_import_location = "virentis"
+    },
   }
 )

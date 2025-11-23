@@ -192,4 +192,87 @@ data:extend({
     }
   },
 
+  ---@type data.AssemblingMachinePrototype
+  {
+    type = "assembling-machine",
+    name = "marketstall",
+    icon = "__virentis__/graphic/icon/machine/marketstall.png",
+    subgroup = "virentis-machines",
+    order = "a",
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    circuit_wire_max_distance = base_assembling_machine.circuit_wire_max_distance,
+    circuit_connector = base_assembling_machine.circuit_connector,
+    energy_usage = "10kW",
+    energy_source = { type = "void" },
+    crafting_categories = { "trading-t1" },
+    crafting_speed = 1,
+    module_slots = 0,
+    minable = {
+      mining_time = 1,
+      result = "marketstall",
+    },
+    collision_box = { { -1.8, -1.8 }, { 1.8, 1.8 } },
+    selection_box = { { -2, -2 }, { 2, 2 } },
+    damaged_trigger_effect = hit_effects.entity(),
+    max_health = 500,
+    dying_explosion = "steel-furnace-explosion",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__virentis__/graphic/machine/marketstall/marketstall.png",
+            priority = "very-low",
+            width = 456,
+            height = 285,
+            frame_count = 1,
+            line_length = 1,
+            repeat_count = 16,
+            shift = util.by_pixel(40, -3),
+            scale = 0.5,
+          },
+          {
+            filename = "__virentis__/graphic/machine/marketstall/marketstall-shadow.png",
+            priority = "very-low",
+            width = 456,
+            height = 285,
+            frame_count = 1,
+            line_length = 1,
+            repeat_count = 16,
+            draw_as_shadow = true,
+            shift = util.by_pixel(40, -3),
+            scale = 0.5,
+          },
+        },
+      },
+      working_visualisations = {
+        {
+          fadeout = true,
+          apply_recipe_tint = "primary",
+          animation = {
+            filename = "__virentis__/graphic/machine/marketstall/marketstall-glow.png",
+            priority = "very-low",
+            width = 456,
+            height = 285,
+            frame_count = 16,
+            line_length = 4,
+            draw_as_glow = true,
+            blend_mode = "additive",
+            shift = util.by_pixel(40, -3),
+            scale = 0.5,
+            animation_speed = 0.25,
+          },
+        },
+      },
+    },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    effect_receiver = { uses_module_effects = false, uses_beacon_effects = false, uses_surface_effects = true },
+    impact_category = "metal",
+    working_sound =
+    {
+      sound = { filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.45, audible_distance_modifier = 0.5 },
+      fade_in_ticks = 4,
+      fade_out_ticks = 20
+    }
+  },
 })
