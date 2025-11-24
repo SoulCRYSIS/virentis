@@ -29,5 +29,11 @@ data:extend(
       name = "woodworking",
       order = "a"
     },
+    {
+      type = "recipe-category",
+      name = "baking",
+      subgroup = "virentis-foods",
+      order = "a"
+    },
   }
 )

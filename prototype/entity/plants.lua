@@ -196,7 +196,7 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
     ---@type data.TreeVariation
     local variation = {
       trunk                             = {
-        filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. ".png", -- use same graphics for now
+        filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. ".png", -- use same graphics for now
         flags = { "mipmap" },
         surface = "gleba",
         width = width,
@@ -205,10 +205,10 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         y = y,
         frame_count = 1,
         shift = shift,
-        scale = 0.33 * scale_multiplier
+        scale = 0.5 * scale_multiplier
       },
       leaves                            = {
-        filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-harvest.png",
+        filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-harvest.png",
         flags = { "mipmap" },
         surface = "gleba",
         width = width,
@@ -217,10 +217,10 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         y = y,
         frame_count = 1,
         shift = shift,
-        scale = 0.33 * scale_multiplier
+        scale = 0.5 * scale_multiplier
       },
       normal                            = {
-        filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-normal.png",
+        filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-normal.png",
         surface = "gleba",
         width = width,
         height = height,
@@ -228,7 +228,7 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         y = y,
         frame_count = 1,
         shift = shift,
-        scale = 0.33 * scale_multiplier
+        scale = 0.5 * scale_multiplier
       },
       shadow                            = {
         frame_count = 2,
@@ -238,15 +238,15 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         surface = "gleba",
         filenames =
         {
-          "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-harvest-shadow.png",
-          "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-shadow.png",
+          "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-harvest-shadow.png",
+          "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-shadow.png",
         },
         width = width,
         height = height,
         x = x,
         y = y,
         shift = shift,
-        scale = 0.33 * scale_multiplier
+        scale = 0.5 * scale_multiplier
       },
 
       -- water_reflection                  = {
@@ -286,7 +286,7 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
         {
           variation.leaves,
           {
-            filename = "__virentis__/graphic/plant/" .. name .. "/" .. name .. "-glow.png",
+            filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-glow.png",
             flags = { "mipmap" },
             surface = "gleba",
             width = width,
@@ -295,7 +295,7 @@ local function virentis_tree_variations(name, variation_count, per_row, scale_mu
             y = y,
             frame_count = 1,
             shift = shift,
-            scale = 0.33 * scale_multiplier,
+            scale = 0.5 * scale_multiplier,
             apply_runtime_tint = true,
             draw_as_light = true
           }
@@ -653,7 +653,7 @@ data:extend({
   {
     type = "plant",
     name = "vangrove-tree",
-    icon = "__virentis__/graphic/icon/plant/vangrove-tree.png",
+    icon = "__virentis__/graphics/entities/plants/vangrove-tree/vangrove-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -687,7 +687,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'vangrove_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("vangrove", 4, 2, 1.3, 640, 560, true, util.by_pixel(80, -50)),
+    variations = virentis_tree_variations("vangrove", 4, 2, 1, 640, 560, true, util.by_pixel(80, -50)),
     colors = minor_tints(),
     ambient_sounds =
     {
@@ -711,7 +711,7 @@ data:extend({
   {
     type = "plant",
     name = "gnarpod-tree",
-    icon = "__virentis__/graphic/icon/plant/gnarpod-tree.png",
+    icon = "__virentis__/graphics/entities/plants/gnarpod-tree/gnarpod-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -729,7 +729,12 @@ data:extend({
         {
           type = "item",
           name = "gnarpod-fruit",
-          amount = 20,
+          amount = 10,
+        },
+        {
+          type = "item",
+          name = "hardwood",
+          amount = 5,
         }
       },
       mining_trigger = leaf_sound_trigger,
@@ -745,7 +750,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'gnarpod_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("gnarpod", 6, 3, 1.3, 640, 560, false, util.by_pixel(40, -50)),
+    variations = virentis_tree_variations("gnarpod", 6, 3, 1, 640, 560, false, util.by_pixel(40, -50)),
     colors = minor_tints(),
     ambient_sounds =
     {
@@ -769,7 +774,7 @@ data:extend({
   {
     type = "plant",
     name = "puffberry-tree",
-    icon = "__virentis__/graphic/icon/plant/puffberry-tree.png",
+    icon = "__virentis__/graphics/entities/plants/puffberry-tree/puffberry-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -787,7 +792,7 @@ data:extend({
         {
           type = "item",
           name = "puffberry-fruit",
-          amount = 20,
+          amount = 10,
         }
       },
       mining_trigger = leaf_sound_trigger,
@@ -803,7 +808,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'puffberry_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("puffberry", 6, 3, 1.3, 640, 560, false, util.by_pixel(60, -40)),
+    variations = virentis_tree_variations("puffberry", 6, 3, 1, 640, 560, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
     {
@@ -827,7 +832,7 @@ data:extend({
   {
     type = "plant",
     name = "coneflora-tree",
-    icon = "__virentis__/graphic/icon/plant/coneflora-tree.png",
+    icon = "__virentis__/graphics/entities/plants/coneflora-tree/coneflora-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -845,7 +850,7 @@ data:extend({
         {
           type = "item",
           name = "coneflora-pollen",
-          amount = 20,
+          amount = 5,
         }
       },
       mining_trigger = leaf_sound_trigger,
@@ -861,7 +866,123 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'coneflora_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("coneflora", 8, 4, 1.3, 640, 560, false, util.by_pixel(60, -40)),
+    variations = virentis_tree_variations("coneflora", 8, 4, 1, 640, 560, false, util.by_pixel(60, -40)),
+    colors = minor_tints(),
+    ambient_sounds =
+    {
+      sound =
+      {
+        variations = sound_variations("__space-age__/sound/world/plants/teflilly", 6, 0.5),
+        advanced_volume_control =
+        {
+          fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = { 1.5, 100.0 } } }
+        }
+      },
+      radius = 7.5,
+      min_entity_count = 2,
+      max_entity_count = 10,
+      entity_to_sound_ratio = 0.2,
+      average_pause_seconds = 8
+    },
+    map_color = { 255, 255, 255 },
+  },
+  ---@type data.PlantPrototype
+  {
+    type = "plant",
+    name = "rockmalt-tree",
+    icon = "__virentis__/graphics/entities/plants/rockmalt-tree/rockmalt-tree.png",
+    icon_size = 256,
+    subgroup = "trees",
+    impact_category = "tree",
+    order = "c",
+    flags = default_flags,
+    growth_ticks = 2 * minute,
+
+    harvest_emissions = default_emission,
+    healing_per_tick = 1,
+    factoriopedia_simulation = virentis_plant_sim("rockmalt-tree", "virentis-plain-grass"),
+    minable = {
+      mining_particle = "teflilly-mining-particle",
+      mining_time = 0.5,
+      results = {
+        {
+          type = "item",
+          name = "rockmalt-fruit",
+          amount = 5,
+        }
+      },
+      mining_trigger = leaf_sound_trigger,
+    },
+    mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-teflilly", 5, 0.5),
+    mined_sound = sound_variations("__space-age__/sound/mining/mined-teflilly", 5, 0.5),
+    max_health = 50,
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -1, -3 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.8,
+    autoplace = {
+      control = "virentis_plants",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'rockmalt_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      richness_expression = "random_penalty_at(3, 1)"
+    },
+    variations = virentis_tree_variations("rockmalt", 6, 3, 1, 360, 256, false, util.by_pixel(60, -40)),
+    colors = minor_tints(),
+    ambient_sounds =
+    {
+      sound =
+      {
+        variations = sound_variations("__space-age__/sound/world/plants/teflilly", 6, 0.5),
+        advanced_volume_control =
+        {
+          fades = { fade_in = { curve_type = "cosine", from = { control = 0.5, volume_percentage = 0.0 }, to = { 1.5, 100.0 } } }
+        }
+      },
+      radius = 7.5,
+      min_entity_count = 2,
+      max_entity_count = 10,
+      entity_to_sound_ratio = 0.2,
+      average_pause_seconds = 8
+    },
+    map_color = { 255, 255, 255 },
+  },
+  ---@type data.PlantPrototype
+  {
+    type = "plant",
+    name = "redbloom-tree",
+    icon = "__virentis__/graphics/entities/plants/redbloom-tree/redbloom-tree.png",
+    icon_size = 256,
+    subgroup = "trees",
+    impact_category = "tree",
+    order = "c",
+    flags = default_flags,
+    growth_ticks = 2 * minute,
+
+    harvest_emissions = default_emission,
+    healing_per_tick = 1,
+    factoriopedia_simulation = virentis_plant_sim("redbloom-tree", "virentis-plain-grass"),
+    minable = {
+      mining_particle = "teflilly-mining-particle",
+      mining_time = 0.5,
+      results = {
+        {
+          type = "item",
+          name = "redbloom-fruit",
+          amount = 5,
+        }
+      },
+      mining_trigger = leaf_sound_trigger,
+    },
+    mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-teflilly", 5, 0.5),
+    mined_sound = sound_variations("__space-age__/sound/mining/mined-teflilly", 5, 0.5),
+    max_health = 50,
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -1, -3 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.8,
+    autoplace = {
+      control = "virentis_plants",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'redbloom_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      richness_expression = "random_penalty_at(3, 1)"
+    },
+    variations = virentis_tree_variations("redbloom", 6, 3, 1, 360, 256, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
     {

@@ -1,5 +1,5 @@
 data:extend(
----@type data.RecipePrototype
+---@type data.RecipePrototype[]
   {
     {
       type = "recipe",

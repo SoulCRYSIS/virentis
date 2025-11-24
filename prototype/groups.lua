@@ -14,12 +14,6 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "virentis-foods",
-    group = "virentis",
-    order = "c"
-  },
-  {
-    type = "item-subgroup",
     name = "virentis-machines",
     group = "virentis",
     order = "a"
@@ -35,5 +29,17 @@ data:extend({
     name = "virentis-trades",
     group = "virentis",
     order = "z"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-foods",
+    group = "virentis",
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-materials",
+    group = "virentis",
+    order = "f"
   },
 })

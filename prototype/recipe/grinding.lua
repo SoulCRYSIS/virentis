@@ -1,16 +1,17 @@
 data:extend(
----@type data.RecipePrototype
+---@type data.RecipePrototype[]
   {
     {
       type = "recipe",
-      name = "grind-gnarpod-fruit",
+      name = "grind-rockmalt-scale",
       category = "grinding",
       order = "a",
       ingredients = {
-        { type = "item", name = "gnarpod-fruit", amount = 1 },
+        { type = "item", name = "rockmalt-scale", amount = 1 },
       },
       results = {
-        { type = "item", name = "iron-plate", amount = 2 },
+        { type = "item", name = "stone", amount = 5 },
       },
     },
-  })
+  }
+)
