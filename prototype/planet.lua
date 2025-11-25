@@ -7,7 +7,7 @@ planet_map_gen.virentis = function()
   return {
     property_expression_names =
     {
-      elevation = "1",
+      elevation = "",
       temperature = "1",
       moisture = "1",
       aux = "1",
@@ -21,12 +21,13 @@ planet_map_gen.virentis = function()
       cliff_elevation_0 = 10
     },
     autoplace_controls = {
-      -- ["virentis_plants"] = {},
+      ["virentis_plants"] = {},
     },
     autoplace_settings = {
       ["tile"] = {
         settings = {
-          -- ["virentis-plain-grass"] = {}
+          ["virentis-plain-grass"] = {},
+          ["virentis-deep-lake"] = {}
         }
       },
       ["decorative"] = {

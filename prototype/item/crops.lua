@@ -75,12 +75,14 @@ data:extend(
       order = "a",
       stack_size = 50,
       weight = 5 * kg,
+      plant_result = "rockmalt-tree",
+      place_result = "rockmalt-tree",
     },
     {
       type = "item",
       name = "grass",
       icon = "__virentis__/graphics/icons/items/crops/grass.png",
-      subgroup = "virentis-crops",
+      subgroup = "virentis-materials",
       order = "a",
       spoil_ticks = 30 * second,
       spoil_result = "spoilage",
@@ -97,5 +99,7 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
+      plant_result = "redbloom-tree",
+      place_result = "redbloom-tree",
     },
   })

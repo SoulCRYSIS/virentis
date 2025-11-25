@@ -16,6 +16,8 @@ data:extend(
       results = {
         { type = "item", name = "redbloom-salad", amount = 1 },
       },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 2,
     },
     {
       type = "recipe",
@@ -30,11 +32,14 @@ data:extend(
       results = {
         { type = "item", name = "raw-mudland-buns", amount = 1 },
       },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 2,
     },
     {
       type = "recipe",
       name = "cook-mudland-buns",
       category = "baking",
+      additional_categories = { "smelting" },
       order = "a",
       icon = "__virentis__/graphics/icons/items/foods/mudland-buns.png",
       ingredients = {
@@ -43,6 +48,8 @@ data:extend(
       results = {
         { type = "item", name = "cooked-mudland-buns", amount = 1 },
       },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 8,
     },
     {
       type = "recipe",
@@ -57,11 +64,14 @@ data:extend(
       results = {
         { type = "item", name = "dough", amount = 3 },
       },
+      crafting_machine_tint = recipe_tints.yellow,
+      energy_required = 3,
     },
     {
       type = "recipe",
       name = "red-sauce",
       category = "baking",
+      additional_categories = { "smelting" },
       order = "a",
       icon = "__virentis__/graphics/icons/items/foods/red-sauce.png",
       ingredients = {
@@ -70,6 +80,8 @@ data:extend(
       results = {
         { type = "item", name = "red-sauce", amount = 1 },
       },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 6,
     },
     {
       type = "recipe",
@@ -84,11 +96,14 @@ data:extend(
       results = {
         { type = "item", name = "raw-mudland-pie", amount = 1 },
       },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 3,
     },
     {
       type = "recipe",
       name = "cook-mudland-pie",
       category = "baking",
+      additional_categories = { "smelting" },
       order = "a",
       icon = "__virentis__/graphics/icons/items/foods/mudland-pie.png",
       ingredients = {
@@ -97,6 +112,8 @@ data:extend(
       results = {
         { type = "item", name = "cooked-mudland-pie", amount = 1 },
       },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 12,
     },
   }
 )

@@ -1,6 +1,8 @@
 local tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
 local tile_trigger_effects = require("__space-age__/prototypes/tile/tile-trigger-effects")
+local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
+local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
 
 local grass_transitions = data.raw.tile["grass-1"].transitions
 local grass_transitions_between_transitions = data.raw.tile["grass-1"].transitions_between_transitions
@@ -37,4 +39,56 @@ data:extend({
     absorptions_per_second = { pollution = 0.000015 },
     trigger_effect = tile_trigger_effects.grass_1_trigger_effect(),
   },
+  {
+    type = "tile",
+    name = "virentis-deep-lake",
+    order = "a[deep]",
+    subgroup = "virentis-water-tiles",
+    collision_mask = tile_collision_masks.water(),
+    autoplace = { probability_expression = "spot_noise{x = x,\z
+                                                       y = y,\z
+                                                       seed0 = map_seed,\z
+                                                       seed1 = 10000,\z
+                                                       density_expression = 0.1,\z
+                                                       spot_radius_expression = 32,\z
+                                                       spot_quantity_expression = 32,\z
+                                                       spot_favorability_expression = 1,\z
+                                                       basement_value = 0,\z
+                                                       maximum_spot_basement_radius = 16,\z
+                                                       region_size = 1024}" },
+    lowland_fog = false,
+    effect = "wetland-blue-slime",
+    effect_color = { 31, 51, 60 },
+    effect_color_secondary = { 49, 80, 14 },
+    particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
+    layer = 1,
+    layer_group = "water-overlay",
+    sprite_usage_surface = "gleba",
+    variants =
+    {
+      main =
+      {
+        {
+          picture = "__base__/graphics/terrain/deepwater/deepwater1.png",
+          count = 1,
+          scale = 0.5,
+          size = 1
+        }
+      },
+      empty_transitions = true,
+    },
+    walking_sound = sound_variations("__base__/sound/walking/shallow-water", 7, 1),
+    landing_steps_sound = space_age_tile_sounds.landing.wet,
+    ambient_sounds =
+    {
+      space_age_tile_sounds.ambient.waterlap,
+      space_age_tile_sounds.ambient.rain_on_water,
+    },
+    map_color = { 18, 37, 51 },
+    walking_speed_modifier = 1,
+    vehicle_friction_modifier = 1,
+    trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
+    default_cover_tile = "landfill",
+    fluid = "water",
+  }
 })

@@ -26,6 +26,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "virentis-water-tiles",
+    group = "virentis",
+    order = "d"
+  },
+  {
+    type = "item-subgroup",
     name = "virentis-trades",
     group = "virentis",
     order = "z"

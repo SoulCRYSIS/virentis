@@ -656,6 +656,18 @@ local function minor_tints() -- Only for leaves where most if the colour is bake
   }
 end
 
+local function very_minor_tints() -- Only for leaves where very little of the colour is baked in.
+  return {
+    { r = 255, g = 255, b = 255 },
+    { r = 240, g = 255, b = 255 },
+    { r = 255, g = 240, b = 255 },
+    { r = 255, g = 255, b = 240 },
+    { r = 240, g = 240, b = 255 },
+    { r = 255, g = 240, b = 240 },
+    { r = 240, g = 255, b = 240 },
+  }
+end
+
 data:extend({
   ---@type data.PlantPrototype
   {
@@ -690,11 +702,11 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -1, -3 }, { 1, 0.5 } },
     drawing_box_vertical_extension = 0.8,
-    autoplace = {
-      control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'vangrove_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
-      richness_expression = "random_penalty_at(3, 1)"
-    },
+    -- autoplace = {
+    --   control = "virentis_plants",
+    --   probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'vangrove_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+    --   richness_expression = "random_penalty_at(3, 1)"
+    -- },
     variations = virentis_tree_variations("vangrove", 4, 2, 1, 640, 560, true, util.by_pixel(80, -50)),
     colors = minor_tints(),
     ambient_sounds =
@@ -753,11 +765,11 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -1, -3 }, { 1, 0.5 } },
     drawing_box_vertical_extension = 0.8,
-    autoplace = {
-      control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'gnarpod_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
-      richness_expression = "random_penalty_at(3, 1)"
-    },
+    -- autoplace = {
+    --   control = "virentis_plants",
+    --   probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'gnarpod_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+    --   richness_expression = "random_penalty_at(3, 1)"
+    -- },
     variations = virentis_tree_variations("gnarpod", 6, 3, 1, 640, 560, false, util.by_pixel(40, -50)),
     colors = minor_tints(),
     ambient_sounds =
@@ -811,11 +823,11 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -1, -3 }, { 1, 0.5 } },
     drawing_box_vertical_extension = 0.8,
-    autoplace = {
-      control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'puffberry_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
-      richness_expression = "random_penalty_at(3, 1)"
-    },
+    -- autoplace = {
+    --   control = "virentis_plants",
+    --   probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'puffberry_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+    --   richness_expression = "random_penalty_at(3, 1)"
+    -- },
     variations = virentis_tree_variations("puffberry", 6, 3, 1, 640, 560, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
@@ -869,11 +881,11 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -1, -3 }, { 1, 0.5 } },
     drawing_box_vertical_extension = 0.8,
-    autoplace = {
-      control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'coneflora_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
-      richness_expression = "random_penalty_at(3, 1)"
-    },
+    -- autoplace = {
+    --   control = "virentis_plants",
+    --   probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'coneflora_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+    --   richness_expression = "random_penalty_at(3, 1)"
+    -- },
     variations = virentis_tree_variations("coneflora", 8, 4, 1, 640, 560, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
@@ -901,10 +913,10 @@ data:extend({
     icon = "__virentis__/graphics/icons/plants/rockmalt-tree.png",
     subgroup = "trees",
     impact_category = "tree",
+    
     order = "c",
     flags = default_flags,
     growth_ticks = 2 * minute,
-
     harvest_emissions = default_emission,
     healing_per_tick = 1,
     factoriopedia_simulation = virentis_plant_sim("rockmalt", "virentis-plain-grass"),
@@ -915,8 +927,13 @@ data:extend({
         {
           type = "item",
           name = "rockmalt-fruit",
-          amount = 5,
-        }
+          amount = 1,
+        },
+        {
+          type = "item",
+          name = "grass",
+          amount = 2,
+        },
       },
       mining_trigger = leaf_sound_trigger,
     },
@@ -924,15 +941,15 @@ data:extend({
     mined_sound = sound_variations("__space-age__/sound/mining/mined-teflilly", 5, 0.5),
     max_health = 50,
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
-    selection_box = { { -1, -3 }, { 1, 0.5 } },
+    selection_box = { { -0.75, -1.5 }, { 0.75, 0.5 } },
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'rockmalt_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x , y = y , seed0 = map_seed, seed1 = 'rockmalt_tree', grid_size = 128, distance_type = 'euclidean', jitter = 0.1 }",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("rockmalt", 6, 3, 1, 360, 256, false, util.by_pixel(60, -40)),
-    colors = minor_tints(),
+    variations = virentis_tree_variations("rockmalt", 6, 3, 0.8, 360, 256, false, util.by_pixel(32, -25)),
+    colors = very_minor_tints(),
     ambient_sounds =
     {
       sound =
@@ -949,7 +966,7 @@ data:extend({
       entity_to_sound_ratio = 0.2,
       average_pause_seconds = 8
     },
-    map_color = { 255, 255, 255 },
+    map_color = { 200, 255, 255 },
   },
   ---@type data.PlantPrototype
   {
@@ -973,7 +990,12 @@ data:extend({
           type = "item",
           name = "redbloom-fruit",
           amount = 5,
-        }
+        },
+        {
+          type = "item",
+          name = "grass",
+          amount = 5,
+        },
       },
       mining_trigger = leaf_sound_trigger,
     },
@@ -985,7 +1007,7 @@ data:extend({
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'redbloom_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
+      probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'redbloom_tree', grid_size = 128, distance_type = 'manhattan', jitter = 0.1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
     variations = virentis_tree_variations("redbloom", 6, 3, 1, 480, 320, false, util.by_pixel(60, -40)),
@@ -1006,6 +1028,11 @@ data:extend({
       entity_to_sound_ratio = 0.2,
       average_pause_seconds = 8
     },
-    map_color = { 255, 255, 255 },
+    map_color = { 255, 200, 255 },
+    agricultural_tower_tint =
+    {
+      primary = {r = 0.552, g = 0.218, b = 0.218, a = 1.000}, -- #8c3737ff
+      secondary = {r = 0.561, g = 0.613, b = 0.308, a = 1.000}, -- #8f4f4eff
+    },
   }
 })
