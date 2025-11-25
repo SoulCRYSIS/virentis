@@ -84,7 +84,7 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/crops/grass.png",
       subgroup = "virentis-materials",
       order = "a",
-      spoil_ticks = 30 * second,
+      spoil_ticks = 1 * minute,
       spoil_result = "spoilage",
       stack_size = 200,
       weight = 1 * kg,

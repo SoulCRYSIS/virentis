@@ -16,7 +16,7 @@ data:extend(
         { type = "item", name = "rockmalt-scale", amount = 1 },
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 2,
+      energy_required = 5,
     },
     {
       type = "recipe",

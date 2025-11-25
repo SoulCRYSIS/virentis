@@ -305,22 +305,22 @@ data:extend({
       max_transfer = "1GW",
       min_working_temperature = 165,
       specific_heat = "1MJ",
-      connections =
+      connections = 
       {
         {
-          position = { 0, 0 },
+          position = { 0, -1.5 },
           direction = defines.direction.north
         },
         {
-          position = { 0, 0 },
+          position = { 1.5, 0 },
           direction = defines.direction.east
         },
         {
-          position = { 0, 0 },
+          position = { 0, 1.5 },
           direction = defines.direction.south
         },
         {
-          position = { 0, 0 },
+          position = { -1.5, 0 },
           direction = defines.direction.west
         }
       }
@@ -380,6 +380,7 @@ data:extend({
             blend_mode = "additive",
             shift = util.by_pixel(45, -22),
             scale = 0.5,
+            animation_speed = 0.1,
           },
         },
       },

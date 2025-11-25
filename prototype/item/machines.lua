@@ -56,7 +56,7 @@ data:extend(
       drop_sound = item_sounds.mechanical_large_inventory_move,
       stack_size = 20,
       default_import_location = "virentis",
-      weight = 50 * kg,
+      weight = 100 * kg,
     },
   }
 )

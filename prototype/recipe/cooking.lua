@@ -50,6 +50,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.red,
       energy_required = 8,
+      result_is_always_fresh = true,
     },
     {
       type = "recipe",
@@ -82,6 +83,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.red,
       energy_required = 6,
+      result_is_always_fresh = true,
     },
     {
       type = "recipe",
@@ -114,6 +116,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.red,
       energy_required = 12,
+      result_is_always_fresh = true,
     },
   }
 )

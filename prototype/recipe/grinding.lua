@@ -4,7 +4,7 @@ data:extend(
     {
       type = "recipe",
       name = "grind-rockmalt-scale-hand-crafting",
-      category = "basic-crafting",
+      category = "crafting",
       additional_categories = { "grinding" },
       subgroup = "virentis-materials",
       order = "a",
