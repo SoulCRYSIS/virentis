@@ -94,6 +94,14 @@ local virentis_tree_particle_effects =
     crop_1 = "yumako-leaf-particle",
     trunk_1 = "yumako-branch-particle",
   },
+  ["rockmalt"] = {
+    crop_1 = "yumako-leaf-particle",
+    trunk_1 = "yumako-branch-particle",
+  },
+  ["redbloom"] = {
+    crop_1 = "yumako-leaf-particle",
+    trunk_1 = "yumako-branch-particle",
+  },
   -- ["jellystem"] =     { sap = "jellystem-leaf-particle",
   --                       jellystem = "jellystem-branch-particle"
   --                     },
@@ -653,7 +661,7 @@ data:extend({
   {
     type = "plant",
     name = "vangrove-tree",
-    icon = "__virentis__/graphics/entities/plants/vangrove-tree/vangrove-tree.png",
+    icon = "__virentis__/graphics/icons/plants/vangrove-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -663,7 +671,7 @@ data:extend({
 
     harvest_emissions = default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant_sim("vangrove-tree", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant_sim("vangrove", "virentis-plain-grass"),
     minable = {
       mining_particle = "hairyclubnub-mining-particle",
       mining_time = 0.5,
@@ -711,7 +719,7 @@ data:extend({
   {
     type = "plant",
     name = "gnarpod-tree",
-    icon = "__virentis__/graphics/entities/plants/gnarpod-tree/gnarpod-tree.png",
+    icon = "__virentis__/graphics/icons/plants/gnarpod-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -721,7 +729,7 @@ data:extend({
 
     harvest_emissions = default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant_sim("gnarpod-tree", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant_sim("gnarpod", "virentis-plain-grass"),
     minable = {
       mining_particle = "teflilly-mining-particle",
       mining_time = 0.5,
@@ -774,7 +782,7 @@ data:extend({
   {
     type = "plant",
     name = "puffberry-tree",
-    icon = "__virentis__/graphics/entities/plants/puffberry-tree/puffberry-tree.png",
+    icon = "__virentis__/graphics/icons/plants/puffberry-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -784,7 +792,7 @@ data:extend({
 
     harvest_emissions = default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant_sim("puffberry-tree", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant_sim("puffberry", "virentis-plain-grass"),
     minable = {
       mining_particle = "yumako-mining-particle",
       mining_time = 0.5,
@@ -832,7 +840,7 @@ data:extend({
   {
     type = "plant",
     name = "coneflora-tree",
-    icon = "__virentis__/graphics/entities/plants/coneflora-tree/coneflora-tree.png",
+    icon = "__virentis__/graphics/icons/plants/coneflora-tree.png",
     icon_size = 256,
     subgroup = "trees",
     impact_category = "tree",
@@ -842,7 +850,7 @@ data:extend({
 
     harvest_emissions = default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant_sim("coneflora-tree", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant_sim("coneflora", "virentis-plain-grass"),
     minable = {
       mining_particle = "teflilly-mining-particle",
       mining_time = 0.5,
@@ -890,8 +898,7 @@ data:extend({
   {
     type = "plant",
     name = "rockmalt-tree",
-    icon = "__virentis__/graphics/entities/plants/rockmalt-tree/rockmalt-tree.png",
-    icon_size = 256,
+    icon = "__virentis__/graphics/icons/plants/rockmalt-tree.png",
     subgroup = "trees",
     impact_category = "tree",
     order = "c",
@@ -900,7 +907,7 @@ data:extend({
 
     harvest_emissions = default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant_sim("rockmalt-tree", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant_sim("rockmalt", "virentis-plain-grass"),
     minable = {
       mining_particle = "teflilly-mining-particle",
       mining_time = 0.5,
@@ -948,8 +955,7 @@ data:extend({
   {
     type = "plant",
     name = "redbloom-tree",
-    icon = "__virentis__/graphics/entities/plants/redbloom-tree/redbloom-tree.png",
-    icon_size = 256,
+    icon = "__virentis__/graphics/icons/plants/redbloom-tree.png",
     subgroup = "trees",
     impact_category = "tree",
     order = "c",
@@ -958,7 +964,7 @@ data:extend({
 
     harvest_emissions = default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant_sim("redbloom-tree", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant_sim("redbloom", "virentis-plain-grass"),
     minable = {
       mining_particle = "teflilly-mining-particle",
       mining_time = 0.5,
@@ -982,7 +988,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x, y = y, seed0 = map_seed, seed1 = 'redbloom_tree', grid_size = 128, distance_type = 'euclidean', jitter = 1}",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_tree_variations("redbloom", 6, 3, 1, 360, 256, false, util.by_pixel(60, -40)),
+    variations = virentis_tree_variations("redbloom", 6, 3, 1, 480, 320, false, util.by_pixel(60, -40)),
     colors = minor_tints(),
     ambient_sounds =
     {

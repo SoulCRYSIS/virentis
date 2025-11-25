@@ -17,7 +17,7 @@ data:extend({
     autoplace = { probability_expression = 'expression_in_range_base(-10, 0.7, 11, 11) + noise_layer_noise(19)' },
     layer = 26,
     variants = tile_variations_template(
-      "__virentis__/graphic/tile/virentis-plain-grass.png", "__base__/graphics/terrain/masks/transition-3.png",
+      "__virentis__/graphics/tiles/virentis-plain-grass.png", "__base__/graphics/terrain/masks/transition-3.png",
       {
         max_size = 4,
         [1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },

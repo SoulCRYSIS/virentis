@@ -15,7 +15,7 @@ data:extend(
     {
       type = "item",
       name = "raw-mudland-buns",
-      icon = "__virentis__/graphics/icons/items/foods/raw-mudland-buns.png",
+      icons = uncooked_icon("__virentis__/graphics/icons/items/foods/mudland-buns.png"),
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 2 * minute,
@@ -26,7 +26,7 @@ data:extend(
     {
       type = "item",
       name = "cooked-mudland-buns",
-      icon = "__virentis__/graphics/icons/items/foods/cooked-mudland-buns.png",
+      icon = "__virentis__/graphics/icons/items/foods/mudland-buns.png",
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 10 * minute,
@@ -37,7 +37,7 @@ data:extend(
     {
       type = "item",
       name = "raw-mudland-pie",
-      icon = "__virentis__/graphics/icons/items/foods/raw-mudland-pie.png",
+      icons = uncooked_icon("__virentis__/graphics/icons/items/foods/mudland-pie.png"),
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 2 * minute,
@@ -48,7 +48,7 @@ data:extend(
     {
       type = "item",
       name = "cooked-mudland-pie",
-      icon = "__virentis__/graphics/icons/items/foods/cooked-mudland-pie.png",
+      icon = "__virentis__/graphics/icons/items/foods/mudland-pie.png",
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 10 * minute,

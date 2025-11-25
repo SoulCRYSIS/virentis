@@ -14,7 +14,7 @@ local function trade_icon(from, to)
       draw_background = true,
     },
     {
-      icon = "__virentis__/graphic/icon/trade-arrow.png",
+      icon = "__virentis__/graphics/icons/misc/trade-arrow.png",
       scale = 0.9,
     },
   }
@@ -29,7 +29,7 @@ data:extend(
       subgroup = "virentis-trades",
       category = "trading-t1",
       order = "a",
-      icons = trade_icon("__virentis__/graphic/icon/item/rockmalt-bulb.png", "__base__/graphics/icons/iron-plate.png"),
+      icons = trade_icon("__virentis__/graphics/icons/items/crops/rockmalt-bulb.png", "__base__/graphics/icons/iron-plate.png"),
       ingredients = {
         { type = "item", name = "rockmalt-bulb", amount = 1 },
       },
@@ -39,13 +39,13 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "trade-redbloom-mashed-to-copper-plate",
+      name = "trade-redbloom-fruit-to-copper-plate",
       subgroup = "virentis-trades",
       category = "trading-t1",
       order = "a",
-      icons = trade_icon("__virentis__/graphic/icon/item/redbloom-mashed.png", "__base__/graphics/icons/copper-plate.png"),
+      icons = trade_icon("__virentis__/graphics/icons/items/crops/redbloom-fruit.png", "__base__/graphics/icons/copper-plate.png"),
       ingredients = {
-        { type = "item", name = "redbloom-mashed", amount = 1 },
+        { type = "item", name = "redbloom-fruit", amount = 1 },
       },
       results = {
         { type = "item", name = "copper-plate", amount = 1 },
@@ -57,7 +57,7 @@ data:extend(
       subgroup = "virentis-trades",
       category = "trading-t1",
       order = "a",
-      icons = trade_icon("__virentis__/graphic/icon/item/cooked-mudland-buns.png", "__base__/graphics/icons/agricultural-tower.png"),
+      icons = trade_icon("__virentis__/graphics/icons/items/foods/mudland-buns.png", "__space-age__/graphics/icons/agricultural-tower.png"),
       ingredients = {
         -- 20 rockmalt + 10 redbloom
         { type = "item", name = "cooked-mudland-buns", amount = 10 },
@@ -73,7 +73,7 @@ data:extend(
       subgroup = "virentis-trades",
       category = "trading-t1",
       order = "a",
-      icons = trade_icon("__virentis__/graphic/icon/item/redbloom-salad.png", "__base__/graphics/icons/electronic-circuit.png"),
+      icons = trade_icon("__virentis__/graphics/icons/items/foods/redbloom-salad.png", "__base__/graphics/icons/electronic-circuit.png"),
       ingredients = {
         -- 1 redbloom + 1 leaves
         { type = "item", name = "redbloom-salad", amount = 1 },
@@ -85,11 +85,11 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "trade-cooked-mudland-pie-to-agricultural-tower", 
+      name = "trade-cooked-mudland-pie-to-oven", 
       subgroup = "virentis-trades",
       category = "trading-t1",
       order = "a",
-      icons = trade_icon("__virentis__/graphic/icon/item/cooked-mudland-pie.png", "__base__/graphics/icons/agricultural-tower.png"),
+      icons = trade_icon("__virentis__/graphics/icons/items/foods/mudland-pie.png", "__virentis__/graphics/icons/machines/oven.png"),
       ingredients = {
         { type = "item", name = "cooked-mudland-pie", amount = 3 },
       },

@@ -4,7 +4,7 @@ data:extend(
     {
       type = "item",
       name = "hardwood",
-      icon = "__virentis__/graphic/icon/item/hardwood.png",
+      icon = "__base__/graphics/icons/wood.png",
       subgroup = "virentis-materials",
       order = "a",
       stack_size = 50,

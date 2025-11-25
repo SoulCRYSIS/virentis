@@ -7,7 +7,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "windmill",
-    icon = "__virentis__/graphic/icon/machine/windmill.png",
+    icon = "__virentis__/graphics/icons/machines/windmill.png",
     subgroup = "virentis-machines",
     order = "a",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -93,7 +93,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "lumbermill",
-    icon = "__virentis__/graphic/icon/machine/lumbermill.png",
+    icon = "__virentis__/graphics/icons/machines/lumbermill.png",
     subgroup = "virentis-machines",
     order = "a",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -196,7 +196,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "marketstall",
-    icon = "__virentis__/graphic/icon/machine/marketstall.png",
+    icon = "__virentis__/graphics/icons/machines/marketstall.png",
     subgroup = "virentis-machines",
     order = "a",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -270,6 +270,19 @@ data:extend({
       sound = { filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.45, audible_distance_modifier = 0.5 },
       fade_in_ticks = 4,
       fade_out_ticks = 20
+    },
+    autoplace = {
+      probability_expression = "spot_noise{x = x,\z
+                                                 y = y,\z
+                                                 seed0 = map_seed,\z
+                                                 seed1 = 10,\z
+                                                 density_expression = 1,\z
+                                                 spot_radius_expression = 32,\z
+                                                 spot_quantity_expression = 5,\z
+                                                 spot_favorability_expression = 1,\z
+                                                 basement_value = 0,\z
+                                                 maximum_spot_basement_radius = 16}",
+      richness_expression = "random_penalty_at(3, 1)"
     }
   },
 
@@ -277,7 +290,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "oven",
-    icon = "__virentis__/graphic/icon/machine/oven.png",
+    icon = "__virentis__/graphics/icons/machines/oven.png",
     subgroup = "virentis-machines",
     order = "a",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },

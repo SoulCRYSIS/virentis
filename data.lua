@@ -1,3 +1,5 @@
+require "prototype.utils"
+
 require "prototype.entity.plants"
 require "prototype.entity.machines"
 

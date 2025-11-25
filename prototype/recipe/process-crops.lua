@@ -6,6 +6,7 @@ data:extend(
       name = "process-rockmalt-fruit",
       category = "organic-or-hand-crafting",
       order = "a",
+      icon = "__virentis__/graphics/icons/items/crops/rockmalt-scale.png",
       ingredients = {
         { type = "item", name = "rockmalt-fruit", amount = 1 },
       },
@@ -16,22 +17,10 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "process-redbloom-fruit",
-      category = "organic-or-hand-crafting",
-      order = "a",
-      ingredients = {
-        { type = "item", name = "redbloom-fruit", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "redbloom-mashed",  amount = 2 },
-        { type = "item", name = "redbloom-seed", amount = 1 },
-      },
-    },
-    {
-      type = "recipe",
       name = "nutrient-from-grass",
       category = "organic-or-hand-crafting",
       order = "a",
+      icon = "__virentis__/graphics/icons/items/crops/grass.png",
       ingredients = {
         { type = "item", name = "grass", amount = 1 },
       },

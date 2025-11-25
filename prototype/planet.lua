@@ -21,19 +21,21 @@ planet_map_gen.virentis = function()
       cliff_elevation_0 = 10
     },
     autoplace_controls = {
-      ["virentis_plants"] = {},
+      -- ["virentis_plants"] = {},
     },
     autoplace_settings = {
       ["tile"] = {
         settings = {
-          ["virentis-plain-grass"] = {}
+          -- ["virentis-plain-grass"] = {}
         }
       },
       ["decorative"] = {
         settings = {}
       },
       ["entity"] = {
-        settings = {}
+        settings = {
+          ["marketstall"] = {}
+        }
       }
     }
   }
@@ -44,9 +46,9 @@ data:extend({
   {
     type = "planet",
     name = "virentis",
-    icon = "__virentis__/graphic/icon/starmap-virentis.png", -- Using nauvis icon as placeholder
+    icon = "__virentis__/graphics/icons/misc/starmap-virentis.png",
     icon_size = 512,
-    starmap_icon = "__virentis__/graphic/icon/starmap-virentis.png",
+    starmap_icon = "__virentis__/graphics/icons/misc/starmap-virentis.png",
     starmap_icon_size = 512,
     gravity_pull = 10,
     distance = 15, -- Between Vulcanus (10) and Gleba (20)
