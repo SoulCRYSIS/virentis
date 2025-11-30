@@ -1,3 +1,5 @@
+local sounds = require("__base__.prototypes.entity.sounds")
+
 data:extend(
 ---@type data.ItemPrototype[]
   {
@@ -45,8 +47,9 @@ data:extend(
       stack_size = 50,
       weight = 10 * kg,
     },
+    ---@type data.CapsulePrototype
     {
-      type = "item",
+      type = "capsule",
       name = "cooked-mudland-pie",
       icon = "__virentis__/graphics/icons/items/foods/mudland-pie.png",
       subgroup = "virentis-foods",
@@ -55,6 +58,35 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 10 * kg,
+      capsule_action = {
+        type = "use-on-self",
+        attack_parameters = {
+          type = "projectile",
+          activation_type = "consume",
+          ammo_category = "capsule",
+          cooldown = 10,
+          range = 0,
+          ammo_type = {
+            target_type = "position",
+            action = {
+              type = "direct",
+              action_delivery = {
+                type = "instant",
+                target_effects = {
+                  {
+                    type = "create-sticker",
+                    sticker = "mudland-pie-speed-sticker"
+                  },
+                  {
+                    type = "play-sound",
+                    sound = sounds.eat_fish
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     },
     {
       type = "item",

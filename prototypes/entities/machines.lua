@@ -1,8 +1,52 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+local circuit_connector_definitions = require("__base__/prototypes/entity/circuit-connector-sprites")
 local base_assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"])
 
 data:extend({
+  ---@type data.ContainerPrototype
+  {
+    type = "container",
+    name = "composter",
+    icon = "__base__/graphics/icons/wooden-chest.png",
+    icon_size = 64,
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "composter" },
+    max_health = 100,
+    corpse = "small-remnants",
+    collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    fast_replaceable_group = "container",
+    inventory_size = 16,
+    open_sound = { filename = "__base__/sound/wooden-chest-open.ogg", volume = 0.6 },
+    close_sound = { filename = "__base__/sound/wooden-chest-close.ogg", volume = 0.6 },
+    picture = {
+      layers = {
+        {
+          filename = "__base__/graphics/entity/wooden-chest/wooden-chest.png",
+          priority = "extra-high",
+          width = 64,
+          height = 80,
+          shift = util.by_pixel(0, -10),
+          tint = { r = 0.5, g = 0.8, b = 0.5, a = 1 },
+          scale = 0.5
+        },
+        {
+          filename = "__base__/graphics/entity/wooden-chest/wooden-chest-shadow.png",
+          priority = "extra-high",
+          width = 64,
+          height = 80,
+          shift = util.by_pixel(10, 0),
+          draw_as_shadow = true,
+          scale = 0.5
+        }
+      }
+    },
+    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
+    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_wire_max_distance = 9 -- default_circuit_wire_max_distance
+  },
+
   ---@type data.AssemblingMachinePrototype
   {
     type = "assembling-machine",

@@ -5,6 +5,19 @@ data:extend(
   {
     {
       type = "item",
+      name = "composter",
+      place_result = "composter",
+      icon = "__base__/graphics/icons/wooden-chest.png",
+      subgroup = "virentis-machines",
+      order = "b",
+      inventory_move_sound = item_sounds.wood_small_inventory_move,
+      pick_sound = item_sounds.wood_small_inventory_pickup,
+      drop_sound = item_sounds.wood_small_inventory_move,
+      stack_size = 50,
+      default_import_location = "virentis",
+    },
+    {
+      type = "item",
       name = "windmill",
       place_result = "windmill",
       icon = "__virentis__/graphics/icons/machines/windmill.png",
