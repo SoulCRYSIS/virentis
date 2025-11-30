@@ -20,4 +20,5 @@ recipe_tints = {
   brown = { primary = { r = 0.5, g = 0.25, b = 0, a = 1 } },
   gray = { primary = { r = 0.5, g = 0.5, b = 0.5, a = 1 } },
   black = { primary = { r = 0, g = 0, b = 0, a = 1 } },
+  white = { primary = { r = 1, g = 1, b = 1, a = 1 } },
 }

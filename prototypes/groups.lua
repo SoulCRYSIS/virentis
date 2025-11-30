@@ -48,4 +48,22 @@ data:extend({
     group = "virentis",
     order = "f"
   },
+  {
+    type = "item-subgroup",
+    name = "virentis-chemicals",
+    group = "virentis",
+    order = "e"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-research",
+    group = "virentis",
+    order = "g"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-fluids",
+    group = "virentis",
+    order = "h"
+  },
 })

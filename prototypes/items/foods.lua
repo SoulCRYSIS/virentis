@@ -5,91 +5,6 @@ data:extend(
   {
     {
       type = "item",
-      name = "redbloom-salad",
-      icon = "__virentis__/graphics/icons/items/foods/redbloom-salad.png",
-      subgroup = "virentis-foods",
-      order = "a",
-      spoil_ticks = 5 * minute,
-      spoil_result = "spoilage",
-      stack_size = 50,
-      weight = 5 * kg,
-    },
-    {
-      type = "item",
-      name = "raw-mudland-buns",
-      icons = uncooked_icon("__virentis__/graphics/icons/items/foods/mudland-buns.png"),
-      subgroup = "virentis-foods",
-      order = "a",
-      spoil_ticks = 2 * minute,
-      spoil_result = "spoilage",
-      stack_size = 50,
-      weight = 5 * kg,
-    },
-    {
-      type = "item",
-      name = "cooked-mudland-buns",
-      icon = "__virentis__/graphics/icons/items/foods/mudland-buns.png",
-      subgroup = "virentis-foods",
-      order = "a",
-      spoil_ticks = 10 * minute,
-      spoil_result = "spoilage",
-      stack_size = 50,
-      weight = 10 * kg,
-    },
-    {
-      type = "item",
-      name = "raw-mudland-pie",
-      icons = uncooked_icon("__virentis__/graphics/icons/items/foods/mudland-pie.png"),
-      subgroup = "virentis-foods",
-      order = "a",
-      spoil_ticks = 2 * minute,
-      spoil_result = "spoilage",
-      stack_size = 50,
-      weight = 10 * kg,
-    },
-    ---@type data.CapsulePrototype
-    {
-      type = "capsule",
-      name = "cooked-mudland-pie",
-      icon = "__virentis__/graphics/icons/items/foods/mudland-pie.png",
-      subgroup = "virentis-foods",
-      order = "a",
-      spoil_ticks = 10 * minute,
-      spoil_result = "spoilage",
-      stack_size = 50,
-      weight = 10 * kg,
-      capsule_action = {
-        type = "use-on-self",
-        attack_parameters = {
-          type = "projectile",
-          activation_type = "consume",
-          ammo_category = "capsule",
-          cooldown = 10,
-          range = 0,
-          ammo_type = {
-            target_type = "position",
-            action = {
-              type = "direct",
-              action_delivery = {
-                type = "instant",
-                target_effects = {
-                  {
-                    type = "create-sticker",
-                    sticker = "mudland-pie-speed-sticker"
-                  },
-                  {
-                    type = "play-sound",
-                    sound = sounds.eat_fish
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    {
-      type = "item",
       name = "red-sauce",
       icon = "__virentis__/graphics/icons/items/foods/red-sauce.png",
       subgroup = "virentis-foods",
@@ -103,6 +18,147 @@ data:extend(
       type = "item",
       name = "dough",
       icon = "__virentis__/graphics/icons/items/foods/dough.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "rockmalt-pudding",
+      icon = "__virentis__/graphics/icons/items/foods/rockmalt-pudding.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "redbloom-buns",
+      icon = "__virentis__/graphics/icons/items/foods/redbloom-buns.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    -- ---@type data.CapsulePrototype
+    -- {
+    --   type = "capsule",
+    --   name = "cooked-mudland-pie",
+    --   icon = "__virentis__/graphics/icons/items/foods/mudland-pie.png",
+    --   subgroup = "virentis-foods",
+    --   order = "a",
+    --   spoil_ticks = 10 * minute,
+    --   spoil_result = "spoilage",
+    --   stack_size = 50,
+    --   weight = 10 * kg,
+    --   capsule_action = {
+    --     type = "use-on-self",
+    --     attack_parameters = {
+    --       type = "projectile",
+    --       activation_type = "consume",
+    --       ammo_category = "capsule",
+    --       cooldown = 10,
+    --       range = 0,
+    --       ammo_type = {
+    --         target_type = "position",
+    --         action = {
+    --           type = "direct",
+    --           action_delivery = {
+    --             type = "instant",
+    --             target_effects = {
+    --               {
+    --                 type = "create-sticker",
+    --                 sticker = "mudland-pie-speed-sticker"
+    --               },
+    --               {
+    --                 type = "play-sound",
+    --                 sound = sounds.eat_fish
+    --               }
+    --             }
+    --           }
+    --         }
+    --       }
+    --     }
+    --   }
+    -- },
+    {
+      type = "item",
+      name = "fried-dumpling-set",
+      icon = "__virentis__/graphics/icons/items/foods/fried-dumpling-set.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "sweet-doughnut",
+      icon = "__virentis__/graphics/icons/items/foods/sweet-doughnut.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+
+    {
+      type = "item",
+      name = "sweat-chilli-sauce",
+      icon = "__virentis__/graphics/icons/items/foods/sweat-chilli-sauce.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "taco-salad",
+      icon = "__virentis__/graphics/icons/items/foods/taco-salad.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "berry-bliss-cookie",
+      icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "mangroove-syrup",
+      icon = "__virentis__/graphics/icons/items/foods/mangroove-syrup.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "mangroove-mashed",
+      icon = "__virentis__/graphics/icons/items/foods/mangroove-mashed.png",
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 5 * minute,

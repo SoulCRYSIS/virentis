@@ -1,101 +1,126 @@
-local function trade_icon(from, to)
-  ---@type data.IconData[]
-  return {
-    {
-      icon = from,
-      scale = 0.7,
-      shift = { -16, -16 },
-      draw_background = true,
-    },
-    {
-      icon = to,
-      scale = 0.7,
-      shift = { 16, 16 },
-      draw_background = true,
-    },
-    {
-      icon = "__virentis__/graphics/icons/misc/trade-arrow.png",
-      scale = 0.9,
-    },
-  }
-end
+-- local function trade_icon(from, to)
+--   ---@type data.IconData[]
+--   return {
+--     {
+--       icon = from,
+--       scale = 0.7,
+--       shift = { -16, -16 },
+--       draw_background = true,
+--     },
+--     {
+--       icon = to,
+--       scale = 0.7,
+--       shift = { 16, 16 },
+--       draw_background = true,
+--     },
+--     {
+--       icon = "__virentis__/graphics/icons/misc/trade-arrow.png",
+--       scale = 0.9,
+--     },
+--   }
+-- end
 
 data:extend(
 ---@type data.RecipePrototype[]
   {
     {
       type = "recipe",
-      name = "trade-rockmalt-bulb-to-iron-plate",
-      subgroup = "virentis-trades",
+      name = "trade-iron-plate",
       category = "trading-t1",
+      subgroup = "virentis-trades",
       order = "a",
-      icons = trade_icon("__virentis__/graphics/icons/items/crops/rockmalt-bulb.png", "__base__/graphics/icons/iron-plate.png"),
+      icon = "__base__/graphics/icons/iron-plate.png",
       ingredients = {
-        { type = "item", name = "rockmalt-bulb", amount = 1 },
+        { type = "item", name = "rockmalt-pudding", amount = 1 }
       },
       results = {
-        { type = "item", name = "iron-plate", amount = 1 },
+        { type = "item", name = "iron-plate", amount = 15 }
       },
+      crafting_machine_tint = recipe_tints.gray,
+      energy_required = 1,
     },
     {
       type = "recipe",
-      name = "trade-redbloom-fruit-to-copper-plate",
-      subgroup = "virentis-trades",
+      name = "trade-copper-plate",
       category = "trading-t1",
+      subgroup = "virentis-trades",
       order = "a",
-      icons = trade_icon("__virentis__/graphics/icons/items/crops/redbloom-fruit.png", "__base__/graphics/icons/copper-plate.png"),
+      icon = "__base__/graphics/icons/copper-plate.png",
       ingredients = {
-        { type = "item", name = "redbloom-fruit", amount = 1 },
+        { type = "item", name = "redbloom-buns", amount = 1 }
       },
       results = {
-        { type = "item", name = "copper-plate", amount = 1 },
+        { type = "item", name = "copper-plate", amount = 15 }
       },
+      crafting_machine_tint = recipe_tints.orange,
+      energy_required = 1,
     },
     {
       type = "recipe",
-      name = "trade-cooked-mudland-buns-to-agricultural-tower", 
-      subgroup = "virentis-trades",
+      name = "trade-firebrick",
       category = "trading-t1",
+      subgroup = "virentis-trades",
       order = "a",
-      icons = trade_icon("__virentis__/graphics/icons/items/foods/mudland-buns.png", "__space-age__/graphics/icons/agricultural-tower.png"),
+      icon = "__virentis__/graphics/icons/items/materials/firebrick.png",
       ingredients = {
-        -- 20 rockmalt + 10 redbloom
-        { type = "item", name = "cooked-mudland-buns", amount = 10 },
+        { type = "item", name = "berry-bliss-cookie", amount = 1 }
       },
       results = {
-        -- 7.5 copper + 25 iron + 20 spoilage + 50 stone = 25 rockmalt + 7.5 redbloom
-        { type = "item", name = "biochamber", amount = 1 }, 
+        { type = "item", name = "firebrick", amount = 1 }
       },
+      crafting_machine_tint = recipe_tints.brown,
+      energy_required = 0.5,
     },
     {
       type = "recipe",
-      name = "trade-redbloom-salad-to-electronic-circuit", 
-      subgroup = "virentis-trades",
+      name = "trade-siltcore",
       category = "trading-t1",
+      subgroup = "virentis-trades",
       order = "a",
-      icons = trade_icon("__virentis__/graphics/icons/items/foods/redbloom-salad.png", "__base__/graphics/icons/electronic-circuit.png"),
+      icon = "__virentis__/graphics/icons/items/materials/siltcore.png",
       ingredients = {
-        -- 1 redbloom + 1 leaves
-        { type = "item", name = "redbloom-salad", amount = 1 },
+        { type = "item", name = "sweet-doughnut",     amount = 1 },
+        { type = "item", name = "fried-dumpling-set", amount = 1 }
       },
       results = {
-        -- 1 rockmalt + 1.5 redbloom
-        { type = "item", name = "electronic-circuit", amount = 2 }, 
+        { type = "item", name = "siltcore", amount = 1 }
       },
+      crafting_machine_tint = recipe_tints.brown,
+      energy_required = 2,
     },
     {
       type = "recipe",
-      name = "trade-cooked-mudland-pie-to-oven", 
-      subgroup = "virentis-trades",
+      name = "low-density-structure",
       category = "trading-t1",
+      subgroup = "virentis-trades",
       order = "a",
-      icons = trade_icon("__virentis__/graphics/icons/items/foods/mudland-pie.png", "__virentis__/graphics/icons/machines/oven.png"),
+      icon = "__virentis__/graphics/icons/items/foods/low-density-structure.png",
       ingredients = {
-        { type = "item", name = "cooked-mudland-pie", amount = 3 },
+        { type = "item", name = "taco-salad", amount = 1 }
       },
       results = {
-        { type = "item", name = "oven", amount = 1 }, 
+        { type = "item", name = "low-density-structure", amount = 2 }
       },
+      energy_required = 1,
+    },
+    {
+      type = "recipe",
+      name = "mudland-environment-data",
+      category = "trading-t1",
+      subgroup = "virentis-trades",
+      order = "a",
+      icon = "__virentis__/graphics/icons/items/researches/mudland-environment-data.png",
+      ingredients = {
+        { type = "item", name = "sweet-doughnut",     amount = 1 },
+        { type = "item", name = "fried-dumpling-set", amount = 1 },
+        { type = "item", name = "taco-salad",         amount = 1 },
+        { type = "item", name = "berry-bliss-cookie", amount = 1 }
+      },
+      results = {
+        { type = "item", name = "mudland-environment-data", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.brown,
+      energy_required = 1,
     },
   }
 )
