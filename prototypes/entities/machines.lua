@@ -1,7 +1,143 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-local circuit_connector_definitions = require("__base__/prototypes/entity/circuit-connector-sprites")
 local base_assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"])
+
+---@param base_layers data.Sprite[]
+---@param horizontal_glow string
+---@param vertical_glow string
+---@return data.Sprite4Way
+local function apply_heatpipe_glow_layer(base_layers, horizontal_glow, vertical_glow)
+  local horizontal = table.deepcopy(base_layers)
+  ---@diagnostic disable-next-line: undefined-global
+  table.insert(horizontal, 1, apply_heat_pipe_glow({
+    filename = horizontal_glow,
+    priority = "very-low",
+    width = 192,
+    height = 192,
+    shift = util.by_pixel(0, 0),
+    scale = 0.5,
+  }))
+  ---@type data.Animation
+  local horizontal_animation = { layers = horizontal }
+
+  local vertical = table.deepcopy(base_layers)
+  ---@diagnostic disable-next-line: undefined-global
+  table.insert(vertical, 1, apply_heat_pipe_glow({
+    filename = vertical_glow,
+    priority = "very-low",
+    width = 192,
+    height = 192,
+    shift = util.by_pixel(0, 0),
+    scale = 0.5,
+  }))
+  ---@type data.Animation
+  local vertical_animation = { layers = vertical }
+
+  return {
+    north = horizontal_animation,
+    east = vertical_animation,
+    south = horizontal_animation,
+    west = vertical_animation,
+  }
+end
+
+---@param base_layers data.Animation[]
+---@return data.Animation4Way
+local function apply_heatpipe_layer(base_layers)
+  local horizontal = table.deepcopy(base_layers)
+  table.insert(horizontal, 1, {
+    filename = "__virentis__/graphics/entities/machines/heatpipe/heatpipe-3x3-horizontal.png",
+    priority = "very-low",
+    width = 192,
+    height = 192,
+    shift = util.by_pixel(0, 0),
+    scale = 0.5,
+  })
+  ---@type data.Animation
+  local horizontal_animation = { layers = horizontal }
+
+  local vertical = table.deepcopy(base_layers)
+  table.insert(vertical, 1, {
+    filename = "__virentis__/graphics/entities/machines/heatpipe/heatpipe-3x3-vertical.png",
+    priority = "very-low",
+    width = 192,
+    height = 192,
+    shift = util.by_pixel(0, 0),
+    scale = 0.5,
+  })
+  ---@type data.Animation
+  local vertical_animation = { layers = vertical }
+
+  return {
+    north = horizontal_animation,
+    east = vertical_animation,
+    south = horizontal_animation,
+    west = vertical_animation,
+  }
+end
+
+---@diagnostic disable-next-line: undefined-global
+local default_pipe_covers = make_4way_animation_from_spritesheet({
+  filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
+  width = 64,
+  height = 64,
+  direction_count = 4,
+  scale = 0.5
+})
+
+---@diagnostic disable-next-line: undefined-global
+local default_heat_pipe_covers = make_4way_animation_from_spritesheet(
+---@diagnostic disable-next-line: undefined-global
+  apply_heat_pipe_glow {
+    filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+    width = 64,
+    height = 64,
+    direction_count = 4,
+    scale = 0.5
+  })
+
+---@diagnostic disable-next-line: undefined-global
+local default_pipe_pictures = assembler2pipepictures()
+
+local default_fluid_boxes = {
+  {
+    production_type = "input",
+    pipe_picture = default_pipe_pictures,
+    ---@diagnostic disable-next-line: undefined-global
+    pipe_covers = pipecoverspictures(),
+    volume = 1000,
+    pipe_connections = { { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } } },
+    secondary_draw_orders = { north = -1 }
+  },
+  {
+    production_type = "output",
+    pipe_picture = default_pipe_pictures,
+    ---@diagnostic disable-next-line: undefined-global
+    pipe_covers = pipecoverspictures(),
+    volume = 1000,
+    pipe_connections = { { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } } },
+    secondary_draw_orders = { north = -1 }
+  }
+}
+
+local two_line_connections = {
+  {
+    position = { 1, 1 },
+    direction = defines.direction.east,
+  },
+  {
+    position = { -1, 1 },
+    direction = defines.direction.west,
+  },
+  {
+    position = { 1, -1 },
+    direction = defines.direction.east,
+  },
+  {
+    position = { -1, -1 },
+    direction = defines.direction.west,
+  },
+}
 
 data:extend(
 ---@type data.AssemblingMachinePrototype[]
@@ -366,7 +502,21 @@ data:extend(
             ---@diagnostic disable-next-line: assign-type-mismatch
             direction = defines.direction.northwest
           }
-        }
+        },
+        light_flicker = {
+          color = { r = 1, g = 0.4, b = 0.1 }, -- fiery orange-red glow
+          minimum_intensity = 0.75,
+          maximum_intensity = 0.95,
+        },
+        smoke = {
+          {
+            name = "smoke", -- lighter, faster dissipating smoke
+            frequency = 4,  -- much lower frequency
+            position = { 0.7, -1.2 },
+            starting_vertical_speed = 0.12,
+            starting_frame_deviation = 60,
+          }
+        },
       },
       crafting_categories = { "baking" },
       crafting_speed = 4,
@@ -610,7 +760,7 @@ data:extend(
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       circuit_wire_max_distance = base_assembling_machine.circuit_wire_max_distance,
       circuit_connector = base_assembling_machine.circuit_connector,
-      energy_usage = "5MW",
+      energy_usage = "2.5MW",
       ---@type data.HeatEnergySource
       energy_source = {
         type = "heat",
@@ -618,55 +768,30 @@ data:extend(
         max_transfer = "1GW",
         min_working_temperature = 165,
         specific_heat = "1MJ",
-        connections = {
-          {
-            position = { -1.5, -1.5 },
-            ---@diagnostic disable-next-line: assign-type-mismatch
-            direction = defines.direction.northeast
+        connections = two_line_connections,
+        heat_picture = apply_heatpipe_glow_layer({
+            {
+              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heat-glow.png",
+              width = 270,
+              height = 210,
+              frame_count = 32,
+              line_length = 4,
+              draw_as_glow = true,
+              blend_mode = "additive",
+              fadeout = true,
+              shift = util.by_pixel(18, -5),
+              scale = 0.5,
+            },
           },
-          {
-            position = { 1.5, -1.5 },
-            ---@diagnostic disable-next-line: assign-type-mismatch
-            direction = defines.direction.southeast
-          },
-          {
-            position = { -1.5, 1.5 },
-            ---@diagnostic disable-next-line: assign-type-mismatch
-            direction = defines.direction.southwest
-          },
-          {
-            position = { 1.5, 1.5 },
-            ---@diagnostic disable-next-line: assign-type-mismatch
-            direction = defines.direction.northwest
-          }
-        }
+          "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heatpipe-glow-horizontal.png",
+          "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heatpipe-glow-vertical.png"
+        ),
+        pipe_covers = default_pipe_covers,
+        heat_pipe_covers = default_heat_pipe_covers,
       },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          ---@diagnostic disable-next-line: undefined-global
-          pipe_picture = assembler2pipepictures(),
-          ---@diagnostic disable-next-line: undefined-global
-          pipe_covers = pipecoverspictures(),
-          volume = 1000,
-          ---@diagnostic disable-next-line: assign-type-mismatch
-          pipe_connections = { { flow_direction = "input-output", direction = defines.direction.north, position = { 0, -1 } } },
-          secondary_draw_orders = { north = -1 }
-        },
-        {
-          production_type = "output",
-          ---@diagnostic disable-next-line: undefined-global
-          pipe_picture = assembler2pipepictures(),
-          ---@diagnostic disable-next-line: undefined-global
-          pipe_covers = pipecoverspictures(),
-          volume = 1000,
-          ---@diagnostic disable-next-line: assign-type-mismatch
-          pipe_connections = { { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } } },
-          secondary_draw_orders = { north = -1 }
-        }
-      },
+      fluid_boxes = default_fluid_boxes,
       fluid_boxes_off_when_no_fluid_recipe = false,
-      crafting_categories = {},
+      crafting_categories = { "crafting" },
       crafting_speed = 1,
       module_slots = 0,
       minable = {
@@ -685,43 +810,56 @@ data:extend(
         },
       },
       graphics_set = {
-        animation = {
-          layers = {
-            {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer.png",
-              priority = "very-low",
-              width = 380,
-              height = 280,
-              shift = util.by_pixel(0, 0),
-              scale = 0.5,
-            },
-            {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-shadow.png",
-              priority = "very-low",
-              width = 380,
-              height = 280,
-              draw_as_shadow = true,
-              shift = util.by_pixel(0, 0),
-              scale = 0.5,
-            },
+        animation = apply_heatpipe_layer({
+          {
+            filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer.png",
+            priority = "very-low",
+            width = 270,
+            height = 210,
+            frame_count = 1,
+            line_length = 1,
+            shift = util.by_pixel(18, -5),
+            scale = 0.5,
           },
-        },
+          {
+            filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-shadow.png",
+            priority = "very-low",
+            width = 270,
+            height = 210,
+            draw_as_shadow = true,
+            shift = util.by_pixel(18, -5),
+            scale = 0.5,
+          },
+        }),
         working_visualisations = {
+          {
+            filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-animation.png",
+            priority = "very-low",
+            width = 270,
+            height = 210,
+            frame_count = 32,
+            line_length = 4,
+            shift = util.by_pixel(18, -5),
+            scale = 0.5,
+            animation_speed = 0.2,
+          },
           {
             fadeout = true,
             apply_recipe_tint = "primary",
             animation = {
               filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-glow.png",
               priority = "very-low",
-              width = 380,
-              height = 280,
-              frame_count = 16,
+              width = 270,
+              height = 210,
+              frame_count = 32,
               line_length = 4,
               draw_as_glow = true,
+              apply_recipe_tint = "primary",
               blend_mode = "additive",
-              shift = util.by_pixel(0, 0),
+              apply_special_effect = true,
+              shift = util.by_pixel(18, -5),
               scale = 0.5,
-              animation_speed = 0.1,
+              animation_speed = 0.2,
             },
           },
         },
