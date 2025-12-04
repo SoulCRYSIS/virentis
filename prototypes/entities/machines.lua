@@ -764,9 +764,9 @@ data:extend(
       ---@type data.HeatEnergySource
       energy_source = {
         type = "heat",
-        max_temperature = 300,
+        max_temperature = 400,
         max_transfer = "1GW",
-        min_working_temperature = 165,
+        min_working_temperature = 240,
         specific_heat = "1MJ",
         connections = two_line_connections,
         heat_picture = apply_heatpipe_glow_layer({
@@ -816,8 +816,6 @@ data:extend(
             priority = "very-low",
             width = 270,
             height = 210,
-            frame_count = 1,
-            line_length = 1,
             shift = util.by_pixel(18, -5),
             scale = 0.5,
           },

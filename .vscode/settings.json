@@ -18,6 +18,7 @@
     "remote",
     "__DebugAdapter",
     "__Profiler",
+    "apply_heat_pipe_glow"
   ],
   "Lua.diagnostics.disable": [
       "lowercase-global"
