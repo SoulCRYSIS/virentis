@@ -97,12 +97,12 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "sweet-cookie",
+      name = "berry-bliss-cookie",
       category = "baking",
       additional_categories = { "smelting" },
       subgroup = "virentis-foods",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/foods/sweet-cookie.png",
+      icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
       ingredients = {
         { type = "item", name = "dough",           amount = 2 },
         { type = "item", name = "red-sauce",       amount = 1 },

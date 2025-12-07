@@ -113,8 +113,8 @@ data:extend(
 
     {
       type = "item",
-      name = "sweat-chilli-sauce",
-      icon = "__virentis__/graphics/icons/items/foods/sweat-chilli-sauce.png",
+      name = "sweet-chili-sauce",
+      icon = "__virentis__/graphics/icons/items/foods/sweet-chili-sauce.png",
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 5 * minute,
@@ -124,8 +124,8 @@ data:extend(
     },
     {
       type = "item",
-      name = "taco-salad",
-      icon = "__virentis__/graphics/icons/items/foods/taco-salad.png",
+      name = "wild-taco",
+      icon = "__virentis__/graphics/icons/items/foods/wild-taco.png",
       subgroup = "virentis-foods",
       order = "a",
       spoil_ticks = 5 * minute,
