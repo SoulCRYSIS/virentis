@@ -1,3 +1,6 @@
+local virentis = require("prototypes.utils")
+local recipe_tints = virentis.recipe_tints
+
 data:extend(
 ---@type data.RecipePrototype[]
   {
@@ -126,7 +129,7 @@ data:extend(
         { type = "item", name = "redbloom-fruit",   amount = 2 }
       },
       results = {
-        { type = "item", name = "taco-salad", amount = 1 }
+        { type = "item", name = "wild-taco", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
       energy_required = 2,
@@ -138,13 +141,13 @@ data:extend(
       category = "organic",
       subgroup = "virentis-foods",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/foods/sweat-chilli-sauce.png",
+      icon = "__virentis__/graphics/icons/items/foods/sweet-chili-sauce.png",
       ingredients = {
         { type = "item", name = "red-sauce",       amount = 1 },
         { type = "item", name = "mangroove-syrup", amount = 1 }
       },
       results = {
-        { type = "item", name = "sweat-chilli-sauce", amount = 1 }
+        { type = "item", name = "sweet-chili-sauce", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 4,
@@ -180,7 +183,7 @@ data:extend(
       ingredients = {
         { type = "item", name = "dough",              amount = 2 },
         { type = "item", name = "vegetable-oil",      amount = 10 },
-        { type = "item", name = "sweat-chilli-sauce", amount = 1 }
+        { type = "item", name = "sweet-chili-sauce", amount = 1 }
       },
       results = {
         { type = "item", name = "fried-dumpling-set", amount = 1 }
