@@ -90,7 +90,11 @@ data:extend(
     {
       type = "item",
       name = "mangroove-fruit",
-      icon = "__virentis__/graphics/icons/items/crops/mangroove-fruit.png",
+      pictures = {
+        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-1.png" },
+        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png" }
+      },
+      icon = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png",
       subgroup = "virentis-crops",
       order = "a",
       spoil_ticks = 5 * minute,

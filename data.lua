@@ -15,7 +15,6 @@ require "prototypes.groups"
 -- require "prototypes.items.environment-data"
 
 -- require "prototypes.recipes.recipe-categories"
--- require "prototypes.recipes.machines"
 -- require "prototypes.recipes.trading"
 -- require "prototypes.recipes.cooking"
 -- require "prototypes.recipes.process-crops"

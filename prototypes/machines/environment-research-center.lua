@@ -1,0 +1,21 @@
+-- {
+--   type = "recipe",
+--   name = "environment-research-center",
+--   category = "crafting",
+--   order = "a",
+--   icon = "__virentis__/graphics/icons/items/machines/environment-research-center.png",
+--   ingredients = {
+--     { type = "item", name = "firebrick",             amount = 4 },
+--     { type = "item", name = "steel-plate",           amount = 8 },
+--     { type = "item", name = "heart-of-nature",       amount = 1 },
+--     { type = "item", name = "processing-unit",       amount = 2 },
+--     { type = "item", name = "low-density-structure", amount = 2 }
+--   },
+--   results = {
+--     { type = "item", name = "environment-research-center", amount = 1 }
+--   },
+--   crafting_machine_tint = recipe_tints.red,
+--   energy_required = 1,
+--   enabled = false,
+--   surface_conditions = virentis_surface,
+-- },
