@@ -239,17 +239,6 @@ data:extend(
     },
     {
       type = "item",
-      name = "mangroove-mashed",
-      icon = "__virentis__/graphics/icons/items/foods/mangroove-mashed.png",
-      subgroup = "virentis-foods",
-      order = "a",
-      spoil_ticks = 3 * minute,
-      spoil_result = "spoilage",
-      stack_size = 50,
-      weight = 5 * kg,
-    },
-    {
-      type = "item",
       name = "mudland-medley",
       icon = "__virentis__/graphics/icons/items/foods/mudland-medley.png",
       subgroup = "virentis-foods",

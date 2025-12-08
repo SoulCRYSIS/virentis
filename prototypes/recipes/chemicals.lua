@@ -10,7 +10,7 @@ data:extend(
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/materials/tar-processing.png",
+      icon = "__virentis__/graphics/icons/items/materials/tar.png",
       ingredients = {
         { type = "item", name = "tar", amount = 1 }
       },
@@ -30,8 +30,8 @@ data:extend(
       order = "a",
       icon = "__base__/graphics/icons/rocket-fuel.png",
       ingredients = {
-        { type = "item", name = "vegetable-oil", amount = 10 },
-        { type = "item", name = "methanol",      amount = 20 },
+        { type = "fluid", name = "vegetable-oil", amount = 10 },
+        { type = "fluid", name = "methanol",      amount = 20 },
         { type = "item", name = "wood", amount = 2 }
       },
       results = {
@@ -50,10 +50,10 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/fluids/vegetable-oil.png",
       ingredients = {
         { type = "item", name = "nyxoleum-seed", amount = 1 },
-        { type = "item", name = "water",         amount = 50 }
+        { type = "fluid", name = "water",         amount = 50 }
       },
       results = {
-        { type = "item", name = "vegetable-oil", amount = 50 }
+        { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 4,

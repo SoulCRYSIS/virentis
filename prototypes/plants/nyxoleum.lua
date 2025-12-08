@@ -41,7 +41,7 @@ data:extend({
       probability_expression = "0.1 * voronoi_facet_noise{x = x , y = y , seed0 = map_seed, seed1 = 'nyxoleum_tree', grid_size = 128, distance_type = 'euclidean', jitter = 0.1 }",
       richness_expression = "random_penalty_at(3, 1)"
     },
-    variations = virentis_plant.tree_variations("nyxoleum", 6, 3, 1, 480, 320, false, util.by_pixel(60, -40)),
+    variations = virentis_plant.tree_variations("nyxoleum", 6, 3, 1, 512, 512, false, util.by_pixel(0, 0)),
     colors = virentis_plant.minor_tints(),
     ambient_sounds =
     {

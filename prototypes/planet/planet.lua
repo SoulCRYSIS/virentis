@@ -35,7 +35,7 @@ planet_map_gen.virentis = function()
       },
       ["entity"] = {
         settings = {
-          ["marketstall"] = {}
+          ["trader-t1"] = {}
         }
       }
     }

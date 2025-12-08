@@ -12,7 +12,7 @@ data:extend(
       order = "a",
       icon = "__virentis__/graphics/icons/items/foods/dough.png",
       ingredients = {
-        { type = "item", name = "water",         amount = 50 },
+        { type = "fluid", name = "water",         amount = 50 },
         { type = "item", name = "rockmalt-bulb", amount = 1 }
       },
       results = {
@@ -182,7 +182,7 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/foods/fried-dumpling-set.png",
       ingredients = {
         { type = "item", name = "dough",              amount = 2 },
-        { type = "item", name = "vegetable-oil",      amount = 10 },
+        { type = "fluid", name = "vegetable-oil",      amount = 10 },
         { type = "item", name = "sweet-chili-sauce", amount = 1 }
       },
       results = {

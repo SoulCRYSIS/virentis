@@ -12,7 +12,7 @@ data:extend(
       order = "a",
     },
     {
-      type = "item",
+      type = "fluid",
       name = "methanol",
       icon = "__virentis__/graphics/icons/items/fluids/methanol.png",
       subgroup = "virentis-fluids",

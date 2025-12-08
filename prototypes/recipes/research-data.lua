@@ -4,7 +4,7 @@ data:extend(
     {
       type = "recipe",
       name = "mudland-research-data",
-      category = "virentis-research-data",
+      category = "environment-research-data",
       subgroup = "virentis-research",
       order = "a",
       icon = "__virentis__/graphics/icons/items/environment-data/mudland-data.png",

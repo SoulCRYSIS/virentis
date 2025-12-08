@@ -91,13 +91,24 @@ data:extend(
       type = "item",
       name = "mangroove-fruit",
       pictures = {
-        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-1.png" },
-        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png" }
+        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-1.png", size = 64 , scale = 0.5 },
+        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png", size = 64 , scale = 0.5 }
       },
       icon = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png",
       subgroup = "virentis-crops",
       order = "a",
       spoil_ticks = 5 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "item",
+      name = "mangroove-mashed",
+      icon = "__virentis__/graphics/icons/items/crops/mangroove-mashed.png",
+      subgroup = "virentis-foods",
+      order = "a",
+      spoil_ticks = 3 * minute,
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,

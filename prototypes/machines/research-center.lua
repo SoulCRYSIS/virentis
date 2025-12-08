@@ -12,7 +12,7 @@ data:extend({
     name = "environment-research-center",
     category = "crafting",
     order = "a",
-    icon = "__virentis__/graphics/icons/items/machines/environment-research-center.png",
+    icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
     ingredients = {
       { type = "item", name = "firebrick",             amount = 4 },
       { type = "item", name = "steel-plate",           amount = 8 },
@@ -43,15 +43,15 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
     },
-    crafting_categories = { "virentis-research" },
+    crafting_categories = { "environment-research-data" },
     crafting_speed = 1,
     module_slots = 0,
     minable = {
       mining_time = 1,
       result = "environment-research-center",
     },
-    collision_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
-    selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     damaged_trigger_effect = hit_effects.entity(),
     max_health = 500,
     dying_explosion = "steel-furnace-explosion",
@@ -77,6 +77,18 @@ data:extend({
       },
       working_visualisations = {
         {
+          animation = {
+            filename = "__virentis__/graphics/entities/machines/research-center/research-center.png",
+            priority = "very-low",
+            width = width,
+            height = height,
+            frame_count = 64,
+            line_length = 8,
+            scale = 0.5,
+            animation_speed = 0.2,
+          },
+        },
+        {
           fadeout = true,
           apply_recipe_tint = "primary",
           effect = "flicker",
@@ -89,20 +101,10 @@ data:extend({
             line_length = 8,
             draw_as_glow = true,
             blend_mode = "additive",
+            animation_speed = 0.2,
             scale = 0.5,
           },
         },
-        {
-          animation = {
-            filename = "__virentis__/graphics/entities/machines/research-center/research-center.png",
-            priority = "very-low",
-            width = width,
-            height = height,
-            frame_count = 64,
-            line_length = 8,
-            scale = 0.5,
-          },
-        }
       },
     },
     open_sound = sounds.machine_open,

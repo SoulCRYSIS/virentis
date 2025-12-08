@@ -12,7 +12,7 @@ data:extend({
     name = "oven",
     category = "crafting",
     order = "a",
-    icon = "__virentis__/graphics/icons/items/machines/oven.png",
+    icon = "__virentis__/graphics/icons/machines/oven.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
       { type = "item", name = "firebrick",   amount = 8 },
@@ -138,7 +138,7 @@ data:extend({
       working_visualisations = {
         {
           fadeout = true,
-          apply_recipe_tint = "primary",
+          applye_recipe_tint = "primary",
           effect = "flicker",
           animation = {
             filename = "__virentis__/graphics/entities/machines/oven/oven-working-glow.png",

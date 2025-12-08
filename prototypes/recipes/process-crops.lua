@@ -69,7 +69,7 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/crops/nyxoleum-sapling.png",
       ingredients = {
         { type = "item", name = "nyxoleum-seed", amount = 1 },
-        { type = "item", name = "vegetable-oil", amount = 10 }
+        { type = "fluid", name = "vegetable-oil", amount = 10 }
       },
       results = {
         { type = "item", name = "nyxoleum-sapling", amount = 1 }

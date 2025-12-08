@@ -1,6 +1,7 @@
 ---@diagnostic disable: assign-type-mismatch, undefined-global
 
 base_assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"])
+local item_sounds = require("__base__.prototypes.item_sounds")
 
 local virentis = {}
 
@@ -38,16 +39,16 @@ virentis.default_pipe_covers = make_4way_animation_from_spritesheet({
 })
 
 ---@type data.FluidBox[]
-virentis.default_fluid_boxes = {
+virentis.pass_middle_fluid_box = {
   {
     production_type = "input",
-    volume = 1000,
+    volume = 100,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } } },
     secondary_draw_orders = { north = -1 }
   },
   {
-    production_type = "output",
-    volume = 1000,
+    production_type = "input",
+    volume = 100,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } } },
     secondary_draw_orders = { north = -1 }
   }

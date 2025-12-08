@@ -9,7 +9,7 @@ data:extend({
     name = "deep-fryer",
     category = "crafting",
     order = "a",
-    icon = "__virentis__/graphics/icons/items/machines/deep-fryer.png",
+    icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
       { type = "item", name = "pipe",        amount = 4 },
@@ -87,7 +87,7 @@ data:extend({
       pipe_covers = virentis.default_pipe_covers,
       heat_pipe_covers = virentis.default_heat_pipe_covers,
     },
-    fluid_boxes = virentis.default_fluid_boxes,
+    fluid_boxes = virentis.pass_middle_fluid_box,
     fluid_boxes_off_when_no_fluid_recipe = false,
     crafting_categories = { "frying" },
     crafting_speed = 1,

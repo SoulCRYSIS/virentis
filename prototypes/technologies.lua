@@ -28,8 +28,8 @@ data:extend(
     -- },
     {
       type = "technology",
-      name = "virentis-oven",
-      icon = "__virentis__/graphics/icons/technologies/oven.png",
+      name = "advanced-baking",
+      icon = "__virentis__/graphics/icons/technologies/advanced-baking.png",
       icon_size = 256,
       effects = {
         {
@@ -39,7 +39,7 @@ data:extend(
       },
       research_trigger = {
         type = "scripted",
-        trigger_description = "technology-description.virentis-oven",
+        trigger_description = "technology-description.advanced-baking",
         icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
       },
       order = "c-g-b",

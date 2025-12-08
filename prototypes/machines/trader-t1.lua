@@ -72,5 +72,19 @@ data:extend({
     close_sound = sounds.machine_close,
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
+    autoplace = {
+      probability_expression = "spot_noise{x = x,\z
+                                           y = y,\z
+                                           seed0 = map_seed,\z
+                                           seed1 = 10,\z
+                                           density_expression = 0.1,\z
+                                           spot_radius_expression = 32,\z
+                                           spot_quantity_expression = 3,\z
+                                           spot_favorability_expression = 1,\z
+                                           basement_value = 0,\z
+                                           maximum_spot_basement_radius = 16,\z
+                                           region_size = 1024}",
+      richness_expression = "random_penalty_at(3, 1)"
+    }
   },
 })

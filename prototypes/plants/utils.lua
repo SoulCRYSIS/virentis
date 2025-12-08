@@ -16,11 +16,11 @@ virentis_plant.simulation = function(name, tile_name)
       end
     end
 
-    game.surfaces[1].create_entity{name = "]] .. name .. [[", position = {x=-2.54, y=-0.76}, tick_grown = 5000}
-    game.surfaces[1].create_entity{name = "]] .. name .. [[", position = {x=2.87, y=-0.37}, tick_grown = 8000}
-    game.surfaces[1].create_entity{name = "]] .. name .. [[", position = {x=-4.68, y=1.83}, tick_grown = 1000}
-    game.surfaces[1].create_entity{name = "]] .. name .. [[", position = {x=-0.10, y=0.67}, tick_grown = 10000}
-    game.surfaces[1].create_entity{name = "]] .. name .. [[", position = {x=4.80, y=1.69}, tick_grown = 5000}
+    game.surfaces[1].create_entity{name = "]] .. name .. [[-tree", position = {x=-2.54, y=-0.76}, tick_grown = 5000}
+    game.surfaces[1].create_entity{name = "]] .. name .. [[-tree", position = {x=2.87, y=-0.37}, tick_grown = 8000}
+    game.surfaces[1].create_entity{name = "]] .. name .. [[-tree", position = {x=-4.68, y=1.83}, tick_grown = 1000}
+    game.surfaces[1].create_entity{name = "]] .. name .. [[-tree", position = {x=-0.10, y=0.67}, tick_grown = 10000}
+    game.surfaces[1].create_entity{name = "]] .. name .. [[-tree", position = {x=4.80, y=1.69}, tick_grown = 5000}
   ]]
   }
 end
@@ -100,6 +100,14 @@ local virentis_tree_particle_effects =
     trunk_1 = "yumako-branch-particle",
   },
   ["redbloom"] = {
+    crop_1 = "yumako-leaf-particle",
+    trunk_1 = "yumako-branch-particle",
+  },
+  ["mangroove"] = {
+    crop_1 = "yumako-leaf-particle",
+    trunk_1 = "yumako-branch-particle",
+  },
+  ["nyxoleum"] = {
     crop_1 = "yumako-leaf-particle",
     trunk_1 = "yumako-branch-particle",
   },
@@ -636,3 +644,5 @@ virentis_plant.very_minor_tints = function() -- Only for leaves where very littl
     { r = 240, g = 255, b = 240 },
   }
 end
+
+return virentis_plant

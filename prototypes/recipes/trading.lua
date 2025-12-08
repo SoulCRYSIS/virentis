@@ -75,9 +75,9 @@ data:extend(
       category = "trading-t1",
       subgroup = "virentis-trades",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/foods/low-density-structure.png",
+      icon = "__base__/graphics/icons/low-density-structure.png",
       ingredients = {
-        { type = "item", name = "taco-salad", amount = 1 }
+        { type = "item", name = "wild-taco", amount = 1 }
       },
       results = {
         { type = "item", name = "low-density-structure", amount = 2 }

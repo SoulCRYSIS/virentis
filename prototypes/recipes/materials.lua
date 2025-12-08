@@ -45,7 +45,7 @@ data:extend(
       ingredients = {
         { type = "item", name = "iron-plate",       amount = 2 },
         { type = "item", name = "rockmalt-scale",        amount = 1 },
-        { type = "item", name = "water", amount = 50 }
+        { type = "fluid", name = "water", amount = 50 }
       },
       results = {
         { type = "item", name = "concrete", amount = 5 }
