@@ -1,5 +1,6 @@
 local research_check_list = {
   ["berry-bliss-cookie"] = "virentis-baking",
+  ["medland-medley"] = "environment-research-center",
 }
 
 script.on_event(defines.events.on_player_used_capsule, function(event)

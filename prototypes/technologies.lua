@@ -29,23 +29,36 @@ data:extend(
     {
       type = "technology",
       name = "virentis-oven",
-      icon = "__virentis__/graphics/icons/machines/oven.png",
-      icon_size = 64,
+      icon = "__virentis__/graphics/icons/technologies/oven.png",
+      icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
           recipe = "oven"
         },
       },
-      unit = {
-        count = 10,
-        ingredients = {},
-        time = 1
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "technology-description.virentis-oven",
+        icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
+      },
+      order = "c-g-b",
+    },
+    {
+      type = "technology",
+      name = "environment-research-center",
+      icon = "__virentis__/graphics/icons/technologies/environment-research-center.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "environment-research-center"
+        },
       },
       research_trigger = {
         type = "scripted",
-        trigger_description = "Eat cooked mudland pies",
-        icon = "__virentis__/graphics/icons/items/foods/mudland-pie.png",
+        trigger_description = "technology-description.environment-research-center",
+        icon = "__virentis__/graphics/icons/items/foods/mudland-medley.png",
       },
       order = "c-g-b",
     },

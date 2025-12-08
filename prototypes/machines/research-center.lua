@@ -6,13 +6,13 @@ local width = 480
 local height = 480
 
 data:extend({
-  virentis.default_machine_item_prototype("virentis-research-center"),
+  virentis.default_machine_item_prototype("environment-research-center"),
   {
     type = "recipe",
-    name = "virentis-research-center",
+    name = "environment-research-center",
     category = "crafting",
     order = "a",
-    icon = "__virentis__/graphics/icons/items/machines/research-center.png",
+    icon = "__virentis__/graphics/icons/items/machines/environment-research-center.png",
     ingredients = {
       { type = "item", name = "firebrick",             amount = 4 },
       { type = "item", name = "steel-plate",           amount = 8 },
@@ -22,7 +22,7 @@ data:extend({
       { type = "item", name = "radar",                 amount = 1 }
     },
     results = {
-      { type = "item", name = "virentis-research-center", amount = 1 }
+      { type = "item", name = "environment-research-center", amount = 1 }
     },
     energy_required = 1,
     enabled = false,
@@ -30,8 +30,8 @@ data:extend({
   },
   {
     type = "assembling-machine",
-    name = "virentis-research-center",
-    icon = "__virentis__/graphics/icons/machines/virentis-research-center.png",
+    name = "environment-research-center",
+    icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
     subgroup = "virentis-machines",
     order = "a",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -48,7 +48,7 @@ data:extend({
     module_slots = 0,
     minable = {
       mining_time = 1,
-      result = "virentis-research-center",
+      result = "environment-research-center",
     },
     collision_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
