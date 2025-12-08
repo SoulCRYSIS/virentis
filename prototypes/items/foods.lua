@@ -238,7 +238,7 @@ data:extend(
       weight = 5 * kg,
     },
     {
-      type = "item",
+      type = "capsule",
       name = "mudland-medley",
       icon = "__virentis__/graphics/icons/items/foods/mudland-medley.png",
       subgroup = "virentis-foods",
