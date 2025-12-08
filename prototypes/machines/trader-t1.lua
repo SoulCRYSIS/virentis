@@ -20,7 +20,7 @@ data:extend({
     energy_source = {
       type = "void"
     },
-    crafting_categories = { "crafting" },
+    crafting_categories = { "trading-t1" },
     crafting_speed = 1,
     module_slots = 0,
     minable = {

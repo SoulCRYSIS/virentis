@@ -117,11 +117,11 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "taco-salad",
+      name = "wild-taco",
       category = "organic",
       subgroup = "virentis-foods",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/foods/taco-salad.png",
+      icon = "__virentis__/graphics/icons/items/foods/wild-taco.png",
       ingredients = {
         { type = "item", name = "dough",            amount = 1 },
         { type = "item", name = "grass",            amount = 2 },
@@ -192,5 +192,26 @@ data:extend(
       energy_required = 2,
       result_is_always_fresh = true,
     },
+    {
+      type = "recipe",
+      name = "mudland-medley",
+      category = "organic",
+      subgroup = "virentis-foods",
+      order = "a",
+      icon = "__virentis__/graphics/icons/items/foods/mudland-medley.png",
+      ingredients = {
+        { type = "item", name = "grass",            amount = 2 },
+        { type = "item", name = "rockmalt-bulb",   amount = 1 },
+        { type = "item", name = "redbloom-fruit",   amount = 1 },
+        { type = "item", name = "mangroove-mashed", amount = 1 },
+        { type = "fluid", name = "vegetable-oil", amount = 10 },
+      },
+      results = {
+        { type = "item", name = "mudland-medley", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.purple,
+      energy_required = 4,
+      result_is_always_fresh = true,
+    }
   }
 )

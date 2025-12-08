@@ -89,7 +89,7 @@ data:extend({
     },
     fluid_boxes = virentis.default_fluid_boxes,
     fluid_boxes_off_when_no_fluid_recipe = false,
-    crafting_categories = { "crafting" },
+    crafting_categories = { "frying" },
     crafting_speed = 1,
     module_slots = 0,
     minable = {

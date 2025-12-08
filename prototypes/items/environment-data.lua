@@ -3,8 +3,8 @@ data:extend(
   {
     {
       type = "item",
-      name = "mudland-environment-data",
-      icon = "__virentis__/graphics/icons/items/foods/mudland-environment-data.png",
+      name = "mudland-research-data",
+      icon = "__virentis__/graphics/icons/items/environment-data/mudland-data.png",
       subgroup = "virentis-research",
       order = "a",
       stack_size = 50,

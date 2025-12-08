@@ -43,7 +43,7 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
     },
-    crafting_categories = { "crafting" },
+    crafting_categories = { "virentis-research" },
     crafting_speed = 1,
     module_slots = 0,
     minable = {

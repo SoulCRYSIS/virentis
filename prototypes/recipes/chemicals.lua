@@ -1,3 +1,6 @@
+local virentis = require("prototypes.utils")
+local recipe_tints = virentis.recipe_tints
+
 data:extend(
   ---@type data.RecipePrototype[]
   {
@@ -28,7 +31,8 @@ data:extend(
       icon = "__base__/graphics/icons/rocket-fuel.png",
       ingredients = {
         { type = "item", name = "vegetable-oil", amount = 10 },
-        { type = "item", name = "methanol",      amount = 20 }
+        { type = "item", name = "methanol",      amount = 20 },
+        { type = "item", name = "wood", amount = 2 }
       },
       results = {
         { type = "item", name = "rocket-fuel", amount = 1 }

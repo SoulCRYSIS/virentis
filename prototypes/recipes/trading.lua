@@ -1,24 +1,5 @@
--- local function trade_icon(from, to)
---   ---@type data.IconData[]
---   return {
---     {
---       icon = from,
---       scale = 0.7,
---       shift = { -16, -16 },
---       draw_background = true,
---     },
---     {
---       icon = to,
---       scale = 0.7,
---       shift = { 16, 16 },
---       draw_background = true,
---     },
---     {
---       icon = "__virentis__/graphics/icons/misc/trade-arrow.png",
---       scale = 0.9,
---     },
---   }
--- end
+local virentis = require("prototypes.utils")
+local recipe_tints = virentis.recipe_tints
 
 data:extend(
 ---@type data.RecipePrototype[]
@@ -101,25 +82,6 @@ data:extend(
       results = {
         { type = "item", name = "low-density-structure", amount = 2 }
       },
-      energy_required = 1,
-    },
-    {
-      type = "recipe",
-      name = "mudland-environment-data",
-      category = "trading-t1",
-      subgroup = "virentis-trades",
-      order = "a",
-      icon = "__virentis__/graphics/icons/items/researches/mudland-environment-data.png",
-      ingredients = {
-        { type = "item", name = "sweet-doughnut",     amount = 1 },
-        { type = "item", name = "fried-dumpling-set", amount = 1 },
-        { type = "item", name = "taco-salad",         amount = 1 },
-        { type = "item", name = "berry-bliss-cookie", amount = 1 }
-      },
-      results = {
-        { type = "item", name = "mudland-environment-data", amount = 1 }
-      },
-      crafting_machine_tint = recipe_tints.brown,
       energy_required = 1,
     },
   }
