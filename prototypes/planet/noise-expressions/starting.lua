@@ -1,0 +1,82 @@
+data:extend(
+---@type data.NoiseExpression[]
+  {
+    {
+      type = "noise-expression",
+      name = "virentis_starting_direction",
+      expression = "-1 + 2 * (map_seed_small & 1)"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_angle",
+      expression = "map_seed_normalized * 3600"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_area_multiplier",
+      expression = "0.7"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_lowlands",
+      expression = "max(starting_lowland_yumako, starting_lowland_jellynut)",
+      local_expressions =
+      {
+        starting_lowland_yumako = "starting_spot_at_angle{angle = virentis_starting_angle + 235 * virentis_starting_direction,\z
+                                                          distance = 300 * virentis_starting_area_multiplier,\z
+                                                          radius = 140 * virentis_starting_area_multiplier,\z
+                                                          x_distortion = virentis_wobble_x * 15,\z
+                                                          y_distortion = virentis_wobble_x * 15}",
+        starting_lowland_jellynut = "starting_spot_at_angle{angle = virentis_starting_angle + 65 * virentis_starting_direction,\z
+                                                            distance = 290 * virentis_starting_area_multiplier,\z
+                                                            radius = 100 * virentis_starting_area_multiplier,\z
+                                                            x_distortion = virentis_wobble_x * 15,\z
+                                                            y_distortion = virentis_wobble_x * 15}",
+      }
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_fertile",
+      expression = "max(starting_lowland_yumako, starting_lowland_jellynut)",
+      local_expressions =
+      {
+        starting_lowland_yumako = "starting_spot_at_angle{angle = virentis_starting_angle + 235 * virentis_starting_direction,\z
+                                                          distance = 310 * virentis_starting_area_multiplier,\z
+                                                          radius = 40 * virentis_starting_area_multiplier,\z
+                                                          x_distortion = virentis_wobble_x * 15,\z
+                                                          y_distortion = virentis_wobble_x * 15}",
+        starting_lowland_jellynut = "starting_spot_at_angle{angle = virentis_starting_angle + 65 * virentis_starting_direction,\z
+                                                            distance = 310 * virentis_starting_area_multiplier,\z
+                                                            radius = 40 * virentis_starting_area_multiplier,\z
+                                                            x_distortion = virentis_wobble_x * 15,\z
+                                                            y_distortion = virentis_wobble_x * 15}",
+      }
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_enemies_safe",
+      expression = "starting_spot_at_angle{ angle = virentis_starting_angle + 40 * virentis_starting_direction,\z
+                                            distance = 210 * virentis_starting_area_multiplier,\z
+                                            radius = 30 * virentis_starting_area_multiplier,\z
+                                            x_distortion = virentis_wobble_x * 20,\z
+                                            y_distortion = virentis_wobble_x * 20}"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_enemies",
+      expression = "max(starting_lowland_yumako, starting_lowland_jellynut)",
+      local_expressions =
+      {
+        starting_lowland_yumako = "starting_spot_at_angle{angle = virentis_starting_angle + 210 * virentis_starting_direction,\z
+                                                          distance = 410 * virentis_starting_area_multiplier,\z
+                                                          radius = 30 * virentis_starting_area_multiplier,\z
+                                                          x_distortion = virentis_wobble_x * 20,\z
+                                                          y_distortion = virentis_wobble_x * 20}",
+        starting_lowland_jellynut = "starting_spot_at_angle{angle = virentis_starting_angle + 30 * virentis_starting_direction,\z
+                                                            distance = 410 * virentis_starting_area_multiplier,\z
+                                                            radius = 30 * virentis_starting_area_multiplier,\z
+                                                            x_distortion = virentis_wobble_x * 20,\z
+                                                            y_distortion = virentis_wobble_x * 20}",
+      }
+    },
+  })

@@ -7,27 +7,36 @@ planet_map_gen.virentis = function()
   return {
     property_expression_names =
     {
-      elevation = "",
-      temperature = "1",
-      moisture = "1",
-      aux = "1",
-      cliffiness = "0",
-      cliff_elevation = "0",
+      elevation = "virentis_elevation",
+      temperature = "virentis_temperature",
+      moisture = "virentis_moisture",
+      aux = "virentis_aux",
+      cliffiness = "virentis_cliffiness",
+      cliff_elevation = "cliff_elevation_from_elevation",
     },
     cliff_settings =
     {
-      name = "cliff",
-      cliff_elevation_interval = 40,
-      cliff_elevation_0 = 10
+      name = "cliff-virentis",
+      control = "virentis_cliff",
+      cliff_elevation_0 = 40,
+      cliff_elevation_interval = 60,
+      richness = 0.80,
+      cliff_smoothing = 0 -- Not critical but looks better
     },
     autoplace_controls = {
       ["virentis_plants"] = {},
+      ["virentis_water"] = {},
+      ["virentis_cliff"] = {},
+      ["virentis_trader"] = {},
     },
     autoplace_settings = {
       ["tile"] = {
         settings = {
-          ["virentis-plain-grass"] = {},
-          ["virentis-deep-lake"] = {}
+          ["virentis-mudland-shallow-water"] = {},
+          ["virentis-mudland-shallow-water-edge"] = {},
+          ["virentis-fertile-soil"] = {},
+          ["virentis-fertile-soil-2"] = {},
+          -- ["virentis-fertile-soil-3"] = {},
         }
       },
       ["decorative"] = {

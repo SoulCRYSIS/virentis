@@ -2,8 +2,8 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 local virentis = require("prototypes.utils")
 
-local width = 480
-local height = 480
+local width = 352
+local height = 352
 
 data:extend({
   virentis.default_machine_item_prototype("environment-research-center"),
@@ -68,8 +68,8 @@ data:extend({
           {
             filename = "__virentis__/graphics/entities/machines/research-center/research-center-shadow.png",
             priority = "very-low",
-            width = width,
-            height = height,
+            width = 480,
+            height = 480,
             draw_as_shadow = true,
             scale = 0.5,
           },
