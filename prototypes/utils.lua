@@ -125,7 +125,14 @@ virentis.default_machine_item_prototype = function(name)
 end
 
 ---@type data.CircuitConnectorDefinition[]
-virentis.default_circuit_connector = base_assembling_machine.circuit_connector
+virentis.default_machine_circuit_connector = base_assembling_machine.circuit_connector
+---@type data.CircuitConnectorDefinition[]
+virentis.default_inserter_circuit_connector = circuit_connector_definitions["inserter"]
+
+---@type number
+virentis.default_circuit_wire_distance = 9
+---@type data.SignalIDConnector
+virentis.default_inserter_stack_control_input_signal = inserter_default_stack_control_input_signal
 
 ---@type data.SurfaceCondition[]
 virentis.surface_condition = {

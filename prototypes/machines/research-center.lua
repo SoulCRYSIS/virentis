@@ -36,7 +36,7 @@ data:extend({
     order = "a",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
-    circuit_connector = virentis.default_circuit_connector,
+    circuit_connector = virentis.default_machine_circuit_connector,
     energy_usage = "80MW",
     ---@type data.ElectricEnergySource
     energy_source = {

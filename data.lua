@@ -15,6 +15,7 @@ require "prototypes.machines.oven"
 require "prototypes.machines.research-center"
 require "prototypes.machines.deep-fryer"
 require "prototypes.machines.trader-t1"
+require "prototypes.machines.living-inserter"
 
 require "prototypes.items.crops"
 require "prototypes.items.machines"
