@@ -27,7 +27,7 @@ data:extend({
     collision_mask = tile_collision_masks.shallow_water(),
     autoplace = { probability_expression = "virentis_shallows_aux_1 + 2 * min(virentis_select(virentis_aux, 0, 0.3, 0.005, 0, 1), virentis_rockpools_shallow)" },
     lowland_fog = true,
-    effect = "wetland-grey",
+    effect = "oil-deep",
     --effect_color = {50,66,66},
     --effect_color_secondary = { 49, 80, 14 },
     effect_color = { 48, 39, 37 },

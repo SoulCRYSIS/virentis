@@ -1,4 +1,3 @@
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 local virentis = require("prototypes.utils")
 
@@ -11,10 +10,11 @@ data:extend({
     order = "a",
     icon = "__virentis__/graphics/icons/machines/living-inserter.png",
     ingredients = {
-      { type = "item", name = "stack-inserter", amount = 1 },
+      { type = "item", name = "stack-inserter",  amount = 1 },
       { type = "item", name = "heart-of-nature", amount = 1 },
-      { type = "item", name = "resin",       amount = 1 },
-      { type = "item", name = "living-wood", amount = 2 }
+      { type = "item", name = "resin",           amount = 1 },
+      { type = "item", name = "living-wood",     amount = 2 },
+      { type = "fluid", name = "nutrients-pulp", amount = 10 },
     },
     results = {
       { type = "item", name = "living-inserter", amount = 1 }
@@ -30,19 +30,19 @@ data:extend({
     order = "a",
     icon = "__virentis__/graphics/icons/machines/living-inserter.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    stack_size_bonus = 4,
+    stack_size_bonus = 6,
     bulk = true,
     grab_less_to_match_belt_stack = true,
     wait_for_full_hand = true,
     enter_drop_mode_if_held_stack_spoiled = true,
     max_belt_stack_size = 4,
     minable = { mining_time = 0.1, result = "living-inserter" },
-    max_health = 160,
+    max_health = 200,
     corpse = "stack-inserter-remnants",
     dying_explosion = "stack-inserter-explosion",
     collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
     selection_box = { { -0.4, -0.35 }, { 0.4, 0.45 } },
-    damaged_trigger_effect = hit_effects.entity(),
+    damaged_trigger_effect = virentis.default_damaged_trigger_effect,
     starting_distance = 0.85,
     pickup_position = { 0, -1 },
     insert_position = { 0, 1.2 },
@@ -51,7 +51,7 @@ data:extend({
     energy_source = { type = "void" },
     heating_energy = "20kW",
     extension_speed = 0.1,
-    rotation_speed = 0.04,
+    rotation_speed = 0.05,
     filter_count = 5,
     icon_draw_specification = { scale = 0.5 },
     fast_replaceable_group = "inserter",

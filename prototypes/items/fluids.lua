@@ -21,5 +21,23 @@ data:extend(
       flow_color = {0.6, 0.85, 1},
       order = "a",
     },
+    {
+      type = "fluid",
+      name = "tar",
+      icon = "__virentis__/graphics/icons/items/fluids/tar.png",
+      subgroup = "virentis-fluids",
+      order = "a",
+      base_color = {0.1, 0.1, 0.1},
+      flow_color = {0.15, 0.15, 0.15},
+    },
+    {
+      type = "fluid",
+      name = "nutrients-pulp",
+      icon = "__virentis__/graphics/icons/items/fluids/nutrients-pulp.png",
+      subgroup = "virentis-fluids",
+      order = "a",
+      base_color = {0.70, 0.40, 0.15},
+      flow_color = {0.85, 0.55, 0.28},
+    },
   }
 )

@@ -1,4 +1,3 @@
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 local virentis = require("prototypes.utils")
 
@@ -14,12 +13,12 @@ data:extend({
     order = "a",
     icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
     ingredients = {
-      { type = "item", name = "firebrick",             amount = 4 },
-      { type = "item", name = "steel-plate",           amount = 8 },
-      { type = "item", name = "heart-of-nature",       amount = 1 },
-      { type = "item", name = "processing-unit",       amount = 2 },
-      { type = "item", name = "low-density-structure", amount = 2 },
-      { type = "item", name = "radar",                 amount = 1 }
+      { type = "item", name = "firebrick",       amount = 4 },
+      { type = "item", name = "steel-plate",     amount = 8 },
+      { type = "item", name = "heart-of-nature", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 2 },
+      { type = "item", name = "graphene",        amount = 2 },
+      { type = "item", name = "radar",           amount = 1 }
     },
     results = {
       { type = "item", name = "environment-research-center", amount = 1 }
@@ -45,14 +44,14 @@ data:extend({
     },
     crafting_categories = { "environment-research-data" },
     crafting_speed = 1,
-    module_slots = 0,
+    module_slots = 4,
     minable = {
       mining_time = 1,
       result = "environment-research-center",
     },
     collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    damaged_trigger_effect = hit_effects.entity(),
+    damaged_trigger_effect = virentis.default_damaged_trigger_effect,
     max_health = 500,
     dying_explosion = "steel-furnace-explosion",
     graphics_set = {

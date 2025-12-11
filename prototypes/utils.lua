@@ -128,6 +128,8 @@ end
 virentis.default_machine_circuit_connector = base_assembling_machine.circuit_connector
 ---@type data.CircuitConnectorDefinition[]
 virentis.default_inserter_circuit_connector = circuit_connector_definitions["inserter"]
+---@type data.CircuitConnectorDefinition[]
+virentis.default_lamp_circuit_connector = circuit_connector_definitions["lamp"]
 
 ---@type number
 virentis.default_circuit_wire_distance = 9
@@ -142,5 +144,7 @@ virentis.surface_condition = {
     max = 2000
   }
 }
+
+virentis.default_damaged_trigger_effect = hit_effects.entity()
 
 return virentis
