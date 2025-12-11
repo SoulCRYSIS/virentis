@@ -12,7 +12,7 @@ data:extend(
       order = "a",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-nyxoleum-seed.png",
       ingredients = {
-        { type = "item", name = "nyxoleum-seed", amount = 2 },
+        { type = "item", name = "nyxoleum-seed", amount = 1 },
       },
       results = {
         { type = "item", name = "solid-fuel", amount = 1 }
@@ -53,7 +53,7 @@ data:extend(
         { type = "fluid", name = "vegetable-oil", amount = 5 }
       },
       results = {
-        { type = "fluid", name = "solid-fuel", amount = 1 }
+        { type = "item", name = "solid-fuel", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 2,

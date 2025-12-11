@@ -1,7 +1,7 @@
 
 
-require("controls.eternal-lantern-beacon")
-require("controls.research-on-eat")
+require("logics.eternal-lantern-beacon")
+require("logics.research-on-eat")
 
 
 

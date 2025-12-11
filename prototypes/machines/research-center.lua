@@ -36,15 +36,21 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
-    energy_usage = "80MW",
-    ---@type data.ElectricEnergySource
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
+    energy_usage = "20MW",
+    ---@type data.BurnerEnergySource
+    energy_source =
+    {
+      type = "burner",
+      fuel_categories = { "nutrients" },
+      effectivity = 1,
+      burner_usage = "nutrients",
+      fuel_inventory_size = 1,
+      light_flicker = require("__space-age__.prototypes.entity.biochamber-pictures").light_flicker
     },
     crafting_categories = { "environment-research-data" },
     crafting_speed = 1,
     module_slots = 4,
+    allowed_effects = { "consumption", "pollution", "speed", "productivity" },
     minable = {
       mining_time = 1,
       result = "environment-research-center",

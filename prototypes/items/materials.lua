@@ -67,5 +67,14 @@ data:extend(
       fuel_category = "nutrients",
       fuel_value = "10MJ",
     },
+    {
+      type = "item",
+      name = "graphene",
+      icon = "__virentis__/graphics/icons/items/materials/graphene.png",
+      subgroup = "virentis-materials",
+      order = "a",
+      stack_size = 200,
+      weight = 5 * kg,
+    },
   }
 )

@@ -22,11 +22,6 @@ data:extend({
           name = "nyxoleum-seed",
           amount = 5,
         },
-        {
-          type = "item",
-          name = "tar",
-          amount = 5,
-        },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
     },

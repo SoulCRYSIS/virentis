@@ -6,7 +6,7 @@ data:extend({
   {
     type = "recipe",
     name = "living-inserter",
-    category = "crafting",
+    category = "organic",
     order = "a",
     icon = "__virentis__/graphics/icons/machines/living-inserter.png",
     ingredients = {
