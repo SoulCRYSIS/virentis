@@ -50,7 +50,7 @@ data:extend(
         { type = "item", name = "firebrick", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.brown,
-      energy_required = 0.5,
+      energy_required = 1,
     },
     {
       type = "recipe",
@@ -71,16 +71,16 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "low-density-structure",
+      name = "trade-phosphorus",
       category = "trading-t1",
       subgroup = "virentis-trades",
       order = "a",
-      icon = "__base__/graphics/icons/low-density-structure.png",
+      icon = "__virentis__/graphics/icons/items/materials/phosphorus.png",
       ingredients = {
         { type = "item", name = "wild-taco", amount = 1 }
       },
       results = {
-        { type = "item", name = "low-density-structure", amount = 2 }
+        { type = "item", name = "phosphorus", amount = 2 }
       },
       energy_required = 1,
     },

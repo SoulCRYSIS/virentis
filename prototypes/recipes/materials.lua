@@ -8,7 +8,8 @@ data:extend(
       type = "recipe",
       name = "stone-from-rockmalt-scale",
       category = "organic-or-hand-crafting",
-      order = "a",
+      subgroup = "virentis-materials",
+      order = "aa",
       icon = "__base__/graphics/icons/stone.png",
       ingredients = {
         { type = "item", name = "rockmalt-scale", amount = 1 }
@@ -24,7 +25,8 @@ data:extend(
       type = "recipe",
       name = "heart-of-nature",
       category = "organic",
-      order = "a",
+      subgroup = "virentis-materials-advanced",
+      order = "aa",
       icon = "__virentis__/graphics/icons/items/materials/heart-of-nature.png",
       ingredients = {
         { type = "item", name = "resin",       amount = 1 },
@@ -41,7 +43,8 @@ data:extend(
       type = "recipe",
       name = "virentis-concrete",
       category = "organic",
-      order = "a",
+      subgroup = "virentis-materials",
+      order = "ab",
       icon = "__base__/graphics/icons/concrete.png",
       ingredients = {
         { type = "item",  name = "iron-plate",     amount = 2 },
@@ -59,7 +62,8 @@ data:extend(
       type = "recipe",
       name = "low-density-structure-from-graphene",
       category = "advanced-crafting",
-      order = "a",
+      subgroup = "virentis-materials-advanced",
+      order = "ab",
       icon = "__virentis__/graphics/icons/recipes/low-density-structure-from-graphene.png",
       ingredients = {
         { type = "item", name = "copper-plate", amount = 10 },
@@ -78,7 +82,7 @@ data:extend(
       name = "nutrients-bar",
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-materials",
-      order = "a",
+      order = "ba",
       icon = "__virentis__/graphics/icons/items/materials/nutrients-bar.png",
       ingredients = {
         { type = "fluid", name = "nutrients-pulp", amount = 25 },
@@ -94,15 +98,35 @@ data:extend(
       name = "graphene",
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-materials",
-      order = "a",
+      order = "cb",
       icon = "__virentis__/graphics/icons/items/materials/graphene.png",
       ingredients = {
-        { type = "item", name = "carbon",     amount = 1 },
+        { type = "item", name = "carbon",     amount = 2 },
         { type = "item", name = "phosphorus", amount = 1 },
         { type = "item", name = "creosote",   amount = 1 }
       },
       results = {
         { type = "item", name = "graphene", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.yellow,
+      energy_required = 2,
+      result_is_always_fresh = true,
+      allow_productivity = true,
+    },
+    {
+      type = "recipe",
+      name = "carbon-from-creosote",
+      category = "organic",
+      subgroup = "virentis-materials",
+      order = "ca",
+      icon = "__virentis__/graphics/icons/recipes/carbon-from-creosote.png",
+      ingredients = {
+        { type = "item",  name = "creosote", amount = 1 },
+        { type = "item",  name = "wood",     amount = 2 },
+        { type = "fluid", name = "methanol", amount = 10 },
+      },
+      results = {
+        { type = "item", name = "carbon", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 4,

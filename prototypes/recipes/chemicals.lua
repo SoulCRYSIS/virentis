@@ -9,7 +9,7 @@ data:extend(
       name = "solid-fuel-from-nyxoleum-seed",
       category = "organic-or-hand-crafting",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "aa",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-nyxoleum-seed.png",
       ingredients = {
         { type = "item", name = "nyxoleum-seed", amount = 1 },
@@ -25,7 +25,7 @@ data:extend(
       name = "tar-processing",
       category = "oil-processing",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "ba",
       icon = "__virentis__/graphics/icons/recipes/tar-processing.png",
       ingredients = {
         { type = "fluid", name = "tar",           amount = 50 },
@@ -46,7 +46,7 @@ data:extend(
       name = "solid-fuel-from-methanol",
       category = "organic",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "bb",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-methanol.png",
       ingredients = {
         { type = "fluid", name = "methanol",      amount = 5 },
@@ -63,7 +63,7 @@ data:extend(
       name = "solid-fuel-from-creosote",
       category = "organic",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "bc",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-creosote.png",
       ingredients = {
         { type = "item",  name = "creosote",      amount = 1 },
@@ -80,7 +80,7 @@ data:extend(
       name = "virentis-rocket-fuel",
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "bd",
       icon = "__base__/graphics/icons/rocket-fuel.png",
       ingredients = {
         { type = "item",  name = "solid-fuel", amount = 10 },
@@ -97,7 +97,7 @@ data:extend(
       name = "vegetable-oil",
       category = "organic-or-hand-crafting",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "ab",
       icon = "__virentis__/graphics/icons/items/fluids/vegetable-oil.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
@@ -115,13 +115,13 @@ data:extend(
       name = "nutrients-pulp",
       category = "organic",
       subgroup = "virentis-chemicals",
-      order = "a",
+      order = "ca",
       icon = "__virentis__/graphics/icons/items/fluids/nutrients-pulp.png",
       ingredients = {
-        { type = "item",  name = "nutrients",  amount = 10 },
-        { type = "item",  name = "phosphorus", amount = 2 },
-        { type = "item",  name = "creosote",   amount = 2 },
-        { type = "fluid", name = "water",      amount = 50 }
+        { type = "item",  name = "nutrients",     amount = 10 },
+        { type = "item",  name = "phosphorus",    amount = 2 },
+        { type = "fluid", name = "vegetable-oil", amount = 10 },
+        { type = "fluid", name = "water",         amount = 40 }
       },
       results = {
         { type = "fluid", name = "nutrients-pulp", amount = 50 }

@@ -8,33 +8,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "virentis-crops",
-    group = "virentis",
-    order = "b"
-  },
-  {
-    type = "item-subgroup",
     name = "virentis-machines",
     group = "virentis",
     order = "a"
   },
   {
     type = "item-subgroup",
-    name = "virentis-tiles",
+    name = "virentis-crops",
     group = "virentis",
-    order = "d"
-  },
-  {
-    type = "item-subgroup",
-    name = "virentis-water-tiles",
-    group = "virentis",
-    order = "d"
-  },
-  {
-    type = "item-subgroup",
-    name = "virentis-trades",
-    group = "virentis",
-    order = "z"
+    order = "b"
   },
   {
     type = "item-subgroup",
@@ -44,15 +26,45 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "virentis-materials",
+    name = "virentis-foods-basic",
     group = "virentis",
-    order = "f"
+    order = "ca"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-foods-intermediate",
+    group = "virentis",
+    order = "cb"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-foods-trade-item",
+    group = "virentis",
+    order = "cc"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-trades",
+    group = "virentis",
+    order = "d"
   },
   {
     type = "item-subgroup",
     name = "virentis-chemicals",
     group = "virentis",
     order = "e"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-materials",
+    group = "virentis",
+    order = "fa"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-materials-advanced",
+    group = "virentis",
+    order = "fb"
   },
   {
     type = "item-subgroup",
@@ -65,5 +77,17 @@ data:extend({
     name = "virentis-fluids",
     group = "virentis",
     order = "h"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-tiles",
+    group = "virentis",
+    order = "z"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-water-tiles",
+    group = "virentis",
+    order = "z"
   },
 })
