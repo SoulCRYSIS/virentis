@@ -1,4 +1,4 @@
-virentis_plant = {}
+local virentis_plant = {}
 
 local sounds = require("__base__.prototypes.entity.sounds")
 

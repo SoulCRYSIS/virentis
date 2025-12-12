@@ -7,6 +7,18 @@ data:extend(
   },
   {
     type = "noise-expression",
+    name = "virentis_plants_noise",
+    expression = "abs(multioctave_noise{x = x, y = y, persistence = 0.8, seed0 = map_seed, seed1 = 700005, octaves = 3, input_scale = 1/20 * control:virentis_plants:frequency }\z
+                      * multioctave_noise{x = x, y = y, persistence = 0.8, seed0 = map_seed, seed1 = 200005, octaves = 3, input_scale = 1/6 * control:virentis_plants:frequency })"
+  },
+  {
+    type = "noise-expression",
+    name = "virentis_plants_noise_b",
+    expression = "abs(multioctave_noise{x = x, y = y, persistence = 0.8, seed0 = map_seed, seed1 = 750005, octaves = 3, input_scale = 1/20 * control:virentis_plants:frequency }\z
+                      * multioctave_noise{x = x, y = y, persistence = 0.8, seed0 = map_seed, seed1 = 250005, octaves = 3, input_scale = 1/6 * control:virentis_plants:frequency })"
+  },
+  {
+    type = "noise-expression",
     name = "virentis_fertile_spots_coastal_raw",
     expression = "spot_noise{ x = x + wobble_noise_x * 15,\z
                               y = y + wobble_noise_y * 15,\z

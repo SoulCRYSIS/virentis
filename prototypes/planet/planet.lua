@@ -32,11 +32,18 @@ planet_map_gen.virentis = function()
     autoplace_settings = {
       ["tile"] = {
         settings = {
-          ["virentis-mudland-shallow-water"] = {},
-          ["virentis-mudland-shallow-water-edge"] = {},
-          ["virentis-fertile-soil"] = {},
-          ["virentis-fertile-soil-2"] = {},
-          -- ["virentis-fertile-soil-3"] = {},
+          ["mudland-fertile-soil"] = {},
+          ["mudland-water"] = {},
+          ["virentis-deep-water"] = {},
+          ["virentis-midland-cracked-lichen"] = {},
+          ["virentis-midland-cracked-lichen-dull"] = {},
+          ["virentis-midland-cracked-lichen-dark"] = {},
+          ["virentis-midland-turquoise-bark-2"] = {},
+          ["virentis-midland-turquoise-bark"] = {},
+          ["virentis-midland-yellow-crust-3"] = {},
+          ["virentis-midland-yellow-crust-2"] = {},
+          ["virentis-midland-yellow-crust"] = {},
+          ["virentis-midland-yellow-crust-4"] = {},
         }
       },
       ["decorative"] = {

@@ -1,4 +1,4 @@
-local virentis_plant = require("prototypes.plants.utils")
+local virentis_plant = require("prototypes.plants.plant-utils")
 
 data:extend({
   {

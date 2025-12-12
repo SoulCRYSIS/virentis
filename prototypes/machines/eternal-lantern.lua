@@ -17,7 +17,7 @@ local function eternal_lantern_entity(variant)
     corpse = "beacon-remnants",
     dying_explosion = "beacon-explosion",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
-    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    selection_box = { { -0.5, -1.0 }, { 0.5, 0.5 } },
     damaged_trigger_effect = virentis.default_damaged_trigger_effect,
     drawing_box_vertical_extension = 0.5,
     allowed_effects = { "consumption", "pollution" },
@@ -119,6 +119,8 @@ data:extend({
   },
   eternal_lantern_entity(0),
   eternal_lantern_entity(1),
+  eternal_lantern_entity(2),
+  eternal_lantern_entity(3),
   {
     type = "module",
     name = "eternal-lantern-module",
