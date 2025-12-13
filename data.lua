@@ -33,8 +33,11 @@ require "prototypes.recipes.environment-data"
 
 require "prototypes.tiles.tile-utils"
 require "prototypes.tiles.ocean"
-require "prototypes.tiles.mudland-fertile-soil"
+require "prototypes.tiles.fertile-soil"
+require "prototypes.tiles.wetland"
+require "prototypes.tiles.lowland"
 require "prototypes.tiles.midland"
+require "prototypes.tiles.highland"
 require "prototypes.tiles.effects"
 
 require "prototypes.planet.noise-expressions.utils"
