@@ -109,7 +109,7 @@ data:extend(
       type = "tile",
       name = "nyxoleum-fertile-soil",
       subgroup = "virentis-tiles",
-      collision_mask = tile_collision_masks.shallow_water(),
+      collision_mask = tile_collision_masks.ground(),
       autoplace = {
         probability_expression = "virentis_fertile_solid * 50000 - 40000 - virentis_biome_mask_red * 1000000"
       },
@@ -117,8 +117,9 @@ data:extend(
       layer = 9,
       searchable = true,
 
-      transitions = virentis_tile.lava_stone_transitions,
-      transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
+      transitions = table.deepcopy(data.raw.tile["oil-ocean-shallow"].transitions),
+      transitions_between_transitions = table.deepcopy(data.raw.tile["oil-ocean-shallow"]
+        .transitions_between_transitions),
       trigger_effect = tile_trigger_effects.landfill_trigger_effect(),
 
       sprite_usage_surface = "gleba",
@@ -135,10 +136,11 @@ data:extend(
       name = "tar-puddle",
       subgroup = "virentis-water-tiles",
       searchable = true,
-      collision_mask = tile_collision_masks.ground(),
+      collision_mask = tile_collision_masks.oil_ocean_deep(),
       layer_group = "water",
       autoplace = {
-        probability_expression = "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask"
+        probability_expression =
+        "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask"
       },
       default_cover_tile = "foundation",
       lowland_fog = false,
@@ -149,20 +151,9 @@ data:extend(
       particle_tints = tile_graphics.fulgora_oil_ocean_particle_tints,
       layer = 8,
       sprite_usage_surface = "gleba",
-      variants = {
-        main =
-        {
-          {
-            picture = "__space-age__/graphics/terrain/gleba/wetland-purple-tentacle.png",
-            count = 1,
-            scale = 0.5,
-            size = 1
-          }
-        },
-        transition = tile_graphics.generic_masked_tile_transitions1
-      },
-      transitions = { virentis_tile.lava_to_out_of_map_transition },
-      transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
+      variants = table.deepcopy(data.raw.tile["oil-ocean-deep"].variants),
+      transitions = table.deepcopy(data.raw.tile["oil-ocean-deep"].transitions),
+      transitions_between_transitions = table.deepcopy(data.raw.tile["oil-ocean-deep"].transitions_between_transitions),
 
       walking_sound = base_tile_sounds.walking.oil({ volume = 1.0 }),
       landing_steps_sound = tile_sounds.landing.oil,
