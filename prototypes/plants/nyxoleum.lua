@@ -35,7 +35,7 @@ data:extend({
       control = "virentis_plants",
       probability_expression = "virentis_plants_probability",
       richness_expression = "random_penalty_at(3, 1)",
-      tile_restriction = { "tar-puddle" }
+      tile_restriction = { "nyxoleum-fertile-soil" }
     },
     variations = virentis_plant.tree_variations("nyxoleum", 6, 3, 1, 512, 512, false, util.by_pixel(0, 0)),
     colors = virentis_plant.minor_tints(),

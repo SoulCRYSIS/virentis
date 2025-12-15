@@ -11,26 +11,30 @@ data:extend({
     type = "tile",
     name = "virentis-wetland-dead-skin",
     subgroup = "virentis-water-tiles",
-    collision_mask = tile_collision_masks.ground(),
+    collision_mask = tile_collision_masks.shallow_water(),
     autoplace = { probability_expression = "virentis_shallows_aux_2 + 2 * min(virentis_select(virentis_aux, 0.3, 0.7, 0.005, 0, 1), virentis_rockpools_shallow)" },
     lowland_fog = true,
+    effect = "wetland-grey",
     effect_color = { 57, 58, 73 },
     effect_color_secondary = { 76, 70, 79 },
     map_color = { r = 46, g = 45, b = 51 },
     particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
-    layer = 6,
+    layer = 7,
     layer_group = "water-overlay",
     sprite_usage_surface = "gleba",
-    variants = virentis_tile.tile_variations_template_with_transitions(
-      "__base__/graphics/terrain/sand-2.png",
-      "__base__/graphics/terrain/masks/transition-4.png",
+    variants =
+    {
+      main =
       {
-        max_size = 8,
-        [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020} },
-        [4] = { probability = 0.20, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
-        [8] = { probability = 0.10, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
-      }
-    ),
+        {
+          picture = "__space-age__/graphics/terrain/gleba/wetland-dead-skin.png",
+          count = 1,
+          scale = 0.5,
+          size = 1
+        }
+      },
+      transition = tile_graphics.generic_masked_tile_transitions1
+    },
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
     walking_sound = tile_sounds.walking.wetland,
@@ -52,9 +56,10 @@ data:extend({
     type = "tile",
     name = "virentis-wetland-light-dead-skin",
     subgroup = "virentis-water-tiles",
-    collision_mask = tile_collision_masks.ground(),
+    collision_mask = tile_collision_masks.shallow_water(),
     autoplace = { probability_expression = "virentis_shallows_edge_aux_2 + 2 * min(virentis_select(virentis_aux, 0.3, 0.7, 0.005, 0, 1), virentis_rockpools_shallow)" },
     lowland_fog = true,
+    effect = "wetland-grey",
     effect_color = { 78, 75, 86 },
     effect_color_secondary = { 76, 70, 79 },
     map_color = { r = 51, g = 50, b = 56 },
@@ -62,17 +67,19 @@ data:extend({
     layer = 7,
     layer_group = "water-overlay",
     sprite_usage_surface = "gleba",
-    variants = virentis_tile.tile_variations_template_with_transitions(
-      "__base__/graphics/terrain/dry-dirt.png",
-      "__base__/graphics/terrain/masks/transition-1.png",
+    variants =
+    {
+      main =
       {
-        max_size = 4,
-        [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-        [2] = { probability = 1, weights = {0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
-        [4] = { probability = 1.00, weights = {0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-        --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
-      }
-    ),
+        {
+          picture = "__space-age__/graphics/terrain/gleba/wetland-dead-skin.png",
+          count = 1,
+          scale = 0.5,
+          size = 1
+        }
+      },
+      transition = tile_graphics.generic_masked_tile_transitions1
+    },
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
     walking_sound = tile_sounds.walking.wetland,
@@ -362,26 +369,29 @@ data:extend({
     type = "tile",
     name = "virentis-wetland-blue-slime",
     subgroup = "virentis-water-tiles",
-    collision_mask = tile_collision_masks.ground(),
+    collision_mask = tile_collision_masks.shallow_water(),
     autoplace = { probability_expression = "6 * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1) + 5 * virentis_rockpools_bluewater" },
     lowland_fog = true,
+    effect = "wetland-blue-slime",
     effect_color = { 45, 63, 70 },
     effect_color_secondary = { 49, 80, 14 },
     particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
     layer = 1,
     layer_group = "water-overlay",
     sprite_usage_surface = "gleba",
-    variants = virentis_tile.tile_variations_template(
-      "__base__/graphics/terrain/sand-3.png",
-      "__base__/graphics/terrain/masks/transition-4.png",
+    variants =
+    {
+      main =
       {
-        max_size = 4,
-        [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-        [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020}, },
-        [4] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020}, },
-        --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
-      }
-    ),
+        {
+          picture = "__base__/graphics/terrain/water/water1.png",
+          count = 1,
+          scale = 0.5,
+          size = 1
+        }
+      },
+      empty_transitions = true,
+    },
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
     walking_sound = virentis_tile.sound_variations("__base__/sound/walking/shallow-water", 7, 1),

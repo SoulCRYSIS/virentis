@@ -109,14 +109,9 @@ data:extend(
       type = "tile",
       name = "nyxoleum-fertile-soil",
       subgroup = "virentis-tiles",
-      collision_mask = tile_collision_masks.ground(),
+      collision_mask = tile_collision_masks.shallow_water(),
       autoplace = {
-        probability_expression =
-        "max(\z
-          virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask,\z
-          virentis_shallows_aux_3 + 2 * min(virentis_select(virentis_aux, 0.7, 2, 0.005, 0, 1), virentis_rockpools_shallow),\z
-          virentis_shallows_edge_aux_3\z
-        )"
+        probability_expression = "virentis_fertile_solid * 50000 - 40000 - virentis_biome_mask_red * 1000000"
       },
       layer_group = "ground-natural",
       layer = 9,
@@ -140,10 +135,10 @@ data:extend(
       name = "tar-puddle",
       subgroup = "virentis-water-tiles",
       searchable = true,
-      collision_mask = tile_collision_masks.oil_ocean_deep(),
+      collision_mask = tile_collision_masks.ground(),
       layer_group = "water",
       autoplace = {
-        probability_expression = "virentis_fertile_solid * 50000 - 40000 - virentis_biome_mask_red * 1000000"
+        probability_expression = "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask"
       },
       default_cover_tile = "foundation",
       lowland_fog = false,
