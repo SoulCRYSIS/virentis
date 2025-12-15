@@ -7,6 +7,7 @@ local height = 512
 
 data:extend({
   virentis.default_machine_item_prototype("trader-t1"),
+  ---@type data.AssemblingMachinePrototype
   {
     type = "assembling-machine",
     name = "trader-t1",
@@ -23,10 +24,10 @@ data:extend({
     crafting_categories = { "trading-t1" },
     crafting_speed = 1,
     module_slots = 0,
-    minable = {
-      mining_time = 1,
-      result = "trader-t1",
-    },
+    -- minable = {
+    --   mining_time = 1,
+    --   result = "trader-t1",
+    -- },
     collision_box = { { -1.8, -1.8 }, { 1.8, 1.8 } },
     selection_box = { { -2, -2 }, { 2, 2 } },
     damaged_trigger_effect = hit_effects.entity(),
@@ -73,18 +74,19 @@ data:extend({
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
     autoplace = {
-      probability_expression = "spot_noise{x = x,\z
-                                           y = y,\z
-                                           seed0 = map_seed,\z
-                                           seed1 = 10,\z
-                                           density_expression = 0.1,\z
-                                           spot_radius_expression = 32,\z
-                                           spot_quantity_expression = 3,\z
-                                           spot_favorability_expression = 1,\z
-                                           basement_value = 0,\z
-                                           maximum_spot_basement_radius = 16,\z
-                                           region_size = 1024}",
-      richness_expression = "random_penalty_at(3, 1)"
-    }
+      probability_expression = "0.2 * spot_noise{x = x,\z
+                             y = y,\z
+                             seed0 = map_seed,\z
+                             seed1 = 7777,\z
+                             density_expression = virentis_highland,\z
+                             spot_radius_expression = 16,\z
+                             spot_quantity_expression = 256,\z
+                             spot_favorability_expression = 1,\z
+                             candidate_spot_count = 15,\z
+                             basement_value = 0,\z
+                             maximum_spot_basement_radius = 32,\z
+                             region_size = 1024}",
+      tile_restriction = { "virentis-highland-yellow-rock" }
+    },
   },
 })

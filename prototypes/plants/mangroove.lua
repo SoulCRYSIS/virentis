@@ -38,8 +38,9 @@ data:extend({
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x , y = y , seed0 = map_seed, seed1 = 'mangroove_tree', grid_size = 128, distance_type = 'euclidean', jitter = 0.1 }",
-      richness_expression = "random_penalty_at(3, 1)"
+      probability_expression = "virentis_plants_probability",
+      richness_expression = "random_penalty_at(3, 1)",
+      tile_restriction = { "mangroove-fertile-soil" }
     },
     variations = virentis_plant.tree_variations("mangroove", 6, 3, 1, 640, 640, false, util.by_pixel(0, 0)),
     colors = virentis_plant.minor_tints(),

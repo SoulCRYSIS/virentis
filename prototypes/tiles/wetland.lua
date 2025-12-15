@@ -11,32 +11,26 @@ data:extend({
     type = "tile",
     name = "virentis-wetland-dead-skin",
     subgroup = "virentis-water-tiles",
-    collision_mask = tile_collision_masks.shallow_water(),
+    collision_mask = tile_collision_masks.ground(),
     autoplace = { probability_expression = "virentis_shallows_aux_2 + 2 * min(virentis_select(virentis_aux, 0.3, 0.7, 0.005, 0, 1), virentis_rockpools_shallow)" },
     lowland_fog = true,
-    effect = "mudland-oil-water",
-    --effect_color = { 76, 70, 79 },
-    --effect_color_secondary = { 76, 70, 79 },
-    effect_color = { 32, 27, 31 },
+    effect_color = { 57, 58, 73 },
     effect_color_secondary = { 76, 70, 79 },
     map_color = { r = 46, g = 45, b = 51 },
     particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
-    layer = 7,
+    layer = 6,
     layer_group = "water-overlay",
     sprite_usage_surface = "gleba",
-    variants =
-    {
-      main =
+    variants = virentis_tile.tile_variations_template_with_transitions(
+      "__base__/graphics/terrain/sand-2.png",
+      "__base__/graphics/terrain/masks/transition-4.png",
       {
-        {
-          picture = "__space-age__/graphics/terrain/gleba/wetland-dead-skin.png",
-          count = 1,
-          scale = 0.5,
-          size = 1
-        }
-      },
-      transition = tile_graphics.generic_masked_tile_transitions1
-    },
+        max_size = 8,
+        [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020} },
+        [4] = { probability = 0.20, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
+        [8] = { probability = 0.10, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+      }
+    ),
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
     walking_sound = tile_sounds.walking.wetland,
@@ -58,30 +52,27 @@ data:extend({
     type = "tile",
     name = "virentis-wetland-light-dead-skin",
     subgroup = "virentis-water-tiles",
-    collision_mask = tile_collision_masks.shallow_water(),
+    collision_mask = tile_collision_masks.ground(),
     autoplace = { probability_expression = "virentis_shallows_edge_aux_2 + 2 * min(virentis_select(virentis_aux, 0.3, 0.7, 0.005, 0, 1), virentis_rockpools_shallow)" },
     lowland_fog = true,
-    effect = "mudland-oil-water",
-    effect_color = { 50, 46, 53 },
+    effect_color = { 78, 75, 86 },
     effect_color_secondary = { 76, 70, 79 },
     map_color = { r = 51, g = 50, b = 56 },
     particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
     layer = 7,
     layer_group = "water-overlay",
     sprite_usage_surface = "gleba",
-    variants =
-    {
-      main =
+    variants = virentis_tile.tile_variations_template_with_transitions(
+      "__base__/graphics/terrain/dry-dirt.png",
+      "__base__/graphics/terrain/masks/transition-1.png",
       {
-        {
-          picture = "__space-age__/graphics/terrain/gleba/wetland-dead-skin.png",
-          count = 1,
-          scale = 0.5,
-          size = 1
-        }
-      },
-      transition = tile_graphics.generic_masked_tile_transitions1
-    },
+        max_size = 4,
+        [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+        [2] = { probability = 1, weights = {0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
+        [4] = { probability = 1.00, weights = {0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
+        --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+      }
+    ),
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
     walking_sound = tile_sounds.walking.wetland,
@@ -101,7 +92,51 @@ data:extend({
   },
   {
     type = "tile",
-    name = "virentis-wetland-green-slime",
+    name = "virentis-wetland-mud",
+    subgroup = "virentis-water-tiles",
+    collision_mask = tile_collision_masks.shallow_water(),
+    autoplace = { probability_expression = "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_green) * virentis_above_deep_water_mask" },
+    default_cover_tile = "landfill",
+    lowland_fog = true,
+    effect = "mudland-slime",
+    fluid = "water",
+    effect_color = { 68, 54, 47 },
+    effect_color_secondary = { 68, 54, 47 },
+    particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
+    layer_group = "water-overlay",
+    layer = 3,
+    sprite_usage_surface = "gleba",
+    variants =
+    {
+      main =
+      {
+        {
+          picture = "__space-age__/graphics/terrain/gleba/wetland-dead-skin.png",
+          count = 1,
+          scale = 0.5,
+          size = 1
+        }
+      },
+      transition = tile_graphics.generic_masked_tile_transitions1
+    },
+    transitions = { virentis_tile.lava_to_out_of_map_transition },
+    transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
+    map_color = { 69, 55, 52 },
+    absorptions_per_second = virentis_tile.pollution_absorption.water,
+
+    walking_speed_modifier = 0.8,
+    vehicle_friction_modifier = 8.0,
+
+    walking_sound = base_tile_sounds.walking.shallow_water,
+    landing_steps_sound = tile_sounds.landing.semi_wet,
+    driving_sound = tile_sounds.driving.wetland,
+    ambient_sounds = tile_sounds.ambient.insects_deep_mud({ max_entity_count = 30, average_pause_seconds = 8 }),
+
+    trigger_effect = tile_trigger_effects.water_mud_trigger_effect(),
+  },
+  {
+    type = "tile",
+    name = "virentis-wetland-mud-slime",
     subgroup = "virentis-water-tiles",
     collision_mask = tile_collision_masks.shallow_water(),
     autoplace = { probability_expression = "virentis_shallows_aux_1 + 2 * min(virentis_select(virentis_aux, 0, 0.3, 0.005, 0, 1), virentis_rockpools_shallow)" },
@@ -148,7 +183,7 @@ data:extend({
   },
   {
     type = "tile",
-    name = "virentis-wetland-light-green-slime",
+    name = "virentis-wetland-light-mud-slime",
     subgroup = "virentis-water-tiles",
     collision_mask = tile_collision_masks.shallow_water(),
     autoplace = { probability_expression = "virentis_shallows_edge_aux_1 + 2 * min(virentis_select(virentis_aux, 0, 0.3, 0.005, 0, 1), virentis_rockpools_shallow)" },
@@ -193,18 +228,21 @@ data:extend({
   },
   -- {
   --   type = "tile",
-  --   name = "virentis-wetland-red-tentacle",
+  --   name = "virentis-wetland-jellynut",
+  --   icon = "__space-age__/graphics/icons/wetland-jellynut.png",
+  --   order = "c[resource]-b[wetland-jellynut]",
   --   subgroup = "virentis-water-tiles",
   --   collision_mask = tile_collision_masks.shallow_water(),
-  --   autoplace = { probability_expression = "virentis_shallows_aux_3 + 2 * min(virentis_select(virentis_aux, 0.7, 2, 0.005, 0, 1), virentis_rockpools_shallow)" },
+  --   autoplace = { probability_expression = "virentis_fertile_spots_coastal * 5000 * (1 - virentisbiome_mask_red) * virentisabove_deep_water_mask" },
+  --   default_cover_tile = "landfill",
+  --   fluid = "water",
   --   lowland_fog = true,
-  --   effect = "mudland-oil-water",
-  --   effect_color = { 50, 42, 41 },
-  --   effect_color_secondary = { 49, 80, 14 },
-  --   map_color = { 54, 15, 24 },
-  --   particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
-  --   layer = 5,
+  --   effect = "wetland-purple",
+  --   effect_color = { 83, 42, 56 },
+  --   effect_color_secondary = { 91, 45, 88 },
   --   layer_group = "water-overlay",
+  --   particle_tints = tile_graphics.gleba_mud_water_particle_tints,
+  --   layer = 3,
   --   sprite_usage_surface = "gleba",
   --   variants =
   --   {
@@ -221,112 +259,36 @@ data:extend({
   --   },
   --   transitions = { virentis_tile.lava_to_out_of_map_transition },
   --   transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
-  --   walking_sound = tile_sounds.walking.wetland,
-  --   landing_steps_sound = tile_sounds.landing.wet,
-  --   driving_sound = tile_sounds.driving.wetland,
-  --   ambient_sounds = tile_sounds.ambient.insects_deep_mud({}),
+  --   map_color = { 132, 7, 119 },
+  --   absorptions_per_second = virentis_tile.pollution_absorption.water,
+
   --   walking_speed_modifier = 0.8,
   --   vehicle_friction_modifier = 8.0,
-  --   trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
-  --   default_cover_tile = "landfill",
-  --   fluid = "water",
-  --   absorptions_per_second = virentis_tile.pollution_absorption.water,
-  -- },
-  -- {
-  --   type = "tile",
-  --   name = "virentis-wetland-red-tentacle",
-  --   subgroup = "virentis-water-tiles",
-  --   collision_mask = tile_collision_masks.shallow_water(),
-  --   autoplace = { probability_expression = "virentis_shallows_aux_3 + 2 * min(virentis_select(virentis_aux, 0.7, 2, 0.005, 0, 1), virentis_rockpools_shallow)" },
-  --   lowland_fog = true,
-  --   effect = "oil-deep",
-  --   effect_color = { 95, 87, 92 },
-  --   effect_color_secondary = { 49, 80, 14 },
-  --   map_color = { 54, 15, 24 },
-  --   particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
-  --   layer = 5,
-  --   layer_group = "water-overlay",
-  --   sprite_usage_surface = "gleba",
-  --   variants =
+
+  --   walking_sound = base_tile_sounds.walking.shallow_water,
+  --   landing_steps_sound = tile_sounds.landing.wet,
+  --   driving_sound = tile_sounds.driving.wetland,
+  --   ambient_sounds =
   --   {
-  --     main =
-  --     {
-  --       {
-  --         picture = "__space-age__/graphics/terrain/gleba/wetland-purple-tentacle.png",
-  --         count = 1,
-  --         scale = 0.5,
-  --         size = 1
-  --       }
-  --     },
-  --     transition = tile_graphics.generic_masked_tile_transitions1
+  --     tile_sounds.ambient.insects_deep_mud({ max_entity_count = 30, average_pause_seconds = 8 }),
+  --     tile_sounds.ambient.night_frogs,
   --   },
-  --   transitions = { virentis_tile.lava_to_out_of_map_transition },
-  --   transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
-  --   walking_sound = tile_sounds.walking.wetland,
-  --   landing_steps_sound = tile_sounds.landing.wet,
-  --   driving_sound = tile_sounds.driving.wetland,
-  --   ambient_sounds = tile_sounds.ambient.insects_deep_mud({}),
-  --   walking_speed_modifier = 0.8,
-  --   vehicle_friction_modifier = 8.0,
-  --   trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
-  --   default_cover_tile = "landfill",
-  --   fluid = "water",
-  --   absorptions_per_second = virentis_tile.pollution_absorption.water,
-  -- },
-  -- {
-  --   type = "tile",
-  --   name = "virentis-wetland-pink-tentacle",
-  --   subgroup = "virentis-water-tiles",
-  --   collision_mask = tile_collision_masks.shallow_water(),
-  --   autoplace = { probability_expression = "virentis_shallows_edge_aux_3" },
-  --   lowland_fog = true,
-  --   effect = "oil",
-  --   effect_color = { 74, 65, 69 },
-  --   -- effect_color = { 62, 48, 43 },
-  --   effect_color_secondary = { 60, 60, 40 },
-  --   map_color = { 64, 19, 34 },
-  --   particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
-  --   layer = 5,
-  --   layer_group = "water-overlay",
-  --   sprite_usage_surface = "gleba",
-  --   variants =
-  --   {
-  --     main =
-  --     {
-  --       {
-  --         picture = "__space-age__/graphics/terrain/gleba/wetland-purple-tentacle.png",
-  --         count = 1,
-  --         scale = 0.5,
-  --         size = 1
-  --       }
-  --     },
-  --     transition = tile_graphics.generic_masked_tile_transitions1
-  --   },
-  --   transitions = { virentis_tile.lava_to_out_of_map_transition },
-  --   transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
-  --   walking_sound = tile_sounds.walking.wetland,
-  --   landing_steps_sound = tile_sounds.landing.wet,
-  --   driving_sound = tile_sounds.driving.wetland,
-  --   ambient_sounds = tile_sounds.ambient.insects_deep_mud({}),
-  --   walking_speed_modifier = 0.8,
-  --   vehicle_friction_modifier = 8.0,
-  --   trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
-  --   default_cover_tile = "landfill",
-  --   fluid = "water",
-  --   absorptions_per_second = virentis_tile.pollution_absorption.water,
+
+  --   trigger_effect = tile_trigger_effects.water_mud_trigger_effect(),
   -- },
   {
     type = "tile",
-    name = "virentis-wetland-blue-slime",
+    name = "virentis-wetland-red-tentacle",
     subgroup = "virentis-water-tiles",
     collision_mask = tile_collision_masks.shallow_water(),
-    autoplace = { probability_expression = "6 * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1) + 5 * virentis_rockpools_bluewater" },
+    autoplace = { probability_expression = "virentis_shallows_aux_3 + 2 * min(virentis_select(virentis_aux, 0.7, 2, 0.005, 0, 1), virentis_rockpools_shallow)" },
     lowland_fog = true,
-    effect = "wetland-blue-slime",
-    effect_color = { 48, 44, 44 },
+    effect = "wetland-pink",
+    effect_color = { 69, 53, 78 },
     effect_color_secondary = { 49, 80, 14 },
+    map_color = { 54, 15, 24 },
     particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
-    layer = 1,
+    layer = 5,
     layer_group = "water-overlay",
     sprite_usage_surface = "gleba",
     variants =
@@ -334,14 +296,92 @@ data:extend({
       main =
       {
         {
-          picture = "__base__/graphics/terrain/water/water1.png",
+          picture = "__space-age__/graphics/terrain/gleba/wetland-purple-tentacle.png",
           count = 1,
           scale = 0.5,
           size = 1
         }
       },
-      empty_transitions = true,
+      transition = tile_graphics.generic_masked_tile_transitions1
     },
+    transitions = { virentis_tile.lava_to_out_of_map_transition },
+    transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
+    walking_sound = tile_sounds.walking.wetland,
+    landing_steps_sound = tile_sounds.landing.wet,
+    driving_sound = tile_sounds.driving.wetland,
+    ambient_sounds = tile_sounds.ambient.insects_deep_mud({}),
+    walking_speed_modifier = 0.8,
+    vehicle_friction_modifier = 8.0,
+    trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
+    default_cover_tile = "landfill",
+    fluid = "water",
+    absorptions_per_second = virentis_tile.pollution_absorption.water,
+  },
+  {
+    type = "tile",
+    name = "virentis-wetland-pink-tentacle",
+    subgroup = "virentis-water-tiles",
+    collision_mask = tile_collision_masks.shallow_water(),
+    autoplace = { probability_expression = "virentis_shallows_edge_aux_3" },
+    lowland_fog = true,
+    effect = "wetland-pink",
+    effect_color = { 85, 64, 88 },
+    effect_color_secondary = { 60, 60, 40 },
+    map_color = { 64, 19, 34 },
+    particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
+    layer = 5,
+    layer_group = "water-overlay",
+    sprite_usage_surface = "gleba",
+    variants =
+    {
+      main =
+      {
+        {
+          picture = "__space-age__/graphics/terrain/gleba/wetland-purple-tentacle.png",
+          count = 1,
+          scale = 0.5,
+          size = 1
+        }
+      },
+      transition = tile_graphics.generic_masked_tile_transitions1
+    },
+    transitions = { virentis_tile.lava_to_out_of_map_transition },
+    transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
+    walking_sound = tile_sounds.walking.wetland,
+    landing_steps_sound = tile_sounds.landing.wet,
+    driving_sound = tile_sounds.driving.wetland,
+    ambient_sounds = tile_sounds.ambient.insects_deep_mud({}),
+    walking_speed_modifier = 0.8,
+    vehicle_friction_modifier = 8.0,
+    trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
+    default_cover_tile = "landfill",
+    fluid = "water",
+    absorptions_per_second = virentis_tile.pollution_absorption.water,
+  },
+  {
+    type = "tile",
+    name = "virentis-wetland-blue-slime",
+    subgroup = "virentis-water-tiles",
+    collision_mask = tile_collision_masks.ground(),
+    autoplace = { probability_expression = "6 * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1) + 5 * virentis_rockpools_bluewater" },
+    lowland_fog = true,
+    effect_color = { 45, 63, 70 },
+    effect_color_secondary = { 49, 80, 14 },
+    particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
+    layer = 1,
+    layer_group = "water-overlay",
+    sprite_usage_surface = "gleba",
+    variants = virentis_tile.tile_variations_template(
+      "__base__/graphics/terrain/sand-3.png",
+      "__base__/graphics/terrain/masks/transition-4.png",
+      {
+        max_size = 4,
+        [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+        [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020}, },
+        [4] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020}, },
+        --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+      }
+    ),
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
     walking_sound = virentis_tile.sound_variations("__base__/sound/walking/shallow-water", 7, 1),

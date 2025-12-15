@@ -11,12 +11,12 @@ virentis_tile.water_transition = data.raw.tile["water"].transitions_between_tran
 
 virentis_tile.lava_to_out_of_map_transition = space_age_tiles_util.lava_to_out_of_map_transition
 virentis_tile.lava_stone_transitions_between_transitions = space_age_tiles_util
-.lava_stone_transitions_between_transitions
+    .lava_stone_transitions_between_transitions
 
 virentis_tile.tile_variations_template = tile_variations_template
 virentis_tile.tile_variations_template_with_transitions = tile_variations_template_with_transitions
 virentis_tile.tile_variations_template_with_transitions_and_effect_map =
-tile_variations_template_with_transitions_and_effect_map
+    tile_variations_template_with_transitions_and_effect_map
 
 virentis_tile.sound_variations = sound_variations
 

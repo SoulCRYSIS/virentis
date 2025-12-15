@@ -7,7 +7,7 @@ data:extend({
     icon = "__virentis__/graphics/icons/plants/rockmalt-tree.png",
     subgroup = "trees",
     impact_category = "tree",
-    
+
     order = "c",
     flags = virentis_plant.default_flags,
     growth_ticks = 5 * minute,
@@ -39,8 +39,9 @@ data:extend({
     drawing_box_vertical_extension = 0.8,
     autoplace = {
       control = "virentis_plants",
-      probability_expression = "0.1 * voronoi_facet_noise{x = x , y = y , seed0 = map_seed, seed1 = 'rockmalt_tree', grid_size = 128, distance_type = 'euclidean', jitter = 0.1 }",
-      richness_expression = "random_penalty_at(3, 1)"
+      probability_expression = "virentis_plants_probability",
+      richness_expression = "random_penalty_at(3, 1)",
+      tile_restriction = { "rockmalt-fertile-soil" }
     },
     variations = virentis_plant.tree_variations("rockmalt", 6, 3, 0.8, 360, 256, false, util.by_pixel(32, -25)),
     colors = virentis_plant.minor_tints(),

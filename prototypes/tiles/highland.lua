@@ -25,7 +25,7 @@ data:extend({
         --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
       }
     ),
-    autoplace = { probability_expression = "virentis_highland * max(0, 1.05 + 0.1 * (1 - virentis_aux) + 0.2 * virentis_temperature_normalised)" },
+    autoplace = { probability_expression = "virentis_highland_1" },
     transitions = virentis_tile.lava_stone_transitions,
     transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
     walking_sound = tile_sounds.walking.dry_rock,
@@ -54,7 +54,7 @@ data:extend({
         --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
       }
     ),
-    autoplace = { probability_expression = "virentis_highland * max(0, 1.13 + 0.1 * (min(virentis_aux + 0.1, 1-virentis_aux)))" },
+    autoplace = { probability_expression = "virentis_highland_2" },
     transitions = virentis_tile.lava_stone_transitions,
     transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
     walking_sound = tile_sounds.walking.dry_rock,
@@ -83,7 +83,7 @@ data:extend({
         --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
       }
     ),
-    autoplace = { probability_expression = "virentis_highland * max(0, 1 + 0.1 * virentis_aux - 0.2 * virentis_temperature_normalised)" },
+    autoplace = { probability_expression = "virentis_highland_3" },
     transitions = virentis_tile.lava_stone_transitions,
     transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
     walking_sound = tile_sounds.walking.dry_rock,
