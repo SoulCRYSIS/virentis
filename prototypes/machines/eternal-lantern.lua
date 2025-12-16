@@ -3,6 +3,7 @@ local virentis = require("prototypes.utils")
 local width = 224
 local height = 224
 
+--- @param variant number
 local function eternal_lantern_entity(variant)
   return ---@type data.BeaconPrototype
   {
@@ -80,6 +81,10 @@ local function eternal_lantern_entity(variant)
     module_slots = 1,
     hidden_in_factoriopedia = variant > 0,
     hidden = variant > 0,
+    autoplace = {
+      probability_expression = "random(0.02, 2)",
+      tile_restriction = { "town-floor" }
+    },
     water_reflection =
     {
       pictures =

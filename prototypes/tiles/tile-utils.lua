@@ -72,4 +72,36 @@ virentis_tile.pollution_absorption = {
   water = { spores = 0.000030 },
 }
 
+virentis_tile.transition_masks = {
+  mask_spritesheet = "__base__/graphics/terrain/masks/transition-1.png",
+  mask_layout =
+  {
+    scale = 0.5,
+    inner_corner =
+    {
+      count = 8,
+    },
+    outer_corner =
+    {
+      count = 8,
+      x = 64*9
+    },
+    side =
+    {
+      count = 8,
+      x = 64*9*2
+    },
+    u_transition =
+    {
+      count = 1,
+      x = 64*9*3
+    },
+    o_transition =
+    {
+      count = 1,
+      x = 64*9*4
+    }
+  }
+}
+
 return virentis_tile

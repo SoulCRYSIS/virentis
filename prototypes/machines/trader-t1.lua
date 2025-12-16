@@ -74,19 +74,8 @@ data:extend({
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
     autoplace = {
-      probability_expression = "0.2 * spot_noise{x = x,\z
-                             y = y,\z
-                             seed0 = map_seed,\z
-                             seed1 = 7777,\z
-                             density_expression = virentis_highland,\z
-                             spot_radius_expression = 16,\z
-                             spot_quantity_expression = 256,\z
-                             spot_favorability_expression = 1,\z
-                             candidate_spot_count = 15,\z
-                             basement_value = 0,\z
-                             maximum_spot_basement_radius = 32,\z
-                             region_size = 1024}",
-      tile_restriction = { "virentis-highland-yellow-rock" }
+      probability_expression = "random(0.05, 1)",
+      tile_restriction = { "town-floor" }
     },
   },
 })

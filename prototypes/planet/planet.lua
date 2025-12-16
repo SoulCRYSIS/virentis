@@ -50,6 +50,7 @@ data:extend({
             ["redbloom-fertile-soil"] = {},
             ["nyxoleum-fertile-soil"] = {},
             ["tar-puddle"] = {},
+            ["town-floor"] = {},
             ["virentis-deep-water"] = {},
             ["virentis-midland-cracked-lichen"] = {},
             ["virentis-midland-cracked-lichen-dull"] = {},
@@ -95,7 +96,8 @@ data:extend({
         },
         ["entity"] = {
           settings = {
-            ["trader-t1"] = {}
+            ["trader-t1"] = {},
+            ["eternal-lantern"] = {},
           }
         }
       }
