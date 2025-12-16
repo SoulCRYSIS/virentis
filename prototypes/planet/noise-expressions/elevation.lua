@@ -33,7 +33,7 @@ data:extend(
         starting_main_blend =
         "min(rockpool_elevation, lerp(terraces_combined, starting_area, clamp(1.7 - (distance / virentis_starting_area_multiplier / 500), 0, 1))) + 3 * (0.5 - abs(high_frequency))",
         starting_area =
-        "max(-30 * clamp(starting_lakes * 2, 0, 1), 5 * min(virentis_starting_lowlands * 2, 1), 130 * min(starting_highlands * 2, 1), 80 * min(starting_midlands * 2, 1), 70 * min((starting_bridges - 0.5) * 3, 1)) + 6 * ridges_small_noise",
+        "max(-30 * clamp(starting_lakes * 2, 0, 1), 5 * min(virentis_starting_lowlands * 2, 1), 130 * min(virentis_starting_highlands * 2, 1), 80 * min(starting_midlands * 2, 1), 70 * min((starting_bridges - 0.5) * 3, 1)) + 6 * ridges_small_noise",
         spiral_angle =
         "virentis_starting_angle - virentis_starting_direction * (distance / virentis_starting_area_multiplier / 16 - 15)",
         starting_rotated_x = "rotate_x(x_from_start, y_from_start, spiral_angle) + virentis_wobble_x * 10",
@@ -63,17 +63,6 @@ data:extend(
         "max(-virentis_tri_ridge * (0.6 + var('control:virentis_water:size') / 3), starting_bridges - 0.8) * 2.4 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
         ridge_terrace = "terrace{value = min(80, 110 + ridges * 500), offset = 40, width = 20, strength = 0.2}",
         terraces_combined = "max(ridge_terrace, peaks_terrace, 25 + 22 * ridges)",
-        starting_highlands = "max(starting_highland_main, starting_highland_small)",
-        starting_highland_main = "starting_spot_at_angle{ angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
-                                                        distance = 100 * virentis_starting_area_multiplier,\z
-                                                        radius = 130 * virentis_starting_area_multiplier,\z
-                                                        x_distortion = virentis_wobble_x * 15,\z
-                                                        y_distortion = virentis_wobble_x * 15}",
-        starting_highland_small = "starting_spot_at_angle{angle = virentis_starting_angle + 40 * virentis_starting_direction,\z
-                                                        distance = 130 * virentis_starting_area_multiplier,\z
-                                                        radius = 65 * virentis_starting_area_multiplier,\z
-                                                        x_distortion = virentis_wobble_x * 15,\z
-                                                        y_distortion = virentis_wobble_x * 15}",
         starting_midlands = "max(starting_midland_landing, starting_midland_iron, starting_midland_copper)",
         starting_midland_landing =
         "starting_spot_at_angle{ angle = virentis_starting_angle + 265 * virentis_starting_direction,\z
@@ -131,7 +120,7 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_deep_water_level",
-      expression = "-10"
+      expression = "-8"
     },
     {
       type = "noise-expression",

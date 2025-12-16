@@ -61,6 +61,6 @@ data:extend({
       entity_to_sound_ratio = 0.2,
       average_pause_seconds = 8
     },
-    map_color = { 200, 255, 255 },
+    map_color = { 240, 240, 255 },
   },
 })

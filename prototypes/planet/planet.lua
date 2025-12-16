@@ -85,7 +85,6 @@ data:extend({
             ["virentis-wetland-mud"] = {},
             ["virentis-wetland-mud-slime"] = {},
             ["virentis-wetland-light-mud-slime"] = {},
-            -- ["virentis-wetland-jellynut"] = {},
             ["virentis-wetland-red-tentacle"] = {},
             ["virentis-wetland-pink-tentacle"] = {},
             ["virentis-wetland-blue-slime"] = {},

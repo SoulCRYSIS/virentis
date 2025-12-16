@@ -63,7 +63,7 @@ data:extend(
           --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
         }
       ),
-      autoplace = { probability_expression = "virentis_highland * virentis_fertile_spots_coastal_raw(2) * 50000 - 30000" },
+      autoplace = { probability_expression = "(virentis_highland - virentis_starting_town) * virentis_fertile_spots_coastal_raw(2) * 50000 - 30000" },
       transitions = virentis_tile.lava_stone_transitions,
       transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
       walking_sound = tile_sounds.walking.dry_rock,
@@ -144,7 +144,7 @@ data:extend(
       },
       default_cover_tile = "foundation",
       lowland_fog = false,
-      effect = "oil-deep",
+      effect = "tar-puddle",
       fluid = "tar",
       effect_color = { 85, 64, 88 },
       effect_color_secondary = { 60, 60, 40 },
@@ -160,7 +160,7 @@ data:extend(
       driving_sound = base_tile_sounds.driving.oil,
       scorch_mark_color = { r = 0.3, g = 0.3, b = 0.3, a = 1.000 },
       trigger_effect = tile_trigger_effects.sand_trigger_effect(),
-      map_color = { 185, 5, 166 },
+      map_color = { 31, 7, 13 },
     },
     {
       type = "tile",
@@ -175,24 +175,26 @@ data:extend(
       variants = table.deepcopy(data.raw.tile["fulgoran-paving"].variants),
       transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions),
       transitions_between_transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions_between_transitions),
-      
-      autoplace = { probability_expression = "virentis_highland * 2 * spot_noise{x = x + virentis_wobble_small_x * 5,\z
+
+      autoplace = {
+        probability_expression = "virentis_highland * 2 * spot_noise{x = x + virentis_wobble_small_x * 5,\z
                              y = y + virentis_wobble_small_y * 5,\z
                              seed0 = map_seed,\z
                              seed1 = 7777,\z
-                             density_expression = virentis_highland_3,\z
+                             density_expression = gleba_select(gleba_elevation, 140, 1000, 0.5, 0, 1) - virentis_starting_area,\z
                              spot_radius_expression = 32,\z
                              spot_quantity_expression = 1024,\z
                              spot_favorability_expression = 1,\z
-                             candidate_spot_count = 30,\z
+                             candidate_spot_count = 10,\z
                              basement_value = 0,\z
                              maximum_spot_basement_radius = 64,\z
-                             region_size = 1024}" },
+                             region_size = 1024} + virentis_starting_town * 5"
+      },
 
       walking_sound = tile_sounds.walking.concrete,
       landing_steps_sound = tile_sounds.landing.concrete,
-      map_color={63, 61, 59},
-      scorch_mark_color = {r = 0.373, g = 0.307, b = 0.243, a = 1.000},
+      map_color = { 140, 62, 59 },
+      scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
       trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
     },
   })

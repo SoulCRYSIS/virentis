@@ -60,7 +60,7 @@ data:extend({
       entity_to_sound_ratio = 0.2,
       average_pause_seconds = 8
     },
-    map_color = { 200, 255, 255 },
+    map_color = { 230, 255, 230 },
     {
       primary = {r = 0.552, g = 0.218, b = 0.218, a = 1.000}, -- #8c3737ff
       secondary = {r = 0.561, g = 0.613, b = 0.308, a = 1.000}, -- #8f4f4eff

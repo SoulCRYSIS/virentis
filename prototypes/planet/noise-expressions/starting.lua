@@ -79,4 +79,36 @@ data:extend(
                                                             y_distortion = virentis_wobble_x * 20}",
       }
     },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_highlands",
+      expression = "max(starting_highland_main, starting_highland_small)",
+      local_expressions =
+      {
+        starting_highland_main = "starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
+                                                        distance = 100 * virentis_starting_area_multiplier,\z
+                                                        radius = 130 * virentis_starting_area_multiplier,\z
+                                                        x_distortion = virentis_wobble_x * 15,\z
+                                                        y_distortion = virentis_wobble_x * 15}",
+        starting_highland_small = "starting_spot_at_angle{angle = virentis_starting_angle + 40 * virentis_starting_direction,\z
+                                                        distance = 130 * virentis_starting_area_multiplier,\z
+                                                        radius = 65 * virentis_starting_area_multiplier,\z
+                                                        x_distortion = virentis_wobble_x * 15,\z
+                                                        y_distortion = virentis_wobble_x * 15}",
+      }
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_town",
+      expression = "max(0, starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
+                                                        distance = 100 * virentis_starting_area_multiplier,\z
+                                                        radius = 16 * virentis_starting_area_multiplier,\z
+                                                        x_distortion = virentis_wobble_x * 5,\z
+                                                        y_distortion = virentis_wobble_x * 5})"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_area",
+      expression = "distance_from_nearest_point{x = x, y = y, points = starting_positions} < 300"
+    }
   })

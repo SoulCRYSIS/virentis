@@ -2,8 +2,6 @@ local virentis_tile = require("prototypes.tiles.tile-utils")
 
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 local tile_trigger_effects = require("__space-age__/prototypes/tile/tile-trigger-effects")
-local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
-local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
 
 data:extend({
