@@ -177,17 +177,17 @@ data:extend(
       transitions_between_transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions_between_transitions),
 
       autoplace = {
-        probability_expression = "virentis_highland * 2 * spot_noise{x = x + virentis_wobble_small_x * 5,\z
+        probability_expression = "virentis_highland * 5 * spot_noise{x = x + virentis_wobble_small_x * 5,\z
                              y = y + virentis_wobble_small_y * 5,\z
                              seed0 = map_seed,\z
                              seed1 = 7777,\z
                              density_expression = gleba_select(gleba_elevation, 140, 1000, 0.5, 0, 1) - virentis_starting_area,\z
-                             spot_radius_expression = 32,\z
-                             spot_quantity_expression = 1024,\z
+                             spot_radius_expression = 24,\z
+                             spot_quantity_expression = 576,\z
                              spot_favorability_expression = 1,\z
-                             candidate_spot_count = 10,\z
+                             candidate_spot_count = 8,\z
                              basement_value = 0,\z
-                             maximum_spot_basement_radius = 64,\z
+                             maximum_spot_basement_radius = 48,\z
                              region_size = 1024} + virentis_starting_town * 5"
       },
 

@@ -102,9 +102,9 @@ data:extend(
       name = "virentis_starting_town",
       expression = "max(0, starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
                                                         distance = 100 * virentis_starting_area_multiplier,\z
-                                                        radius = 16 * virentis_starting_area_multiplier,\z
-                                                        x_distortion = virentis_wobble_x * 5,\z
-                                                        y_distortion = virentis_wobble_x * 5})"
+                                                        radius = 24 * virentis_starting_area_multiplier,\z
+                                                        x_distortion = virentis_wobble_small_x * 5 * virentis_starting_area_multiplier,\z
+                                                        y_distortion = virentis_wobble_small_x * 5 * virentis_starting_area_multiplier})"
     },
     {
       type = "noise-expression",

@@ -74,7 +74,19 @@ data:extend({
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
     autoplace = {
-      probability_expression = "random(0.05, 1)",
+      probability_expression = "spot_noise{x = x,\z
+                                          y = y,\z
+                                          seed0 = map_seed,\z
+                                          seed1 = 123,\z
+                                          candidate_spot_count = 1,\z
+                                          region_size = 12,\z
+                                          density_expression = 1,\z
+                                          spot_quantity_expression = 1,\z
+                                          spot_radius_expression = 1,\z
+                                          spot_favorability_expression = 1,\z
+                                          basement_value = 0,\z
+                                          suggested_minimum_candidate_point_spacing = 12,\z
+                                          maximum_spot_basement_radius = 12}",
       tile_restriction = { "town-floor" }
     },
   },

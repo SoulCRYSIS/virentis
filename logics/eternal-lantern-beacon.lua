@@ -11,7 +11,7 @@ end
 
 local module_name = "eternal-lantern-module" -- Change this to your desired hidden module
 
-local function process_beacon(entity, player_index)
+local function process_beacon(entity, player_index, is_from_map)
   if not (entity and entity.valid) then return end
 
   if entity.name == "eternal-lantern" then
@@ -40,6 +40,10 @@ local function process_beacon(entity, player_index)
         player = player_index
       })
 
+      if is_from_map then
+        entity.minable = false
+      end
+
       if not entity then return end -- Should not happen if prototypes exist
     end
   end
@@ -56,7 +60,7 @@ end
 local function on_created_entity(event)
   local entity = event.created_entity or event.entity
   if not (entity and entity.valid and beacon_names[entity.name]) then return end
-  process_beacon(entity, event.player_index)
+  process_beacon(entity, event.player_index, false)
 end
 
 local function on_chunk_generated(event)
@@ -70,7 +74,7 @@ local function on_chunk_generated(event)
   })
   
   for _, entity in pairs(entities) do
-    process_beacon(entity, nil)
+    process_beacon(entity, nil, true)
   end
 end
 
