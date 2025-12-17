@@ -82,20 +82,20 @@ local function eternal_lantern_entity(variant)
     hidden_in_factoriopedia = variant > 0,
     hidden = variant > 0,
     autoplace = {
-      probability_expression = "spot_noise{x = x,\z
-                                          y = y,\z
-                                          seed0 = map_seed,\z
-                                          seed1 = 567,\z
-                                          candidate_spot_count = 1,\z
-                                          region_size = 16,\z
-                                          density_expression = 1,\z
-                                          spot_quantity_expression = 1,\z
-                                          spot_radius_expression = 1,\z
-                                          spot_favorability_expression = 1,\z
-                                          basement_value = 0,\z
-                                          suggested_minimum_candidate_point_spacing = 12,\z
-                                          maximum_spot_basement_radius = 12} * 0.9",
-      tile_restriction = { "town-floor" }
+      probability_expression =
+      "spot_noise{x = x,\z
+      y = y,\z
+      seed0 = map_seed,\z
+      seed1 = 567,\z
+      candidate_spot_count = 1,\z
+      region_size = 12,\z
+      density_expression = max(virentis_town_edge, 0.2 * virentis_town_rural),\z
+      spot_quantity_expression = 1,\z
+      spot_radius_expression = 1,\z
+      spot_favorability_expression = 1,\z
+      basement_value = 0,\z
+      suggested_minimum_candidate_point_spacing = 8,\z
+      maximum_spot_basement_radius = 1}",
     },
     water_reflection =
     {

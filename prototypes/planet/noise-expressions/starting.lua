@@ -99,15 +99,6 @@ data:extend(
     },
     {
       type = "noise-expression",
-      name = "virentis_starting_town",
-      expression = "max(0, starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
-                                                        distance = 100 * virentis_starting_area_multiplier,\z
-                                                        radius = 24 * virentis_starting_area_multiplier,\z
-                                                        x_distortion = virentis_wobble_small_x * 5 * virentis_starting_area_multiplier,\z
-                                                        y_distortion = virentis_wobble_small_x * 5 * virentis_starting_area_multiplier})"
-    },
-    {
-      type = "noise-expression",
       name = "virentis_starting_area",
       expression = "distance_from_nearest_point{x = x, y = y, points = starting_positions} < 300"
     }

@@ -40,7 +40,7 @@ data:extend({
         ["virentis_plants"] = {},
         ["virentis_water"] = {},
         ["virentis_cliff"] = {},
-        ["virentis_trader"] = {},
+        ["virentis_town"] = {},
       },
       autoplace_settings = {
         ["tile"] = {

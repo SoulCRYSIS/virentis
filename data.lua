@@ -49,6 +49,7 @@ require "prototypes.planet.noise-expressions.plants"
 require "prototypes.planet.noise-expressions.starting"
 require "prototypes.planet.noise-expressions.decoratives"
 require "prototypes.planet.noise-expressions.tiles"
+require "prototypes.planet.noise-expressions.town"
 
 require "prototypes.planet.controls"
 require "prototypes.planet.planet"
