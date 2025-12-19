@@ -693,4 +693,355 @@ data:extend(
         region_box = "virentis_select(virentis_aux, -1, 0.4, 0.1, -10, 1) - 1"
       }
     },
+
+    -- Gleba decorations
+    {
+      type = "noise-expression",
+      name = "virentis_red_lichen_decal_probability",
+      expression = "grpi(0.3) + virentis_select(virentis_red_lichen - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.4, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_barnacles_decal_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_white_grass - clamp(virentis_decorative_knockout, 0, 1), 0.5, 2, 0.5, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_black_sceptre_probability",
+      expression = "grpi(0.7) + virentis_water_plant_ramp * virentis_select(virentis_corals - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_blood_grape_probability",
+      expression = "grpi(0.8) + virentis_select(virentis_bramble_vines - clamp(virentis_decorative_knockout, 0, 1), 0.0, 0.4, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_blood_grape_vibrant_probability",
+      expression = "grpi(0.4) + virentis_select(virentis_bramble_grapes - clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_brambles_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_veins - clamp(virentis_decorative_knockout, 0, 1), 0.3, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_brown_cup_probability",
+      expression = "grpi(0.4) + virentis_select(virentis_bramble_grapes_vibrant - clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_coral_land_probability",
+      expression = "grpi(0.7) + virentis_select(virentis_wispy_lichen - 0.5 * clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_coral_stunted_probability",
+      expression = "min(0.2, virentis_coral_stunted)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_coral_stunted_grey_probability",
+      expression = "virentis_coral_stunted_grey",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_coral_water_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_corals - clamp(virentis_decorative_knockout, 0, 1), 0.3, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_curly_roots_grey_probability",
+      expression = "grpi(0.1) + virentis_select(virentis_curly_orange_roots, 0.5, 2, 0.5, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_curly_roots_orange_probability",
+      expression = "grpi(0.6) + virentis_select(virentis_barnacle_solo - 0.5 * clamp(virentis_decorative_knockout, 0, 1), 0.6, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_fuchsia_pita_probability",
+      expression = "grpi(0.7) + virentis_select(virentis_fuchsia_pita - clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_gleba_spawner_slime_probability",
+      expression = "min(0.2, virentis_coral_stunted)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_cup_probability",
+      expression = "grpi(0.6) + virentis_select(virentis_green_cup - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.2, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_lettuce_lichen_1x1_probability",
+      expression = "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_lettuce_lichen_3x3_probability",
+      expression = "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.1, 0.4, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_lettuce_lichen_6x6_probability",
+      expression = "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_lettuce_lichen_water_1x1_probability",
+      expression = "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_lettuce_lichen_water_3x3_probability",
+      expression = "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.1, 0.4, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_green_lettuce_lichen_water_6x6_probability",
+      expression = "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_grey_cracked_mud_decal_probability",
+      expression = "grpi(0.08) + virentis_select(virentis_grey_cracked_mud - clamp(virentis_decorative_knockout, 0, 1), 0.1, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_honeycomb_fungus_probability",
+      expression = "grpi(0.7) + min(virentis_decorative_subtype_mixer, virentis_select(virentis_honeycomb, 0.3, 2, 0.1, 0, 1))",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_honeycomb_fungus_1x1_probability",
+      expression = "grpi(0.7) + min(virentis_decorative_subtype_mixer, virentis_select(virentis_honeycomb, 0.3, 2, 0.1, 0, 1))",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_honeycomb_fungus_decayed_probability",
+      expression = "grpi(0.4) + min(virentis_decorative_subtype_mixer, virentis_select(virentis_honeycomb, 0, 0.4, 0.1, 0, 1))",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_iron_stromatolite_probability",
+      expression = "2 * virentis_boompuff_region",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_knobbly_roots_orange_probability",
+      expression = "2 * virentis_funnel_trunk_region",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_matches_small_probability",
+      expression = "grpi(0.6) + virentis_select(region_box + 0.3 * virentis_scrub_noise + 0.7 * virentis_temperature_normalised - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)",
+      local_expressions =
+      {
+        region_box = "min(virentis_select(virentis_aux, 0.65, 2, 0.05, -10, 1), virentis_select(virentis_moisture, 0.25, 0.55, 0.01, -10, 1), virentis_select(virentis_temperature_normalised, 0.5, 2, 0.3, -10, 1)) - 1"
+      }
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_mycelium_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_mycelium - clamp(virentis_decorative_knockout, 0, 1), 0.1, 2, 0.2, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_nerve_roots_dense_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_nerve_veins + virentis_temperature_normalised  - clamp(virentis_decorative_knockout, 0, 1), 0.6, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_nerve_roots_sparse_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_nerve_veins + virentis_temperature_normalised  - clamp(virentis_decorative_knockout, 0, 1), 0.2, 0.6, 0.2, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_1x1_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_pale_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.6, -0.1, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_3x3_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_pale_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), -0.2, 0.4, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_6x6_probability",
+      expression = "grpi(0.3) + virentis_select(virentis_pale_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_cups_1x1_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_cups_3x3_probability",
+      expression = "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_purple_cups - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, -0.1, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_cups_6x6_probability",
+      expression = "grpi(0.2) + virentis_water_plant_ramp * virentis_select(virentis_purple_cups - 0.8 * clamp(virentis_decorative_knockout, 0, 1), -0.1, 0.2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_water_1x1_probability",
+      expression = "grpi(0.1) + virentis_water_plant_ramp * virentis_select(virentis_pale_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_water_3x3_probability",
+      expression = "grpi(0.2) + virentis_water_plant_ramp * virentis_select(virentis_pale_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.1, 0.5, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pale_lettuce_lichen_water_6x6_probability",
+      expression = "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_pale_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.5, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pink_lichen_decal_probability",
+      expression = "virentis_pink_lichen_probability",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_pink_phalanges_probability",
+      expression = "grpi(0.6) + virentis_select(virentis_pink_phalanges - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_polycephalum_balloon_probability",
+      expression = "virentis_select(virentis_polycephalum - clamp(-virentis_decorative_knockout, 0, 1), 0.9, 2, 0.2, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_polycephalum_slime_probability",
+      expression = "grpi(0.7) + virentis_select(virentis_brown_cup - clamp(virentis_decorative_knockout, 0, 1), 0.6, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_red_nerve_roots_veins_dense_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_red_nerve_roots_veins_sparse_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_purple_nerve_roots_veins_dense_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_purple_nerve_roots_veins_sparse_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_cream_nerve_roots_veins_dense_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_cream_nerve_roots_veins_sparse_probability",
+      expression = "0",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_solo_barnacle_probability",
+      expression = "grpi(0.6) + virentis_select(virentis_barnacle_solo - 0.5 * clamp(virentis_decorative_knockout, 0, 1), 0.6, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_split_gill_1x1_probability",
+      expression = "grpi(0.5) + virentis_select(0.4 + virentis_split_gill + 0.2 * virentis_decorative_knockout, -0.5, 0.2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_split_gill_2x2_probability",
+      expression = "grpi(0.6) + virentis_select(0.4 + virentis_split_gill + 0.3 * virentis_decorative_knockout, 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_split_gill_dying_1x1_probability",
+      expression = "grpi(0.5) + virentis_select(0.4 + virentis_split_gill_dying + 0.2 * virentis_decorative_knockout, -0.5, 0.2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_split_gill_dying_2x2_probability",
+      expression = "grpi(0.6) + virentis_select(0.4 + virentis_split_gill_dying + 0.3 * virentis_decorative_knockout, 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_split_gill_red_1x1_probability",
+      expression = "grpi(0.5) + virentis_select(0.4 + virentis_split_gill_red + 0.2 * virentis_decorative_knockout, -0.5, 0.2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_split_gill_red_2x2_probability",
+      expression = "grpi(0.6) + virentis_select(0.4 + virentis_split_gill_red + 0.3 * virentis_decorative_knockout, 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_veins_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_veins - clamp(virentis_decorative_knockout, 0, 1), -0.1, 0.3, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_veins_small_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_veins - clamp(virentis_decorative_knockout, 0, 1), 0.3, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_wispy_lichen_probability",
+      expression = "grpi(0.7) + virentis_select(virentis_wispy_lichen - 0.5 * clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_white_carpet_grass_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_white_grass - clamp(virentis_decorative_knockout, 0, 1), 0.5, 2, 0.5, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_coral_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_yellow_coral - 0.5 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_lettuce_lichen_1x1_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_yellow_lettuce - 0.6 * clamp(virentis_decorative_knockout, 0, 1), -0.6, -0.1, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_lettuce_lichen_3x3_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_yellow_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), 0.-0.1, 0.3, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_lettuce_lichen_6x6_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_yellow_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.3, 10, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_lettuce_lichen_cups_1x1_probability",
+      expression = "grpi(0.5) + virentis_select(virentis_yellow_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.3, 10, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_lettuce_lichen_cups_3x3_probability",
+      expression = "grpi(0.3) + virentis_select(virentis_yellow_lettuce_cups - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, -0.2, 0.1, 0, 1)",
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_yellow_lettuce_lichen_cups_6x6_probability",
+      expression = "grpi(0.2) + virentis_select(virentis_yellow_lettuce_cups - 0.8 * clamp(virentis_decorative_knockout, 0, 1), -0.2, 0.2, 0.1, 0, 1)",
+    }
   })

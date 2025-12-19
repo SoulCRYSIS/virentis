@@ -48,12 +48,12 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_decorative_knockout", -- small wavelength noise (5 tiles-ish) to make decoratives patchy
-      expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1300000, octaves = 2, input_scale = 1/3}"
+      expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1300005, octaves = 2, input_scale = 1/3}"
     },
     {
       type = "noise-expression",
       name = "virentis_decorative_subtype_mixer", -- small wavelength noise (1 tiles-ish) to make decoratives patchy
-      expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1300000, octaves = 2, input_scale = 1/1}"
+      expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1300005, octaves = 2, input_scale = 1/1}"
     },
     {
       type = "noise-expression",

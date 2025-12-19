@@ -82,6 +82,7 @@ local function eternal_lantern_entity(variant)
     hidden_in_factoriopedia = variant > 0,
     hidden = variant > 0,
     autoplace = {
+      order = "c",
       probability_expression =
       "spot_noise{x = x,\z
       y = y,\z
