@@ -100,6 +100,6 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_starting_area",
-      expression = "distance_from_nearest_point{x = x, y = y, points = starting_positions} < 300"
+      expression = "distance_from_nearest_point{x = x, y = y, points = starting_positions} < 512"
     }
   })

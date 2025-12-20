@@ -1,6 +1,6 @@
 
 
-require("logics.eternal-lantern-beacon")
+require("logics.decor-process")
 require("logics.research-on-eat")
 
 

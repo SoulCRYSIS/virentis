@@ -63,13 +63,7 @@ local function eternal_lantern_entity(variant)
         },
       },
     },
-    radius_visualisation_picture =
-    {
-      filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-radius-visualization.png",
-      priority = "extra-high-no-scale",
-      width = 10,
-      height = 10
-    },
+    radius_visualisation_picture = virentis.decor_radius_visualisation_picture,
     supply_area_distance = 12,
     energy_source = { type = "void" },
     impact_category = "glass",
@@ -81,23 +75,11 @@ local function eternal_lantern_entity(variant)
     module_slots = 1,
     hidden_in_factoriopedia = variant > 0,
     hidden = variant > 0,
-    autoplace = {
-      order = "c",
-      probability_expression =
-      "spot_noise{x = x,\z
-      y = y,\z
-      seed0 = map_seed,\z
-      seed1 = 567,\z
-      candidate_spot_count = 1,\z
-      region_size = 12,\z
-      density_expression = max(virentis_town_edge, 0.2 * virentis_town_rural),\z
-      spot_quantity_expression = 1,\z
-      spot_radius_expression = 1,\z
-      spot_favorability_expression = 1,\z
-      basement_value = 0,\z
-      suggested_minimum_candidate_point_spacing = 8,\z
-      maximum_spot_basement_radius = 1}",
-    },
+    autoplace = variant == 0 and {
+      order = "ad",
+      force = "player",
+      probability_expression = "max(virentis_town_edge, 0.3 * virentis_town_rural, 0.1 * virentis_town_center) * grid_random_shift(12, 10, 992)",
+    } or nil,
     water_reflection =
     {
       pictures =
@@ -110,7 +92,8 @@ local function eternal_lantern_entity(variant)
       },
       rotate = false,
       orientation_to_variation = false
-    }
+    },
+    map_color = { 240, 240, 240},
   }
 end
 

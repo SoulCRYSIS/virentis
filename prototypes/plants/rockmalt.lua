@@ -5,7 +5,7 @@ data:extend({
     type = "plant",
     name = "rockmalt-tree",
     icon = "__virentis__/graphics/icons/plants/rockmalt-tree.png",
-    subgroup = "trees",
+    subgroup = "virentis-plants",
     impact_category = "tree",
 
     order = "c",

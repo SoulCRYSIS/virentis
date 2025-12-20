@@ -74,20 +74,10 @@ data:extend({
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
     autoplace = {
-      order = "b",
-      probability_expression = "2 * spot_noise{x = x,\z
-      y = y,\z
-      seed0 = map_seed,\z
-      seed1 = 123,\z
-      candidate_spot_count = 1,\z
-      region_size = 10,\z
-      density_expression = min(virentis_town_rural, 0.05 * virentis_town_edge),\z
-      spot_quantity_expression = 1,\z
-      spot_radius_expression = 1,\z
-      spot_favorability_expression = 1,\z
-      basement_value = 0,\z
-      suggested_minimum_candidate_point_spacing = 12,\z
-      maximum_spot_basement_radius = 1}",
+      order = "ab",
+      force = "player",
+      probability_expression = "2 * max(virentis_town_rural, 0.05 * virentis_town_edge) * grid_random_shift(14, 10, 993)",
     },
+    map_color = { 230, 230, 255},
   },
 })

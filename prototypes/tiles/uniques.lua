@@ -5,6 +5,36 @@ local tile_trigger_effects = require("__space-age__/prototypes/tile/tile-trigger
 local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
 local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
+local tile_spritesheet_layout = tile_graphics.tile_spritesheet_layout
+
+local fulgora_rock_sand_transitions =
+{
+  {
+    to_tiles = virentis_tile.land_tiles,
+    transition_group = 1,
+
+    background_layer_group = "ground-natural",
+    background_layer_offset = -5,
+    masked_background_layer_offset = 1,
+    offset_background_layer_by_tile_layer = false,
+
+    spritesheet = "__space-age__/graphics/terrain/water-transitions/fulgora-rock-slab-transition.png",
+    layout = tile_spritesheet_layout.transition_16_16_16_4_8_short,
+    background_enabled = false,
+    effect_map_layout =
+    {
+      spritesheet = "__space-age__/graphics/terrain/effect-maps/water-fulgora-sand-mask.png",
+      --tile_height = 2,
+      inner_corner_tile_height = 2,
+      outer_corner_tile_height = 2,
+      side_tile_height = 2,
+      u_transition_tile_height = 2,
+      o_transition_count = 1
+    },
+    background_mask_layout = tile_spritesheet_layout.simple_white_mask
+  },
+  ground_to_out_of_map_transition
+}
 
 data:extend(
 ---@type data.TilePrototype[]
@@ -68,7 +98,7 @@ data:extend(
       transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
       walking_sound = tile_sounds.walking.dry_rock,
       landing_steps_sound = tile_sounds.landing.rock,
-      map_color = { 52, 55, 48 },
+      map_color = { 30, 33, 26 },
       walking_speed_modifier = 1,
       vehicle_friction_modifier = 1,
       absorptions_per_second = virentis_tile.pollution_absorption.land,
@@ -99,7 +129,7 @@ data:extend(
       transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
       walking_sound = tile_sounds.walking.dry_rock,
       landing_steps_sound = tile_sounds.landing.rock,
-      map_color = { 114, 86, 40 },
+      map_color = { 191, 34, 23 },
       walking_speed_modifier = 1,
       vehicle_friction_modifier = 1,
       absorptions_per_second = virentis_tile.pollution_absorption.land,
@@ -164,17 +194,15 @@ data:extend(
     },
     {
       type = "tile",
-      name = "town-floor",
+      name = "town-floor-edge",
       subgroup = "virentis-tiles",
-      needs_correction = false,
       collision_mask = tile_collision_masks.ground(),
       walking_speed_modifier = 1.4,
-      layer = virentis_tile.tile_offset + 22,
+      layer = virentis_tile.tile_offset + 19,
       layer_group = "ground-natural",
-      decorative_removal_probability = 0.25,
-      variants = table.deepcopy(data.raw.tile["fulgoran-paving"].variants),
-      transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions),
-      transitions_between_transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions_between_transitions),
+      variants = table.deepcopy(data.raw.tile["fulgoran-rock"].variants),
+      transitions = fulgora_rock_sand_transitions,
+      transitions_between_transitions = table.deepcopy(data.raw.tile["fulgoran-rock"].transitions_between_transitions),
 
       autoplace = {
         probability_expression = "virentis_town_raw * 10"
@@ -182,7 +210,29 @@ data:extend(
 
       walking_sound = tile_sounds.walking.concrete,
       landing_steps_sound = tile_sounds.landing.concrete,
-      map_color = { 140, 62, 59 },
+      map_color = { 150, 45, 45 },
+      scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
+      trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
+    },
+    {
+      type = "tile",
+      name = "town-floor-center",
+      subgroup = "virentis-tiles",
+      collision_mask = tile_collision_masks.ground(),
+      walking_speed_modifier = 1.4,
+      layer = virentis_tile.tile_offset + 20,
+      layer_group = "ground-natural",
+      variants = table.deepcopy(data.raw.tile["fulgoran-paving"].variants),
+      transitions = fulgora_rock_sand_transitions,
+      transitions_between_transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions_between_transitions),
+
+      autoplace = {
+        probability_expression = "(virentis_town_rural + virentis_town_center) * 15"
+      },
+
+      walking_sound = tile_sounds.walking.concrete,
+      landing_steps_sound = tile_sounds.landing.concrete,
+      map_color = { 150, 45, 45 },
       scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
       trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
     },

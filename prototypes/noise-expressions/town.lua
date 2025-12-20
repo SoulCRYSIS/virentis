@@ -4,7 +4,7 @@ data:extend({
   {
     type = "noise-expression",
     name = "virentis_town_size",
-    expression = "24 * control:virentis_town:size"
+    expression = "40 * control:virentis_town:size"
   },
   {
     type = "noise-expression",
@@ -18,8 +18,8 @@ data:extend({
   {
     type = "noise-expression",
     name = "virentis_town_raw",
-    expression = "virentis_highland * spot_noise{x = x + virentis_wobble_small_x * 3,\z
-                             y = y + virentis_wobble_small_y * 3,\z
+    expression = "virentis_highland * spot_noise{x = x + virentis_wobble_small_x * 5,\z
+                             y = y + virentis_wobble_small_y * 5,\z
                              seed0 = map_seed,\z
                              seed1 = 7777,\z
                              density_expression = virentis_select(virentis_elevation, 140, 1000, 0.5, 0, 1) - virentis_starting_area,\z
@@ -29,22 +29,28 @@ data:extend({
                              candidate_spot_count = 8,\z
                              basement_value = 0,\z
                              suggested_minimum_candidate_point_spacing = virentis_town_size * 4,\z
+                             hard_region_target_quantity = 200,\z
                              maximum_spot_basement_radius = virentis_town_size * 2,\z
-                             region_size = 600 + 400 / control:virentis_town:frequency} + virentis_starting_town"
+                             region_size = 500 + 400 / control:virentis_town:frequency} + virentis_starting_town"
   },
   {
     type = "noise-expression",
     name = "virentis_town_center",
-    expression = "virentis_select(virentis_town_raw, 0.7, 1, 0.1, 0, 1)" 
+    expression = "virentis_select(virentis_town_raw, 0.8, 1, 0, 0, 1)" 
   },
   {
     type = "noise-expression",
     name = "virentis_town_rural",
-    expression = "virentis_select(virentis_town_raw, 0.3, 0.7, 0.1, 0, 1)"
+    expression = "virentis_select(virentis_town_raw, 0.4, 0.8, 0.1, 0, 1)"
   },
   {
     type = "noise-expression",
     name = "virentis_town_edge",
-    expression = "virentis_select(virentis_town_raw, 0.15, 0.3, 0.1, 0, 1)"
+    expression = "virentis_select(virentis_town_raw, 0.2, 0.4, 0.05, 0, 1)"
+  },
+  {
+    type = "noise-expression",
+    name = "virentis_town_border",
+    expression = "virentis_select(virentis_town_raw, 0.1, 0.25, 0.05, 0, 1)"
   },
 })

@@ -1043,5 +1043,69 @@ data:extend(
       type = "noise-expression",
       name = "virentis_yellow_lettuce_lichen_cups_6x6_probability",
       expression = "grpi(0.2) + virentis_select(virentis_yellow_lettuce_cups - 0.8 * clamp(virentis_decorative_knockout, 0, 1), -0.2, 0.2, 0.1, 0, 1)",
-    }
+    },
+    -- Town
+    {
+      type = "noise-expression",
+      name = "virentis_fulgoran_ruin_tiny_probability",
+      expression = "virentis_town_rural * 0.05"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_fulgoran_gravewort_probability",
+      expression = "virentis_town_center * 0.2"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_tiny_fulgora_rock_probability",
+      expression = "virentis_town_raw * 0.05"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_small_fulgora_rock_probability",
+      expression = "virentis_town_edge * 0.05"
+    },
+    -- Rockmalt
+    {
+      type = "noise-expression",
+      name = "virentis_rockmalt_decorate_area",
+      expression = "(virentis_highland - virentis_starting_town) * virentis_fertile_spots_coastal_raw(2) * 50000 - 25000"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_tiny_volcanic_rock_probability",
+      expression = "virentis_rockmalt_decorate_area * 0.05"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_small_volcanic_rock_probability",
+      expression = "virentis_rockmalt_decorate_area * 0.03"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_medium_volcanic_rock_probability",
+      expression = "virentis_rockmalt_decorate_area * 0.01"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_crater_small_probability",
+      expression = "virentis_rockmalt_decorate_area * 0.03"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_vulcanus_pita_probability",
+      expression = "spot_noise{x = x + virentis_wobble_small_x,\z
+                             y = y + virentis_wobble_small_y,\z
+                             seed0 = map_seed,\z
+                             seed1 = 7777,\z
+                             density_expression = virentis_rockmalt_decorate_area,\z
+                             spot_radius_expression = 6,\z
+                             spot_quantity_expression = 10,\z
+                             spot_favorability_expression = 1,\z
+                             candidate_spot_count = 10,\z
+                             basement_value = 0,\z
+                             suggested_minimum_candidate_point_spacing = 12,\z
+                             maximum_spot_basement_radius = 12,\z
+                             region_size = 32}"
+    },
   })

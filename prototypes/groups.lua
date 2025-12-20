@@ -90,4 +90,16 @@ data:extend({
     group = "virentis",
     order = "z"
   },
+  {
+    type = "item-subgroup",
+    name = "virentis-decoratives",
+    group = "virentis",
+    order = "x"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-plants",
+    group = "virentis",
+    order = "w"
+  },
 })

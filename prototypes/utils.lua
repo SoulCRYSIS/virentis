@@ -148,4 +148,11 @@ virentis.surface_condition = {
 
 virentis.default_damaged_trigger_effect = hit_effects.entity()
 
+virentis.decor_radius_visualisation_picture = {
+  filename = "__virentis__/graphics/entities/machines/decor-radius-visualization.png",
+  priority = "extra-high-no-scale",
+  width = 10,
+  height = 10
+}
+
 return virentis

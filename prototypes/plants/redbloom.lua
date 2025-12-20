@@ -5,7 +5,7 @@ data:extend({
     type = "plant",
     name = "redbloom-tree",
     icon = "__virentis__/graphics/icons/plants/redbloom-tree.png",
-    subgroup = "trees",
+    subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",
     flags = virentis_plant.default_flags,
