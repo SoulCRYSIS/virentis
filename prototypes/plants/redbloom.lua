@@ -24,7 +24,7 @@ data:extend({
         },
         {
           type = "item",
-          name = "grass",
+          name = "herb",
           amount = 5,
         },
       },

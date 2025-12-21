@@ -7,15 +7,15 @@ data:extend({
   {
     type = "recipe",
     name = "deep-fryer",
-    category = "crafting",
+    category = "crafting-with-fluid",
     order = "a",
     icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
       { type = "item", name = "pipe",        amount = 4 },
       { type = "item", name = "heat-pipe",   amount = 2 },
-      { type = "item", name = "resin",       amount = 2 },
-      { type = "item", name = "firebrick",   amount = 4 }
+      { type = "item", name = "firebrick",   amount = 4 },
+      { type = "fluid", name = "vegetable-oil",    amount = 20 }
     },
     results = {
       { type = "item", name = "deep-fryer", amount = 1 }

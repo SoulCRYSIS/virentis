@@ -36,8 +36,8 @@ data:extend(
     },
     {
       type = "item",
-      name = "grass",
-      icon = "__virentis__/graphics/icons/items/crops/grass.png",
+      name = "herb",
+      icon = "__virentis__/graphics/icons/items/crops/herb.png",
       subgroup = "virentis-crops",
       order = "aa",
       spoil_ticks = 1 * minute,

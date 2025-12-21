@@ -6,11 +6,11 @@ data:extend({
   {
     type = "planet",
     name = "virentis",
-    icon = "__virentis__/graphics/icons/misc/starmap-virentis.png",
-    icon_size = 512,
+    icon = "__virentis__/graphics/icons/misc/virentis-icon.png",
+    icon_size = 256,
     pollutant_type = "spores",
     starmap_icon = "__virentis__/graphics/icons/misc/starmap-virentis.png",
-    starmap_icon_size = 512,
+    starmap_icon_size = 1080,
     gravity_pull = 10,
     distance = 15, -- Between Vulcanus (10) and Gleba (20)
     orientation = 0.25,

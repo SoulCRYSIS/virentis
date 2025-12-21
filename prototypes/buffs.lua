@@ -10,6 +10,19 @@ data:extend(
       target_movement_modifier = 1.5,
       icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
       flags = { "not-on-map" },
+    },
+    {
+      type = "sticker",
+      name = "pentapod-souffle-omelette-speed-sticker",
+      duration_in_ticks = 15 * second,
+      damage_interval = 1 * second,
+      damage_per_tick = {
+        amount = 30,
+        type = "fire"
+      },
+      target_movement_modifier = 5,
+      icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
+      flags = { "not-on-map" },
       animation = {
         filename = "__base__/graphics/entity/fire-flame/fire-flame-01.png",
         line_length = 10,

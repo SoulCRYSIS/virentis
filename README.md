@@ -4,7 +4,10 @@ The planet of agriculturing, cooking, and trading.
 
 Right here, you will achieve your dream of becoming a farmer in Factorio, it design to be mixture of Factorio + Stardew Valley.
 
+This planet require to complete Gleba first. Easier than Aquilo, but harder than Gleba.
+
 Concept is simple, you plant, you cook, and you trade for unique materials.
+
 
 ## IMPORTANT
 
@@ -33,6 +36,7 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 ## Credits
 
 - Town turret graphics: https://mods.factorio.com/mod/aai-vehicles-ironclad
+- Behemoth Pentapod: https://mods.factorio.com/mod/behemoth-enemies
 
 ## Disclaimers
 

@@ -63,6 +63,8 @@ data:extend(
       subgroup = "virentis-materials",
       order = "ah",
       stack_size = 200,
+      spoil_result = "spoilage",
+      spoil_ticks = 2 * minute,
       weight = 5 * kg,
       fuel_category = "nutrients",
       fuel_value = "10MJ",

@@ -31,7 +31,8 @@ data:extend(
       ingredients = {
         { type = "item", name = "resin",       amount = 1 },
         { type = "item", name = "siltcore",    amount = 1 },
-        { type = "item", name = "living-wood", amount = 2 }
+        { type = "item", name = "living-wood", amount = 2 },
+        { type = "item", name = "pentapod-egg", amount = 1 }
       },
       results = {
         { type = "item", name = "heart-of-nature", amount = 1 }

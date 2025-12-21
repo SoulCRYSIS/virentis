@@ -15,10 +15,11 @@ data:extend(
         { type = "item", name = "rockmalt-pudding", amount = 1 }
       },
       results = {
-        { type = "item", name = "iron-plate", amount = 15 }
+        { type = "item", name = "iron-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.gray,
       energy_required = 1,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -31,10 +32,11 @@ data:extend(
         { type = "item", name = "redbloom-buns", amount = 1 }
       },
       results = {
-        { type = "item", name = "copper-plate", amount = 15 }
+        { type = "item", name = "copper-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 1,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -51,6 +53,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.brown,
       energy_required = 1,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -68,6 +71,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.brown,
       energy_required = 2,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -77,12 +81,29 @@ data:extend(
       order = "a",
       icon = "__virentis__/graphics/icons/items/materials/phosphorus.png",
       ingredients = {
-        { type = "item", name = "wild-taco", amount = 1 }
+        { type = "item", name = "pentapod-souffle-omelette", amount = 1 }
       },
       results = {
         { type = "item", name = "phosphorus", amount = 2 }
       },
       energy_required = 1,
+      enabled = false,
     },
+    {
+      type = "recipe",
+      name = "trade-processing-unit",
+      category = "trading-t1",
+      subgroup = "virentis-trades",
+      order = "a",
+      icon = "__base__/graphics/icons/processing-unit.png",
+      ingredients = {
+        { type = "item", name = "wild-taco", amount = 1 }
+      },
+      results = {
+        { type = "item", name = "processing-unit", amount = 1 }
+      },
+      energy_required = 1,
+      enabled = false,
+    }
   }
 )

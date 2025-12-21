@@ -6,13 +6,13 @@ data:extend(
   {
     {
       type = "recipe",
-      name = "nutrient-from-grass",
+      name = "nutrient-from-herb",
       category = "organic-or-hand-crafting",
       subgroup = "virentis-crops",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/crops/grass.png",
+      icon = "__virentis__/graphics/icons/items/crops/herb.png",
       ingredients = {
-        { type = "item", name = "grass", amount = 1 },
+        { type = "item", name = "herb", amount = 1 },
       },
       results = {
         { type = "item", name = "nutrients",  amount = 2 },
@@ -21,6 +21,7 @@ data:extend(
       energy_required = 1,
       result_is_always_fresh = true,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -40,6 +41,7 @@ data:extend(
       energy_required = 5,
       result_is_always_fresh = false,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -59,6 +61,7 @@ data:extend(
       energy_required = 1,
       result_is_always_fresh = false,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -77,6 +80,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.black,
       energy_required = 4,
       result_is_always_fresh = true,
+      enabled = false,
     },
   }
 )

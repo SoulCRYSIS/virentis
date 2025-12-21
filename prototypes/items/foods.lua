@@ -260,4 +260,27 @@ data:extend(
       weight = 5 * kg,
       capsule_action = throw_grenade_action("mudland-medley-grenade")
     },
+    {
+      type = "item",
+      name = "soft-cooked-pentapod-egg",
+      icon = "__virentis__/graphics/icons/items/foods/soft-cooked-pentapod-egg.png",
+      subgroup = "virentis-foods",
+      order = "cg",
+      spoil_ticks = 10 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+    },
+    {
+      type = "capsule",
+      name = "pentapod-souffle-omelette",
+      icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
+      subgroup = "virentis-foods",
+      order = "ch",
+      spoil_ticks = 3 * minute,
+      spoil_result = "spoilage",
+      stack_size = 50,
+      weight = 5 * kg,
+      capsule_action = eat_action("pentapod-souffle-omelette-speed-sticker")
+    },
   })
