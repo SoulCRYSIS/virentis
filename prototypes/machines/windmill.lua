@@ -11,7 +11,7 @@ data:extend({
     icon = "__virentis__/graphics/icons/machines/windmill.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     placeable_by = { item = "windmill", count = 1 },
-    max_health = 200,
+    max_health = 10000,
     corpse = "beacon-remnants",
     dying_explosion = "beacon-explosion",
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
@@ -67,7 +67,7 @@ data:extend({
       },
     },
     radius_visualisation_picture = virentis.decor_radius_visualisation_picture,
-    supply_area_distance = 32,
+    supply_area_distance = 64,
     energy_source = { type = "void" },
     impact_category = "metal",
     energy_usage = "10kW",
@@ -79,7 +79,15 @@ data:extend({
     autoplace = {
       order = "aa",
       force = "player",
-      probability_expression = "3 * virentis_town_center * grid_random_shift(12, 8, 991)",
+      probability_expression = "3 * (virentis_town_center - virentis_starting_town_center) * grid_random_shift(12, 4, 991) + virentis_starting_windmill * 10",
+      local_expressions = {
+        virentis_starting_windmill = "starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
+                                                      distance = 100 * virentis_starting_area_multiplier,\z
+                                                      radius = 1,\z
+                                                      x_distortion = 0,\z
+                                                      y_distortion = 0} > 0",
+        virentis_starting_town_center = "virentis_select(virentis_starting_town, 0.8, 1, 0, 0, 1)",
+      },
     },
     water_reflection =
     {

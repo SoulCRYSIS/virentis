@@ -1053,12 +1053,12 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_fulgoran_gravewort_probability",
-      expression = "virentis_town_center * 0.2"
+      expression = "max(virentis_town_center * 0.1, virentis_town_rural * 0.05)"
     },
     {
       type = "noise-expression",
       name = "virentis_tiny_fulgora_rock_probability",
-      expression = "virentis_town_raw * 0.05"
+      expression = "(virentis_town_raw - virentis_town_center) * 0.05"
     },
     {
       type = "noise-expression",

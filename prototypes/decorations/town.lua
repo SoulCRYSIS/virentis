@@ -16,17 +16,16 @@ fulgora_ruin_medium.subgroup = "virentis-decoratives"
 fulgora_ruin_medium.name = "virentis-fulgoran-ruin-medium"
 fulgora_ruin_medium.minable = nil
 fulgora_ruin_medium.max_health = 500
-fulgora_ruin_medium.autoplace = { probability_expression = "virentis_town_edge * 0.01" }
+fulgora_ruin_medium.autoplace = { probability_expression = "virentis_town_edge * 0.01", force = "player" }
 
 local fulgora_ruin_stonehenge = table.deepcopy(data.raw["simple-entity"]["fulgoran-ruin-stonehenge"])
 fulgora_ruin_stonehenge.subgroup = "virentis-decoratives"
 fulgora_ruin_stonehenge.name = "virentis-fulgoran-ruin-stonehenge"
 fulgora_ruin_stonehenge.minable = nil
 fulgora_ruin_stonehenge.max_health = 800
-fulgora_ruin_stonehenge.autoplace = { probability_expression = "virentis_town_border * 0.01" }
+fulgora_ruin_stonehenge.autoplace = { probability_expression = "virentis_town_border * 0.01", force = "player" }
 
 data:extend({
-  fulgora_ruin_small,
   fulgora_ruin_medium,
   fulgora_ruin_stonehenge,
 })

@@ -4,7 +4,7 @@ data:extend({
   ---@type data.ElectricTurretPrototype
   {
     type = "electric-turret",
-    name = "town-turret",
+    name = "town-mortar-turret",
     icon = "__virentis__/graphics/icons/machines/town-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
@@ -28,7 +28,7 @@ data:extend({
     autoplace = {
       order = "ac",
       force = "player",
-      probability_expression = "2 * virentis_town_border * grid_random_shift(10, 6, 995)",
+      probability_expression = "2 * max(virentis_town_edge, 0.1 * virentis_town_rural) * grid_random_shift(10, 6, 995)",
     },
     energy_source = {
       type = "void"
@@ -118,19 +118,21 @@ data:extend({
     ---@type data.ProjectileAttackParameters
     {
       type = "projectile",
-      ammo_category = "mortar-bomb",
-      cooldown = 540,
+      cooldown = 180,
+      ammo_category = "rocket",
+      lead_target_for_projectile_delay = 1,
+      lead_target_for_projectile_speed = 1,
       movement_slow_down_factor = 0,
       projectile_creation_distance = 0.5,
       projectile_center = { -0, -0.6 },
       health_penalty = -1,
       rotate_penalty = 1,
-      range = 80,
+      range = 100,
       min_range = 20,
       turn_range = 1,
       sound = sounds.tank_gunshot,
       ammo_type = {
-        target_type = "position",
+        target_type = "entity",
         clamp_position = true,
         action = {
           type = "direct",
@@ -194,7 +196,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = {amount = 100, type = "explosion"}
+            damage = {amount = 50, type = "explosion"}
           },
           {
             type = "create-entity",
@@ -221,6 +223,7 @@ data:extend({
             {
               type = "area",
               radius = 6.5,
+              force = "enemy",
               action_delivery =
               {
                 type = "instant",

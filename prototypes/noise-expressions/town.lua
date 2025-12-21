@@ -12,8 +12,8 @@ data:extend({
     expression = "max(0, starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
                                                       distance = 100 * virentis_starting_area_multiplier,\z
                                                       radius = virentis_town_size * virentis_starting_area_multiplier,\z
-                                                      x_distortion = virentis_wobble_small_x * 3 * virentis_starting_area_multiplier,\z
-                                                      y_distortion = virentis_wobble_small_x * 3 * virentis_starting_area_multiplier})"
+                                                      x_distortion = virentis_wobble_small_x * 5 * virentis_starting_area_multiplier,\z
+                                                      y_distortion = virentis_wobble_small_x * 5 * virentis_starting_area_multiplier})"
   },
   {
     type = "noise-expression",

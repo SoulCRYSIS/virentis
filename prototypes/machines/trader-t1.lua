@@ -31,7 +31,7 @@ data:extend({
     collision_box = { { -1.8, -1.8 }, { 1.8, 1.8 } },
     selection_box = { { -2, -2 }, { 2, 2 } },
     damaged_trigger_effect = hit_effects.entity(),
-    max_health = 10000,
+    max_health = 5000,
     graphics_set = {
       animation = {
         layers = {

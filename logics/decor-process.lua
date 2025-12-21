@@ -11,46 +11,74 @@ local module_to_insert = {
   ["windmill"] = "windmill-module",
 }
 
+local random_rotate = {
+  ["town-mortar-turret"] = "orientation",
+}
+
+local to_process = {
+  "eternal-lantern",
+  "windmill",
+  "town-mortar-turret",
+}
+
 local function apply_variant(event)
   local entity = event.created_entity or event.entity
   if not (entity and entity.valid) then return end
+  game.print(serpent.line(entity.name))
   
   local variant_count = variants_to_switch[entity.name]
-  if not variant_count or variant_count == 0 then return end
 
   -- 0 means keep the base variant
-  local variant = math.random(0, variant_count)
-  if variant == 0 then return end
+  local variant = 0
+  if variant_count then
+    variant = math.random(0, variant_count)
+  end
 
-  local surface = entity.surface
-  local position = entity.position
-  local force = entity.force
-  local direction = entity.direction
-  local player_index = event.player_index
   local name = entity.name
 
-  -- Destroy the original entity
-  entity.destroy()
+  ---@type LuaEntity
+  local new_entity
+  if variant == 0 then 
+    new_entity = entity
+  else
+    local surface = entity.surface
+    local position = entity.position
+    local force = entity.force
+    local direction = entity.direction
+    local player_index = event.player_index
 
-  -- Create the variant
-  local new_entity = surface.create_entity({
-    name = name .. "-" .. variant,
-    position = position,
-    force = force,
-    direction = direction,
-    raise_built = true,
-    player = player_index,
-  })
+    -- Destroy the original entity
+    entity.destroy()
+
+    -- Create the variant
+    new_entity = surface.create_entity({
+      name = name .. "-" .. variant,
+      position = position,
+      force = force,
+      direction = direction,
+      fast_replace = true,
+      player = player_index,
+    })
+  end
+
+  game.print(serpent.line(name .. " 1"))
 
   -- If this was created from map generation, make it non-minable
-  if new_entity and event.is_from_map then
+  if event.is_from_map then
     new_entity.minable = false
   end
 
   local module_name = module_to_insert[name]
   if module_name then
-    local module = new_entity.get_module_inventory()
-    module.insert({ name = module_name })
+    local inventory = new_entity.get_inventory(defines.inventory.beacon_modules)
+    inventory.insert({ name = module_name })
+    new_entity.operable = false
+  end
+
+  if random_rotate[name] then
+    if random_rotate[name] == "orientation" then
+      new_entity.orientation = math.random()
+    end
   end
 end
 
@@ -58,31 +86,31 @@ local function on_chunk_generated(event)
   local surface = event.surface
   local area = event.area
   
-  for base_name, _ in pairs(variants_to_switch) do
+  for _, base_name in ipairs(to_process) do
     local entities = surface.find_entities_filtered({
       area = area,
       name = base_name
     })
     
-    for _, entity in pairs(entities) do
+    for _, entity in ipairs(entities) do
       -- Simulate built event for chunk generated entities
       apply_variant({
         entity = entity,
-        is_from_map = true
+        is_from_map = true,
       })
     end
   end
 end
 
-local change_variant_filters = {}
-for name, _ in pairs(variants_to_switch) do
-  table.insert(change_variant_filters, { filter = "name", name = name })
+local filters = {}
+for _, name in ipairs(to_process) do
+  table.insert(filters, { filter = "name", name = name })
 end
 
-script.on_event(defines.events.on_built_entity, apply_variant, change_variant_filters)
-script.on_event(defines.events.on_robot_built_entity, apply_variant, change_variant_filters)
-script.on_event(defines.events.script_raised_built, apply_variant, change_variant_filters)
-script.on_event(defines.events.script_raised_revive, apply_variant, change_variant_filters)
+script.on_event(defines.events.on_built_entity, apply_variant, filters)
+script.on_event(defines.events.on_robot_built_entity, apply_variant, filters)
+script.on_event(defines.events.script_raised_built, apply_variant, filters)
+script.on_event(defines.events.script_raised_revive, apply_variant, filters)
 
 script.on_event(defines.events.on_chunk_generated, on_chunk_generated)
 
