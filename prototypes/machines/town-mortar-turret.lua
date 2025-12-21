@@ -5,6 +5,7 @@ data:extend({
   {
     type = "electric-turret",
     name = "town-mortar-turret",
+    subgroup = "virentis-machines",
     icon = "__virentis__/graphics/icons/machines/town-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
@@ -26,9 +27,9 @@ data:extend({
     close_sound = sounds.machine_close,
     turret_base_has_direction = true,
     autoplace = {
-      order = "ac",
+      order = "acb",
       force = "player",
-      probability_expression = "2 * max(virentis_town_edge, 0.1 * virentis_town_rural) * grid_random_shift(10, 6, 995)",
+      probability_expression = "2 * max(0.1 * virentis_town_edge, virentis_town_rural) * grid_random_shift(14, 10, 995)",
     },
     energy_source = {
       type = "void"
@@ -38,7 +39,7 @@ data:extend({
       layers =
       {
         {
-          filename = "__virentis__/graphics/entities/machines/town-turret/mortar-turret.png",
+          filename = "__virentis__/graphics/entities/machines/town-mortar-turret/mortar-turret.png",
           priority = "low",
           line_length = 16,
           width = 2048 / 16,
@@ -50,7 +51,7 @@ data:extend({
           scale = 0.65
         },
         {
-          filename = "__virentis__/graphics/entities/machines/town-turret/mortar-turret-mask.png",
+          filename = "__virentis__/graphics/entities/machines/town-mortar-turret/mortar-turret-mask.png",
           priority = "low",
           line_length = 16,
           width = 2048 / 16,
@@ -62,7 +63,7 @@ data:extend({
           scale = 0.65
         },
         {
-          filename = "__virentis__/graphics/entities/machines/town-turret/mortar-turret-shadow.png",
+          filename = "__virentis__/graphics/entities/machines/town-mortar-turret/mortar-turret-shadow.png",
           priority = "low",
           line_length = 4,
           width = 672 / 4,
@@ -118,7 +119,7 @@ data:extend({
     ---@type data.ProjectileAttackParameters
     {
       type = "projectile",
-      cooldown = 180,
+      cooldown = 240,
       ammo_category = "rocket",
       lead_target_for_projectile_delay = 1,
       lead_target_for_projectile_speed = 1,
@@ -127,8 +128,8 @@ data:extend({
       projectile_center = { -0, -0.6 },
       health_penalty = -1,
       rotate_penalty = 1,
-      range = 100,
-      min_range = 20,
+      range = 80,
+      min_range = 10,
       turn_range = 1,
       sound = sounds.tank_gunshot,
       ammo_type = {
@@ -231,7 +232,7 @@ data:extend({
                 {
                   {
                     type = "damage",
-                    damage = {amount = 200, type = "explosion"}
+                    damage = {amount = 100, type = "explosion"}
                   },
                   {
                     type = "create-entity",

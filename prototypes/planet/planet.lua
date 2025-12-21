@@ -236,6 +236,7 @@ data:extend({
             ["virentis-fulgoran-ruin-medium"] = {},
             ["virentis-fulgoran-ruin-stonehenge"] = {},
             ["town-mortar-turret"] = {},
+            ["town-tesla-turret"] = {},
             ["trader-t1"] = {},
             ["eternal-lantern"] = {},
             ["windmill"] = {},

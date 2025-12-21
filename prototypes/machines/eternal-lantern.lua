@@ -78,7 +78,7 @@ local function eternal_lantern_entity(variant)
     autoplace = variant == 0 and {
       order = "ad",
       force = "player",
-      probability_expression = "max(virentis_town_edge, 0.3 * virentis_town_rural, 0.1 * virentis_town_center) * grid_random_shift(12, 10, 992)",
+      probability_expression = "max(virentis_town_edge, 0.4 * virentis_town_rural) * grid_random_shift(12, 10, 992)",
     } or nil,
     water_reflection =
     {

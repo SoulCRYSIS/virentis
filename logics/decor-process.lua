@@ -13,18 +13,19 @@ local module_to_insert = {
 
 local random_rotate = {
   ["town-mortar-turret"] = "orientation",
+  ["town-tesla-turret"] = "4way",
 }
 
 local to_process = {
   "eternal-lantern",
   "windmill",
   "town-mortar-turret",
+  "town-tesla-turret",
 }
 
 local function apply_variant(event)
   local entity = event.created_entity or event.entity
   if not (entity and entity.valid) then return end
-  game.print(serpent.line(entity.name))
   
   local variant_count = variants_to_switch[entity.name]
 
@@ -61,8 +62,6 @@ local function apply_variant(event)
     })
   end
 
-  game.print(serpent.line(name .. " 1"))
-
   -- If this was created from map generation, make it non-minable
   if event.is_from_map then
     new_entity.minable = false
@@ -78,6 +77,9 @@ local function apply_variant(event)
   if random_rotate[name] then
     if random_rotate[name] == "orientation" then
       new_entity.orientation = math.random()
+    elseif random_rotate[name] == "4way" then
+      local directions = { defines.direction.north, defines.direction.east, defines.direction.south, defines.direction.west }
+      new_entity.direction = directions[math.random(1, 4)]
     end
   end
 end

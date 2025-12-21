@@ -79,15 +79,7 @@ data:extend({
     autoplace = {
       order = "aa",
       force = "player",
-      probability_expression = "3 * (virentis_town_center - virentis_starting_town_center) * grid_random_shift(12, 4, 991) + virentis_starting_windmill * 10",
-      local_expressions = {
-        virentis_starting_windmill = "starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
-                                                      distance = 100 * virentis_starting_area_multiplier,\z
-                                                      radius = 1,\z
-                                                      x_distortion = 0,\z
-                                                      y_distortion = 0} > 0",
-        virentis_starting_town_center = "virentis_select(virentis_starting_town, 0.8, 1, 0, 0, 1)",
-      },
+      probability_expression = "virentis_windmill_spot * 10",
     },
     water_reflection =
     {

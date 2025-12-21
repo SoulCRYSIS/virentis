@@ -1,5 +1,3 @@
-
-
 data:extend({
   {
     type = "noise-expression",
@@ -35,8 +33,33 @@ data:extend({
   },
   {
     type = "noise-expression",
+    name = "virentis_windmill_spot",
+    expression = "(virentis_highland * spot_noise{x = x,\z
+                             y = y,\z
+                             seed0 = map_seed,\z
+                             seed1 = 7777,\z
+                             density_expression = virentis_select(virentis_elevation, 140, 1000, 0.5, 0, 1) - virentis_starting_area,\z
+                             spot_radius_expression = 1,\z
+                             spot_quantity_expression = 1,\z
+                             spot_favorability_expression = 1,\z
+                             candidate_spot_count = 8,\z
+                             basement_value = 0,\z
+                             suggested_minimum_candidate_point_spacing = virentis_town_size * 4,\z
+                             maximum_spot_basement_radius = virentis_town_size * 2,\z
+                             region_size = 500 + 400 / control:virentis_town:frequency} > 0) + virentis_starting_windmill",
+    local_expressions = {
+      virentis_starting_windmill =
+      "starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
+                                                                            distance = 100 * virentis_starting_area_multiplier,\z
+                                                                            radius = 1,\z
+                                                                            x_distortion = 0,\z
+                                                                            y_distortion = 0} > 0",
+    },
+  },
+  {
+    type = "noise-expression",
     name = "virentis_town_center",
-    expression = "virentis_select(virentis_town_raw, 0.8, 1, 0, 0, 1)" 
+    expression = "virentis_select(virentis_town_raw, 0.8, 1, 0, 0, 1)"
   },
   {
     type = "noise-expression",

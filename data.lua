@@ -18,6 +18,7 @@ require "prototypes.machines.living-inserter"
 require "prototypes.machines.eternal-lantern"
 require "prototypes.machines.windmill"
 require "prototypes.machines.town-mortar-turret"
+require "prototypes.machines.town-tesla-turret"
 
 require "prototypes.items.crops"
 require "prototypes.items.materials"
