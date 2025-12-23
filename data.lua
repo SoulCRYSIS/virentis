@@ -55,6 +55,7 @@ require "prototypes.noise-expressions.decoratives"
 require "prototypes.noise-expressions.tiles"
 require "prototypes.noise-expressions.town"
 require "prototypes.noise-expressions.entity-decoratives"
+require "prototypes.noise-expressions.enemies"
 
 require "prototypes.decorations.base-gleba"
 require "prototypes.decorations.town"

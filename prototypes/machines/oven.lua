@@ -79,6 +79,7 @@ data:extend({
         percent = 100,
       },
     },
+    corpse = "steel-furnace-remnants",
     graphics_set = {
       animation = virentis.animation_2way_to_4way(
         {

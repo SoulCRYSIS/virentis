@@ -55,6 +55,7 @@ data:extend({
     damaged_trigger_effect = virentis.default_damaged_trigger_effect,
     max_health = 1000,
     dying_explosion = "steel-furnace-explosion",
+    corpse = "big-remnants",
     graphics_set = {
       animation = {
         layers = {
@@ -85,7 +86,7 @@ data:extend({
             frame_count = 64,
             line_length = 8,
             scale = 0.7,
-            animation_speed = 0.2,
+            animation_speed = 0.1,
           },
         },
         {
@@ -101,7 +102,7 @@ data:extend({
             line_length = 8,
             draw_as_glow = true,
             blend_mode = "additive",
-            animation_speed = 0.2,
+            animation_speed = 0.1,
             scale = 0.7,
           },
         },

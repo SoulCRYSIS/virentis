@@ -120,7 +120,7 @@ data:extend({
     collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
     damaged_trigger_effect = hit_effects.entity(),
     start_attacking_only_when_can_shoot = true,
-    rotation_speed = 0.005,
+    rotation_speed = 0.05,
     preparing_speed = 0.1,
     folding_speed = 0.1,
     ending_attack_speed = 1 / (30 + 1), -- Must be clocked to the beam duration so the face light turns off at the right time
@@ -144,19 +144,23 @@ data:extend({
     autoplace = {
       order = "aca",
       force = "player",
-      probability_expression = "2 * max(virentis_town_edge, 0.1 * virentis_town_rural) * grid_random_shift(16, 10, 996)",
+      probability_expression = "2 * max(virentis_town_edge, 0.1 * virentis_town_rural) * grid_random_shift(18, 12, 996)",
     },
     turret_base_has_direction = true,
     ending_attack_animation = convert_to_4way({
       base_animation,
       base_glow_animation,
+      charging_animation,
       attacking_animation,
     }),
     preparing_animation = charging_state_animation,
+    prepared_animation = charging_state_animation,
+    folding_animation = charging_state_animation,
     folded_animation = convert_to_4way({
       base_animation,
       base_glow_animation,
     }),
+    energy_glow_animation = laser_turret_shooting_glow(),
     glow_light_intensity = 0.5, -- defaults to 0
     integration_patch_render_layer = "elevated-higher-object",
     graphics_set =
@@ -189,8 +193,8 @@ data:extend({
       range = 60,
       range_mode = "center-to-bounding-box",
       fire_penalty = 0.9,
-      source_direction_count = 64,
-      source_offset = { -1.1, -0.5 },
+      source_direction_count = 1,
+      source_offset = { 0, -1 },
       ammo_category = "tesla",
       ammo_type =
       {

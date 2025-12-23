@@ -143,7 +143,12 @@ virentis.surface_condition = {
     property = "pressure",
     min = 2000,
     max = 2000
-  }
+  },
+  {
+    property = "gravity",
+    min = 10,
+    max = 10
+  },
 }
 
 virentis.default_damaged_trigger_effect = hit_effects.entity()

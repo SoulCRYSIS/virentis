@@ -11,7 +11,7 @@ local fulgora_rock_sand_transitions = table.deepcopy(data.raw["tile"]["fulgoran-
 fulgora_rock_sand_transitions[1].to_tiles = virentis_tile.land_tiles
 fulgora_rock_sand_transitions[1].background_layer_group = "ground-natural"
 
-local oil_sand_transitions = table.deepcopy(data.raw["tile"]["oil-ocean-deep"].transitions)
+local oil_sand_transitions = table.deepcopy(data.raw["tile"]["oil-ocean-shallow"].transitions)
 oil_sand_transitions[1].to_tiles = virentis_tile.water_tiles
 
 data:extend(
@@ -71,7 +71,7 @@ data:extend(
           --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
         }
       ),
-      autoplace = { probability_expression = "(virentis_highland - virentis_starting_town) * virentis_fertile_spots_coastal_raw(2) * 50000 - 30000" },
+      autoplace = { probability_expression = "(virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2) * 50000 - 30000" },
       transitions = virentis_tile.lava_stone_transitions,
       transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
       walking_sound = tile_sounds.walking.dry_rock,
@@ -125,7 +125,7 @@ data:extend(
       layer = 9,
       searchable = true,
 
-      transitions = table.deepcopy(data.raw.tile["oil-ocean-shallow"].transitions),
+      transitions = oil_sand_transitions,
       transitions_between_transitions = table.deepcopy(data.raw.tile["oil-ocean-shallow"]
         .transitions_between_transitions),
       trigger_effect = tile_trigger_effects.landfill_trigger_effect(),
@@ -160,7 +160,7 @@ data:extend(
       layer = 8,
       sprite_usage_surface = "gleba",
       variants = table.deepcopy(data.raw.tile["oil-ocean-deep"].variants),
-      transitions = oil_sand_transitions,
+      transitions = table.deepcopy(data.raw.tile["oil-ocean-deep"].transitions),
       transitions_between_transitions = table.deepcopy(data.raw.tile["oil-ocean-deep"].transitions_between_transitions),
 
       walking_sound = base_tile_sounds.walking.oil({ volume = 1.0 }),

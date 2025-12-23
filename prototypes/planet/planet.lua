@@ -1,8 +1,10 @@
 -- Planet map generation settings
 local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
+local planet_catalogue_gleba = require("__space-age__.prototypes.planet.procession-catalogue-gleba")
 
 -- Create the actual planet prototype
 data:extend({
+  ---@type data.PlanetPrototype
   {
     type = "planet",
     name = "virentis",
@@ -12,11 +14,24 @@ data:extend({
     starmap_icon = "__virentis__/graphics/icons/misc/starmap-virentis.png",
     starmap_icon_size = 1080,
     gravity_pull = 10,
-    distance = 15, -- Between Vulcanus (10) and Gleba (20)
+    distance = 25, -- Between Vulcanus (10) and Gleba (20)
     orientation = 0.25,
+    solar_power_in_space = 50,
     magnitude = 1.0,
-    order = "c[virentis]",
+    order = "ca",
     subgroup = "planets",
+    platform_procession_set =
+    {
+      arrival = {"planet-to-platform-b"},
+      departure = {"platform-to-planet-a"}
+    },
+    planet_procession_set =
+    {
+      arrival = {"platform-to-planet-b"},
+      departure = {"planet-to-platform-a"}
+    },
+    procession_graphic_catalogue = planet_catalogue_gleba,
+    surface_render_parameters = table.deepcopy(data.raw["planet"]["gleba"].surface_render_parameters),
     map_gen_settings = {
       property_expression_names =
       {
@@ -253,7 +268,7 @@ data:extend({
     surface_properties =
     {
       ["day-night-cycle"] = 5 * minute,
-      ["magnetic-field"] = 50,
+      ["magnetic-field"] = 25,
       ["solar-power"] = 30,
       pressure = 2000,
       gravity = 10

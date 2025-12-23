@@ -6,7 +6,6 @@ local width = 512
 local height = 512
 
 data:extend({
-  virentis.default_machine_item_prototype("trader-t1"),
   ---@type data.AssemblingMachinePrototype
   {
     type = "assembling-machine",
@@ -32,6 +31,7 @@ data:extend({
     selection_box = { { -2, -2 }, { 2, 2 } },
     damaged_trigger_effect = hit_effects.entity(),
     max_health = 5000,
+    corpse = "medium-remnants",
     graphics_set = {
       animation = {
         layers = {
@@ -76,7 +76,7 @@ data:extend({
     autoplace = {
       order = "ab",
       force = "player",
-      probability_expression = "2 * max(virentis_town_rural, 0.1 * virentis_town_edge) * grid_random_shift(14, 10, 993)",
+      probability_expression = "2 * max(virentis_town_rural, 0.1 * virentis_town_edge) * grid_random_shift(12, 8, 993)",
     },
     map_color = { 230, 230, 255},
   },

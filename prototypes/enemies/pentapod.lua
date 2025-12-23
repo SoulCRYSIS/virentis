@@ -122,6 +122,7 @@ pentapod_spawner.result_units = {
 }
 pentapod_spawner.autoplace = {
   order = "ba",
+  force = "enemy",
   probability_expression = "virentis_pentapod_spawner",
   control = "virentis_enemy_base",
 }
@@ -138,6 +139,7 @@ pentapod_spawner_small.result_units = {
 }
 pentapod_spawner_small.autoplace = {
   order = "bb",
+  force = "enemy",
   probability_expression = "virentis_pentapod_spawner_small",
   control = "virentis_enemy_base",
 }

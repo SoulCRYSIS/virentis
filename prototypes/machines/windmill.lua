@@ -4,15 +4,13 @@ local width = 960
 local height = 960
 
 data:extend({
-  virentis.default_machine_item_prototype("windmill"),
   {
     type = "beacon",
     name = "windmill",
     icon = "__virentis__/graphics/icons/machines/windmill.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    placeable_by = { item = "windmill", count = 1 },
     max_health = 10000,
-    corpse = "beacon-remnants",
+    corpse = "big-remnants",
     dying_explosion = "beacon-explosion",
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },

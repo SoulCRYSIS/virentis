@@ -97,7 +97,7 @@ local function apply_variant(event)
     if (name == "windmill") then
       local position = new_entity.position
       local distance = math.sqrt(position.x ^ 2 + position.y ^ 2)
-      inventory.insert({ name = module_name, count = math.min(math.ceil(distance / 1000), 20) })
+      inventory.insert({ name = module_name, count = 3 + math.min(math.log(2, 4 + math.sqrt(distance / 48)), 17) })
     else
       inventory.insert({ name = module_name })
     end

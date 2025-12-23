@@ -6,6 +6,11 @@ data:extend({
   },
   {
     type = "noise-expression",
+    name = "virentis_town_size_scale_distance",
+    expression = "min(virentis_town_size, (distance_from_nearest_point{x = x, y = y, points = starting_positions} / 32) ^ 0.5) + virentis_town_size"
+  },
+  {
+    type = "noise-expression",
     name = "virentis_starting_town",
     expression = "max(0, starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z
                                                       distance = 100 * virentis_starting_area_multiplier,\z
@@ -21,15 +26,14 @@ data:extend({
                              seed0 = map_seed,\z
                              seed1 = 7777,\z
                              density_expression = virentis_select(virentis_elevation, 140, 1000, 0.5, 0, 1) - virentis_starting_area,\z
-                             spot_radius_expression = virentis_town_size,\z
-                             spot_quantity_expression = virentis_town_size * virentis_town_size,\z
+                             spot_radius_expression = virentis_town_size_scale_distance,\z
+                             spot_quantity_expression = virentis_town_size_scale_distance * virentis_town_size_scale_distance,\z
                              spot_favorability_expression = 1,\z
-                             candidate_spot_count = 8,\z
+                             candidate_spot_count = 6,\z
                              basement_value = 0,\z
-                             suggested_minimum_candidate_point_spacing = virentis_town_size * 4,\z
-                             hard_region_target_quantity = 200,\z
-                             maximum_spot_basement_radius = virentis_town_size * 2,\z
-                             region_size = 500 + 400 / control:virentis_town:frequency} + virentis_starting_town"
+                             suggested_minimum_candidate_point_spacing = virentis_town_size * 8,\z
+                             maximum_spot_basement_radius = virentis_town_size * 4,\z
+                             region_size = 600 + 400 / control:virentis_town:frequency} + virentis_starting_town"
   },
   {
     type = "noise-expression",
@@ -40,12 +44,12 @@ data:extend({
                              seed1 = 7777,\z
                              density_expression = virentis_select(virentis_elevation, 140, 1000, 0.5, 0, 1) - virentis_starting_area,\z
                              spot_radius_expression = 1,\z
-                             spot_quantity_expression = 1,\z
+                             spot_quantity_expression = 5,\z
                              spot_favorability_expression = 1,\z
-                             candidate_spot_count = 8,\z
+                             candidate_spot_count = 6,\z
                              basement_value = 0,\z
-                             suggested_minimum_candidate_point_spacing = virentis_town_size * 4,\z
-                             maximum_spot_basement_radius = virentis_town_size * 2,\z
+                             suggested_minimum_candidate_point_spacing = virentis_town_size * 8,\z
+                             maximum_spot_basement_radius = virentis_town_size * 4,\z
                              region_size = 500 + 400 / control:virentis_town:frequency} > 0) + virentis_starting_windmill",
     local_expressions = {
       virentis_starting_windmill =
