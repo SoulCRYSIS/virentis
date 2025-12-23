@@ -26,6 +26,8 @@ data:extend({
         aux = "virentis_aux",
         cliffiness = "virentis_cliffiness",
         cliff_elevation = "cliff_elevation_from_elevation",
+        enemy_base_radius = "gleba_enemy_base_radius",
+        enemy_base_frequency = "gleba_enemy_base_frequency",
 
         ["decorative:red-desert-bush:probability"] = "virentis_red_desert_bush_probability",
         ["decorative:white-desert-bush:probability"] = "virentis_white_desert_bush_probability",
@@ -41,7 +43,7 @@ data:extend({
         ["decorative:dark-mud-decal:probability"] = "virentis_dark_mud_probability",
         ["decorative:green-carpet-grass:probability"] = "virentis_green_carpet_grass_probability",
         ["decorative:green-hairy-grass:probability"] = "virentis_green_hairy_grass_probability",
-        
+
         ["decorative:fulgoran-ruin-tiny:probability"] = "virentis_fulgoran_ruin_tiny_probability",
         ["decorative:fulgoran-gravewort:probability"] = "virentis_fulgoran_gravewort_probability",
         ["decorative:tiny-fulgora-rock:probability"] = "virentis_tiny_fulgora_rock_probability",
@@ -55,14 +57,10 @@ data:extend({
 
         ["entity:funneltrunk:probability"] = "virentis_funneltrunk_probability",
         ["entity:funneltrunk:control"] = "virentis_plants",
-        ["entity:slipstack:probability"] = "virentis_slipstack_probability",
-        ["entity:slipstack:control"] = "virentis_plants",
         ["entity:hairyclubnub:probability"] = "virentis_hairyclubnub_probability",
         ["entity:hairyclubnub:control"] = "virentis_plants",
         ["entity:teflilly:probability"] = "virentis_teflilly_probability",
         ["entity:teflilly:control"] = "virentis_plants",
-        ["entity:cuttlepop:probability"] = "virentis_cuttlepop_probability",
-        ["entity:cuttlepop:control"] = "virentis_plants",
         ["entity:lickmaw:probability"] = "virentis_lickmaw_probability",
         ["entity:lickmaw:control"] = "virentis_plants",
         ["entity:sunnycomb:probability"] = "virentis_sunnycomb_probability",
@@ -82,6 +80,7 @@ data:extend({
         ["virentis_water"] = {},
         ["virentis_cliff"] = {},
         ["virentis_town"] = {},
+        ["virentis_enemy_base"] = {},
       },
       autoplace_settings = {
         ["tile"] = {
@@ -241,10 +240,10 @@ data:extend({
             ["eternal-lantern"] = {},
             ["windmill"] = {},
             ["funneltrunk"] = {},
-            ["slipstack"] = {},
+            ["virentis-slipstack"] = {},
             ["hairyclubnub"] = {},
             ["teflilly"] = {},
-            ["cuttlepop"] = {},
+            ["virentis-cuttlepop"] = {},
             ["lickmaw"] = {},
             ["sunnycomb"] = {},
           }

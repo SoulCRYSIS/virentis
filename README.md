@@ -13,6 +13,8 @@ Concept is simple, you plant, you cook, and you trade for unique materials.
 
 This mod is in beta state, which means it will have many bugs and unbalance, feel free to report them and suggest in the discussion tab.
 
+Some items may not much useful, because it's plan to use in further update.
+
 When a major update come, it has a very high chance that you need to regenerate the map.
 I suggested you to play this mod again or wait for final version.
 

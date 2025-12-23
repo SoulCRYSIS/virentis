@@ -217,4 +217,17 @@ virentis_tile.all_tiles_exclude_oil_and_town = {
   "virentis-wetland-blue-slime"
 }
 
+virentis_tile.water_tiles = {
+  "virentis-wetland-dead-skin",
+  "virentis-wetland-light-dead-skin",
+  "virentis-wetland-mud",
+  "virentis-wetland-mud-slime",
+  "virentis-wetland-light-mud-slime",
+  "virentis-wetland-red-tentacle",
+  "virentis-wetland-pink-tentacle",
+  "virentis-wetland-blue-slime",
+  "virentis-deep-water",
+  "tar-puddle",
+}
+
 return virentis_tile

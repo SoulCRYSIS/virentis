@@ -19,7 +19,7 @@ data:extend(
           recipe = "trade-iron-plate"
         },
       },
-      prerequisites = { "advanced-asteroid-processing", "heating-tower", "asteroid-reprocessing", "rocket-turret" },
+      prerequisites = { "advanced-asteroid-processing", "heating-tower", "asteroid-reprocessing", "rocket-turret", "biolab" },
       unit =
       {
         count = 3000,
@@ -64,7 +64,7 @@ data:extend(
       },
       research_trigger = {
         type = "mine-entity",
-        entity_name = "redbloom-tree",
+        entity = "redbloom-tree",
       },
     },
     {
@@ -94,7 +94,7 @@ data:extend(
       },
       research_trigger = {
         type = "mine-entity",
-        entity_name = "rockmalt-tree",
+        entity = "rockmalt-tree",
       },
     },
     {
@@ -120,7 +120,7 @@ data:extend(
       },
       research_trigger = {
         type = "mine-entity",
-        entity_name = "mangroove-tree",
+        entity = "mangroove-tree",
       },
     },
     {
@@ -186,24 +186,37 @@ data:extend(
           type = "unlock-recipe",
           recipe = "fried-dumpling-set"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "trade-siltcore"
+        },
       },
       prerequisites = { "advanced-baking" },
       research_trigger = {
         type = "mine-entity",
-        entity_name = "nyxoleum-tree",
+        entity = "nyxoleum-tree",
       },
     },
     {
       type = "technology",
-      name = "environment-research-center",
-      icon = "__virentis__/graphics/icons/technologies/environment-research-center.png",
+      name = "pentapod-cooking",
+      icon = "__virentis__/graphics/icons/technologies/pentapod-cooking.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "environment-research-center"
+          recipe = "pentapod-souffle-omelette"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "soft-cooked-pentapod-egg"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "mudland-medley"
         },
       },
+      prerequisites = { "nyxoleum-processing" },
       research_trigger = {
         type = "scripted",
         trigger_description = "technology-description.environment-research-center",
@@ -241,10 +254,76 @@ data:extend(
           recipe = "virentis-rocket-fuel"
         },
       },
+      prerequisites = { "pentapod-cooking" },
       research_trigger = {
         type = "scripted",
         trigger_description = "technology-description.tar-processing",
         icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
       },
     },
+    {
+      type = "technology",
+      name = "environment-research-center",
+      icon = "__virentis__/graphics/icons/technologies/environment-research-center.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "environment-research-center"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "mudland-research-data"
+        },
+      },
+      prerequisites = { "tar-processing" },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "technology-description.environment-research-center",
+        icon = "__virentis__/graphics/icons/items/foods/mudland-medley.png",
+      },
+    },
+    {
+      type = "technology",
+      name = "living-inserter",
+      icon = "__virentis__/graphics/icons/machines/living-inserter.png",
+      icon_size = 64,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "living-inserter"
+        },
+      },
+      prerequisites = { "environment-research-center" },
+      unit = {
+        count = 3000,
+        ingredients =
+        {
+          { "mudland-research-data",     1 },
+        },
+        time = 60
+      },
+    },
+    {
+      type = "technology",
+      name = "eternal-lantern",
+      icon = "__virentis__/graphics/icons/technologies/eternal-lantern.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "eternal-lantern"
+        },
+      },
+      prerequisites = { "environment-research-center" },
+      unit = {
+        count = 3000,
+        ingredients =
+        {
+          { "mudland-research-data",     1 },
+        },
+        time = 60
+      },
+    },
+
   })

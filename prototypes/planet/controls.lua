@@ -4,27 +4,35 @@ data:extend(
     {
       type = "autoplace-control",
       name = "virentis_plants",
-      order = "e",
+      order = "ea",
       category = "terrain",
       can_be_disabled = false
     },
     {
       type = "autoplace-control",
       name = "virentis_water",
-      order = "e",
+      order = "eb",
       category = "terrain",
       can_be_disabled = false
     },
     {
       type = "autoplace-control",
       name = "virentis_cliff",
-      order = "e",
+      order = "ec",
       category = "cliff",
     },
     {
       type = "autoplace-control",
       name = "virentis_town",
-      order = "e",
+      order = "ea",
       category = "resource",
+      can_be_disabled = false
+    },
+    {
+      type = "autoplace-control",
+      name = "virentis_enemy_base",
+      order = "ea",
+      category = "enemy",
+      can_be_disabled = false
     },
   })

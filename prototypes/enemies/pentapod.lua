@@ -86,19 +86,19 @@ for i, k in pairs(new_tier_list) do
     space_age_sounds.wriggler_pentapod.big)
 
 
-  data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__behemoth-enemies__/graphics/icons/" .. k .. "-strafer.png"
-  data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__behemoth-enemies__/graphics/icons/" .. k .. "-stomper.png"
-  data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__behemoth-enemies__/graphics/icons/" .. k .. "-stomper.png"
-  data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__behemoth-enemies__/graphics/icons/" ..
+  data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
+  data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
+  data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
+  data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/enemies/" ..
   k .. "-wriggler.png"
-  data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__behemoth-enemies__/graphics/icons/" .. k .. "-wriggler.png"
-  data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__behemoth-enemies__/graphics/icons/" ..
+  data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-wriggler.png"
+  data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/enemies/" ..
   k .. "-wriggler-corpse.png"
-  data.raw["corpse"][k .. "-stomper-corpse"].icon = "__behemoth-enemies__/graphics/icons/" .. k .. "-stomper.png"
-  data.raw["corpse"][k .. "-strafer-corpse"].icon = "__behemoth-enemies__/graphics/icons/" .. k .. "-strafer.png"
-  data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__behemoth-enemies__/graphics/icons/" .. k ..
+  data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
+  data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
+  data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
   "-stomper.png"
-  data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__behemoth-enemies__/graphics/icons/" .. k ..
+  data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
   "-strafer.png"
 end
 
@@ -123,7 +123,7 @@ pentapod_spawner.result_units = {
 pentapod_spawner.autoplace = {
   order = "ba",
   probability_expression = "virentis_pentapod_spawner",
-  control = "virentis_enemies",
+  control = "virentis_enemy_base",
 }
 
 local pentapod_spawner_small = table.deepcopy(data.raw["unit-spawner"]["gleba-spawner-small"])
@@ -139,7 +139,7 @@ pentapod_spawner_small.result_units = {
 pentapod_spawner_small.autoplace = {
   order = "bb",
   probability_expression = "virentis_pentapod_spawner_small",
-  control = "virentis_enemies",
+  control = "virentis_enemy_base",
 }
 data:extend({
   pentapod_spawner,

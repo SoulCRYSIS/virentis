@@ -16,17 +16,22 @@ local random_rotate = {
   ["town-tesla-turret"] = "4way",
 }
 
+local swap_pairs = {
+  ["biolab"] = "virentis-biolab",
+}
+
 local to_process = {
   "eternal-lantern",
   "windmill",
   "town-mortar-turret",
   "town-tesla-turret",
+  "biolab",
 }
 
 local function apply_variant(event)
   local entity = event.created_entity or event.entity
   if not (entity and entity.valid) then return end
-  
+
   local variant_count = variants_to_switch[entity.name]
 
   -- 0 means keep the base variant
@@ -39,8 +44,27 @@ local function apply_variant(event)
 
   ---@type LuaEntity
   local new_entity
-  if variant == 0 then 
-    new_entity = entity
+  if variant == 0 then
+    if swap_pairs[name] and entity.surface.name == "virentis" then
+      local surface = entity.surface
+      local position = entity.position
+      local force = entity.force
+      local direction = entity.direction
+      local player_index = event.player_index
+
+      entity.destroy()
+
+      new_entity = surface.create_entity({
+        name = swap_pairs[name],
+        position = position,
+        force = force,
+        direction = direction,
+        fast_replace = true,
+        player = player_index,
+      })
+    else
+      new_entity = entity
+    end
   else
     local surface = entity.surface
     local position = entity.position
@@ -70,7 +94,13 @@ local function apply_variant(event)
   local module_name = module_to_insert[name]
   if module_name then
     local inventory = new_entity.get_inventory(defines.inventory.beacon_modules)
-    inventory.insert({ name = module_name })
+    if (name == "windmill") then
+      local position = new_entity.position
+      local distance = math.sqrt(position.x ^ 2 + position.y ^ 2)
+      inventory.insert({ name = module_name, count = math.min(math.ceil(distance / 1000), 20) })
+    else
+      inventory.insert({ name = module_name })
+    end
     new_entity.operable = false
   end
 
@@ -78,7 +108,8 @@ local function apply_variant(event)
     if random_rotate[name] == "orientation" then
       new_entity.orientation = math.random()
     elseif random_rotate[name] == "4way" then
-      local directions = { defines.direction.north, defines.direction.east, defines.direction.south, defines.direction.west }
+      local directions = { defines.direction.north, defines.direction.east, defines.direction.south, defines.direction
+          .west }
       new_entity.direction = directions[math.random(1, 4)]
     end
   end
@@ -87,13 +118,13 @@ end
 local function on_chunk_generated(event)
   local surface = event.surface
   local area = event.area
-  
+
   for _, base_name in ipairs(to_process) do
     local entities = surface.find_entities_filtered({
       area = area,
       name = base_name
     })
-    
+
     for _, entity in ipairs(entities) do
       -- Simulate built event for chunk generated entities
       apply_variant({

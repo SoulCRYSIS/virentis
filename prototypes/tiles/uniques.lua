@@ -7,34 +7,12 @@ local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
 local tile_spritesheet_layout = tile_graphics.tile_spritesheet_layout
 
-local fulgora_rock_sand_transitions =
-{
-  {
-    to_tiles = virentis_tile.land_tiles,
-    transition_group = 1,
+local fulgora_rock_sand_transitions = table.deepcopy(data.raw["tile"]["fulgoran-rock"].transitions)
+fulgora_rock_sand_transitions[1].to_tiles = virentis_tile.land_tiles
+fulgora_rock_sand_transitions[1].background_layer_group = "ground-natural"
 
-    background_layer_group = "ground-natural",
-    background_layer_offset = -5,
-    masked_background_layer_offset = 1,
-    offset_background_layer_by_tile_layer = false,
-
-    spritesheet = "__space-age__/graphics/terrain/water-transitions/fulgora-rock-slab-transition.png",
-    layout = tile_spritesheet_layout.transition_16_16_16_4_8_short,
-    background_enabled = false,
-    effect_map_layout =
-    {
-      spritesheet = "__space-age__/graphics/terrain/effect-maps/water-fulgora-sand-mask.png",
-      --tile_height = 2,
-      inner_corner_tile_height = 2,
-      outer_corner_tile_height = 2,
-      side_tile_height = 2,
-      u_transition_tile_height = 2,
-      o_transition_count = 1
-    },
-    background_mask_layout = tile_spritesheet_layout.simple_white_mask
-  },
-  ground_to_out_of_map_transition
-}
+local oil_sand_transitions = table.deepcopy(data.raw["tile"]["oil-ocean-deep"].transitions)
+oil_sand_transitions[1].to_tiles = virentis_tile.water_tiles
 
 data:extend(
 ---@type data.TilePrototype[]
@@ -182,7 +160,7 @@ data:extend(
       layer = 8,
       sprite_usage_surface = "gleba",
       variants = table.deepcopy(data.raw.tile["oil-ocean-deep"].variants),
-      transitions = table.deepcopy(data.raw.tile["oil-ocean-deep"].transitions),
+      transitions = oil_sand_transitions,
       transitions_between_transitions = table.deepcopy(data.raw.tile["oil-ocean-deep"].transitions_between_transitions),
 
       walking_sound = base_tile_sounds.walking.oil({ volume = 1.0 }),

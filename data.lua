@@ -19,6 +19,7 @@ require "prototypes.machines.eternal-lantern"
 require "prototypes.machines.windmill"
 require "prototypes.machines.town-mortar-turret"
 require "prototypes.machines.town-tesla-turret"
+require "prototypes.machines.biolab"
 
 require "prototypes.items.crops"
 require "prototypes.items.materials"
@@ -57,6 +58,9 @@ require "prototypes.noise-expressions.entity-decoratives"
 
 require "prototypes.decorations.base-gleba"
 require "prototypes.decorations.town"
+require "prototypes.decorations.gleba-plants"
+
+require "prototypes.enemies.pentapod"
 
 require "prototypes.planet.controls"
 require "prototypes.planet.planet"

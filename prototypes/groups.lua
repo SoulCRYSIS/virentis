@@ -103,4 +103,10 @@ data:extend({
     group = "virentis",
     order = "w"
   },
+  {
+    type = "item-subgroup",
+    name = "virentis-enemies",
+    group = "virentis",
+    order = "v"
+  },
 })

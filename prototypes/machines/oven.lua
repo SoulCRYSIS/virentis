@@ -149,18 +149,6 @@ data:extend({
             scale = 0.5,
           },
         },
-        {
-          fadeout = true,
-          animation = {
-            filename = "__virentis__/graphics/entities/machines/oven/oven-working-glow-2.png",
-            priority = "very-low",
-            width = width,
-            height = height,
-            draw_as_glow = true,
-            blend_mode = "additive",
-            scale = 0.5,
-          },
-        }
       },
     },
     open_sound = sounds.machine_open,
