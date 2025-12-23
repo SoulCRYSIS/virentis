@@ -16,7 +16,8 @@ data:extend(
       durability_description_key = "description.science-pack-remaining-amount-key",
       factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
       durability_description_value = "description.science-pack-remaining-amount-value",
-      random_tint_color = item_tints.bluish_science
+      random_tint_color = item_tints.bluish_science,
+      auto_recycle = false,
     },
   }
 )

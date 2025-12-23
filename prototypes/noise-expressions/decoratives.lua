@@ -1069,7 +1069,7 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_rockmalt_decorate_area",
-      expression = "(virentis_highland - virentis_starting_town) * virentis_fertile_spots_coastal_raw(2) * 50000 - 25000"
+      expression = "(virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2) * 50000 - 25000"
     },
     {
       type = "noise-expression",

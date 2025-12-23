@@ -1,3 +1,21 @@
+local trading_recipes = {
+  "trade-iron-plate",
+  "trade-copper-plate",
+  "trade-firebrick",
+  "trade-siltcore",
+  "trade-phosphorus",
+  "trade-processing-unit",
+}
+
+local trading_recipes_effects = {}
+for i, recipe in ipairs(trading_recipes) do
+  trading_recipes_effects[i] = {
+    type = "change-recipe-productivity",
+    recipe = recipe,
+    change = 0.05
+  }
+end
+
 data:extend(
 ---@type data.TechnologyPrototype[]
   {
@@ -149,7 +167,7 @@ data:extend(
     {
       type = "technology",
       name = "nyxoleum-processing",
-      icon = "__virentis__/graphics/icons/technologies/rockmalt-processing.png",
+      icon = "__virentis__/graphics/icons/technologies/nyxoleum-processing.png",
       icon_size = 256,
       essential = true,
       effects =
@@ -247,10 +265,6 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "nutrients-pulp"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "virentis-rocket-fuel"
         },
       },
@@ -285,6 +299,39 @@ data:extend(
     },
     {
       type = "technology",
+      name = "nutrients-pulp",
+      icon = "__virentis__/graphics/icons/technologies/nutrients-pulp.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "nutrients-pulp"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "nutrients-bar"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "pentapod-from-nutrients-pulp"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "vegetable-oil-gleba"
+        },
+      },
+      prerequisites = { "environment-research-center" },
+      unit = {
+        count = 1000,
+        ingredients =
+        {
+          { "mudland-research-data", 1 },
+        },
+        time = 60
+      },
+    },
+    {
+      type = "technology",
       name = "living-inserter",
       icon = "__virentis__/graphics/icons/machines/living-inserter.png",
       icon_size = 64,
@@ -294,12 +341,12 @@ data:extend(
           recipe = "living-inserter"
         },
       },
-      prerequisites = { "environment-research-center" },
+      prerequisites = { "nutrients-pulp" },
       unit = {
         count = 3000,
         ingredients =
         {
-          { "mudland-research-data",     1 },
+          { "mudland-research-data", 1 },
         },
         time = 60
       },
@@ -320,10 +367,55 @@ data:extend(
         count = 3000,
         ingredients =
         {
-          { "mudland-research-data",     1 },
+          { "mudland-research-data", 1 },
         },
         time = 60
       },
     },
-
+    {
+      type = "technology",
+      name = "tesla-weapons-speed",
+      icons = util.technology_icon_constant_speed("__space-age__/graphics/technology/electric-weapons-damage.png"),
+      effects =
+      {
+        {
+          type = "gun-speed",
+          ammo_category = "tesla",
+          icon = "__space-age__/graphics/icons/tesla-ammo.png",
+          icon_size = 64,
+          modifier = 0.1
+        },
+      },
+      prerequisites = { "environment-research-center", "tesla-weapons" },
+      unit =
+      {
+        count_formula = "2000 * 2 ^ (L - 1)",
+        ingredients =
+        {
+          { "mudland-research-data", 1 },
+        },
+        time = 60
+      },
+      upgrade = true,
+      max_level = "infinite"
+    },
+    {
+      type = "technology",
+      name = "trading-productivity",
+      icons = util.technology_icon_constant_recipe_productivity("__virentis__/graphics/icons/technologies/trading-productivity.png"),
+      icon_size = 256,
+      effects = trading_recipes_effects,
+      prerequisites = { "environment-research-center" },
+      unit =
+      {
+        count_formula = "1000 * 2 ^ (L - 1)",
+        ingredients =
+        {
+          { "mudland-research-data", 1 },
+        },
+        time = 60
+      },
+      max_level = "infinite",
+      upgrade = true
+    },
   })

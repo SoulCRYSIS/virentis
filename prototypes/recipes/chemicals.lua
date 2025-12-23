@@ -134,5 +134,42 @@ data:extend(
       energy_required = 2,
       enabled = false,
     },
+    {
+      type = "recipe",
+      name = "pentapod-from-nutrients-pulp",
+      category = "organic",
+      subgroup = "virentis-chemicals",
+      order = "cb",
+      icon = "__virentis__/graphics/icons/recipes/pentapod-from-nutrients-pulp.png",
+      ingredients = {
+        { type = "item",  name = "pentapod-egg",   amount = 1, ignored_by_stats = 1 },
+        { type = "fluid", name = "nutrients-pulp", amount = 30 },
+      },
+      results = {
+        { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1, ignored_by_productivity = 1 }
+      },
+      crafting_machine_tint = recipe_tints.orange,
+      energy_required = 8,
+      enabled = false,
+    },
+    {
+      type = "recipe",
+      name = "vegetable-oil-gleba",
+      category = "organic",
+      subgroup = "virentis-chemicals",
+      order = "cc",
+      icon = "__virentis__/graphics/icons/recipes/vegetable-oil-gleba.png",
+      ingredients = {
+        { type = "item",  name = "phosphorus", amount = 1 },
+        { type = "item", name = "jelly",      amount = 4 },
+        { type = "fluid", name = "water",      amount = 50 },
+      },
+      results = {
+        { type = "fluid", name = "vegetable-oil", amount = 50 }
+      },
+      crafting_machine_tint = recipe_tints.yellow,
+      energy_required = 2,
+      enabled = false,
+    },
   }
 )

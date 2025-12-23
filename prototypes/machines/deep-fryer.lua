@@ -91,7 +91,9 @@ data:extend({
     fluid_boxes_off_when_no_fluid_recipe = false,
     crafting_categories = { "frying" },
     crafting_speed = 1,
-    module_slots = 0,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    allowed_module_categories = { "efficiency", "productivity", "speed" },
     minable = {
       mining_time = 1,
       result = "deep-fryer",

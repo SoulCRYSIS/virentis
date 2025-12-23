@@ -141,13 +141,8 @@ virentis.default_inserter_stack_control_input_signal = inserter_default_stack_co
 virentis.surface_condition = {
   {
     property = "pressure",
-    min = 2000,
-    max = 2000
-  },
-  {
-    property = "gravity",
-    min = 10,
-    max = 10
+    min = 1200,
+    max = 1200
   },
 }
 

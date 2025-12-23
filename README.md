@@ -25,7 +25,6 @@ I suggested you to play this mod again or wait for final version.
 - Oven
 - Deep fryer
 - Environment research center: virentis lab
-- Living inserter: inserter without electric
 
 ### Decoration System
 
@@ -33,7 +32,10 @@ They act like a beacon, small benefit, but need no energy and seperate beacon co
 
 While adding aesthetics to the terrain. Now, your factory will look like a real city instead of just factory.
 
+### Reward
 
+- Better nutrients production everywhere
+- Living inserter: inserter without electric
 
 ## Credits
 

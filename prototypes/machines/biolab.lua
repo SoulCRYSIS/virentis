@@ -10,4 +10,10 @@ biolab.energy_source = {
 }
 biolab.energy_usage = "5MW"
 
+data.raw["lab"]["biolab"].surface_conditions[1] = {
+  property = "pressure",
+  min = 1000,
+  max = 1200
+}
+
 data:extend({ biolab })

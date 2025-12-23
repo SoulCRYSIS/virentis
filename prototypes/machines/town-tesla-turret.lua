@@ -190,7 +190,7 @@ data:extend({
     {
       type = "beam",
       cooldown = 120,
-      range = 60,
+      range = 80,
       range_mode = "center-to-bounding-box",
       fire_penalty = 0.9,
       source_direction_count = 1,
@@ -216,7 +216,7 @@ data:extend({
                   action_delivery =
                   {
                     type = "chain",
-                    chain = "chain-tesla-turret-chain",
+                    chain = "town-tesla-turret-chain",
                   }
                 }
               },
@@ -260,4 +260,27 @@ data:extend({
       orientation_to_variation = false
     }
   },
+  {
+    type = "chain-active-trigger",
+    name = "town-tesla-turret-chain",
+    max_jumps = 15,
+    max_range_per_jump = 20,
+    jump_delay_ticks = 6,
+    fork_chance = 0.08,
+    fork_chance_increase_per_quality_level = 0.08,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "beam",
+        beam = "chain-tesla-turret-beam-bounce",
+        max_length = 20 + 0.5,
+        duration = 30,
+        add_to_shooter = false,
+        destroy_with_source_or_target = false,
+        source_offset = {0, 0}, -- should match beam's target_offset
+      },
+    },
+  }
 })

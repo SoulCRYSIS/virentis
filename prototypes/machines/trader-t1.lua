@@ -23,10 +23,7 @@ data:extend({
     crafting_categories = { "trading-t1" },
     crafting_speed = 1,
     module_slots = 0,
-    -- minable = {
-    --   mining_time = 1,
-    --   result = "trader-t1",
-    -- },
+    allowed_effects = { "productivity" },
     collision_box = { { -1.8, -1.8 }, { 1.8, 1.8 } },
     selection_box = { { -2, -2 }, { 2, 2 } },
     damaged_trigger_effect = hit_effects.entity(),

@@ -107,6 +107,7 @@ data:extend({
             ["tar-puddle"] = {},
             ["town-floor-edge"] = {},
             ["town-floor-center"] = {},
+            ["town-floor-windmill"] = {},
             ["virentis-deep-water"] = {},
             ["virentis-midland-cracked-lichen"] = {},
             ["virentis-midland-cracked-lichen-dull"] = {},
@@ -270,7 +271,7 @@ data:extend({
       ["day-night-cycle"] = 5 * minute,
       ["magnetic-field"] = 25,
       ["solar-power"] = 30,
-      pressure = 2000,
+      pressure = 1200,
       gravity = 10
     },
     -- Using default surface render parameters

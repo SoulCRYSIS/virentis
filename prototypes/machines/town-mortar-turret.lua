@@ -128,7 +128,7 @@ data:extend({
       projectile_center = { -0, -0.6 },
       health_penalty = -1,
       rotate_penalty = 1,
-      range = 80,
+      range = 100,
       min_range = 10,
       turn_range = 1,
       sound = sounds.tank_gunshot,
@@ -197,7 +197,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = {amount = 50, type = "explosion"}
+            damage = {amount = 100, type = "explosion"}
           },
           {
             type = "create-entity",
@@ -223,7 +223,7 @@ data:extend({
             action =
             {
               type = "area",
-              radius = 6.5,
+              radius = 9,
               force = "enemy",
               action_delivery =
               {
@@ -232,7 +232,7 @@ data:extend({
                 {
                   {
                     type = "damage",
-                    damage = {amount = 100, type = "explosion"}
+                    damage = {amount = 200, type = "explosion"}
                   },
                   {
                     type = "create-entity",

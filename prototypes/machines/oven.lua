@@ -63,7 +63,8 @@ data:extend({
     },
     crafting_categories = { "baking" },
     crafting_speed = 1,
-    module_slots = 0,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {
       mining_time = 1,
       result = "oven",

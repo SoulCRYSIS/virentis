@@ -46,8 +46,9 @@ data:extend({
     crafting_speed = 4,
     module_slots = 4,
     allowed_effects = { "consumption", "pollution", "speed", "productivity" },
+    allowed_module_categories = { "efficiency", "productivity", "speed", "quality" },
     minable = {
-      mining_time = 1,
+      mining_time = 2,
       result = "environment-research-center",
     },
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
