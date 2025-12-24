@@ -20,6 +20,8 @@ I suggested you to play this mod again or wait for final version.
 
 ## Core features
 
+- The default settings is pretty challenging, about average of one town every 2000 block, that mean you have to clear ~500 enemy bases
+
 ### Machines
 
 - Oven

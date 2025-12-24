@@ -15,6 +15,7 @@ local function eternal_lantern_entity(variant)
     factoriopedia_alternative = "eternal-lantern",
     placeable_by = { item = "eternal-lantern", count = 1 },
     max_health = 200,
+    healing_per_tick = 1,
     corpse = "lamp-remnants",
     dying_explosion = "beacon-explosion",
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
@@ -94,7 +95,7 @@ local function eternal_lantern_entity(variant)
       rotate = false,
       orientation_to_variation = false
     },
-    map_color = { 240, 240, 240},
+    map_color = { 240, 240, 240 },
   }
 end
 
@@ -107,10 +108,11 @@ data:extend({
     order = "a",
     icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
     ingredients = {
-      { type = "item",  name = "firebrick",       amount = 1 },
-      { type = "item",  name = "heart-of-nature", amount = 1 },
-      { type = "item",  name = "living-wood",     amount = 2 },
-      { type = "fluid", name = "nutrients-pulp",  amount = 10 },
+      { type = "item",  name = "firebrick",           amount = 1 },
+      { type = "item",  name = "heart-of-nature",     amount = 1 },
+      { type = "item",  name = "living-wood",         amount = 2 },
+      { type = "item",  name = "efficiency-module-3", amount = 1 },
+      { type = "fluid", name = "nutrients-pulp",      amount = 10 },
     },
     results = {
       { type = "item", name = "eternal-lantern", amount = 1 }
@@ -132,7 +134,7 @@ data:extend({
     tier = 1,
     order = "z",
     stack_size = 50,
-    effect = { consumption = -0.2 },
+    effect = { consumption = -0.3 },
     auto_recycle = false,
     hidden = true,
   },

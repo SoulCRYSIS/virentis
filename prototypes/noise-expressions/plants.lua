@@ -39,8 +39,8 @@ data:extend(
                               maximum_spot_basement_radius = 128}",
     local_expressions =
     {
-      wobble_noise_x = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 3000000, octaves = 2, input_scale = 1/20}",
-      wobble_noise_y = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 4000000, octaves = 2, input_scale = 1/20}"
+      wobble_noise_x = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 3000000 + seed, octaves = 2, input_scale = 1/20}",
+      wobble_noise_y = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 4000000 + seed, octaves = 2, input_scale = 1/20}"
     }
   },
   {

@@ -56,6 +56,7 @@ local base_animation = {
   lines_per_file = 1,
   direction_count = 1,
   repeat_count = 8,
+  animation_speed = 0.2,
 }
 local base_glow_animation = {
   filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-glow.png",
@@ -71,6 +72,7 @@ local base_glow_animation = {
   lines_per_file = 1,
   direction_count = 1,
   repeat_count = 8,
+  animation_speed = 0.2,
 }
 local charging_animation = {
   filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-charging-glow.png",
@@ -98,13 +100,8 @@ local attacking_animation = {
   lines_per_file = 1,
   direction_count = 1,
   repeat_count = 8,
+  animation_speed = 0.2,
 }
-
-local charging_state_animation = convert_to_4way({
-  base_animation,
-  base_glow_animation,
-  charging_animation,
-})
 
 data:extend({
   ---@type data.ElectricTurretPrototype
@@ -114,7 +111,8 @@ data:extend({
     subgroup = "virentis-machines",
     icon = "__space-age__/graphics/icons/fulgoran-ruin-attractor.png",
     flags = { "placeable-player", "player-creation" },
-    max_health = 3000,
+    max_health = 4000,
+    healing_per_tick = 1,
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
@@ -147,50 +145,46 @@ data:extend({
       probability_expression = "2 * max(virentis_town_edge, 0.1 * virentis_town_rural) * grid_random_shift(18, 12, 996)",
     },
     turret_base_has_direction = true,
+    folded_animation = {
+      filename = "__virentis__/graphics/mocks/empty-icon.png",
+      priority = "low",
+      width = 16,
+      height = 16,
+      frame_count = 1,
+      direction_count = 1,
+      line_length = 1,
+      lines_per_file = 1,
+    },
     ending_attack_animation = convert_to_4way({
-      base_animation,
-      base_glow_animation,
-      charging_animation,
       attacking_animation,
-    }),
-    preparing_animation = charging_state_animation,
-    prepared_animation = charging_state_animation,
-    folding_animation = charging_state_animation,
-    folded_animation = convert_to_4way({
-      base_animation,
-      base_glow_animation,
     }),
     energy_glow_animation = laser_turret_shooting_glow(),
     glow_light_intensity = 0.5, -- defaults to 0
-    integration_patch_render_layer = "elevated-higher-object",
     graphics_set =
     {
-      -- base_visualisation =
-      -- {
-      -- {
-      --   animation =     {
-      --     layers = {
-      --       {
-      --         filename = "__virentis__/graphics/mocks/empty-icon.png",
-      --         priority = "low",
-      --         width = 16,
-      --         height = 16,
-      --         frame_count = 1,
-      --         direction_count = 1,
-      --         line_length = 1,
-      --         lines_per_file = 1,
-      --       }
-      --     },
-      --   },
-      -- },
-      -- }
+      base_visualisation = {
+        {
+          render_layer = "higher-object-under",
+          animation = convert_to_4way({
+            base_animation,
+            base_glow_animation,
+          }),
+        },
+        {
+          render_layer = "higher-object-above",
+          enabled_states = { "prepared", "preparing", "starting-attack", "attacking", "ending-attack" },
+          animation = convert_to_4way({
+            charging_animation,
+          }),
+        },
+      },
     },
 
     attack_parameters =
     {
       type = "beam",
       cooldown = 120,
-      range = 80,
+      range = 90,
       range_mode = "center-to-bounding-box",
       fire_penalty = 0.9,
       source_direction_count = 1,
@@ -228,7 +222,7 @@ data:extend({
                   action_delivery =
                   {
                     type = "beam",
-                    beam = "chain-tesla-turret-beam-start",
+                    beam = "town-tesla-turret-beam-start",
                     max_length = 40,
                     duration = 30,
                     add_to_shooter = false,
@@ -260,6 +254,7 @@ data:extend({
       orientation_to_variation = false
     }
   },
+  make_tesla_beam("town-tesla-turret-beam-start", true, 180),
   {
     type = "chain-active-trigger",
     name = "town-tesla-turret-chain",
@@ -279,7 +274,7 @@ data:extend({
         duration = 30,
         add_to_shooter = false,
         destroy_with_source_or_target = false,
-        source_offset = {0, 0}, -- should match beam's target_offset
+        source_offset = { 0, 0 }, -- should match beam's target_offset
       },
     },
   }

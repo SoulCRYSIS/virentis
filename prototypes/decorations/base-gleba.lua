@@ -94,7 +94,7 @@ honeycomb_fungus_decayed.autoplace = {
 local green_lettuce_lichen_1x1 = table.deepcopy(data.raw["optimized-decorative"]["green-lettuce-lichen-1x1"])
 green_lettuce_lichen_1x1.name = "virentis-green-lettuce-lichen-1x1"
 green_lettuce_lichen_1x1.autoplace = { -- process: survival_chance + subtype_selection_band_of: (region_box - small_scale_knockout)
-  tile_restriction = virentis_tile.land_tiles,
+  tile_restriction = virentis_tile.land_tiles_exclude_town,
   probability_expression =
   "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1)"
 }
@@ -102,7 +102,7 @@ green_lettuce_lichen_1x1.autoplace = { -- process: survival_chance + subtype_sel
 local green_lettuce_lichen_3x3 = table.deepcopy(data.raw["optimized-decorative"]["green-lettuce-lichen-3x3"])
 green_lettuce_lichen_3x3.name = "virentis-green-lettuce-lichen-3x3"
 green_lettuce_lichen_3x3.autoplace = {
-  tile_restriction = virentis_tile.land_tiles,
+  tile_restriction = virentis_tile.land_tiles_exclude_town,
   probability_expression =
   "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.1, 0.4, 0.1, 0, 1)"
 }
@@ -110,7 +110,7 @@ green_lettuce_lichen_3x3.autoplace = {
 local green_lettuce_lichen_6x6 = table.deepcopy(data.raw["optimized-decorative"]["green-lettuce-lichen-6x6"])
 green_lettuce_lichen_6x6.name = "virentis-green-lettuce-lichen-6x6"
 green_lettuce_lichen_6x6.autoplace = {
-  tile_restriction = virentis_tile.land_tiles,
+  tile_restriction = virentis_tile.land_tiles_exclude_town,
   probability_expression =
   "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)"
 }
@@ -251,6 +251,7 @@ local green_cup = table.deepcopy(data.raw["optimized-decorative"]["green-cup"])
 green_cup.name = "virentis-green-cup"
 green_cup.autoplace = {
   placement_density = 2,
+  tile_restriction = virentis_tile.all_tiles_exclude_oil_and_town,
   probability_expression =
   "grpi(0.6) + virentis_select(virentis_green_cup - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.2, 0, 1)"
 }
@@ -312,6 +313,7 @@ local polycephalum_slime = table.deepcopy(data.raw["optimized-decorative"]["poly
 polycephalum_slime.name = "virentis-polycephalum-slime"
 polycephalum_slime.autoplace = {
   order = "d[decorative]-c[trivial]-c[cover]-c[outer]",
+  tile_restriction = virentis_tile.all_tiles_exclude_oil_and_town,
   probability_expression =
   "virentis_select(virentis_polycephalum - clamp(-virentis_decorative_knockout, 0, 1), 0.9, 2, 0.2, 0, 1)"
 }
@@ -320,6 +322,7 @@ local polycephalum_balloon = table.deepcopy(data.raw["optimized-decorative"]["po
 polycephalum_balloon.name = "virentis-polycephalum-balloon"
 polycephalum_balloon.autoplace = {
   order = "d[decorative]-c[trivial]-b[bush]-a[inner]",
+  tile_restriction = virentis_tile.all_tiles_exclude_oil_and_town,
   probability_expression =
   "grpi(0.6) + virentis_select(virentis_polycephalum - clamp(-virentis_decorative_knockout, 0, 1), 1, 2, 0.2, 0, 1)"
 }
@@ -335,6 +338,7 @@ grey_cracked_mud_decal.autoplace = {
 local yellow_coral = table.deepcopy(data.raw["optimized-decorative"]["yellow-coral"])
 yellow_coral.name = "virentis-yellow-coral"
 yellow_coral.autoplace = {
+  tile_restriction = virentis_tile.all_tiles_exclude_oil_and_town,
   probability_expression =
   "grpi(0.2) + virentis_select(virentis_yellow_coral - 0.5 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)"
 }
@@ -393,7 +397,7 @@ local pale_lettuce_lichen_1x1 = table.deepcopy(data.raw["optimized-decorative"][
 pale_lettuce_lichen_1x1.name = "virentis-pale-lettuce-lichen-1x1"
 pale_lettuce_lichen_1x1.autoplace = { -- process: survival_chance + subtype_selection_band_of: (region_box - small_scale_knockout)
   order = "d[decorative]-c[trivial]-c[cover]-c[outer]",
-  tile_restriction = virentis_tile.land_tiles,
+  tile_restriction = virentis_tile.land_tiles_exclude_town,
   probability_expression =
   "grpi(0.2) + virentis_select(virentis_pale_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.6, -0.1, 0.1, 0, 1)"
 }
@@ -402,7 +406,7 @@ local pale_lettuce_lichen_3x3 = table.deepcopy(data.raw["optimized-decorative"][
 pale_lettuce_lichen_3x3.name = "virentis-pale-lettuce-lichen-3x3"
 pale_lettuce_lichen_3x3.autoplace = {
   order = "d[decorative]-c[trivial]-c[cover]-b[mid-ring]",
-  tile_restriction = virentis_tile.land_tiles,
+  tile_restriction = virentis_tile.land_tiles_exclude_town,
   probability_expression =
   "grpi(0.2) + virentis_select(virentis_pale_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), -0.2, 0.4, 0.1, 0, 1)"
 }
@@ -411,7 +415,7 @@ local pale_lettuce_lichen_6x6 = table.deepcopy(data.raw["optimized-decorative"][
 pale_lettuce_lichen_6x6.name = "virentis-pale-lettuce-lichen-6x6"
 pale_lettuce_lichen_6x6.autoplace = {
   order = "d[decorative]-c[trivial]-c[cover]-a[inner]",
-  tile_restriction = virentis_tile.land_tiles,
+  tile_restriction = virentis_tile.land_tiles_exclude_town,
   probability_expression =
   "grpi(0.3) + virentis_select(virentis_pale_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)"
 }

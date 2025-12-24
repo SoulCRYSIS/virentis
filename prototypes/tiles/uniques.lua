@@ -124,7 +124,7 @@ data:extend(
       layer_group = "ground-natural",
       layer = 9,
       searchable = true,
-
+      lowland_fog = false,
       transitions = oil_sand_transitions,
       transitions_between_transitions = table.deepcopy(data.raw.tile["oil-ocean-shallow"]
         .transitions_between_transitions),
@@ -196,6 +196,7 @@ data:extend(
       type = "tile",
       name = "town-floor-center",
       subgroup = "virentis-tiles",
+      searchable = true,
       collision_mask = tile_collision_masks.ground(),
       walking_speed_modifier = 1.4,
       layer = virentis_tile.tile_offset + 20,
@@ -206,28 +207,6 @@ data:extend(
 
       autoplace = {
         probability_expression = "(virentis_town_rural + virentis_town_center) * 15"
-      },
-
-      walking_sound = tile_sounds.walking.concrete,
-      landing_steps_sound = tile_sounds.landing.concrete,
-      map_color = { 150, 45, 45 },
-      scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
-      trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
-    },
-    {
-      type = "tile",
-      name = "town-floor-windmill",
-      subgroup = "virentis-tiles",
-      collision_mask = tile_collision_masks.ground(),
-      walking_speed_modifier = 1.4,
-      layer = virentis_tile.tile_offset + 21,
-      layer_group = "ground-natural",
-      variants = table.deepcopy(data.raw.tile["concrete"].variants),
-      transitions = fulgora_rock_sand_transitions,
-      transitions_between_transitions = table.deepcopy(data.raw.tile["fulgoran-paving"].transitions_between_transitions),
-
-      autoplace = {
-        probability_expression = "virentis_windmill_spot * 100"
       },
 
       walking_sound = tile_sounds.walking.concrete,

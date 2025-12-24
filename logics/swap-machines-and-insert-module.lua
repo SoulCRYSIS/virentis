@@ -1,7 +1,6 @@
 -- logics/variant-switcher.lua
 -- This logic handles switching a base entity with a random variant upon creation.
 
--- List of base entities and their variant counts (excluding 0)
 local variants_to_switch = {
   ["eternal-lantern"] = 3
 }
@@ -20,12 +19,27 @@ local swap_pairs = {
   ["biolab"] = "virentis-biolab",
 }
 
+local quality_by_distance = {
+  ["town-mortar-turret"] = true,
+  ["town-tesla-turret"] = true,
+  ["trader-t1"] = true,
+}
+
 local to_process = {
   "eternal-lantern",
   "windmill",
   "town-mortar-turret",
   "town-tesla-turret",
   "biolab",
+  "trader-t1",
+}
+
+local quality_list = {
+  "normal",
+  "uncommon",
+  "rare",
+  "epic",
+  "legendary",
 }
 
 local function apply_variant(event)
@@ -43,50 +57,68 @@ local function apply_variant(event)
   local name = entity.name
 
   ---@type LuaEntity
-  local new_entity
-  if variant == 0 then
-    if swap_pairs[name] and entity.surface.name == "virentis" then
-      local surface = entity.surface
-      local position = entity.position
-      local force = entity.force
-      local direction = entity.direction
-      local player_index = event.player_index
+  local new_entity = entity
+  local need_create = false
+  local new_name = name
+  local new_quallity = entity.quality.name
 
-      entity.destroy()
+  if swap_pairs[name] and entity.surface.name == "virentis" then
+    new_name = swap_pairs[name]
+    need_create = true
+  end
 
-      new_entity = surface.create_entity({
-        name = swap_pairs[name],
-        position = position,
-        force = force,
-        direction = direction,
-        fast_replace = true,
-        player = player_index,
-      })
-    else
-      new_entity = entity
+  if variant ~= 0 then
+    new_name = new_name .. "-" .. variant
+    need_create = true
+  end
+
+  if quality_by_distance[name] then
+    local dist = math.sqrt(entity.position.x ^ 2 + entity.position.y ^ 2)
+    local max_quality = #quality_list
+    local base_dist = 1000
+    local quality_index = 1
+
+    if dist > base_dist then
+      local log_val = math.log(dist / base_dist, 2)
+      local base_level = math.floor(log_val)
+      local probability = log_val - base_level
+      local current_tier = base_level + 1
+
+      if math.random() < probability then
+        quality_index = current_tier + 1
+      else
+        quality_index = current_tier
+      end
     end
-  else
+
+    if quality_index > max_quality then
+      quality_index = max_quality
+    end
+
+    new_quallity = quality_list[quality_index]
+    need_create = true
+  end
+
+  if need_create then
     local surface = entity.surface
     local position = entity.position
     local force = entity.force
     local direction = entity.direction
     local player_index = event.player_index
 
-    -- Destroy the original entity
     entity.destroy()
 
-    -- Create the variant
     new_entity = surface.create_entity({
-      name = name .. "-" .. variant,
+      name = new_name,
       position = position,
       force = force,
       direction = direction,
       fast_replace = true,
+      quality = new_quallity,
       player = player_index,
     })
   end
 
-  -- If this was created from map generation, make it non-minable
   if event.is_from_map then
     new_entity.minable = false
   end

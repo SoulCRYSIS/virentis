@@ -9,7 +9,8 @@ data:extend({
     icon = "__virentis__/graphics/icons/machines/town-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
-    max_health = 2000,
+    max_health = 3000,
+    healing_per_tick = 1,
     corpse = "gun-turret-remnants",
     dying_explosion = "gun-turret-explosion",
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
@@ -197,7 +198,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = {amount = 100, type = "explosion"}
+            damage = {amount = 75, type = "explosion"}
           },
           {
             type = "create-entity",
@@ -232,7 +233,7 @@ data:extend({
                 {
                   {
                     type = "damage",
-                    damage = {amount = 200, type = "explosion"}
+                    damage = {amount = 150, type = "explosion"}
                   },
                   {
                     type = "create-entity",

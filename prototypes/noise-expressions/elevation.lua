@@ -10,7 +10,7 @@ data:extend(
       type = "noise-expression",
       name = "virentis_elevation",
       --intended_property = "elevation",
-      expression = "lerp(virentis_elevation_common, lowland_elevation, lowland_mask)",
+      expression = "max(lerp(virentis_elevation_common, lowland_elevation, lowland_mask), virentis_select(virentis_town_raw, 0.1, 1, 0.1, 0, 1) * 140)",
       local_expressions =
       {
         aux_high_contrast = "clamp(10 * (virentis_aux - 0.5) + 0.5, 0, 1)",
@@ -60,7 +60,7 @@ data:extend(
         --ridges = "max(-virentis_tri_ridge, starting_bridge - 0.8) * 2.3 + 0.2 * ridges_small_noise",
         --ridges = "max(-virentis_tri_ridge, starting_bridges - 0.8) * 2.3 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
         ridges =
-        "max(-virentis_tri_ridge * (0.6 + var('control:virentis_water:size') / 3), starting_bridges - 0.8) * 2.4 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
+        "max(-virentis_tri_ridge * (0.6 + var('virentis_water_size') / 3), starting_bridges - 0.8) * 2.4 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
         ridge_terrace = "terrace{value = min(80, 110 + ridges * 500), offset = 40, width = 20, strength = 0.2}",
         terraces_combined = "max(ridge_terrace, peaks_terrace, 25 + 22 * ridges)",
         starting_midlands = "max(starting_midland_landing, starting_midland_iron, starting_midland_copper)",
@@ -107,9 +107,9 @@ data:extend(
       expression = "0.5 * ((tri_bc < tri_a) * (tri_a - tri_bc) + (tri_ac < tri_b) * (tri_b - tri_ac) + (tri_ab < tri_c) * (tri_c - tri_ab))",
       local_expressions =
       {
-        tri_a = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/300*control:virentis_water:frequency, seed0 = map_seed, seed1 = 10000}",
-        tri_b = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/300*control:virentis_water:frequency, seed0 = map_seed, seed1 = 20000}",
-        tri_c = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/300*control:virentis_water:frequency, seed0 = map_seed, seed1 = 30000}",
+        tri_a = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/300*virentis_water_frequency, seed0 = map_seed, seed1 = 10000}",
+        tri_b = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/300*virentis_water_frequency, seed0 = map_seed, seed1 = 20000}",
+        tri_c = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/300*virentis_water_frequency, seed0 = map_seed, seed1 = 30000}",
         tri_ab = "max(tri_a, tri_b)",
         tri_ac = "max(tri_a, tri_c)",
         tri_bc = "max(tri_b, tri_c)",

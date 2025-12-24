@@ -28,6 +28,7 @@ data:extend({
     selection_box = { { -2, -2 }, { 2, 2 } },
     damaged_trigger_effect = hit_effects.entity(),
     max_health = 5000,
+    healing_per_tick = 1,
     corpse = "medium-remnants",
     graphics_set = {
       animation = {
@@ -73,7 +74,7 @@ data:extend({
     autoplace = {
       order = "ab",
       force = "player",
-      probability_expression = "2 * max(virentis_town_rural, 0.1 * virentis_town_edge) * grid_random_shift(12, 8, 993)",
+      probability_expression = "2 * max(virentis_town_rural, 0.1 * virentis_town_edge) * grid_random_shift(14, 10, 993)",
     },
     map_color = { 230, 230, 255},
   },

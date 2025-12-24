@@ -10,6 +10,7 @@ data:extend({
     icon = "__virentis__/graphics/icons/machines/windmill.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     max_health = 10000,
+    healing_per_tick = 1,
     corpse = "big-remnants",
     dying_explosion = "beacon-explosion",
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },

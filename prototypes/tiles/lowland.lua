@@ -8,7 +8,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-olive-blubber",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 4,
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-olive-blubber-2", -- weird
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 3,
@@ -78,7 +78,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-olive-blubber-3", -- bright
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 8,
@@ -113,7 +113,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-brown-blubber",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 1,
@@ -147,7 +147,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-pale-green",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 2,
@@ -182,7 +182,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-cream-cauliflower-2",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     autoplace = { probability_expression = "virentis_lowland * virentis_select(virentis_aux, 0.3, 0.45, 0.005, 0, 1) + 0.1 * virentis_select(virentis_temperature_normalised, -0.2, 1, 0.005, 0, 1)" },
     layer_group = "water-overlay",
@@ -216,7 +216,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-cream-cauliflower",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     -- autoplace = { probability_expression = "virentis_lowland * virentis_select(virentis_aux, 0.45, 0.65, 0.005, 0, 1) + 0.1 * virentis_select(virentis_temperature_normalised, -0.2, 1, 0.005, 0, 1)" },
     -- autoplace = { probability_expression = "virentis_lowland * virentis_select(virentis_aux, 0.3, 0.45, 0.005, 0, 1) + 0.1 * virentis_select(virentis_temperature_normalised, -0.2, 1, 0.005, 0, 1)" },
@@ -253,7 +253,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-dead-skin",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     autoplace = { probability_expression = "virentis_lowland * virentis_select(virentis_aux, 0.45, 0.65, 0.005, 0, 1) + 0.1 * virentis_select(virentis_temperature_normalised, -1, -0.2, 0.005, 0, 1)" },
     layer_group = "water-overlay",
@@ -287,7 +287,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-dead-skin-2",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     autoplace = { probability_expression = "virentis_lowland * virentis_select(virentis_aux, 0.3, 0.45, 0.005, 0, 1) + 0.1 * virentis_select(virentis_temperature_normalised, -1, -0.2, 0.005, 0, 1)" },
     layer_group = "water-overlay",
@@ -321,7 +321,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-cream-red",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     autoplace = { probability_expression = "virentis_lowland * virentis_select(virentis_aux, 0.62, 0.77, 0.005, 0, 1) * virentis_select(virentis_temperature_normalised, 0.25, 1, 0.005, 0, 1)" },
     layer_group = "water-overlay",
@@ -356,7 +356,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-red-vein-2", -- bulges
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 12,
@@ -390,7 +390,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-red-vein", -- sanguine
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 13,
@@ -424,7 +424,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-red-vein-3", -- dull
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 14,
@@ -456,7 +456,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-red-vein-4", -- bright
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 15,
@@ -488,7 +488,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-red-vein-dead",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 7,
@@ -522,7 +522,7 @@ data:extend({
   {
     type = "tile",
     name = "virentis-lowland-red-infection",
-    subgroup = "gleba-tiles",
+    subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "water-overlay",
     layer = virentis_tile.lowland_tile_offset + 16,
