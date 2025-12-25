@@ -8,6 +8,8 @@ data:extend({
     type = "beacon",
     name = "windmill",
     icon = "__virentis__/graphics/icons/machines/windmill.png",
+    subgroup = "virentis-decors",
+    order = "ba",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     max_health = 10000,
     healing_per_tick = 1,
@@ -23,7 +25,7 @@ data:extend({
       light = { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 36 },
       animation_list = {
         {
-          render_layer = "object",
+          render_layer = "higher-object-above",
           always_draw = true,
           animation =
           {

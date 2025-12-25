@@ -32,10 +32,6 @@ data:extend(
           space_location = "virentis",
           use_icon_overlay_constant = true
         },
-        {
-          type = "unlock-recipe",
-          recipe = "trade-iron-plate"
-        },
       },
       prerequisites = { "advanced-asteroid-processing", "heating-tower", "asteroid-reprocessing", "rocket-turret", "biolab" },
       unit =
@@ -84,6 +80,7 @@ data:extend(
         type = "mine-entity",
         entity = "redbloom-tree",
       },
+      prerequisites = { "planet-discovery-virentis" },
     },
     {
       type = "technology",
@@ -109,11 +106,16 @@ data:extend(
           type = "unlock-recipe",
           recipe = "trade-iron-plate"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "basic-oven"
+        }
       },
       research_trigger = {
         type = "mine-entity",
         entity = "rockmalt-tree",
       },
+      prerequisites = { "planet-discovery-virentis" },
     },
     {
       type = "technology",
@@ -140,6 +142,7 @@ data:extend(
         type = "mine-entity",
         entity = "mangroove-tree",
       },
+      prerequisites = { "rockmalt-processing" },
     },
     {
       type = "technology",

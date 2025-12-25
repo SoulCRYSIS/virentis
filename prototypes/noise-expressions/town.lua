@@ -36,7 +36,7 @@ data:extend({
                              spot_favorability_expression = virentis_town_point_candidate,\z
                              candidate_spot_count = 4,\z
                              basement_value = 0,\z
-                             suggested_minimum_candidate_point_spacing = 400,\z
+                             suggested_minimum_candidate_point_spacing = 600,\z
                              maximum_spot_basement_radius = virentis_town_size * 4,\z
                              region_size = 800 + 600 / control:virentis_town:frequency} + virentis_starting_town"
   },
@@ -53,7 +53,7 @@ data:extend({
                              spot_favorability_expression = virentis_town_point_candidate,\z
                              candidate_spot_count = 4,\z
                              basement_value = 0,\z
-                             suggested_minimum_candidate_point_spacing = 400,\z
+                             suggested_minimum_candidate_point_spacing = 600,\z
                              maximum_spot_basement_radius = 1,\z
                              region_size = 800 + 600 / control:virentis_town:frequency} > 0) + virentis_starting_windmill",
     local_expressions = {

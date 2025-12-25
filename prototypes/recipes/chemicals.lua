@@ -19,6 +19,7 @@ data:extend(
       },
       energy_required = 2,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -112,6 +113,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 4,
+      enabled = false,
       allow_productivity = true,
     },
     {

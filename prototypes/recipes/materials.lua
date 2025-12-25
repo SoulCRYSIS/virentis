@@ -20,6 +20,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.red,
       energy_required = 8,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -39,6 +40,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.green,
       energy_required = 20,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -58,6 +60,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.gray,
       energy_required = 8,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -77,6 +80,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.gray,
       energy_required = 4,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -93,6 +97,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 2,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -113,6 +118,7 @@ data:extend(
       energy_required = 2,
       result_is_always_fresh = true,
       allow_productivity = true,
+      enabled = false,
     },
     {
       type = "recipe",
@@ -133,6 +139,7 @@ data:extend(
       energy_required = 4,
       result_is_always_fresh = true,
       allow_productivity = true,
+      enabled = false,
     },
   }
 )

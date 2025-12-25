@@ -10,6 +10,8 @@ local function eternal_lantern_entity(variant)
     type = "beacon",
     name = variant == 0 and "eternal-lantern" or "eternal-lantern-" .. variant,
     icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
+    subgroup = "virentis-decors",
+    order = "aa",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.1, result = "eternal-lantern" },
     factoriopedia_alternative = "eternal-lantern",
@@ -105,7 +107,8 @@ data:extend({
     type = "recipe",
     name = "eternal-lantern",
     category = "organic",
-    order = "a",
+    subgroup = "virentis-decors",
+    order = "aa",
     icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
     ingredients = {
       { type = "item",  name = "firebrick",           amount = 1 },

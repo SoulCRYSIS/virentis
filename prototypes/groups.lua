@@ -33,12 +33,6 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "virentis-foods-intermediate",
-    group = "virentis",
-    order = "cb"
-  },
-  {
-    type = "item-subgroup",
     name = "virentis-foods-trade-item",
     group = "virentis",
     order = "cc"
@@ -108,5 +102,11 @@ data:extend({
     name = "virentis-enemies",
     group = "virentis",
     order = "v"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-decors",
+    group = "virentis",
+    order = "x"
   },
 })

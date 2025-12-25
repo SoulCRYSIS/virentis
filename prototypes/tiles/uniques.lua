@@ -188,7 +188,7 @@ data:extend(
 
       walking_sound = tile_sounds.walking.concrete,
       landing_steps_sound = tile_sounds.landing.concrete,
-      map_color = { 150, 45, 45 },
+      map_color = { 100, 45, 45 },
       scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
       trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
     },
@@ -211,7 +211,7 @@ data:extend(
 
       walking_sound = tile_sounds.walking.concrete,
       landing_steps_sound = tile_sounds.landing.concrete,
-      map_color = { 150, 45, 45 },
+      map_color = { 100, 45, 45 },
       scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
       trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
     },

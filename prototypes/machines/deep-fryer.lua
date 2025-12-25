@@ -8,7 +8,8 @@ data:extend({
     type = "recipe",
     name = "deep-fryer",
     category = "crafting-with-fluid",
-    order = "a",
+    subgroup = "virentis-machines",
+    order = "ac",
     icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
@@ -29,7 +30,7 @@ data:extend({
     name = "deep-fryer",
     icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
     subgroup = "virentis-machines",
-    order = "a",
+    order = "ac",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
@@ -108,6 +109,14 @@ data:extend({
         type = "fire",
         percent = 100,
       },
+      {
+        type = "explosion",
+        percent = 50
+      },
+      {
+        type = "impact",
+        percent = 50
+      }
     },
     corpse = "medium-small-remnants",
     graphics_set = {

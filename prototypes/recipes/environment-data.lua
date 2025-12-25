@@ -19,6 +19,7 @@ data:extend(
       },
       energy_required = 4,
       allow_productivity = true,
+      enabled = false,
     },
   }
 )

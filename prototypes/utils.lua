@@ -155,4 +155,41 @@ virentis.decor_radius_visualisation_picture = {
   height = 10
 }
 
+virentis.load_sprite_4way = function(animation)
+  local north = {}
+  for _, layer in ipairs(animation) do
+    local modified_layer = table.deepcopy(layer)
+    modified_layer.x = 0
+    table.insert(north, modified_layer)
+  end
+
+  local east = {}
+  for _, layer in ipairs(animation) do
+    local modified_layer = table.deepcopy(layer)
+    modified_layer.x = width
+    table.insert(east, modified_layer)
+  end
+
+  local south = {}
+  for _, layer in ipairs(animation) do
+    local modified_layer = table.deepcopy(layer)
+    modified_layer.x = width * 2
+    table.insert(south, modified_layer)
+  end
+
+  local west = {}
+  for _, layer in ipairs(animation) do
+    local modified_layer = table.deepcopy(layer)
+    modified_layer.x = width * 3
+    table.insert(west, modified_layer)
+  end
+
+  return {
+    north = { layers = north },
+    east = { layers = east },
+    south = { layers = south },
+    west = { layers = west }
+  }
+end
+
 return virentis

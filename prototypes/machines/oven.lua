@@ -10,7 +10,8 @@ data:extend({
     type = "recipe",
     name = "oven",
     category = "crafting",
-    order = "a",
+    subgroup = "virentis-machines",
+    order = "ab",
     icon = "__virentis__/graphics/icons/machines/oven.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
@@ -29,7 +30,7 @@ data:extend({
     name = "oven",
     icon = "__virentis__/graphics/icons/machines/oven.png",
     subgroup = "virentis-machines",
-    order = "a",
+    order = "ab",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
@@ -61,8 +62,8 @@ data:extend({
       pipe_covers = virentis.default_pipe_covers,
       heat_pipe_covers = virentis.default_heat_pipe_covers,
     },
-    crafting_categories = { "baking" },
-    crafting_speed = 1,
+    crafting_categories = { "baking", "basic-cooking" },
+    crafting_speed = 2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {
@@ -79,6 +80,14 @@ data:extend({
         type = "fire",
         percent = 100,
       },
+      {
+        type = "explosion",
+        percent = 50
+      },
+      {
+        type = "impact",
+        percent = 50
+      }
     },
     corpse = "steel-furnace-remnants",
     graphics_set = {
@@ -143,14 +152,31 @@ data:extend({
           effect = "flicker",
           animation = {
             filename = "__virentis__/graphics/entities/machines/oven/oven-working-glow.png",
-            priority = "very-low",
             width = width,
             height = height,
             draw_as_glow = true,
             blend_mode = "additive",
             scale = 0.5,
+            repeat_count = 48,
           },
         },
+        {
+          fadeout = true,
+          constant_speed = true,
+          render_layer = "wires",
+          animation =
+          {
+            filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-outer.png",
+            frame_count = 47,
+            line_length = 16,
+            width = 90,
+            height = 188,
+            animation_speed = 0.5,
+            shift = { -0.1, -3.5 },
+            tint = { 0.4, 0.4, 0.4, 1 },
+            scale = 0.5
+          }
+        }
       },
     },
     open_sound = sounds.machine_open,

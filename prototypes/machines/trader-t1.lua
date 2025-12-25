@@ -12,7 +12,7 @@ data:extend({
     name = "trader-t1",
     icon = "__virentis__/graphics/icons/machines/trader-t1.png",
     subgroup = "virentis-machines",
-    order = "a",
+    order = "za",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,

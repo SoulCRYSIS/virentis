@@ -6,6 +6,7 @@ data:extend({
     type = "electric-turret",
     name = "town-mortar-turret",
     subgroup = "virentis-machines",
+    order = "zb",
     icon = "__virentis__/graphics/icons/machines/town-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },

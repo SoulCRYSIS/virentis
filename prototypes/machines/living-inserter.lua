@@ -7,7 +7,8 @@ data:extend({
     type = "recipe",
     name = "living-inserter",
     category = "organic",
-    order = "a",
+    subgroup = "virentis-machines",
+    order = "ba",
     icon = "__virentis__/graphics/icons/machines/living-inserter.png",
     ingredients = {
       { type = "item", name = "stack-inserter",  amount = 1 },
@@ -27,7 +28,7 @@ data:extend({
     type = "inserter",
     name = "living-inserter",
     subgroup = "virentis-machines",
-    order = "a",
+    order = "ba",
     icon = "__virentis__/graphics/icons/machines/living-inserter.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     stack_size_bonus = 6,

@@ -2,47 +2,12 @@ local sounds = require("__base__.prototypes.entity.sounds")
 local space_age_sounds = require("__space-age__.prototypes.entity.sounds")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
+local virentis = require("prototypes.utils")
+
 local width = 448
 local height = 384
 
 local shift = { 1.5, -1 }
-
-local function convert_to_4way(animation)
-  local north = {}
-  for _, layer in ipairs(animation) do
-    local modified_layer = table.deepcopy(layer)
-    modified_layer.x = 0
-    table.insert(north, modified_layer)
-  end
-
-  local east = {}
-  for _, layer in ipairs(animation) do
-    local modified_layer = table.deepcopy(layer)
-    modified_layer.x = width
-    table.insert(east, modified_layer)
-  end
-
-  local south = {}
-  for _, layer in ipairs(animation) do
-    local modified_layer = table.deepcopy(layer)
-    modified_layer.x = width * 2
-    table.insert(south, modified_layer)
-  end
-
-  local west = {}
-  for _, layer in ipairs(animation) do
-    local modified_layer = table.deepcopy(layer)
-    modified_layer.x = width * 3
-    table.insert(west, modified_layer)
-  end
-
-  return {
-    north = { layers = north },
-    east = { layers = east },
-    south = { layers = south },
-    west = { layers = west }
-  }
-end
 
 local base_animation = {
   filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret.png",
@@ -109,6 +74,7 @@ data:extend({
     type = "electric-turret",
     name = "town-tesla-turret",
     subgroup = "virentis-machines",
+    order = "zc",
     icon = "__space-age__/graphics/icons/fulgoran-ruin-attractor.png",
     flags = { "placeable-player", "player-creation" },
     max_health = 4000,
@@ -155,7 +121,7 @@ data:extend({
       line_length = 1,
       lines_per_file = 1,
     },
-    ending_attack_animation = convert_to_4way({
+    ending_attack_animation = virentis.load_sprite_4way({
       attacking_animation,
     }),
     energy_glow_animation = laser_turret_shooting_glow(),
@@ -165,7 +131,7 @@ data:extend({
       base_visualisation = {
         {
           render_layer = "higher-object-under",
-          animation = convert_to_4way({
+          animation = virentis.load_sprite_4way({
             base_animation,
             base_glow_animation,
           }),
@@ -173,7 +139,7 @@ data:extend({
         {
           render_layer = "higher-object-above",
           enabled_states = { "prepared", "preparing", "starting-attack", "attacking", "ending-attack" },
-          animation = convert_to_4way({
+          animation = virentis.load_sprite_4way({
             charging_animation,
           }),
         },
@@ -258,8 +224,8 @@ data:extend({
   {
     type = "chain-active-trigger",
     name = "town-tesla-turret-chain",
-    max_jumps = 15,
-    max_range_per_jump = 20,
+    max_jumps = 12,
+    max_range_per_jump = 18,
     jump_delay_ticks = 6,
     fork_chance = 0.08,
     fork_chance_increase_per_quality_level = 0.08,

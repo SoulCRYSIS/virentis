@@ -45,8 +45,7 @@ data:extend(
     {
       type = "recipe",
       name = "red-sauce",
-      category = "baking",
-      additional_categories = { "smelting" },
+      category = "basic-cooking",
       subgroup = "virentis-foods-basic",
       order = "ab",
       icon = "__virentis__/graphics/icons/items/foods/red-sauce.png",
@@ -64,7 +63,7 @@ data:extend(
     {
       type = "recipe",
       name = "redbloom-buns",
-      category = "baking",
+      category = "basic-cooking",
       additional_categories = { "smelting" },
       subgroup = "virentis-foods-trade-item",
       order = "ab",
@@ -84,8 +83,7 @@ data:extend(
     {
       type = "recipe",
       name = "mangroove-syrup",
-      category = "baking",
-      additional_categories = { "smelting" },
+      category = "basic-cooking",
       subgroup = "virentis-foods-basic",
       order = "ac",
       icon = "__virentis__/graphics/icons/items/foods/mangroove-syrup.png",
@@ -102,8 +100,7 @@ data:extend(
     {
       type = "recipe",
       name = "berry-bliss-cookie",
-      category = "baking",
-      additional_categories = { "smelting" },
+      category = "basic-cooking",
       subgroup = "virentis-foods-trade-item",
       order = "ac",
       icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",

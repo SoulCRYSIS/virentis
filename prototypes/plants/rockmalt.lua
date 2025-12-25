@@ -13,7 +13,7 @@ data:extend({
     growth_ticks = 5 * minute,
     harvest_emissions = virentis_plant.default_emission,
     healing_per_tick = 1,
-    factoriopedia_simulation = virentis_plant.simulation("rockmalt", "virentis-plain-grass"),
+    factoriopedia_simulation = virentis_plant.simulation("rockmalt", "rockmalt-fertile-soil"),
     minable = {
       mining_particle = "teflilly-mining-particle",
       mining_time = 0.5,
@@ -26,7 +26,7 @@ data:extend({
         {
           type = "item",
           name = "herb",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,

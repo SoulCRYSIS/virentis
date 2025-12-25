@@ -5,7 +5,7 @@ data:extend(
       type = "recipe-category",
       name = "trading-t1",
       subgroup = "virentis-trades",
-      order = "ka"
+      order = "a"
     },
     -- {
     --   type = "recipe-category",
@@ -33,19 +33,25 @@ data:extend(
       type = "recipe-category",
       name = "baking",
       subgroup = "virentis-foods",
-      order = "a"
+      order = "c"
+    },
+    {
+      type = "recipe-category",
+      name = "basic-cooking",
+      subgroup = "virentis-foods",
+      order = "b"
     },
     {
       type = "recipe-category",
       name = "frying",
       subgroup = "virentis-foods",
-      order = "a"
+      order = "d"
     },
     {
       type = "recipe-category",
       name = "environment-research-data",
       subgroup = "virentis-research",
-      order = "a"
+      order = "z"
     },
   }
 )

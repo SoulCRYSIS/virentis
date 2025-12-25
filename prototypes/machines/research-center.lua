@@ -10,7 +10,8 @@ data:extend({
     type = "recipe",
     name = "environment-research-center",
     category = "crafting",
-    order = "a",
+    subgroup = "virentis-machines",
+    order = "ca",
     icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
     ingredients = {
       { type = "item", name = "firebrick",       amount = 4 },
@@ -32,7 +33,7 @@ data:extend({
     name = "environment-research-center",
     icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
     subgroup = "virentis-machines",
-    order = "a",
+    order = "ca",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
