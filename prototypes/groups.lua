@@ -109,4 +109,16 @@ data:extend({
     group = "virentis",
     order = "x"
   },
+  {
+    type = "item-subgroup",
+    name = "virentis-technologies",
+    group = "virentis",
+    order = "z"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-mock",
+    group = "virentis",
+    order = "zz"
+  }
 })

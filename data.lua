@@ -35,6 +35,7 @@ require "prototypes.recipes.process-crops"
 require "prototypes.recipes.chemicals"
 require "prototypes.recipes.materials"
 require "prototypes.recipes.environment-data"
+require "prototypes.recipes.giving"
 
 require "prototypes.tiles.tile-utils"
 require "prototypes.tiles.uniques"

@@ -22,7 +22,7 @@ I suggested you to play this mod again or wait for final version.
 - Fertile soils and trader can't recreate or move, so you need to expand for more resource, forcing enormous usage of train. You may want to design your train system carefully, or you may regrets later.
 - While enemies here is tougher with Behemoth tier, and higher evolution rate.
 - Everything here is base on foods which are spoilable, if you hate Gleba, this mod is not for you.
-- The default settings is pretty challenging, about average of one town every ~1000-2000 block, that mean you have to clear ~20-50 enemy bases
+- The default settings is pretty challenging, about average of one town every ~500-1000 block, that mean you have to clear ~10-20 enemy bases
 
 ## Main concepts/challenges
 - Trading: Trading outpost will generate throughout the map, the

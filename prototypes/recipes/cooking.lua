@@ -42,6 +42,7 @@ data:extend(
       energy_required = 4,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -81,6 +82,7 @@ data:extend(
       energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -98,6 +100,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.purple,
       energy_required = 8,
       result_is_always_fresh = true,
+      enabled = false,
       allow_productivity = true,
     },
     {
@@ -119,6 +122,7 @@ data:extend(
       energy_required = 12,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -141,6 +145,7 @@ data:extend(
       energy_required = 4,
       result_is_always_fresh = false,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -181,6 +186,7 @@ data:extend(
       energy_required = 2,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -201,6 +207,7 @@ data:extend(
       energy_required = 2,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -242,6 +249,7 @@ data:extend(
       energy_required = 2,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -263,6 +271,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.green,
       energy_required = 4,
       result_is_always_fresh = true,
+      enabled = false,
     }
   }
 )

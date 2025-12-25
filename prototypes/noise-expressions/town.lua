@@ -21,7 +21,7 @@ data:extend({
   {
     type = "noise-expression",
     name = "virentis_town_point_candidate",
-    expression = "virentis_select(virentis_elevation_common, 140, 1000, 0.5, 0, 1) - virentis_starting_area"
+    expression = "virentis_select(virentis_elevation_common, 80, 1000, 0.5, 0, 1) - virentis_starting_area"
   },
   {
     type = "noise-expression",
@@ -34,11 +34,11 @@ data:extend({
                              spot_radius_expression = virentis_town_size_scale_distance,\z
                              spot_quantity_expression = virentis_town_size_scale_distance * virentis_town_size_scale_distance,\z
                              spot_favorability_expression = virentis_town_point_candidate,\z
-                             candidate_spot_count = 4,\z
+                             candidate_spot_count = 3,\z
                              basement_value = 0,\z
-                             suggested_minimum_candidate_point_spacing = 600,\z
+                             suggested_minimum_candidate_point_spacing = 400,\z
                              maximum_spot_basement_radius = virentis_town_size * 4,\z
-                             region_size = 800 + 600 / control:virentis_town:frequency} + virentis_starting_town"
+                             region_size = 600 + 400 / control:virentis_town:frequency} + virentis_starting_town"
   },
   {
     type = "noise-expression",
@@ -51,11 +51,11 @@ data:extend({
                              spot_radius_expression = 1,\z
                              spot_quantity_expression = 5,\z
                              spot_favorability_expression = virentis_town_point_candidate,\z
-                             candidate_spot_count = 4,\z
+                             candidate_spot_count = 3,\z
                              basement_value = 0,\z
-                             suggested_minimum_candidate_point_spacing = 600,\z
+                             suggested_minimum_candidate_point_spacing = 400,\z
                              maximum_spot_basement_radius = 1,\z
-                             region_size = 800 + 600 / control:virentis_town:frequency} > 0) + virentis_starting_windmill",
+                             region_size = 600 + 400 / control:virentis_town:frequency} > 0) + virentis_starting_windmill",
     local_expressions = {
       virentis_starting_windmill =
       "starting_spot_at_angle{angle = virentis_starting_angle + 95 * virentis_starting_direction,\z

@@ -1,6 +1,15 @@
 local virentis = require("prototypes.utils")
 local recipe_tints = virentis.recipe_tints
 
+local pentapod_egg_recipe = table.deepcopy(data.raw["recipe"]["pentapod-egg"])
+pentapod_egg_recipe.surface_conditions = {
+  {
+    property = "pressure",
+    min = 1200,
+    max = 2000
+  }
+}
+
 data:extend(
 ---@type data.RecipePrototype[]
   {

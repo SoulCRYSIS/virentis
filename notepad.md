@@ -19,3 +19,5 @@ max(0, starting_spot_at_angle{angle = gleba_starting_angle + 95 * gleba_starting
 max(0, starting_spot_at_angle{angle = gleba_starting_angle + 95 * gleba_starting_direction,distance = 100 * gleba_starting_area_multiplier,radius = gleba_town_size * gleba_starting_area_multiplier,x_distortion = gleba_wobble_small_x * 5 * gleba_starting_area_multiplier,y_distortion = gleba_wobble_small_x * 5 * gleba_starting_area_multiplier})
 
 starting_spot_at_angle{angle = gleba_starting_angle + 95 * gleba_starting_direction,distance = 100 * gleba_starting_area_multiplier,radius = 1,x_distortion = 0,y_distortion = 0}
+
+lerp(clamp(1 - min(0.15 + (gleba_elevation_common / 100), 0.4 + (gleba_elevation_common - 20) / 500), 0, 1), 0.35, min(1, gleba_rockpools_pitrock * 5))
