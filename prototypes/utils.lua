@@ -156,6 +156,8 @@ virentis.decor_radius_visualisation_picture = {
 }
 
 virentis.load_sprite_4way = function(animation)
+  local width = animation[1].width
+
   local north = {}
   for _, layer in ipairs(animation) do
     local modified_layer = table.deepcopy(layer)

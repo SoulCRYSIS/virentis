@@ -37,7 +37,7 @@ data:extend(
         { type = "item", name = "rockmalt-bulb",  amount = 10 },
         { type = "item", name = "rockmalt-scale", amount = 1, probability = 0.2 }
       },
-      crafting_machine_tint = recipe_tints.white,
+      crafting_machine_tint = recipe_tints.yellow,
       energy_required = 5,
       result_is_always_fresh = false,
       allow_productivity = true,

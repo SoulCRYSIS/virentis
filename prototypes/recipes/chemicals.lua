@@ -17,6 +17,7 @@ data:extend(
       results = {
         { type = "item", name = "solid-fuel", amount = 1 }
       },
+      crafting_machine_tint = recipe_tints.orange,
       energy_required = 2,
       allow_productivity = true,
       enabled = false,
@@ -38,7 +39,7 @@ data:extend(
         { type = "item",  name = "creosote", amount = 2 },
         { type = "fluid", name = "methanol", amount = 50 }
       },
-      crafting_machine_tint = recipe_tints.black,
+      crafting_machine_tint = recipe_tints.orange,
       energy_required = 5,
       allow_productivity = true,
       enabled = false,

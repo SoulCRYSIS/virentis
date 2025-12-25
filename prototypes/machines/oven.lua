@@ -148,7 +148,12 @@ data:extend({
       working_visualisations = {
         {
           fadeout = true,
-          applye_recipe_tint = "primary",
+          effect = "flicker",
+          light =  { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 7 },
+        },
+        {
+          fadeout = true,
+          apply_recipe_tint = "primary",
           effect = "flicker",
           animation = {
             filename = "__virentis__/graphics/entities/machines/oven/oven-working-glow.png",
@@ -164,6 +169,7 @@ data:extend({
           fadeout = true,
           constant_speed = true,
           render_layer = "wires",
+          apply_recipe_tint = "primary",
           animation =
           {
             filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-outer.png",
@@ -172,8 +178,8 @@ data:extend({
             width = 90,
             height = 188,
             animation_speed = 0.5,
-            shift = { -0.1, -3.5 },
-            tint = { 0.4, 0.4, 0.4, 1 },
+            shift = { -0.05, -3.45 },
+            tint = { 0.7, 0.7, 0.7, 0.5 },
             scale = 0.5
           }
         }

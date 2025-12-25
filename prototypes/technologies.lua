@@ -270,6 +270,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "virentis-rocket-fuel"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "explosive-from-methanol"
+        },
       },
       prerequisites = { "pentapod-cooking" },
       research_trigger = {

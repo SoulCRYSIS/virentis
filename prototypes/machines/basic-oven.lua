@@ -119,6 +119,7 @@ data:extend {
         {
           fadeout = true,
           effect = "flicker",
+          apply_recipe_tint = "primary",
           animation =
           {
             layers =

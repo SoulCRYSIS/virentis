@@ -177,6 +177,11 @@ data:extend({
       working_visualisations = {
         {
           fadeout = true,
+          effect = "flicker",
+          light =  { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 7 },
+        },
+        {
+          fadeout = true,
           animation = {
             filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-working-animation.png",
             priority = "very-low",

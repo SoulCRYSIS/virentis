@@ -22,6 +22,7 @@ data:extend(
       energy_required = 8,
       result_is_always_fresh = false,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -59,6 +60,7 @@ data:extend(
       energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -93,9 +95,10 @@ data:extend(
       results = {
         { type = "item", name = "mangroove-syrup", amount = 1 }
       },
-      crafting_machine_tint = recipe_tints.orange,
+      crafting_machine_tint = recipe_tints.purple,
       energy_required = 8,
       result_is_always_fresh = true,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -112,7 +115,7 @@ data:extend(
       results = {
         { type = "item", name = "berry-bliss-cookie", amount = 2 }
       },
-      crafting_machine_tint = recipe_tints.red,
+      crafting_machine_tint = recipe_tints.purple,
       energy_required = 12,
       result_is_always_fresh = true,
       enabled = false,
@@ -153,10 +156,11 @@ data:extend(
       results = {
         { type = "item", name = "sweet-chili-sauce", amount = 1 }
       },
-      crafting_machine_tint = recipe_tints.orange,
+      crafting_machine_tint = recipe_tints.purple,
       energy_required = 4,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -216,6 +220,7 @@ data:extend(
       energy_required = 4,
       result_is_always_fresh = true,
       enabled = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -255,7 +260,7 @@ data:extend(
       results = {
         { type = "item", name = "mudland-medley", amount = 1 }
       },
-      crafting_machine_tint = recipe_tints.purple,
+      crafting_machine_tint = recipe_tints.green,
       energy_required = 4,
       result_is_always_fresh = true,
     }
