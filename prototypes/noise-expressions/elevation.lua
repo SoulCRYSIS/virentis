@@ -60,7 +60,7 @@ data:extend(
         --ridges = "max(-virentis_tri_ridge, starting_bridge - 0.8) * 2.3 + 0.2 * ridges_small_noise",
         --ridges = "max(-virentis_tri_ridge, starting_bridges - 0.8) * 2.3 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
         ridges =
-        "max(-virentis_tri_ridge * (0.6 + var('virentis_water_size') / 3), starting_bridges - 0.8) * 2.4 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
+        "max(-virentis_tri_ridge * (0.4 + var('virentis_water_size') / 3), starting_bridges - 0.8) * 2.4 + 0.2 * ridges_small_noise", -- bridge extends out of starting area.
         ridge_terrace = "terrace{value = min(80, 110 + ridges * 500), offset = 40, width = 20, strength = 0.2}",
         terraces_combined = "max(ridge_terrace, peaks_terrace, 25 + 22 * ridges)",
         starting_midlands = "max(starting_midland_landing, starting_midland_iron, starting_midland_copper)",

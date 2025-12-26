@@ -44,9 +44,9 @@ data:extend(
         { type = "item",  name = "phosphorus",    amount = 1 }
       },
       results = {
-        { type = "item",  name = "resin",    amount = 2 },
-        { type = "item",  name = "creosote", amount = 2 },
-        { type = "fluid", name = "methanol", amount = 50 }
+        { type = "item",  name = "virentis-resin", amount = 2 },
+        { type = "item",  name = "creosote",       amount = 2 },
+        { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 5,
@@ -173,7 +173,7 @@ data:extend(
       icon = "__virentis__/graphics/icons/recipes/vegetable-oil-gleba.png",
       ingredients = {
         { type = "item",  name = "phosphorus", amount = 1 },
-        { type = "item", name = "jelly",      amount = 4 },
+        { type = "item",  name = "jelly",      amount = 4 },
         { type = "fluid", name = "water",      amount = 50 },
       },
       results = {

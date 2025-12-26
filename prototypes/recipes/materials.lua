@@ -30,10 +30,10 @@ data:extend(
       order = "aa",
       icon = "__virentis__/graphics/icons/items/materials/heart-of-nature.png",
       ingredients = {
-        { type = "item", name = "resin",       amount = 1 },
-        { type = "item", name = "siltcore",    amount = 1 },
-        { type = "item", name = "living-wood", amount = 2 },
-        { type = "item", name = "pentapod-egg", amount = 1 }
+        { type = "item", name = "virentis-resin", amount = 1 },
+        { type = "item", name = "siltcore",       amount = 1 },
+        { type = "item", name = "living-wood",    amount = 2 },
+        { type = "item", name = "pentapod-egg",   amount = 1 }
       },
       results = {
         { type = "item", name = "heart-of-nature", amount = 1 }
@@ -149,9 +149,9 @@ data:extend(
       order = "ca",
       icon = "__virentis__/graphics/icons/recipes/explosive-from-methanol.png",
       ingredients = {
-        { type = "fluid", name = "methanol", amount = 10 },
-        { type = "item", name = "carbon", amount = 1 },
-        { type = "item", name = "phosphorus", amount = 1 },
+        { type = "fluid", name = "methanol",   amount = 10 },
+        { type = "item",  name = "carbon",     amount = 1 },
+        { type = "item",  name = "phosphorus", amount = 1 },
       },
       results = {
         { type = "item", name = "explosives", amount = 10 }

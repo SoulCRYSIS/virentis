@@ -3,12 +3,12 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_water_frequency",
-      expression = "slider_rescale(control:virentis_water:frequency, 8) / 8"
+      expression = "slider_rescale(control:virentis_water:frequency, 8) / 4"
     },
     {
       type = "noise-expression",
       name = "virentis_water_size",
-      expression = "control:virentis_water:size / 16"
+      expression = "control:virentis_water:size / 4"
     },
     {
       type = "noise-expression",

@@ -3,7 +3,7 @@ data:extend(
   {
     {
       type = "item",
-      name = "resin",
+      name = "virentis-resin",
       icon = "__virentis__/graphics/icons/items/materials/resin.png",
       subgroup = "virentis-materials",
       order = "ab",

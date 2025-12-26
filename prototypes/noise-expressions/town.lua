@@ -21,7 +21,7 @@ data:extend({
   {
     type = "noise-expression",
     name = "virentis_town_point_candidate",
-    expression = "virentis_select(virentis_elevation_common, 80, 1000, 0.5, 0, 1) - virentis_starting_area"
+    expression = "virentis_select(virentis_elevation_common, 40, 1000, 0.5, 0, 1) - virentis_starting_area"
   },
   {
     type = "noise-expression",
