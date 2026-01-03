@@ -44,7 +44,7 @@ data:extend({
       tile_restriction = { "rockmalt-fertile-soil" }
     },
     variations = virentis_plant.tree_variations("rockmalt", 6, 3, 0.8, 360, 256, false, util.by_pixel(32, -25)),
-    colors = virentis_plant.minor_tints(),
+    colors = virentis_plant.grey_tints(),
     ambient_sounds =
     {
       sound =

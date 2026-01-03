@@ -100,16 +100,16 @@ local virentis_tree_particle_effects =
     trunk_1 = "yumako-branch-particle",
   },
   ["redbloom"] = {
-    crop_1 = "yumako-leaf-particle",
-    trunk_1 = "yumako-branch-particle",
+    crop_1 = "sunnycomb-leaf-particle",
+    spongy = "sunnycomb-branch-particle"
   },
   ["mangroove"] = {
-    crop_1 = "yumako-leaf-particle",
-    trunk_1 = "yumako-branch-particle",
+    crop_1 = "sunnycomb-leaf-particle",
+    spongy = "sunnycomb-branch-particle"
   },
   ["nyxoleum"] = {
-    crop_1 = "yumako-leaf-particle",
-    trunk_1 = "yumako-branch-particle",
+    water_cane_top = "water-cane-branch-particle",
+    water_cane = "water-cane-branch-particle",
   },
   -- ["jellystem"] =     { sap = "jellystem-leaf-particle",
   --                       jellystem = "jellystem-branch-particle"
@@ -642,6 +642,15 @@ virentis_plant.very_minor_tints = function() -- Only for leaves where very littl
     { r = 240, g = 240, b = 255 },
     { r = 255, g = 240, b = 240 },
     { r = 240, g = 255, b = 240 },
+  }
+end
+
+virentis_plant.grey_tints = function() -- Only for leaves where most if the colour is baked in.
+  return {
+    { r = 255, g = 255, b = 255 },
+    { r = 240, g = 240, b = 240 },
+    { r = 230, g = 230, b = 230 },
+    { r = 220, g = 220, b = 220 },
   }
 end
 

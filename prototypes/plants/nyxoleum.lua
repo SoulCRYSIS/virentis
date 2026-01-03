@@ -38,7 +38,7 @@ data:extend({
       tile_restriction = { "nyxoleum-fertile-soil" }
     },
     variations = virentis_plant.tree_variations("nyxoleum", 6, 3, 1, 512, 512, false, util.by_pixel(0, 0)),
-    colors = virentis_plant.minor_tints(),
+    colors = virentis_plant.very_minor_tints(),
     ambient_sounds =
     {
       sound =
