@@ -25,7 +25,7 @@ data:extend(
                               y = y + wobble_noise_y * 15,\z
                               seed0 = map_seed,\z
                               seed1 = seed,\z
-                              candidate_spot_count = 40,\z
+                              candidate_spot_count = 80,\z
                               suggested_minimum_candidate_point_spacing = 128,\z
                               skip_span = 1,\z
                               skip_offset = 0,\z

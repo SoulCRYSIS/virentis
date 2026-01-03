@@ -10,7 +10,7 @@ data:extend(
       type = "noise-expression",
       name = "virentis_elevation",
       --intended_property = "elevation",
-      expression = "max(lerp(virentis_elevation_common, lowland_elevation, lowland_mask), virentis_select(virentis_town_raw, 0.1, 1, 0.1, 0, 1) * 120)",
+      expression = "max(lerp(virentis_elevation_common, lowland_elevation, lowland_mask), virentis_select(virentis_town_raw, 0.1, 1, 0.1, 0, 1) * 120) - virentis_select(virentis_river_ridge, 0, 0.002, 0.018, 0, 1) * 180",
       local_expressions =
       {
         aux_high_contrast = "clamp(10 * (virentis_aux - 0.5) + 0.5, 0, 1)",
@@ -119,8 +119,24 @@ data:extend(
     },
     {
       type = "noise-expression",
+      name = "virentis_river_ridge", -- from Space Exploration
+      expression = "0.5 * ((tri_bc < tri_a) * (tri_a - tri_bc) + (tri_ac < tri_b) * (tri_b - tri_ac) + (tri_ab < tri_c) * (tri_c - tri_ab))",
+      local_expressions =
+      {
+        tri_a = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/600*virentis_water_frequency, seed0 = map_seed, seed1 = 10005}",
+        tri_b = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/600*virentis_water_frequency, seed0 = map_seed, seed1 = 20005}",
+        tri_c = "1 + multioctave_noise{x = wobble_x, y = wobble_y, persistence = 0.65, octaves = 3, input_scale = 1/600*virentis_water_frequency, seed0 = map_seed, seed1 = 30005}",
+        tri_ab = "max(tri_a, tri_b)",
+        tri_ac = "max(tri_a, tri_c)",
+        tri_bc = "max(tri_b, tri_c)",
+        wobble_x = "x + virentis_wobble_x * 6",
+        wobble_y = "y + virentis_wobble_y * 6"
+      }
+    },
+    {
+      type = "noise-expression",
       name = "virentis_deep_water_level",
-      expression = "-8"
+      expression = "-90"
     },
     {
       type = "noise-expression",

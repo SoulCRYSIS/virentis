@@ -319,7 +319,7 @@ data:extend({
     name = "virentis-wetland-blue-slime",
     subgroup = "virentis-water-tiles",
     collision_mask = tile_collision_masks.shallow_water(),
-    autoplace = { probability_expression = "6 * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1) + 5 * virentis_rockpools_bluewater" },
+    autoplace = { probability_expression = "6 * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1)" },
     lowland_fog = true,
     effect = "wetland-blue-slime",
     effect_color = { 45, 63, 70 },
@@ -339,7 +339,8 @@ data:extend({
           size = 1
         }
       },
-      empty_transitions = true,
+      -- empty_transitions = true,
+      transition = tile_graphics.generic_masked_tile_transitions1
     },
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
@@ -364,7 +365,7 @@ data:extend({
     name = "virentis-deep-water",
     subgroup = "virentis-water-tiles",
     collision_mask = tile_collision_masks.water(),
-    autoplace = { probability_expression = "10 * virentis_select(elevation, -500, virentis_deep_water_level, 0.5, 0, 1) + 10 * virentis_rockpools_deepwater" },
+    autoplace = { probability_expression = "10 * virentis_select(elevation, -500, virentis_deep_water_level, 0.5, 0, 1)" },
     lowland_fog = false,
     effect = "wetland-blue-slime",
     effect_color = { 31, 51, 60 },
@@ -384,7 +385,7 @@ data:extend({
           size = 1
         }
       },
-      empty_transitions = true,
+      transition = tile_graphics.generic_masked_tile_transitions1
     },
     transitions = { virentis_tile.lava_to_out_of_map_transition },
     transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,

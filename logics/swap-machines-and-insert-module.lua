@@ -161,11 +161,15 @@ local function on_chunk_generated(event)
     })
 
     for _, entity in ipairs(entities) do
-      -- Simulate built event for chunk generated entities
-      apply_variant({
-        entity = entity,
-        is_from_map = true,
-      })
+      local pos = entity.position
+      if pos.x >= area.left_top.x and pos.y >= area.left_top.y and
+          pos.x < area.right_bottom.x and pos.y < area.right_bottom.y then
+        -- Simulate built event for chunk generated entities
+        apply_variant({
+          entity = entity,
+          is_from_map = true,
+        })
+      end
     end
   end
 end

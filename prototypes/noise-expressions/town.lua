@@ -21,7 +21,7 @@ data:extend({
   {
     type = "noise-expression",
     name = "virentis_town_point_candidate",
-    expression = "virentis_select(virentis_elevation_common, 40, 1000, 0.5, 0, 1) - virentis_starting_area"
+    expression = "virentis_select(virentis_elevation_common, 40, 1000, 0.5, 0, 1) - virentis_starting_area - virentis_select(virentis_river_ridge, 0, 0.1, 0, 0, 1)"
   },
   {
     type = "noise-expression",
@@ -34,7 +34,7 @@ data:extend({
                              spot_radius_expression = virentis_town_size_scale_distance,\z
                              spot_quantity_expression = virentis_town_size_scale_distance * virentis_town_size_scale_distance,\z
                              spot_favorability_expression = virentis_town_point_candidate,\z
-                             candidate_spot_count = 3,\z
+                             candidate_spot_count = 4,\z
                              basement_value = 0,\z
                              suggested_minimum_candidate_point_spacing = 400,\z
                              maximum_spot_basement_radius = virentis_town_size * 4,\z
@@ -48,13 +48,13 @@ data:extend({
                              seed0 = map_seed,\z
                              seed1 = 7777,\z
                              density_expression = virentis_town_point_candidate,\z
-                             spot_radius_expression = 1,\z
-                             spot_quantity_expression = 5,\z
+                             spot_radius_expression = 0.5,\z
+                             spot_quantity_expression = 4,\z
                              spot_favorability_expression = virentis_town_point_candidate,\z
-                             candidate_spot_count = 3,\z
+                             candidate_spot_count = 4,\z
                              basement_value = 0,\z
                              suggested_minimum_candidate_point_spacing = 400,\z
-                             maximum_spot_basement_radius = 1,\z
+                             maximum_spot_basement_radius = 0.5,\z
                              region_size = 600 + 400 / control:virentis_town:frequency} > 0) + virentis_starting_windmill",
     local_expressions = {
       virentis_starting_windmill =

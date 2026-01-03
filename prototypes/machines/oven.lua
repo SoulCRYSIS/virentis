@@ -63,7 +63,7 @@ data:extend({
       heat_pipe_covers = virentis.default_heat_pipe_covers,
     },
     crafting_categories = { "baking", "basic-cooking" },
-    crafting_speed = 2,
+    crafting_speed = 1,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {

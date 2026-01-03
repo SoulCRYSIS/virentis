@@ -37,20 +37,38 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_starting_fertile",
-      expression = "max(starting_lowland_yumako, starting_lowland_jellynut)",
+      expression = "max(starting_nyxoleum, starting_mangroove)",
       local_expressions =
       {
-        starting_lowland_yumako = "starting_spot_at_angle{angle = virentis_starting_angle + 235 * virentis_starting_direction,\z
+        starting_nyxoleum = "starting_spot_at_angle{angle = virentis_starting_angle + 235 * virentis_starting_direction,\z
                                                           distance = 310 * virentis_starting_area_multiplier,\z
-                                                          radius = 40 * virentis_starting_area_multiplier,\z
+                                                          radius = 30 * virentis_starting_area_multiplier,\z
                                                           x_distortion = virentis_wobble_x * 15,\z
                                                           y_distortion = virentis_wobble_x * 15}",
-        starting_lowland_jellynut = "starting_spot_at_angle{angle = virentis_starting_angle + 65 * virentis_starting_direction,\z
+        starting_mangroove = "starting_spot_at_angle{angle = virentis_starting_angle + 65 * virentis_starting_direction,\z
                                                             distance = 310 * virentis_starting_area_multiplier,\z
-                                                            radius = 40 * virentis_starting_area_multiplier,\z
+                                                            radius = 30 * virentis_starting_area_multiplier,\z
                                                             x_distortion = virentis_wobble_x * 15,\z
                                                             y_distortion = virentis_wobble_x * 15}",
       }
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_rockmalt",
+      expression = "max(0, starting_spot_at_angle{ angle = virentis_starting_angle + 40 * virentis_starting_direction,\z
+                                            distance = 130 * virentis_starting_area_multiplier,\z
+                                            radius = 20 * virentis_starting_area_multiplier,\z
+                                            x_distortion = virentis_wobble_x * 15,\z
+                                            y_distortion = virentis_wobble_x * 15})"
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_starting_redbloom",
+      expression = "max(0, starting_spot_at_angle{ angle = virentis_starting_angle + 340 * virentis_starting_direction,\z
+                                            distance = 100 * virentis_starting_area_multiplier,\z
+                                            radius = 20 * virentis_starting_area_multiplier,\z
+                                            x_distortion = virentis_wobble_x * 15,\z
+                                            y_distortion = virentis_wobble_x * 15}"
     },
     {
       type = "noise-expression",

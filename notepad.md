@@ -21,3 +21,7 @@ max(0, starting_spot_at_angle{angle = gleba_starting_angle + 95 * gleba_starting
 starting_spot_at_angle{angle = gleba_starting_angle + 95 * gleba_starting_direction,distance = 100 * gleba_starting_area_multiplier,radius = 1,x_distortion = 0,y_distortion = 0}
 
 lerp(clamp(1 - min(0.15 + (gleba_elevation_common / 100), 0.4 + (gleba_elevation_common - 20) / 500), 0, 1), 0.35, min(1, gleba_rockpools_pitrock * 5))
+
+spot_noise{x = x + gleba_wobble_small_x * 5,y = y + gleba_wobble_small_y * 5,seed0 = map_seed,seed1 = 7777,density_expression = gleba_town_point_candidate,spot_radius_expression = 32,spot_quantity_expression = 32 * 32,spot_favorability_expression = gleba_town_point_candidate,candidate_spot_count = 3,basement_value = 0,suggested_minimum_candidate_point_spacing = 400,maximum_spot_basement_radius = 32 * 4,region_size = 600 + 400}
+
+gleba_select(gleba_elevation_common, 40, 1000, 0.5, 0, 1) - gleba_select(gleba_river_ridge, 0, 0.05, 0.02, 0, 1)
