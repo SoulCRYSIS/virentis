@@ -22,7 +22,7 @@ data:extend(
     {
       type = "technology",
       name = "planet-discovery-virentis",
-      order = "a",
+      order = "va",
       subgroup = "virentis-technologies", 
       icons = util.technology_icon_constant_planet("__virentis__/graphics/icons/misc/virentis-icon.png"),
       icon_size = 256,
@@ -56,7 +56,7 @@ data:extend(
     {
       type = "technology",
       name = "redbloom-processing",
-      order = "ba",
+      order = "vba",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/redbloom-processing.png",
       icon_size = 256,
@@ -89,7 +89,7 @@ data:extend(
     {
       type = "technology",
       name = "rockmalt-processing",
-      order = "bb",
+      order = "vbb",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/rockmalt-processing.png",
       icon_size = 256,
@@ -126,7 +126,7 @@ data:extend(
     {
       type = "technology",
       name = "mangroove-processing",
-      order = "bc",
+      order = "vbc",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/mangroove-processing.png",
       icon_size = 256,
@@ -155,7 +155,7 @@ data:extend(
     {
       type = "technology",
       name = "advanced-baking",
-      order = "ca",
+      order = "vca",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/advanced-baking.png",
       icon_size = 256,
@@ -179,7 +179,7 @@ data:extend(
     {
       type = "technology",
       name = "nyxoleum-processing",
-      order = "cb",
+      order = "vcb",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/nyxoleum-processing.png",
       icon_size = 256,
@@ -220,7 +220,7 @@ data:extend(
     {
       type = "technology",
       name = "frying",
-      order = "db",
+      order = "vdb",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/frying.png",
       icon_size = 256,
@@ -252,7 +252,7 @@ data:extend(
     {
       type = "technology",
       name = "tar-processing",
-      order = "ea",
+      order = "vea",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/tar-processing.png",
       icon_size = 256,
@@ -295,7 +295,7 @@ data:extend(
     {
       type = "technology",
       name = "environment-research-center",
-      order = "fa",
+      order = "vfa",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/environment-research-center.png",
       icon_size = 256,
@@ -331,8 +331,8 @@ data:extend(
     {
       type = "technology",
       name = "nutrients-pulp",
-      order = "ga",
-      subgroup = "virentis-technologies", 
+      order = "vga",
+      subgroup = "virentis-technologies",
       icon = "__virentis__/graphics/icons/technologies/nutrients-pulp.png",
       icon_size = 256,
       effects = {
@@ -366,7 +366,7 @@ data:extend(
     {
       type = "technology",
       name = "living-inserter",
-      order = "ha",
+      order = "vha",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/machines/living-inserter.png",
       icon_size = 64,
@@ -389,7 +389,7 @@ data:extend(
     {
       type = "technology",
       name = "eternal-lantern",
-      order = "hb",
+      order = "vhb",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/eternal-lantern.png",
       icon_size = 256,
@@ -412,7 +412,7 @@ data:extend(
     {
       type = "technology",
       name = "tesla-weapons-speed",
-      order = "hc",
+      order = "vhc",
       subgroup = "virentis-technologies", 
       icons = util.technology_icon_constant_speed("__space-age__/graphics/technology/electric-weapons-damage.png"),
       effects =
@@ -441,7 +441,7 @@ data:extend(
     {
       type = "technology",
       name = "trading-productivity",
-      order = "hd",
+      order = "vhd",
       subgroup = "virentis-technologies", 
       icons = util.technology_icon_constant_recipe_productivity("__virentis__/graphics/icons/technologies/trading-productivity.png"),
       icon_size = 256,

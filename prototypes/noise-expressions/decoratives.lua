@@ -1069,27 +1069,27 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_rockmalt_decorate_area",
-      expression = "(virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2) * 50000 - 25000"
+      expression = "max((virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2) - 0.5, virentis_starting_rockmalt)"
     },
     {
       type = "noise-expression",
       name = "virentis_tiny_volcanic_rock_probability",
-      expression = "virentis_rockmalt_decorate_area * 0.05"
+      expression = "virentis_rockmalt_decorate_area * 0.5"
     },
     {
       type = "noise-expression",
       name = "virentis_small_volcanic_rock_probability",
-      expression = "virentis_rockmalt_decorate_area * 0.03"
+      expression = "virentis_rockmalt_decorate_area * 0.3"
     },
     {
       type = "noise-expression",
       name = "virentis_medium_volcanic_rock_probability",
-      expression = "virentis_rockmalt_decorate_area * 0.01"
+      expression = "virentis_rockmalt_decorate_area * 0.1"
     },
     {
       type = "noise-expression",
       name = "virentis_crater_small_probability",
-      expression = "virentis_rockmalt_decorate_area * 0.03"
+      expression = "virentis_rockmalt_decorate_area * 0.3"
     },
     {
       type = "noise-expression",

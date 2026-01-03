@@ -34,7 +34,7 @@ data:extend({
                              spot_radius_expression = virentis_town_size_scale_distance,\z
                              spot_quantity_expression = virentis_town_size_scale_distance * virentis_town_size_scale_distance,\z
                              spot_favorability_expression = virentis_town_point_candidate,\z
-                             candidate_spot_count = 4,\z
+                             candidate_spot_count = 2,\z
                              basement_value = 0,\z
                              suggested_minimum_candidate_point_spacing = 400,\z
                              maximum_spot_basement_radius = virentis_town_size * 4,\z
@@ -51,7 +51,7 @@ data:extend({
                              spot_radius_expression = 0.5,\z
                              spot_quantity_expression = 4,\z
                              spot_favorability_expression = virentis_town_point_candidate,\z
-                             candidate_spot_count = 4,\z
+                             candidate_spot_count = 2,\z
                              basement_value = 0,\z
                              suggested_minimum_candidate_point_spacing = 400,\z
                              maximum_spot_basement_radius = 0.5,\z

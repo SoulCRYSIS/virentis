@@ -65,6 +65,7 @@ data:extend({
         ["decorative:small-fulgora-rock:probability"] = "virentis_small_fulgora_rock_probability",
         ["decorative:tiny-volcanic-rock:probability"] = "virentis_tiny_volcanic_rock_probability",
         ["decorative:small-volcanic-rock:probability"] = "virentis_small_volcanic_rock_probability",
+        ["decorative:medium-volcanic-rock:probability"] = "virentis_medium_volcanic_rock_probability",
         ["decorative:crater-small:probability"] = "virentis_crater_small_probability",
         ["decorative:v-red-pita:probability"] = "virentis_vulcanus_pita_probability",
 
@@ -239,6 +240,7 @@ data:extend({
             -- Rockmalt
             ["tiny-volcanic-rock"] = {},
             ["small-volcanic-rock"] = {},
+            ["medium-volcanic-rock"] = {},
             ["crater-small"] = {},
             ["v-red-pita"] = {},
           }

@@ -34,7 +34,7 @@ data:extend({
     mining_sound = virentis_plant.sound_variations("__space-age__/sound/mining/axe-mining-teflilly", 5, 0.5),
     mined_sound = virentis_plant.sound_variations("__space-age__/sound/mining/mined-teflilly", 5, 0.5),
     max_health = 50,
-    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    collision_box = { { -0.75, -0.75 }, { 0.75, 0.75 } },
     selection_box = { { -0.75, -1.5 }, { 0.75, 0.5 } },
     drawing_box_vertical_extension = 0.8,
     autoplace = {
