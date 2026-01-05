@@ -3,12 +3,34 @@ local virentis = require("prototypes.utils")
 local width = 224
 local height = 224
 
---- @param variant number
-local function eternal_lantern_entity(variant)
-  return ---@type data.BeaconPrototype
+data:extend({
+  virentis.default_machine_item_prototype("eternal-lantern", 50),
+  {
+    type = "recipe",
+    name = "eternal-lantern",
+    category = "organic",
+    subgroup = "virentis-decors",
+    order = "aa",
+    icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
+    ingredients = {
+      { type = "item",  name = "heart-of-nature",     amount = 1 },
+      { type = "item",  name = "sylva-core",          amount = 1 },
+      { type = "item",  name = "firebrick",           amount = 4 },
+      { type = "item",  name = "living-wood",         amount = 8 },
+      { type = "item",  name = "efficiency-module-3", amount = 1 },
+      { type = "fluid", name = "nutrients-pulp",      amount = 20 },
+    },
+    results = {
+      { type = "item", name = "eternal-lantern", amount = 1 }
+    },
+    energy_required = 1,
+    enabled = false,
+    surface_conditions = virentis.surface_condition,
+  },
+  ---@type data.BeaconPrototype
   {
     type = "beacon",
-    name = variant == 0 and "eternal-lantern" or "eternal-lantern-" .. variant,
+    name = "eternal-lantern",
     icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
     subgroup = "virentis-decors",
     order = "aa",
@@ -26,46 +48,51 @@ local function eternal_lantern_entity(variant)
     drawing_box_vertical_extension = 0.5,
     allowed_effects = { "consumption", "pollution" },
     create_ghost_on_death = false,
+    stateless_visualisation = {
+      {
+        light = { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 24 },
+        animation = {
+          sheet = {
+            filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern.png",
+            variation_count = 4,
+            line_length = 4,
+            width = width,
+            height = height,
+            scale = 0.5,
+          },
+        }
+      },
+      {
+        animation = {
+          sheet = {
+            filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-shadow.png",
+            variation_count = 4,
+            line_length = 4,
+            width = width,
+            height = height,
+            scale = 0.5,
+            draw_as_shadow = true,
+          }
+        }
+      },
+      {
+        animation = {
+          sheet = {
+            effect = "flicker",
+            filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-glow.png",
+            variation_count = 4,
+            line_length = 4,
+            width = width,
+            height = height,
+            scale = 0.5,
+            draw_as_glow = true,
+            blend_mode = "additive",
+          }
+        }
+      }
+    },
     graphics_set = {
       module_icons_suppressed = true,
-      light = { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 24 },
-      animation_list = {
-        {
-          render_layer = "object",
-          always_draw = true,
-          animation =
-          {
-            layers =
-            {
-              {
-                filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern.png",
-                width = width,
-                height = height,
-                scale = 0.5,
-                x = width * variant,
-              },
-              {
-                filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-shadow.png",
-                width = width,
-                height = height,
-                scale = 0.5,
-                draw_as_shadow = true,
-                x = width * variant,
-              },
-              {
-                effect = "flicker",
-                filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-glow.png",
-                width = width,
-                height = height,
-                scale = 0.5,
-                draw_as_glow = true,
-                blend_mode = "additive",
-                x = width * variant,
-              }
-            }
-          }
-        },
-      },
     },
     radius_visualisation_picture = virentis.decor_radius_visualisation_picture,
     supply_area_distance = 12,
@@ -98,37 +125,7 @@ local function eternal_lantern_entity(variant)
       orientation_to_variation = false
     },
     map_color = { 240, 240, 240 },
-  }
-end
-
-data:extend({
-  virentis.default_machine_item_prototype("eternal-lantern"),
-  {
-    type = "recipe",
-    name = "eternal-lantern",
-    category = "organic",
-    subgroup = "virentis-decors",
-    order = "aa",
-    icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
-    ingredients = {
-      { type = "item",  name = "heart-of-nature",     amount = 1 },
-      { type = "item",  name = "sylva-core",          amount = 1 },
-      { type = "item",  name = "firebrick",           amount = 4 },
-      { type = "item",  name = "living-wood",         amount = 8 },
-      { type = "item",  name = "efficiency-module-3", amount = 1 },
-      { type = "fluid", name = "nutrients-pulp",      amount = 20 },
-    },
-    results = {
-      { type = "item", name = "eternal-lantern", amount = 1 }
-    },
-    energy_required = 1,
-    enabled = false,
-    surface_conditions = virentis.surface_condition,
   },
-  eternal_lantern_entity(0),
-  eternal_lantern_entity(1),
-  eternal_lantern_entity(2),
-  eternal_lantern_entity(3),
   {
     type = "module",
     name = "eternal-lantern-module",
@@ -138,7 +135,7 @@ data:extend({
     tier = 1,
     order = "z",
     stack_size = 50,
-    effect = { consumption = -0.3 },
+    effect = { consumption = -0.5 },
     auto_recycle = false,
     hidden = true,
   },

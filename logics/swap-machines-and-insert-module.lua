@@ -1,10 +1,6 @@
 -- logics/variant-switcher.lua
 -- This logic handles switching a base entity with a random variant upon creation.
 
-local variants_to_switch = {
-  ["eternal-lantern"] = 3
-}
-
 local module_to_insert = {
   ["eternal-lantern"] = "eternal-lantern-module",
   ["windmill"] = "windmill-module",
@@ -46,14 +42,6 @@ local function apply_variant(event)
   local entity = event.created_entity or event.entity
   if not (entity and entity.valid) then return end
 
-  local variant_count = variants_to_switch[entity.name]
-
-  -- 0 means keep the base variant
-  local variant = 0
-  if variant_count then
-    variant = math.random(0, variant_count)
-  end
-
   local name = entity.name
 
   ---@type LuaEntity
@@ -64,11 +52,6 @@ local function apply_variant(event)
 
   if swap_pairs[name] and entity.surface.name == "virentis" then
     new_name = swap_pairs[name]
-    need_create = true
-  end
-
-  if variant ~= 0 then
-    new_name = new_name .. "-" .. variant
     need_create = true
   end
 

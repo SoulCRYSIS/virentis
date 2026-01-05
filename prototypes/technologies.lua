@@ -197,7 +197,7 @@ data:extend(
           recipe = "flatbread"
         },
       },
-      prerequisites = { "mangroove-processing" },
+      prerequisites = { "advanced-baking" },
       research_trigger = {
         type = "mine-entity",
         entity = "kheast-stromatolite",
@@ -223,6 +223,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "nyxoleum-sapling"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "wild-taco"
         },
         {
@@ -238,7 +242,7 @@ data:extend(
           recipe = "housewarming-gift"
         },
       },
-      prerequisites = { "advanced-baking", "kheast-processing" },
+      prerequisites = { "kheast-processing" },
       research_trigger = {
         type = "mine-entity",
         entity = "nyxoleum-tree",

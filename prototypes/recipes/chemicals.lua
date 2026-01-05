@@ -24,10 +24,10 @@ data:extend(
         { type = "item", name = "nyxoleum-seed", amount = 1 },
       },
       results = {
-        { type = "item", name = "solid-fuel", amount = 1 }
+        { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 8,
+      energy_required = 4,
       allow_productivity = true,
       enabled = false,
     },
@@ -117,10 +117,10 @@ data:extend(
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
         { type = "item",  name = "kheast",        amount = 1 },
-        { type = "fluid", name = "water",         amount = 10 }
+        { type = "fluid", name = "water",         amount = 20 }
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 10 }
+        { type = "fluid", name = "vegetable-oil", amount = 20 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 8,

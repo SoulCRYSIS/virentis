@@ -108,7 +108,7 @@ virentis.default_working_sound = {
 
 ---@param name string
 ---@return data.ItemPrototype
-virentis.default_machine_item_prototype = function(name)
+virentis.default_machine_item_prototype = function(name, stack_size)
   return {
     type = "item",
     name = name,
@@ -119,7 +119,7 @@ virentis.default_machine_item_prototype = function(name)
     inventory_move_sound = item_sounds.mechanical_large_inventory_move,
     pick_sound = item_sounds.mechanical_large_inventory_pickup,
     drop_sound = item_sounds.mechanical_large_inventory_move,
-    stack_size = 10,
+    stack_size = stack_size or 20,
     default_import_location = "virentis",
     weight = 100 * kg,
   }

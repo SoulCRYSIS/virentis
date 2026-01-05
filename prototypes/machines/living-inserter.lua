@@ -2,7 +2,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 local virentis = require("prototypes.utils")
 
 data:extend({
-  virentis.default_machine_item_prototype("living-inserter"),
+  virentis.default_machine_item_prototype("living-inserter", 50),
   {
     type = "recipe",
     name = "living-inserter",

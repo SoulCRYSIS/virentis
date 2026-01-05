@@ -143,7 +143,7 @@ data:extend(
     {
       type = "recipe",
       name = "wild-taco",
-      category = "baking",
+      category = "organic",
       subgroup = "virentis-foods-trade-item",
       order = "bd",
       icon = "__virentis__/graphics/icons/items/foods/wild-taco.png",
