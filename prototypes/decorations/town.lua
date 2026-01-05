@@ -17,11 +17,12 @@ fulgora_ruin_medium.name = "virentis-fulgoran-ruin-medium"
 fulgora_ruin_medium.minable = {
   mining_time = 0.5,
   results = {
-    { type = "item", name = "stone-brick",        amount_min = 1, amount_max = 3 },
-    { type = "item", name = "electronic-circuit", amount_min = 1, amount_max = 3 },
-    { type = "item", name = "steel-plate",        amount_min = 2, amount_max = 5 },
-    { type = "item", name = "iron-plate",         amount_min = 2, amount_max = 5 },
-    { type = "item", name = "copper-plate",       amount_min = 2, amount_max = 5 },
+    { type = "item", name = "stone-brick",        amount_min = 5,  amount_max = 10 },
+    { type = "item", name = "electronic-circuit", amount_min = 10, amount_max = 15 },
+    { type = "item", name = "steel-plate",        amount_min = 20, amount_max = 30 },
+    { type = "item", name = "iron-plate",         amount_min = 20, amount_max = 30 },
+    { type = "item", name = "copper-plate",       amount_min = 20, amount_max = 30 },
+    { type = "item", name = "substation",         amount_min = 2,  amount_max = 3 },
   }
 }
 fulgora_ruin_medium.autoplace = { probability_expression = "virentis_town_edge * 0.01", force = "player" }
@@ -32,11 +33,12 @@ fulgora_ruin_stonehenge.name = "virentis-fulgoran-ruin-stonehenge"
 fulgora_ruin_stonehenge.minable = {
   mining_time = 1,
   results = {
-    { type = "item", name = "stone-brick",        amount_min = 2, amount_max = 5 },
-    { type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 5 },
-    { type = "item", name = "steel-plate",        amount_min = 4, amount_max = 8 },
-    { type = "item", name = "iron-plate",         amount_min = 4, amount_max = 8 },
-    { type = "item", name = "copper-plate",       amount_min = 4, amount_max = 8 },
+    { type = "item", name = "stone-brick",        amount_min = 10, amount_max = 15 },
+    { type = "item", name = "electronic-circuit", amount_min = 20, amount_max = 30 },
+    { type = "item", name = "steel-plate",        amount_min = 35, amount_max = 50 },
+    { type = "item", name = "iron-plate",         amount_min = 35, amount_max = 50 },
+    { type = "item", name = "copper-plate",       amount_min = 35, amount_max = 50 },
+    { type = "item", name = "substation",         amount_min = 3,  amount_max = 5 },
   }
 }
 fulgora_ruin_stonehenge.autoplace = { probability_expression = "virentis_town_border * 0.01", force = "player" }

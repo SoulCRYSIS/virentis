@@ -18,7 +18,7 @@ data:extend(
         { type = "item", name = "iron-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 0.5,
+      energy_required = 2,
       enabled = false,
       allow_productivity = true,
     },
@@ -36,7 +36,7 @@ data:extend(
         { type = "item", name = "copper-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 0.5,
+      energy_required = 2,
       enabled = false,
       allow_productivity = true,
     },
@@ -54,7 +54,7 @@ data:extend(
         { type = "item", name = "firebrick", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.brown,
-      energy_required = 0.5,
+      energy_required = 2,
       enabled = false,
       allow_productivity = true,
     },
@@ -73,7 +73,7 @@ data:extend(
         { type = "item", name = "siltcore", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.brown,
-      energy_required = 2,
+      energy_required = 4,
       enabled = false,
       allow_productivity = true,
     },
@@ -90,7 +90,7 @@ data:extend(
       results = {
         { type = "item", name = "phosphorus", amount = 2 }
       },
-      energy_required = 0.5,
+      energy_required = 2,
       enabled = false,
       allow_productivity = true,
     },
@@ -107,7 +107,7 @@ data:extend(
       results = {
         { type = "item", name = "processing-unit", amount = 1 }
       },
-      energy_required = 1,
+      energy_required = 2,
       enabled = false,
     },
   }

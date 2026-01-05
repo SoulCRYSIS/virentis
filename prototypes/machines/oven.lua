@@ -15,7 +15,7 @@ data:extend({
     icon = "__virentis__/graphics/icons/machines/oven.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
-      { type = "item", name = "firebrick",   amount = 8 },
+      { type = "item", name = "firebrick",   amount = 16 },
       { type = "item", name = "heat-pipe",   amount = 2 }
     },
     results = {
@@ -34,14 +34,14 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
-    energy_usage = "5MW",
+    energy_usage = "10MW",
     ---@type data.HeatEnergySource
     energy_source = {
       type = "heat",
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      specific_heat = "1MJ",
+      specific_heat = "10MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
         apply_heat_pipe_glow({
@@ -63,7 +63,7 @@ data:extend({
       heat_pipe_covers = virentis.default_heat_pipe_covers,
     },
     crafting_categories = { "baking", "basic-cooking" },
-    crafting_speed = 1,
+    crafting_speed = 2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {

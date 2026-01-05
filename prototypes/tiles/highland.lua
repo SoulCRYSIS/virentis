@@ -10,7 +10,7 @@ data:extend({
     name = "virentis-highland-dark-rock",
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
-    layer = virentis_tile.tile_offset + 16,
+    layer = virentis_tile.tile_offset + 17,
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
       "__space-age__/graphics/terrain/gleba/highland-dark-rock.png",
@@ -39,7 +39,7 @@ data:extend({
     name = "virentis-highland-dark-rock-2",
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
-    layer = virentis_tile.tile_offset + 17,
+    layer = virentis_tile.tile_offset + 18,
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
       "__space-age__/graphics/terrain/gleba/highland-dark-rock-2.png",
@@ -68,7 +68,7 @@ data:extend({
     name = "virentis-highland-yellow-rock",
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
-    layer = virentis_tile.tile_offset + 18,
+    layer = virentis_tile.tile_offset + 19,
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
       "__space-age__/graphics/terrain/gleba/highland-yellow-rock.png",

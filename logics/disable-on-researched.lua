@@ -1,5 +1,5 @@
 local recipe_to_disable = {
-  ["frying"] = "give-sweet-chili-sauce",
+  ["frying"] = "housewarming-gift",
   ["environment-research-center"] = "give-explosive-rocket",
 }
 

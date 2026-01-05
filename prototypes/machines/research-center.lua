@@ -14,11 +14,11 @@ data:extend({
     order = "ca",
     icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
     ingredients = {
-      { type = "item", name = "firebrick",       amount = 4 },
-      { type = "item", name = "steel-plate",     amount = 8 },
-      { type = "item", name = "heart-of-nature", amount = 1 },
-      { type = "item", name = "processing-unit", amount = 2 },
-      { type = "item", name = "graphene",        amount = 2 },
+      { type = "item", name = "firebrick",       amount = 20 },
+      { type = "item", name = "steel-plate",     amount = 20 },
+      { type = "item", name = "heart-of-nature", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "graphene",        amount = 20 },
       { type = "item", name = "radar",           amount = 1 }
     },
     results = {

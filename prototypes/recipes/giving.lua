@@ -45,14 +45,14 @@ data:extend(
   {
     {
       type = "recipe",
-      name = "give-sweet-chili-sauce",
-      localised_name = give_recipe_localised("sweet-chili-sauce"),
+      name = "housewarming-gift",
       category = "trading-t1",
       subgroup = "virentis-mock",
       order = "a",
-      icons = give_icon("__virentis__/graphics/icons/items/foods/sweet-chili-sauce.png"),
+      icons = give_icon("__virentis__/graphics/icons/recipes/housewarming-gift.png"),
       ingredients = {
-        { type = "item", name = "sweet-chili-sauce", amount = 50 }
+        { type = "item", name = "sweet-chili-sauce", amount = 30 },
+        { type = "item", name = "wild-taco",         amount = 30 }
       },
       results = {
         { type = "item", name = "eternal-lantern", amount = 1 }

@@ -10,7 +10,7 @@ data:extend(
       type = "noise-expression",
       name = "virentis_elevation",
       --intended_property = "elevation",
-      expression = "max(lerp(virentis_elevation_common, lowland_elevation, lowland_mask), virentis_select(virentis_town_raw, 0.1, 1, 0.1, 0, 1) * 120) - virentis_select(virentis_river_ridge, 0, 0.002, 0.018, 0, 1) * 180",
+      expression = "max(lerp(virentis_elevation_common, lowland_elevation, lowland_mask) - virentis_select(virentis_river_ridge, 0, 0.002, 0.018, 0, 1) * 180, virentis_select(virentis_town_raw, 0.1, 1, 0.1, 0, 1) * 120)",
       local_expressions =
       {
         aux_high_contrast = "clamp(10 * (virentis_aux - 0.5) + 0.5, 0, 1)",

@@ -38,6 +38,7 @@ require "prototypes.recipes.environment-data"
 require "prototypes.recipes.giving"
 
 require "prototypes.tiles.tile-utils"
+require "prototypes.tiles.data-updates"
 require "prototypes.tiles.uniques"
 require "prototypes.tiles.water"
 require "prototypes.tiles.lowland"

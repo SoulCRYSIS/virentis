@@ -27,7 +27,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 2,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
     },
@@ -39,9 +39,9 @@ data:extend(
       order = "ba",
       icon = "__virentis__/graphics/icons/recipes/tar-processing.png",
       ingredients = {
-        { type = "fluid", name = "tar",           amount = 50 },
-        { type = "fluid", name = "vegetable-oil", amount = 20 },
-        { type = "item",  name = "phosphorus",    amount = 1 }
+        { type = "fluid", name = "tar",           amount = 20 },
+        { type = "fluid", name = "vegetable-oil", amount = 40 },
+        { type = "item",  name = "phosphorus",    amount = 4 }
       },
       results = {
         { type = "item",  name = "virentis-resin", amount = 2 },
@@ -49,7 +49,7 @@ data:extend(
         { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 5,
+      energy_required = 16,
       allow_productivity = true,
       enabled = false,
     },
@@ -68,7 +68,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 2,
+      energy_required = 8,
       enabled = false,
     },
     {
@@ -86,7 +86,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 2,
+      energy_required = 8,
       enabled = false,
     },
     {
@@ -103,7 +103,7 @@ data:extend(
       results = {
         { type = "item", name = "rocket-fuel", amount = 1 }
       },
-      energy_required = 2,
+      energy_required = 16,
       allow_productivity = true,
       enabled = false,
     },
@@ -116,13 +116,14 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/fluids/vegetable-oil.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
-        { type = "fluid", name = "water",         amount = 50 }
+        { type = "item",  name = "kheast",        amount = 1 },
+        { type = "fluid", name = "water",         amount = 10 }
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 50 }
+        { type = "fluid", name = "vegetable-oil", amount = 10 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 4,
+      energy_required = 8,
       enabled = false,
       allow_productivity = true,
     },
@@ -143,7 +144,7 @@ data:extend(
         { type = "fluid", name = "nutrients-pulp", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 2,
+      energy_required = 32,
       enabled = false,
     },
     {
@@ -158,7 +159,7 @@ data:extend(
         { type = "fluid", name = "nutrients-pulp", amount = 30 },
       },
       results = {
-        { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1, ignored_by_productivity = 1 }
+        { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 8,
@@ -174,13 +175,13 @@ data:extend(
       ingredients = {
         { type = "item",  name = "phosphorus", amount = 1 },
         { type = "item",  name = "jelly",      amount = 4 },
-        { type = "fluid", name = "water",      amount = 50 },
+        { type = "fluid", name = "water",      amount = 40 },
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 50 }
+        { type = "fluid", name = "vegetable-oil", amount = 40 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 2,
+      energy_required = 32,
       enabled = false,
     },
   }

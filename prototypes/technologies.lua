@@ -115,6 +115,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "basic-oven"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "stone-from-rockmalt-scale"
         }
       },
       research_trigger = {
@@ -178,8 +182,31 @@ data:extend(
     },
     {
       type = "technology",
-      name = "nyxoleum-processing",
+      name = "kheast-processing",
       order = "vcb",
+      subgroup = "virentis-technologies", 
+      icon = "__virentis__/graphics/icons/technologies/kheast-processing.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "kheast-cultivation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "flatbread"
+        },
+      },
+      prerequisites = { "mangroove-processing" },
+      research_trigger = {
+        type = "mine-entity",
+        entity = "kheast-rock",
+      },
+    },
+    {
+      type = "technology",
+      name = "nyxoleum-processing",
+      order = "vcc",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/nyxoleum-processing.png",
       icon_size = 256,
@@ -208,10 +235,10 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "give-sweet-chili-sauce"
+          recipe = "housewarming-gift"
         },
       },
-      prerequisites = { "advanced-baking" },
+      prerequisites = { "advanced-baking", "kheast-processing" },
       research_trigger = {
         type = "mine-entity",
         entity = "nyxoleum-tree",
@@ -365,8 +392,31 @@ data:extend(
     },
     {
       type = "technology",
-      name = "living-inserter",
+      name = "nature-control",
       order = "vha",
+      subgroup = "virentis-technologies", 
+      icon = "__virentis__/graphics/icons/technologies/nature-control.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "sylva-core"
+        },
+      },
+      prerequisites = { "nutrients-pulp" },
+      unit = {
+        count = 1000,
+        ingredients = 
+        {
+          { "mudland-research-data", 1 },
+        },
+        time = 60
+      },
+    },
+    {
+      type = "technology",
+      name = "living-inserter",
+      order = "vga",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/machines/living-inserter.png",
       icon_size = 64,
@@ -376,7 +426,7 @@ data:extend(
           recipe = "living-inserter"
         },
       },
-      prerequisites = { "nutrients-pulp" },
+      prerequisites = { "nature-control" },
       unit = {
         count = 3000,
         ingredients =
@@ -389,7 +439,7 @@ data:extend(
     {
       type = "technology",
       name = "eternal-lantern",
-      order = "vhb",
+      order = "vgb",
       subgroup = "virentis-technologies", 
       icon = "__virentis__/graphics/icons/technologies/eternal-lantern.png",
       icon_size = 256,
@@ -399,7 +449,7 @@ data:extend(
           recipe = "eternal-lantern"
         },
       },
-      prerequisites = { "nutrients-pulp" },
+      prerequisites = { "nature-control" },
       unit = {
         count = 3000,
         ingredients =
@@ -412,7 +462,7 @@ data:extend(
     {
       type = "technology",
       name = "tesla-weapons-speed",
-      order = "vhc",
+      order = "vgc",
       subgroup = "virentis-technologies", 
       icons = util.technology_icon_constant_speed("__space-age__/graphics/technology/electric-weapons-damage.png"),
       effects =
@@ -441,7 +491,7 @@ data:extend(
     {
       type = "technology",
       name = "trading-productivity",
-      order = "vhd",
+      order = "vgd",
       subgroup = "virentis-technologies", 
       icons = util.technology_icon_constant_recipe_productivity("__virentis__/graphics/icons/technologies/trading-productivity.png"),
       icon_size = 256,

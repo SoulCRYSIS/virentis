@@ -111,11 +111,12 @@ data:extend({
     order = "aa",
     icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
     ingredients = {
-      { type = "item",  name = "firebrick",           amount = 1 },
       { type = "item",  name = "heart-of-nature",     amount = 1 },
-      { type = "item",  name = "living-wood",         amount = 2 },
+      { type = "item",  name = "sylva-core",          amount = 1 },
+      { type = "item",  name = "firebrick",           amount = 4 },
+      { type = "item",  name = "living-wood",         amount = 8 },
       { type = "item",  name = "efficiency-module-3", amount = 1 },
-      { type = "fluid", name = "nutrients-pulp",      amount = 10 },
+      { type = "fluid", name = "nutrients-pulp",      amount = 20 },
     },
     results = {
       { type = "item", name = "eternal-lantern", amount = 1 }

@@ -58,7 +58,7 @@ data:extend(
       subgroup = "virentis-tiles",
       searchable = true,
       collision_mask = tile_collision_masks.ground(),
-      layer = virentis_tile.tile_offset + 19,
+      layer = virentis_tile.tile_offset + 21,
       sprite_usage_surface = "gleba",
       variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
         "__space-age__/graphics/terrain/gleba/pit-rock.png",

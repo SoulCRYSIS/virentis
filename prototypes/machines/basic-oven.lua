@@ -62,8 +62,8 @@ data:extend {
     selection_box = { { -0.8, -1 }, { 0.8, 1 } },
     damaged_trigger_effect = hit_effects.rock(),
     crafting_categories = { "basic-cooking" },
-    energy_usage = "90kW",
-    crafting_speed = 0.5,
+    energy_usage = "1MW",
+    crafting_speed = 1,
     energy_source =
     {
       type = "burner",

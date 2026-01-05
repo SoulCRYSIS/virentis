@@ -133,5 +133,15 @@ data:extend(
       weight = 5 * kg,
       default_import_location = "virentis",
     },
+    {
+      type = "item",
+      name = "sylva-core",
+      icon = "__virentis__/graphics/icons/items/materials/sylva-core.png",
+      subgroup = "virentis-materials",
+      order = "ah",
+      stack_size = 50,
+      weight = 10 * kg,
+      default_import_location = "virentis",
+    },
   }
 )

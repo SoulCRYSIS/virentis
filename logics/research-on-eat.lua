@@ -1,5 +1,5 @@
 local research_check_list = {
-  ["berry-bliss-cookie"] = "virentis-baking",
+  ["berry-bliss-cookie"] = "advanced-baking",
   ["pentapod-souffle-omelette"] = "tar-processing",
 }
 

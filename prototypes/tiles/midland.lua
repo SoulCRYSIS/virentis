@@ -161,7 +161,7 @@ data:extend({
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "ground-natural",
-    layer = virentis_tile.tile_offset + 12,
+    layer = virentis_tile.tile_offset + 13,
     autoplace = {probability_expression = "virentis_midland * virentis_select(virentis_aux, 0.65, 1, 0.1, 0, 1)"},
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
@@ -191,7 +191,7 @@ data:extend({
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "ground-natural",
-    layer = virentis_tile.tile_offset + 13,
+    layer = virentis_tile.tile_offset + 14,
     autoplace = {probability_expression = "virentis_midland * virentis_select(virentis_aux, 0.8, 1, 0.15, 0, 1) * (0.93 + 0.1 * virentis_select(virentis_moisture, 0.5, 0.5, 0.25, 0, 1) - 0.1 * virentis_temperature_normalised)"},
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
@@ -221,7 +221,7 @@ data:extend({
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "ground-natural",
-    layer = virentis_tile.tile_offset + 14,
+    layer = virentis_tile.tile_offset + 15,
     autoplace = {probability_expression = "virentis_midland * virentis_select(virentis_aux, 0.7, 1, 0.1, 0, 1) * (1 + 0.1 * (virentis_aux - 0.75) + 0.05 * virentis_plants_noise_b)"},
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
@@ -251,7 +251,7 @@ data:extend({
     subgroup = "virentis-tiles",
     collision_mask = tile_collision_masks.ground(),
     layer_group = "ground-natural",
-    layer = virentis_tile.tile_offset + 15,
+    layer = virentis_tile.tile_offset + 16,
     autoplace = {probability_expression = "virentis_midland * virentis_select(virentis_aux, 0.8, 1, 0.15, 0, 1) * (0.9 + 0.1 * virentis_select(virentis_moisture, 0.25, 0.25, 0.25, 0, 1) + 0.1 * virentis_temperature_normalised)"},
     sprite_usage_surface = "gleba",
     variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(

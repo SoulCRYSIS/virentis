@@ -23,7 +23,7 @@ data:extend(
       stack_size = 50,
       weight = 5 * kg,
       fuel_category = "chemical",
-      fuel_value = "2MJ",
+      fuel_value = "5MJ",
     },
     {
       type = "item",
@@ -62,7 +62,7 @@ data:extend(
       plant_result = "redbloom-tree",
       place_result= "redbloom-tree",
       fuel_category = "chemical",
-      fuel_value = "2MJ",
+      fuel_value = "5MJ",
     },
     {
       type = "item",

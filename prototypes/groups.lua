@@ -35,13 +35,19 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-foods-trade-item",
     group = "virentis",
-    order = "cc"
+    order = "cb"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-microorganism",
+    group = "virentis",
+    order = "d"
   },
   {
     type = "item-subgroup",
     name = "virentis-trades",
     group = "virentis",
-    order = "d"
+    order = "t"
   },
   {
     type = "item-subgroup",
@@ -53,25 +59,25 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-materials",
     group = "virentis",
-    order = "fa"
+    order = "ga"
   },
   {
     type = "item-subgroup",
     name = "virentis-materials-advanced",
     group = "virentis",
-    order = "fb"
+    order = "gb"
   },
   {
     type = "item-subgroup",
     name = "virentis-research",
     group = "virentis",
-    order = "g"
+    order = "h"
   },
   {
     type = "item-subgroup",
     name = "virentis-fluids",
     group = "virentis",
-    order = "h"
+    order = "f"
   },
   {
     type = "item-subgroup",

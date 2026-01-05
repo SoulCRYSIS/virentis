@@ -11,10 +11,10 @@ data:extend({
     order = "ba",
     icon = "__virentis__/graphics/icons/machines/living-inserter.png",
     ingredients = {
-      { type = "item",  name = "stack-inserter",  amount = 1 },
       { type = "item",  name = "heart-of-nature", amount = 1 },
-      { type = "item",  name = "virentis-resin",  amount = 1 },
-      { type = "item",  name = "living-wood",     amount = 2 },
+      { type = "item",  name = "sylva-core",      amount = 1 },
+      { type = "item",  name = "virentis-resin",  amount = 4 },
+      { type = "item",  name = "stack-inserter",  amount = 1 },
       { type = "fluid", name = "nutrients-pulp",  amount = 10 },
     },
     results = {

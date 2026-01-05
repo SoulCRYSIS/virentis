@@ -12,11 +12,12 @@ data:extend({
     order = "ac",
     icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
     ingredients = {
-      { type = "item", name = "steel-plate", amount = 8 },
-      { type = "item", name = "pipe",        amount = 4 },
-      { type = "item", name = "heat-pipe",   amount = 2 },
-      { type = "item", name = "firebrick",   amount = 4 },
-      { type = "fluid", name = "vegetable-oil",    amount = 20 }
+      { type = "item",  name = "steel-plate",     amount = 8 },
+      { type = "item",  name = "pipe",            amount = 4 },
+      { type = "item",  name = "heat-pipe",       amount = 2 },
+      { type = "item",  name = "firebrick",       amount = 16 },
+      { type = "item",  name = "processing-unit", amount = 4 },
+      { type = "fluid", name = "vegetable-oil",   amount = 20 },
     },
     results = {
       { type = "item", name = "deep-fryer", amount = 1 }
@@ -34,14 +35,14 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
-    energy_usage = "2.5MW",
+    energy_usage = "10MW",
     ---@type data.HeatEnergySource
     energy_source = {
       type = "heat",
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      specific_heat = "1MJ",
+      specific_heat = "10MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
         {
@@ -91,7 +92,7 @@ data:extend({
     fluid_boxes = virentis.pass_middle_fluid_box,
     fluid_boxes_off_when_no_fluid_recipe = false,
     crafting_categories = { "frying" },
-    crafting_speed = 1,
+    crafting_speed = 2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     allowed_module_categories = { "efficiency", "productivity", "speed" },
@@ -178,7 +179,7 @@ data:extend({
         {
           fadeout = true,
           effect = "flicker",
-          light =  { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 7 },
+          light = { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 7 },
         },
         {
           fadeout = true,
