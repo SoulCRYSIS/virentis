@@ -248,6 +248,7 @@ data:extend({
         ["entity"] = {
           settings = {
             ["big-fulgora-rock"] = {},
+            ["kheast-stromatolite"] = {},
             -- ["virentis-fulgoran-ruin-small"] = {},
             ["virentis-fulgoran-ruin-medium"] = {},
             ["virentis-fulgoran-ruin-stonehenge"] = {},

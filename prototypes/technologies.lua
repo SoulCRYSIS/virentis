@@ -200,7 +200,7 @@ data:extend(
       prerequisites = { "mangroove-processing" },
       research_trigger = {
         type = "mine-entity",
-        entity = "kheast-rock",
+        entity = "kheast-stromatolite",
       },
     },
     {
@@ -263,10 +263,6 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "soft-cooked-pentapod-egg"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "mudland-medley"
         },
       },
       prerequisites = { "nyxoleum-processing" },
@@ -346,6 +342,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "mudland-research-data"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "mudland-medley"
         },
       },
       prerequisites = { "tar-processing" },
