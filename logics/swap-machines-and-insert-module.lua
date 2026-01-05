@@ -184,12 +184,6 @@ end
 local remove_module_filters = {}
 for name, _ in pairs(module_to_insert) do
   table.insert(remove_module_filters, { filter = "name", name = name })
-  local variant_count = variants_to_switch[name]
-  if variant_count then
-    for i = 1, variant_count do
-      table.insert(remove_module_filters, { filter = "name", name = name .. "-" .. i })
-    end
-  end
 end
 
 script.on_event(defines.events.on_pre_player_mined_item, remove_module, remove_module_filters)

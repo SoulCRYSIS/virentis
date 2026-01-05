@@ -21,7 +21,7 @@ data:extend({
         {
           type = "item",
           name = "rockmalt-fruit",
-          amount = 5,
+          amount = 2,
         },
         {
           type = "item",
@@ -62,5 +62,10 @@ data:extend({
       average_pause_seconds = 8
     },
     map_color = { 240, 240, 255 },
+    agricultural_tower_tint =
+    {
+      primary = { 253, 255, 209, 255 },
+      secondary = { 244, 245, 228, 255 },
+    },
   },
 })

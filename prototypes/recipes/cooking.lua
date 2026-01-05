@@ -12,7 +12,7 @@ data:extend(
       order = "aa",
       icon = "__virentis__/graphics/icons/items/foods/dough.png",
       ingredients = {
-        { type = "fluid", name = "water",         amount = 40 },
+        { type = "fluid", name = "water",         amount = 50 },
         { type = "item",  name = "rockmalt-bulb", amount = 2 }
       },
       results = {
@@ -39,7 +39,7 @@ data:extend(
         { type = "item", name = "rockmalt-pudding", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 12,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -78,7 +78,7 @@ data:extend(
         { type = "item", name = "redbloom-buns", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 12,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -117,7 +117,7 @@ data:extend(
         { type = "item", name = "berry-bliss-cookie", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 12,
+      energy_required = 16,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -138,6 +138,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.white,
       energy_required = 8,
       result_is_always_fresh = true,
+      allow_productivity = true,
       enabled = false,
     },
     {
@@ -152,13 +153,13 @@ data:extend(
         { type = "item",  name = "herb",             amount = 2 },
         { type = "item",  name = "mangroove-mashed", amount = 2 },
         { type = "item",  name = "redbloom-fruit",   amount = 2 },
-        { type = "fluid", name = "vegetable-oil",    amount = 10 }
+        { type = "fluid", name = "vegetable-oil",    amount = 50 }
       },
       results = {
         { type = "item", name = "wild-taco", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 8,
+      energy_required = 16,
       result_is_always_fresh = false,
       enabled = false,
     },
@@ -177,7 +178,7 @@ data:extend(
         { type = "item", name = "sweet-chili-sauce", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 8,
+      energy_required = 12,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,
@@ -192,13 +193,13 @@ data:extend(
       ingredients = {
         { type = "item",  name = "mangroove-syrup", amount = 2 },
         { type = "item",  name = "dough",           amount = 2 },
-        { type = "fluid", name = "vegetable-oil",   amount = 10 }
+        { type = "fluid", name = "vegetable-oil",   amount = 50 }
       },
       results = {
         { type = "item", name = "sweet-doughnut", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 8,
+      energy_required = 16,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -212,13 +213,13 @@ data:extend(
       ingredients = {
         { type = "item",  name = "flatbread",         amount = 2 },
         { type = "item",  name = "sweet-chili-sauce", amount = 2 },
-        { type = "fluid", name = "vegetable-oil",     amount = 10 },
+        { type = "fluid", name = "vegetable-oil",     amount = 50 },
       },
       results = {
         { type = "item", name = "fried-dumpling-set", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 16,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -254,13 +255,13 @@ data:extend(
         { type = "item",  name = "soft-cooked-pentapod-egg", amount = 4 },
         { type = "item",  name = "sweet-chili-sauce",        amount = 2 },
         { type = "item",  name = "flatbread",                amount = 2 },
-        { type = "fluid", name = "vegetable-oil",            amount = 20 },
+        { type = "fluid", name = "vegetable-oil",            amount = 100 },
       },
       results = {
         { type = "item", name = "pentapod-souffle-omelette", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 8,
+      energy_required = 24,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -276,13 +277,13 @@ data:extend(
         { type = "item",  name = "rockmalt-bulb",            amount = 2 },
         { type = "item",  name = "redbloom-fruit",           amount = 2 },
         { type = "item",  name = "mangroove-mashed",         amount = 2 },
-        { type = "fluid", name = "vegetable-oil",            amount = 20 },
+        { type = "fluid", name = "vegetable-oil",            amount = 100 },
       },
       results = {
         { type = "item", name = "mudland-medley", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 8,
+      energy_required = 24,
       result_is_always_fresh = true,
       enabled = false,
     }

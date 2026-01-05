@@ -20,7 +20,7 @@ data:extend(
   {
     type = "noise-function",
     name = "virentis_fertile_spots_coastal_raw",
-    parameters = { "seed" },
+    parameters = { "seed", "spot_radius" },
     expression = "spot_noise{ x = x + wobble_noise_x * 15,\z
                               y = y + wobble_noise_y * 15,\z
                               seed0 = map_seed,\z
@@ -32,7 +32,7 @@ data:extend(
                               region_size = 1024,\z
                               density_expression = 80,\z
                               spot_quantity_expression = 1000,\z
-                              spot_radius_expression = 32,\z
+                              spot_radius_expression = spot_radius,\z
                               hard_region_target_quantity = 0,\z
                               spot_favorability_expression = 60,\z
                               basement_value = -0.5,\z
@@ -56,7 +56,7 @@ data:extend(
   {
     type = "noise-expression",
     name = "virentis_fertile_spots_coastal_raw_default",
-    expression = "virentis_fertile_spots_coastal_raw(1)"
+    expression = "virentis_fertile_spots_coastal_raw(1, 32)"
   },
   {
     type = "noise-expression",

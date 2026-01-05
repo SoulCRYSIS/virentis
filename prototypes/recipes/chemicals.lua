@@ -40,7 +40,7 @@ data:extend(
       icon = "__virentis__/graphics/icons/recipes/tar-processing.png",
       ingredients = {
         { type = "fluid", name = "tar",           amount = 20 },
-        { type = "fluid", name = "vegetable-oil", amount = 40 },
+        { type = "fluid", name = "vegetable-oil", amount = 50 },
         { type = "item",  name = "phosphorus",    amount = 4 }
       },
       results = {
@@ -49,7 +49,7 @@ data:extend(
         { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 16,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
     },
@@ -117,10 +117,10 @@ data:extend(
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
         { type = "item",  name = "kheast",        amount = 1 },
-        { type = "fluid", name = "water",         amount = 20 }
+        { type = "fluid", name = "water",         amount = 50 }
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 20 }
+        { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 8,
@@ -137,32 +137,13 @@ data:extend(
       ingredients = {
         { type = "item",  name = "nutrients",     amount = 10 },
         { type = "item",  name = "phosphorus",    amount = 2 },
-        { type = "fluid", name = "vegetable-oil", amount = 10 },
-        { type = "fluid", name = "water",         amount = 40 }
+        { type = "fluid", name = "vegetable-oil", amount = 50 },
       },
       results = {
         { type = "fluid", name = "nutrients-pulp", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 32,
-      enabled = false,
-    },
-    {
-      type = "recipe",
-      name = "pentapod-from-nutrients-pulp",
-      category = "organic",
-      subgroup = "virentis-chemicals",
-      order = "cb",
-      icon = "__virentis__/graphics/icons/recipes/pentapod-from-nutrients-pulp.png",
-      ingredients = {
-        { type = "item",  name = "pentapod-egg",   amount = 1, ignored_by_stats = 1 },
-        { type = "fluid", name = "nutrients-pulp", amount = 30 },
-      },
-      results = {
-        { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1 }
-      },
-      crafting_machine_tint = recipe_tints.orange,
-      energy_required = 8,
       enabled = false,
     },
     {
@@ -174,11 +155,11 @@ data:extend(
       icon = "__virentis__/graphics/icons/recipes/vegetable-oil-gleba.png",
       ingredients = {
         { type = "item",  name = "phosphorus", amount = 1 },
-        { type = "item",  name = "jelly",      amount = 4 },
-        { type = "fluid", name = "water",      amount = 40 },
+        { type = "item",  name = "jelly",      amount = 5 },
+        { type = "fluid", name = "water",      amount = 50 },
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 40 }
+        { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 32,

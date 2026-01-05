@@ -104,13 +104,11 @@ data:extend({
     profile = { 1.0, 0.5, 0.33333, 0.25, 0.2, 0.16667, 0.14286, 0.125, 0.11111, 0.1, 0.09091, 0.08333, 0.07692, 0.07143, 0.06667, 0.0625, 0.05882, 0.05556, 0.05263, 0.05, 0.04762, 0.04545, 0.04348, 0.04167, 0.04, 0.03846, 0.03704, 0.03571, 0.03448, 0.03333, 0.03226, 0.03125, 0.0303, 0.02941, 0.02857, 0.02778, 0.02703, 0.02632, 0.02564, 0.025, 0.02439, 0.02381, 0.02326, 0.02273, 0.02222, 0.02174, 0.02128, 0.02083, 0.02041, 0.02 },
     beacon_counter = "same_type",
     module_slots = 1,
-    hidden_in_factoriopedia = variant > 0,
-    hidden = variant > 0,
-    autoplace = variant == 0 and {
+    autoplace = {
       order = "ad",
       force = "player",
       probability_expression = "max(virentis_town_edge, 0.4 * virentis_town_rural) * grid_random_shift(12, 10, 992)",
-    } or nil,
+    },
     water_reflection =
     {
       pictures =

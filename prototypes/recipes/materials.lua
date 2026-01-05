@@ -156,7 +156,7 @@ data:extend(
         { type = "fluid", name = "methanol", amount = 10 },
       },
       results = {
-        { type = "item", name = "carbon", amount = 2 }
+        { type = "item", name = "carbon", amount = 4 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 8,
@@ -177,10 +177,10 @@ data:extend(
         { type = "item",  name = "phosphorus", amount = 1 },
       },
       results = {
-        { type = "item", name = "explosives", amount = 10 }
+        { type = "item", name = "explosives", amount = 8 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 16,
       allow_productivity = true,
       enabled = false,
     }

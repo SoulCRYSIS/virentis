@@ -56,9 +56,10 @@ data:extend({
       average_pause_seconds = 8
     },
     map_color = { 230, 200, 230 },
+    agricultural_tower_tint =
     {
-      primary = {r = 0.552, g = 0.218, b = 0.218, a = 1.000}, -- #8c3737ff
-      secondary = {r = 0.561, g = 0.613, b = 0.308, a = 1.000}, -- #8f4f4eff
+      primary = { 56, 36, 52, 255 },
+      secondary = { 32, 22, 29, 255 },
     },
   },
 })

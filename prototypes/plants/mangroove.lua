@@ -20,7 +20,7 @@ data:extend({
         {
           type = "item",
           name = "mangroove-fruit",
-          amount = 50,
+          amount = 20,
         },
         {
           type = "item",
@@ -61,9 +61,10 @@ data:extend({
       average_pause_seconds = 8
     },
     map_color = { 230, 255, 230 },
+    agricultural_tower_tint =
     {
-      primary = {r = 0.552, g = 0.218, b = 0.218, a = 1.000}, -- #8c3737ff
-      secondary = {r = 0.561, g = 0.613, b = 0.308, a = 1.000}, -- #8f4f4eff
+      primary = { 13, 112, 18, 255 },
+      secondary = { 34, 64, 26, 255 },
     },
   },
 })

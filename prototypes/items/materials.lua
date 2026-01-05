@@ -107,6 +107,8 @@ data:extend(
       stack_size = 200,
       weight = 5 * kg,
       default_import_location = "virentis",
+      fuel_category = "chemical",
+      fuel_value = "12MJ",
     },
     {
       type = "item",

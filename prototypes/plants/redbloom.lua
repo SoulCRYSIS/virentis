@@ -1,4 +1,6 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
+local recipe_tints = require("prototypes.utils").recipe_tints
+
 
 data:extend({
   {
@@ -20,7 +22,7 @@ data:extend({
         {
           type = "item",
           name = "redbloom-fruit",
-          amount = 50,
+          amount = 20,
         },
         {
           type = "item",
@@ -61,9 +63,10 @@ data:extend({
       average_pause_seconds = 8
     },
     map_color = { 255, 240, 240 },
+    agricultural_tower_tint =
     {
-      primary = {r = 0.552, g = 0.218, b = 0.218, a = 1.000}, -- #8c3737ff
-      secondary = {r = 0.561, g = 0.613, b = 0.308, a = 1.000}, -- #8f4f4eff
+      primary = { 214, 45, 45, 255 },
+      secondary = { 184, 59, 59, 255 },
     },
   },
 })

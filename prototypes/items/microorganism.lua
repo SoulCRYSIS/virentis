@@ -8,7 +8,7 @@ data:extend(
       order = "a",
       stack_size = 50,
       weight = 5 * kg,
-      spoil_ticks = 2 * minute,
+      spoil_ticks = 5 * minute,
       spoil_result = nil,
     }
   }
