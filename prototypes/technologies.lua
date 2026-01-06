@@ -361,6 +361,21 @@ data:extend(
     },
     {
       type = "technology",
+      name = "carbon-from-creosote",
+      order = "vfb",
+      subgroup = "virentis-technologies", 
+      icon = "__virentis__/graphics/icons/technologies/carbon-from-creosote.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "carbon-from-creosote"
+        },
+      },
+      prerequisites = { "tar-processing" },
+    },
+    {
+      type = "technology",
       name = "nutrients-pulp",
       order = "vga",
       subgroup = "virentis-technologies",
