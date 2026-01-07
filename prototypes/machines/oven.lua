@@ -41,7 +41,7 @@ data:extend({
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      specific_heat = "10MJ",
+      specific_heat = "2MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
         apply_heat_pipe_glow({

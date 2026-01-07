@@ -363,7 +363,7 @@ data:extend(
       research_trigger = {
         type = "craft-item",
         item = "gived-explosive-rocket",
-        count = 5000,
+        count = 2000,
       },
     },
     {
@@ -415,7 +415,7 @@ data:extend(
       },
       prerequisites = { "environment-research-center" },
       unit = {
-        count = 1000,
+        count = 500,
         ingredients =
         {
           { "mudland-research-data", 1 },

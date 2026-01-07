@@ -18,7 +18,7 @@ data:extend(
       subgroup = "virentis-materials",
       order = "ad",
       stack_size = 50,
-      spoil_ticks = 20 * minute,
+      spoil_ticks = 60 * minute,
       spoil_to_trigger_result =
       {
         items_per_trigger = 2,
@@ -32,7 +32,7 @@ data:extend(
             {
               {
                 type = "create-entity",
-                entity_name = "big-wriggler-pentapod-premature",
+                entity_name = "small-stomper-pentapod",
                 affects_target = true,
                 show_in_tooltip = true,
                 as_enemy = true,

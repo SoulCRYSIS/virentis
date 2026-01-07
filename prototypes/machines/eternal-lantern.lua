@@ -50,7 +50,7 @@ data:extend({
     create_ghost_on_death = false,
     stateless_visualisation = {
       {
-        light = { shift = { 0, 0 }, color = { 1, 0.7, 0.5 }, intensity = 0.7, size = 24 },
+        light = { shift = { 0, 0 }, color = { 0.8, 0.7, 0.5 }, intensity = 0.9, size = 28 },
         animation = {
           sheet = {
             filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern.png",

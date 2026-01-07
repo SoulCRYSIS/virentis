@@ -26,17 +26,17 @@ data:extend(
                               seed0 = map_seed,\z
                               seed1 = seed,\z
                               candidate_spot_count = 80,\z
-                              suggested_minimum_candidate_point_spacing = 128,\z
+                              suggested_minimum_candidate_point_spacing = spot_radius * 4,\z
                               skip_span = 1,\z
                               skip_offset = 0,\z
                               region_size = 1024,\z
                               density_expression = 80,\z
-                              spot_quantity_expression = 1000,\z
+                              spot_quantity_expression = spot_radius * spot_radius,\z
                               spot_radius_expression = spot_radius,\z
                               hard_region_target_quantity = 0,\z
                               spot_favorability_expression = 60,\z
                               basement_value = -0.5,\z
-                              maximum_spot_basement_radius = 128}",
+                              maximum_spot_basement_radius = spot_radius * 4}",
     local_expressions =
     {
       wobble_noise_x = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 3000000 + seed, octaves = 2, input_scale = 1/20}",

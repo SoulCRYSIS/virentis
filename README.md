@@ -23,6 +23,7 @@ I suggested you to play this mod again or wait for final version.
 ### Town
 The fulgaran move to live here, they are your allies, cooperate with them to clear out the pentapods.
 
+![](https://files.catbox.moe/gwg6bu.mov)
 
 ### New machines
 - Oven
@@ -36,11 +37,15 @@ The fulgaran move to live here, they are your allies, cooperate with them to cle
 - Nyxoleum: oil base plant
 - Kheast: just alien name for yeast :)
 
+![](https://files.catbox.moe/ryf4f0.png)
+
 ### Decoration System
 
 They act like a beacon, small benefit, but need no energy and seperate beacon count from normal beacon, so why not!
 
 While adding aesthetics to the terrain. Now, your factory will look like a real city instead of just factory.
+
+![](https://files.catbox.moe/48a5w7.png)
 
 ### Reward
 - Better nutrients production (also at Gleba)
@@ -59,7 +64,7 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - Some basic stuff like Red chip, Sulfur, Plastic, etc, can't produce here. Eventhough it not use in the main production line, but it use to produce base-game high tier machines. So you may want to import basic machines like Assembling machine, Modules, Bots.
 
 ## Recommended mods
-- https://mods.factorio.com/mod/simple_refrigerator
+- If you struggle to deal with spoiling: https://mods.factorio.com/mod/simple_refrigerator
 
 ## Credits
 

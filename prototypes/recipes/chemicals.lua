@@ -56,7 +56,7 @@ data:extend(
     {
       type = "recipe",
       name = "solid-fuel-from-methanol",
-      category = "organic",
+      category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
       order = "bb",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-methanol.png",
@@ -68,13 +68,14 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 8,
+      energy_required = 4,
+      allow_productivity = true,
       enabled = false,
     },
     {
       type = "recipe",
       name = "solid-fuel-from-creosote",
-      category = "organic",
+      category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
       order = "bc",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-creosote.png",
@@ -86,7 +87,8 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 8,
+      energy_required = 4,
+      allow_productivity = true,
       enabled = false,
     },
     {
@@ -144,6 +146,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 32,
+      allow_productivity = true,
       enabled = false,
     },
     {

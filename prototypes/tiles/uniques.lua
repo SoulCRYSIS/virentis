@@ -71,7 +71,7 @@ data:extend(
           --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
         }
       ),
-      autoplace = { probability_expression = "max(virentis_starting_rockmalt * 10, (virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2, 64) * 50000 - 30000)" },
+      autoplace = { probability_expression = "max(virentis_starting_rockmalt * 10, (virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2, 32) * 50000 - 30000)" },
       transitions = virentis_tile.lava_stone_transitions,
       transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
       walking_sound = tile_sounds.walking.dry_rock,

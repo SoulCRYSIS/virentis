@@ -39,7 +39,9 @@ data:extend(
         { type = "item", name = "heart-of-nature", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
+      result_is_always_fresh = true,
       energy_required = 24,
+      allow_productivity = true,
       enabled = false,
     },
     {
@@ -116,7 +118,6 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.gray,
       energy_required = 16,
-      result_is_always_fresh = true,
       allow_productivity = true,
       enabled = false,
     },
@@ -139,7 +140,6 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.green,
       energy_required = 16,
-      result_is_always_fresh = true,
       allow_productivity = true,
       enabled = false,
     },
