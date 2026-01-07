@@ -1,6 +1,7 @@
 local biolab = table.deepcopy(data.raw["lab"]["biolab"])
 biolab.name = "virentis-biolab"
 biolab.inputs = { "mudland-research-data" }
+biolab.energy_usage = "50MW"
 biolab.energy_source = {
   type = "burner",
   fuel_categories = { "nutrients" },
@@ -9,6 +10,13 @@ biolab.energy_source = {
   fuel_inventory_size = 1,
 }
 biolab.energy_usage = "5MW"
+biolab.surface_conditions = {
+  {
+    property = "pressure",
+    min = 1200,
+    max = 1200
+  }
+}
 
 data.raw["lab"]["biolab"].surface_conditions[1] = {
   property = "pressure",

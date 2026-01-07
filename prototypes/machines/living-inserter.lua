@@ -52,7 +52,7 @@ data:extend({
     energy_source = { type = "void" },
     heating_energy = "20kW",
     extension_speed = 0.1,
-    rotation_speed = 0.05,
+    rotation_speed = 0.04,
     filter_count = 5,
     icon_draw_specification = { scale = 0.5 },
     fast_replaceable_group = "inserter",

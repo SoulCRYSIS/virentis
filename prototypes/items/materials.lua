@@ -65,6 +65,7 @@ data:extend(
       },
       weight = 10 * kg,
       default_import_location = "virentis",
+      
     },
     {
       type = "item",

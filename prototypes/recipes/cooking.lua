@@ -233,7 +233,7 @@ data:extend(
       ingredients = {
         { type = "item", name = "kheast",       amount = 2 },
         { type = "item", name = "pentapod-egg", amount = 2 },
-        { type = "item", name = "herb",         amount = 4 },
+        { type = "item", name = "herb",         amount = 2 },
       },
       results = {
         { type = "item", name = "soft-cooked-pentapod-egg", amount = 1 }
@@ -252,9 +252,9 @@ data:extend(
       order = "bg",
       icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
       ingredients = {
-        { type = "item",  name = "soft-cooked-pentapod-egg", amount = 4 },
-        { type = "item",  name = "sweet-chili-sauce",        amount = 2 },
-        { type = "item",  name = "flatbread",                amount = 2 },
+        { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
+        { type = "item",  name = "sweet-chili-sauce",        amount = 1 },
+        { type = "item",  name = "flatbread",                amount = 1 },
         { type = "fluid", name = "vegetable-oil",            amount = 100 },
       },
       results = {

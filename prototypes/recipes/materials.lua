@@ -156,7 +156,7 @@ data:extend(
         { type = "fluid", name = "methanol", amount = 10 },
       },
       results = {
-        { type = "item", name = "carbon", amount = 4 }
+        { type = "item", name = "carbon", amount = 6 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 8,
@@ -164,25 +164,5 @@ data:extend(
       allow_productivity = true,
       enabled = false,
     },
-    {
-      type = "recipe",
-      name = "explosive-from-methanol",
-      category = "chemistry-or-cryogenics",
-      subgroup = "virentis-materials",
-      order = "ca",
-      icon = "__virentis__/graphics/icons/recipes/explosive-from-methanol.png",
-      ingredients = {
-        { type = "fluid", name = "methanol",   amount = 10 },
-        { type = "item",  name = "carbon",     amount = 1 },
-        { type = "item",  name = "phosphorus", amount = 1 },
-      },
-      results = {
-        { type = "item", name = "explosives", amount = 8 }
-      },
-      crafting_machine_tint = recipe_tints.red,
-      energy_required = 16,
-      allow_productivity = true,
-      enabled = false,
-    }
   }
 )

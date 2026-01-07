@@ -49,7 +49,7 @@ data:extend(
         { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 8,
+      energy_required = 16,
       allow_productivity = true,
       enabled = false,
     },
@@ -61,11 +61,11 @@ data:extend(
       order = "bb",
       icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-methanol.png",
       ingredients = {
-        { type = "fluid", name = "methanol",      amount = 5 },
+        { type = "fluid", name = "methanol",      amount = 10 },
         { type = "fluid", name = "vegetable-oil", amount = 5 }
       },
       results = {
-        { type = "item", name = "solid-fuel", amount = 1 }
+        { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 8,
@@ -83,7 +83,7 @@ data:extend(
         { type = "fluid", name = "vegetable-oil", amount = 5 }
       },
       results = {
-        { type = "item", name = "solid-fuel", amount = 1 }
+        { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 8,
@@ -165,5 +165,25 @@ data:extend(
       energy_required = 32,
       enabled = false,
     },
+    {
+      type = "recipe",
+      name = "explosive-from-methanol",
+      category = "chemistry-or-cryogenics",
+      subgroup = "virentis-chemicals",
+      order = "be",
+      icon = "__virentis__/graphics/icons/recipes/explosive-from-methanol.png",
+      ingredients = {
+        { type = "fluid", name = "methanol",   amount = 10 },
+        { type = "item",  name = "carbon",     amount = 1 },
+        { type = "item",  name = "phosphorus", amount = 1 },
+      },
+      results = {
+        { type = "item", name = "explosives", amount = 4 }
+      },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 16,
+      allow_productivity = true,
+      enabled = false,
+    }
   }
 )

@@ -18,7 +18,7 @@ data:extend(
         { type = "item", name = "iron-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 2,
+      energy_required = 1,
       enabled = false,
       allow_productivity = true,
     },
@@ -36,7 +36,7 @@ data:extend(
         { type = "item", name = "copper-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 2,
+      energy_required = 1,
       enabled = false,
       allow_productivity = true,
     },

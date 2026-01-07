@@ -20,8 +20,9 @@ data:extend(
         { type = "item", name = "kheast", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 4,
+      energy_required = 8,
       result_is_always_fresh = true,
+      allow_productivity = true,
       enabled = false,
     }
   }

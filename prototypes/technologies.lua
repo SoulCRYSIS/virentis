@@ -47,7 +47,6 @@ data:extend(
           { "production-science-pack",   1 },
           { "utility-science-pack",      1 },
           { "space-science-pack",        1 },
-          { "metallurgic-science-pack",  1 },
           { "agricultural-science-pack", 1 },
         },
         time = 60
@@ -341,6 +340,14 @@ data:extend(
         },
         {
           type = "unlock-recipe",
+          recipe = "heart-of-nature"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "graphene"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "environment-research-center"
         },
         {
@@ -356,7 +363,7 @@ data:extend(
       research_trigger = {
         type = "craft-item",
         item = "gived-explosive-rocket",
-        count = 500,
+        count = 5000,
       },
     },
     {
@@ -372,7 +379,14 @@ data:extend(
           recipe = "carbon-from-creosote"
         },
       },
-      prerequisites = { "tar-processing" },
+      prerequisites = { "environment-research-center" },
+      unit = {
+        count = 500,
+        ingredients = {
+          { "mudland-research-data", 1 },
+        },
+        time = 60
+      },
     },
     {
       type = "technology",
@@ -445,7 +459,7 @@ data:extend(
           recipe = "living-inserter"
         },
       },
-      prerequisites = { "nature-control" },
+      prerequisites = { "nature-control", "stack-inserter" },
       unit = {
         count = 3000,
         ingredients =
@@ -468,7 +482,7 @@ data:extend(
           recipe = "eternal-lantern"
         },
       },
-      prerequisites = { "nature-control" },
+      prerequisites = { "nature-control", "efficiency-module-3" },
       unit = {
         count = 3000,
         ingredients =

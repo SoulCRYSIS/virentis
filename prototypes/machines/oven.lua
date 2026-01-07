@@ -34,7 +34,7 @@ data:extend({
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     circuit_wire_max_distance = 8,
     circuit_connector = virentis.default_machine_circuit_connector,
-    energy_usage = "10MW",
+    energy_usage = "20MW",
     ---@type data.HeatEnergySource
     energy_source = {
       type = "heat",
@@ -64,7 +64,7 @@ data:extend({
     },
     crafting_categories = { "baking", "basic-cooking" },
     crafting_speed = 2,
-    module_slots = 2,
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {
       mining_time = 1,

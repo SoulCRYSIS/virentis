@@ -78,7 +78,7 @@ data:extend(
       },
       hide_from_player_crafting = true,
       hide_from_signal_gui = true,
-      energy_required = 1,
+      energy_required = 0.2,
       enabled = false,
     },
     gived_mock_item("explosive-rocket", "ammo"),
