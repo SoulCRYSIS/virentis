@@ -23,7 +23,7 @@ I suggested you to play this mod again or wait for final version.
 ### Town
 The fulgaran move to live here, they are your allies, cooperate with them to clear out the pentapods.
 
-![](https://files.catbox.moe/gwg6bu.mov)
+![](https://files.catbox.moe/s3ay8t.mp4)
 
 ### New machines
 - Oven
@@ -37,7 +37,7 @@ The fulgaran move to live here, they are your allies, cooperate with them to cle
 - Nyxoleum: oil base plant
 - Kheast: just alien name for yeast :)
 
-![](https://files.catbox.moe/ryf4f0.png)
+![](https://files.catbox.moe/zuuks8.png)
 
 ### Decoration System
 
