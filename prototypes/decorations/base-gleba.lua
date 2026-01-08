@@ -566,17 +566,17 @@ knobbly_roots_orange.autoplace = { -- based on boom puff
   probability_expression = "2 * virentis_boompuff_region"
 }
 
-local kheast_stromatolite = table.deepcopy(data.raw["simple-entity"]["copper-stromatolite"])
-kheast_stromatolite.name = "kheast-stromatolite"
-kheast_stromatolite.subgroup = "virentis-decoratives"
-kheast_stromatolite.autoplace = {
-  probability_expression =
-  "virentis_select(virentis_copper_stromatolite - clamp(virentis_decorative_knockout, 0, 1), 1.3, 2, 0.2, 0, 1)"
-}
-kheast_stromatolite.minable.results = {
-  { type = "item", name = "kheast", amount_min = 13, amount_max = 17 },
-  { type = "item", name = "stone",  amount_min = 2,  amount_max = 3 },
-}
+-- local kheast_stromatolite = table.deepcopy(data.raw["simple-entity"]["copper-stromatolite"])
+-- kheast_stromatolite.name = "kheast-stromatolite"
+-- kheast_stromatolite.subgroup = "virentis-decoratives"
+-- kheast_stromatolite.autoplace = {
+--   probability_expression =
+--   "virentis_select(virentis_copper_stromatolite - clamp(virentis_decorative_knockout, 0, 1), 1.3, 2, 0.2, 0, 1)"
+-- }
+-- kheast_stromatolite.minable.results = {
+--   { type = "item", name = "kheast", amount_min = 13, amount_max = 17 },
+--   { type = "item", name = "stone",  amount_min = 2,  amount_max = 3 },
+-- }
 -- for _, picture in pairs(kheast_stromatolite.pictures) do
 --   picture.tint = { r = 255, g = 103, b = 54, a = 80 }
 -- end

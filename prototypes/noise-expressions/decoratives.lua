@@ -675,24 +675,24 @@ data:extend(
 
 
     -- B-pattern (billows)
-    {
-      type = "noise-expression",
-      name = "virentis_iron_stromatolite",
-      expression = "region_box - virentis_scrub_noise",
-      local_expressions =
-      { -- plateau potential: -10 to 0
-        region_box = "virentis_select(virentis_aux, 0.6, 2, 0.1, -10, 1) - 1"
-      }
-    },
-    {
-      type = "noise-expression",
-      name = "virentis_copper_stromatolite",
-      expression = "region_box - virentis_scrub_noise",
-      local_expressions =
-      { -- plateau potential: -10 to 0
-        region_box = "virentis_select(virentis_aux, -1, 0.4, 0.1, -10, 1) - 1"
-      }
-    },
+    -- {
+    --   type = "noise-expression",
+    --   name = "virentis_iron_stromatolite",
+    --   expression = "region_box - virentis_scrub_noise",
+    --   local_expressions =
+    --   { -- plateau potential: -10 to 0
+    --     region_box = "virentis_select(virentis_aux, 0.6, 2, 0.1, -10, 1) - 1"
+    --   }
+    -- },
+    -- {
+    --   type = "noise-expression",
+    --   name = "virentis_copper_stromatolite",
+    --   expression = "region_box - virentis_scrub_noise",
+    --   local_expressions =
+    --   { -- plateau potential: -10 to 0
+    --     region_box = "virentis_select(virentis_aux, -1, 0.4, 0.1, -10, 1) - 1"
+    --   }
+    -- },
 
     -- Gleba decorations
     {

@@ -32,32 +32,13 @@ data:extend(
             {
               {
                 type = "create-entity",
-                entity_name = "small-stomper-pentapod",
+                entity_name = "small-strafer-pentapod",
                 affects_target = true,
                 show_in_tooltip = true,
                 as_enemy = true,
                 find_non_colliding_position = true,
-                abort_if_over_space = true,
+                abort_if_over_space = false,
                 offset_deviation = { { -5, -5 }, { 5, 5 } },
-                non_colliding_fail_result =
-                {
-                  type = "direct",
-                  action_delivery =
-                  {
-                    type = "instant",
-                    source_effects =
-                    {
-                      {
-                        type = "create-entity",
-                        entity_name = "big-strafer-pentapod",
-                        affects_target = true,
-                        show_in_tooltip = false,
-                        as_enemy = true,
-                        offset_deviation = { { -1, -1 }, { 1, 1 } },
-                      }
-                    }
-                  }
-                }
               }
             }
           }

@@ -70,7 +70,7 @@ for i, k in pairs(new_tier_list) do
     mask_thigh = fade(gleba_mask_tint2, 0.2),
     body = from_color(grey_overlay(gleba_body_tint, 0.1)),
     projectile_mask = behemoth_wriggler_mask_tint, -- same as wriggler mask tint
-    projectile = behemoth_wriggler_body_tint     -- same as wriggler body tint
+    projectile = behemoth_wriggler_body_tint       -- same as wriggler body tint
   }, factoriopedia_gleba_enemy_strafer, space_age_sounds.strafer_pentapod.big)
   make_stomper(k .. "-", 2.3 * behemoth_scale, 30000, 2.4, 2.8, {
     mask = fade(gleba_mask_tint, 0.4),
@@ -80,9 +80,9 @@ for i, k in pairs(new_tier_list) do
   }, factoriopedia_gleba_enemy_stomper, space_age_sounds.stomper_pentapod.big)
 
   make_wriggler(k .. "-", 1.2 * behemoth_scale, 600, 2.6, {
-    mask = fade(gleba_mask_tint, 0.5),
-    body = gleba_body_tint
-  }, factoriopedia_gleba_enemy_wriggler, factoriopedia_gleba_enemy_wriggler_premature,
+      mask = fade(gleba_mask_tint, 0.5),
+      body = gleba_body_tint
+    }, factoriopedia_gleba_enemy_wriggler, factoriopedia_gleba_enemy_wriggler_premature,
     space_age_sounds.wriggler_pentapod.big)
 
 
@@ -90,17 +90,47 @@ for i, k in pairs(new_tier_list) do
   data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
   data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
   data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/enemies/" ..
-  k .. "-wriggler.png"
+      k .. "-wriggler.png"
   data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-wriggler.png"
   data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/enemies/" ..
-  k .. "-wriggler-corpse.png"
+      k .. "-wriggler-corpse.png"
   data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
   data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
   data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
-  "-stomper.png"
+      "-stomper.png"
   data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
-  "-strafer.png"
+      "-strafer.png"
 end
+
+local behemoth_stomper_pentapod_shell = data.raw["simple-entity"]["behemoth-stomper-shell"]
+
+behemoth_stomper_pentapod_shell.autoplace = {
+  force = "enemy",
+  probability_expression =
+  "spot_noise{x = x,\z
+              y = y,\z
+              seed0 = map_seed,\z
+              seed1 = 7778,\z
+              density_expression = virentis_select(virentis_elevation, -50, 0, 2, 0, 1),\z
+              spot_radius_expression = 0.5,\z
+              spot_quantity_expression = 1,\z
+              spot_favorability_expression = 1,\z
+              candidate_spot_count = 4,\z
+              basement_value = 0,\z
+              suggested_minimum_candidate_point_spacing = 20,\z
+              maximum_spot_basement_radius = 0.5,\z
+              region_size = 512}"
+}
+behemoth_stomper_pentapod_shell.minable.results = {
+  { type = "item", name = "kheast",       amount_min = 30, amount_max = 45 },
+  { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
+  { type = "item", name = "pentapod-egg", amount_min = 3,  amount_max = 5, percent_spoiled = 0.5 },
+}
+behemoth_stomper_pentapod_shell.remains_when_mined = {
+  "behemoth-wriggler-pentapod-premature",
+  "behemoth-wriggler-pentapod-premature",
+  "behemoth-wriggler-pentapod-premature",
+}
 
 local pentapod_spawner = table.deepcopy(data.raw["unit-spawner"]["gleba-spawner"])
 pentapod_spawner.name = "virentis-pentapod-spawner"

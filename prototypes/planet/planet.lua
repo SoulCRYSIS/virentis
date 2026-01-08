@@ -248,8 +248,6 @@ data:extend({
         ["entity"] = {
           settings = {
             ["big-fulgora-rock"] = {},
-            ["kheast-stromatolite"] = {},
-            -- ["virentis-fulgoran-ruin-small"] = {},
             ["virentis-fulgoran-ruin-medium"] = {},
             ["virentis-fulgoran-ruin-stonehenge"] = {},
             ["town-mortar-turret"] = {},
@@ -264,6 +262,7 @@ data:extend({
             ["virentis-cuttlepop"] = {},
             ["lickmaw"] = {},
             ["sunnycomb"] = {},
+            ["behemoth-stomper-shell"] = {},
           }
         }
       }
