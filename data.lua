@@ -71,3 +71,4 @@ require "prototypes.enemies.pentapod"
 
 require "prototypes.planet.controls"
 require "prototypes.planet.planet"
+require "prototypes.planet.connections"

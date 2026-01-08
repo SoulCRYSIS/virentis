@@ -14,10 +14,10 @@ data:extend({
     starmap_icon = "__virentis__/graphics/icons/misc/starmap-virentis.png",
     starmap_icon_size = 1080,
     gravity_pull = 10,
-    distance = 25, -- Between Vulcanus (10) and Gleba (20)
-    orientation = 0.25,
-    solar_power_in_space = 50,
-    magnitude = 1.0,
+    distance = 25,
+    orientation = 0.17,
+    solar_power_in_space = 100,
+    magnitude = 0.8,
     order = "ca",
     subgroup = "planets",
     platform_procession_set =
@@ -31,6 +31,7 @@ data:extend({
       departure = {"planet-to-platform-a"}
     },
     procession_graphic_catalogue = planet_catalogue_gleba,
+    persistent_ambient_sounds = table.deepcopy(data.raw["planet"]["gleba"].persistent_ambient_sounds),
     surface_render_parameters = table.deepcopy(data.raw["planet"]["gleba"].surface_render_parameters),
     map_gen_settings = {
       property_expression_names =
@@ -277,6 +278,6 @@ data:extend({
     },
     -- Using default surface render parameters
     asteroid_spawn_influence = 1,
-    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.9)
+    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_fulgora, 0.9)
   }
 })
