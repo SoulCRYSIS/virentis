@@ -113,10 +113,7 @@ behemoth_stomper_pentapod_shell.remains_when_mined = {
   "behemoth-wriggler-pentapod-premature",
   "behemoth-wriggler-pentapod-premature",
 }
-
-local map_behemoth_stomper_pentapod_shell = table.deepcopy(behemoth_stomper_pentapod_shell)
-map_behemoth_stomper_pentapod_shell.name = "map-behemoth-stomper-shell"
-map_behemoth_stomper_pentapod_shell.autoplace = {
+behemoth_stomper_pentapod_shell.autoplace = {
   force = "enemy",
   probability_expression =
   "spot_noise{x = x,\z
@@ -133,7 +130,7 @@ map_behemoth_stomper_pentapod_shell.autoplace = {
               maximum_spot_basement_radius = 0.5,\z
               region_size = 512}"
 }
-map_behemoth_stomper_pentapod_shell.created_effect = {
+behemoth_stomper_pentapod_shell.created_effect = {
   type = "direct",
   action_delivery =
   {
@@ -191,7 +188,6 @@ map_behemoth_stomper_pentapod_shell.created_effect = {
     }
   }
 }
-data:extend({ map_behemoth_stomper_pentapod_shell })
 
 local pentapod_spawner = table.deepcopy(data.raw["unit-spawner"]["gleba-spawner"])
 pentapod_spawner.name = "virentis-pentapod-spawner"
