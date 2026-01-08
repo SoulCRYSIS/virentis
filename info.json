@@ -1,12 +1,13 @@
 {
   "name": "virentis",
-  "version": "0.1.0",
-  "title": "Planet Virentis",
+  "version": "0.1.1",
+  "title": "Planet Virentis [Beta1]",
   "author": "SoulCRYSIS",
   "factorio_version": "2.0",
-  "description": "A planet focused on agriculture, alien grooming, and trading.",
+  "description": "A planet focused on agriculturing, alien grooming, and trading.",
   "dependencies": [
     "space-age >= 2.0",
+    "aai-vehicles-ironclad", 
     "!behemoth-enemies"
   ]
 }

@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-01-08
+  Changes:
+    - Migrate ironclad graphic to dependency (to respect license)

@@ -41,7 +41,7 @@ data:extend({
       layers =
       {
         {
-          filename = "__virentis__/graphics/entities/machines/town-mortar-turret/mortar-turret.png",
+          filename = "__aai-vehicles-ironclad__/graphics/entity/mortar-turret/mortar-turret.png",
           priority = "low",
           line_length = 16,
           width = 2048 / 16,
@@ -53,7 +53,7 @@ data:extend({
           scale = 0.65
         },
         {
-          filename = "__virentis__/graphics/entities/machines/town-mortar-turret/mortar-turret-mask.png",
+          filename = "__aai-vehicles-ironclad__/graphics/entity/mortar-turret/mortar-turret-mask.png",
           priority = "low",
           line_length = 16,
           width = 2048 / 16,
@@ -65,7 +65,7 @@ data:extend({
           scale = 0.65
         },
         {
-          filename = "__virentis__/graphics/entities/machines/town-mortar-turret/mortar-turret-shadow.png",
+          filename = "__aai-vehicles-ironclad__/graphics/entity/mortar-turret/mortar-turret-shadow.png",
           priority = "low",
           line_length = 4,
           width = 672 / 4,
