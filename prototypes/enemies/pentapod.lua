@@ -103,8 +103,20 @@ for i, k in pairs(new_tier_list) do
 end
 
 local behemoth_stomper_pentapod_shell = data.raw["simple-entity"]["behemoth-stomper-shell"]
+behemoth_stomper_pentapod_shell.minable.results = {
+  { type = "item", name = "kheast",       amount_min = 30, amount_max = 45 },
+  { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
+  { type = "item", name = "pentapod-egg", amount_min = 3,  amount_max = 5, percent_spoiled = 0.5 },
+}
+behemoth_stomper_pentapod_shell.remains_when_mined = {
+  "behemoth-wriggler-pentapod-premature",
+  "behemoth-wriggler-pentapod-premature",
+  "behemoth-wriggler-pentapod-premature",
+}
 
-behemoth_stomper_pentapod_shell.autoplace = {
+local map_behemoth_stomper_pentapod_shell = table.deepcopy(behemoth_stomper_pentapod_shell)
+map_behemoth_stomper_pentapod_shell.name = "map-behemoth-stomper-shell"
+map_behemoth_stomper_pentapod_shell.autoplace = {
   force = "enemy",
   probability_expression =
   "spot_noise{x = x,\z
@@ -121,16 +133,65 @@ behemoth_stomper_pentapod_shell.autoplace = {
               maximum_spot_basement_radius = 0.5,\z
               region_size = 512}"
 }
-behemoth_stomper_pentapod_shell.minable.results = {
-  { type = "item", name = "kheast",       amount_min = 30, amount_max = 45 },
-  { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
-  { type = "item", name = "pentapod-egg", amount_min = 3,  amount_max = 5, percent_spoiled = 0.5 },
+map_behemoth_stomper_pentapod_shell.created_effect = {
+  type = "direct",
+  action_delivery =
+  {
+    type = "instant",
+    source_effects =
+    {
+      {
+        type = "create-decorative",
+        decorative = "virentis-pale-lettuce-lichen-cups-1x1",
+        spawn_min = 6,
+        spawn_max = 12,
+        spawn_min_radius = 5,
+        spawn_max_radius = 7,
+      },
+      {
+        type = "create-decorative",
+        decorative = "virentis-pale-lettuce-lichen-cups-3x3",
+        spawn_min = 4,
+        spawn_max = 8,
+        spawn_min_radius = 5,
+        spawn_max_radius = 7,
+      },
+      {
+        type = "create-decorative",
+        decorative = "virentis-pale-lettuce-lichen-cups-6x6",
+        spawn_min = 3,
+        spawn_max = 5,
+        spawn_min_radius = 5,
+        spawn_max_radius = 7,
+      },
+      {
+        type = "create-decorative",
+        decorative = "virentis-gleba-spawner-slime",
+        spawn_min = 2,
+        spawn_max = 4,
+        spawn_min_radius = 4,
+        spawn_max_radius = 6,
+      },
+      {
+        type = "create-decorative",
+        decorative = "virentis-coral-stunted",
+        spawn_min = 2,
+        spawn_max = 4,
+        spawn_min_radius = 5,
+        spawn_max_radius = 7,
+      },
+      {
+        type = "create-decorative",
+        decorative = "virentis-purple-nerve-roots-veins-dense",
+        spawn_min = 3,
+        spawn_max = 5,
+        spawn_min_radius = 4,
+        spawn_max_radius = 6,
+      },
+    }
+  }
 }
-behemoth_stomper_pentapod_shell.remains_when_mined = {
-  "behemoth-wriggler-pentapod-premature",
-  "behemoth-wriggler-pentapod-premature",
-  "behemoth-wriggler-pentapod-premature",
-}
+data:extend({ map_behemoth_stomper_pentapod_shell })
 
 local pentapod_spawner = table.deepcopy(data.raw["unit-spawner"]["gleba-spawner"])
 pentapod_spawner.name = "virentis-pentapod-spawner"
