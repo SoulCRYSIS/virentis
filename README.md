@@ -63,6 +63,15 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - Biochamber is a must to start here
 - Some basic stuff like Red chip, Sulfur, Plastic, etc, can't produce here. Eventhough it not use in the main production line, but it use to produce base-game high tier machines. So you may want to import basic machines like Assembling machine, Modules, Bots.
 
+## Todo list
+- Fishing system
+- Husbandry age
+- More biomes and its production line
+  - Frozen
+  - Mycelia
+- More rewards (maybe unique turret)
+- Another planet (maybe moon)
+
 ## Recommended mods
 - If you struggle to deal with spoiling: https://mods.factorio.com/mod/simple_refrigerator
 
