@@ -21,6 +21,7 @@ require "prototypes.machines.town-mortar-turret"
 require "prototypes.machines.town-tesla-turret"
 require "prototypes.machines.biolab"
 require "prototypes.machines.basic-oven"
+require "prototypes.machines.fishing-dock"
 
 require "prototypes.items.crops"
 require "prototypes.items.materials"

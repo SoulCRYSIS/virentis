@@ -66,9 +66,9 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 ## Todo list
 - Fishing system
 - Husbandry age
-- More biomes and its production line
-  - Frozen
-  - Mycelia
+- More biomes and its production line: frozen, lava, mycelia
+- Add some cooking recipe to other planets
+- Support any planet start
 - More rewards (maybe unique turret)
 - Another planet (maybe moon)
 
