@@ -22,7 +22,7 @@ data:extend({
     allowed_effects = { "productivity" },
     graphics_set = {
       module_icons_suppressed = true,
-      light = { shift = { 0, 0 }, color = { 1, 0.85, 0.7 }, intensity = 0.6, size = 48 },
+      light = { shift = { 0, 0 }, color = { 1, 0.85, 0.7 }, intensity = 0.6, size = 48, minimum_darkness = 0.3 },
       animation_list = {
         {
           render_layer = "higher-object-above",
