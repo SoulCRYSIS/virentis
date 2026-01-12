@@ -263,7 +263,7 @@ data:extend({
             ["virentis-cuttlepop"] = {},
             ["lickmaw"] = {},
             ["sunnycomb"] = {},
-            ["behemoth-stomper-shell"] = {},
+            ["virentis-behemoth-stomper-shell"] = {},
           }
         }
       }

@@ -44,65 +44,69 @@ local function grey_overlay(tint, amount) -- fades to opaque grey. Full opacity 
   return lerp_color(tint, { r = 127, g = 127, b = 127, a = 255 }, amount)
 end
 
+if mods["behemoth-enemies"] == nil then
+  local gleba_body_tint = { r = 117, g = 116, b = 104, a = 255 }
+  local behemoth_wriggler_body_tint = gleba_body_tint
+  local behemoth_color = { r = 150, g = 0, b = 150, a = 255 }
+  local behemoth_color2 = { r = 150, g = 100, b = 150, a = 255 }
+  local behemoth_scale = 1
 
-local gleba_body_tint = { r = 117, g = 116, b = 104, a = 255 }
-local behemoth_wriggler_body_tint = gleba_body_tint
-local behemoth_color = { r = 150, g = 0, b = 150, a = 255 }
-local behemoth_color2 = { r = 150, g = 100, b = 150, a = 255 }
-local behemoth_scale = 1
+  new_tier_list = { "behemoth" }
+  local gleba_mask_tints = { behemoth_color }
+  local gleba_mask_tints2 = { behemoth_color2 }
 
-new_tier_list = { "behemoth" }
-local gleba_mask_tints = { behemoth_color }
-local gleba_mask_tints2 = { behemoth_color2 }
+  for i, k in pairs(new_tier_list) do
+    gleba_mask_tint = gleba_mask_tints[i]
+    gleba_mask_tint2 = gleba_mask_tints2[i]
+    local behemoth_wriggler_mask_tint = fade(gleba_mask_tint, 0.4)
 
-for i, k in pairs(new_tier_list) do
-  gleba_mask_tint = gleba_mask_tints[i]
-  gleba_mask_tint2 = gleba_mask_tints2[i]
-  local behemoth_wriggler_mask_tint = fade(gleba_mask_tint, 0.4)
+    factoriopedia_gleba_enemy_stomper = { init = make_enemy(k .. "-stomper-pentapod", 0.8) }
+    factoriopedia_gleba_enemy_strafer = { init = make_enemy(k .. "-strafer-pentapod", 0.8) }
+    factoriopedia_gleba_enemy_wriggler = { init = make_enemy(k .. "-wriggler-pentapod", 1.8) }
+    factoriopedia_gleba_enemy_wriggler_premature = { init = make_enemy(k .. "-wriggler-pentapod-premature", 1.8) }
 
-  factoriopedia_gleba_enemy_stomper = { init = make_enemy(k .. "-stomper-pentapod", 0.8) }
-  factoriopedia_gleba_enemy_strafer = { init = make_enemy(k .. "-strafer-pentapod", 0.8) }
-  factoriopedia_gleba_enemy_wriggler = { init = make_enemy(k .. "-wriggler-pentapod", 1.8) }
-  factoriopedia_gleba_enemy_wriggler_premature = { init = make_enemy(k .. "-wriggler-pentapod-premature", 1.8) }
+    make_strafer(k .. "-", 2.0 * behemoth_scale, 4000, 2.4, 7.0, 30, 35, 40, {
+      mask = fade(gleba_mask_tint, 0.4),
+      mask_thigh = fade(gleba_mask_tint2, 0.2),
+      body = from_color(grey_overlay(gleba_body_tint, 0.1)),
+      projectile_mask = behemoth_wriggler_mask_tint, -- same as wriggler mask tint
+      projectile = behemoth_wriggler_body_tint     -- same as wriggler body tint
+    }, factoriopedia_gleba_enemy_strafer, space_age_sounds.strafer_pentapod.big)
+    make_stomper(k .. "-", 2.3 * behemoth_scale, 30000, 2.4, 2.8, {
+      mask = fade(gleba_mask_tint, 0.4),
+      mask_thigh = fade(gleba_mask_tint2, 0.3),
+      body = from_color(grey_overlay(gleba_body_tint, 0.1)),
+      body_thigh = lerp_color(gleba_body_tint, grey_overlay({ r = 250, g = 108, b = 0, a = 255 }, 0.7), 0.1) -- more orange/yellow
+    }, factoriopedia_gleba_enemy_stomper, space_age_sounds.stomper_pentapod.big)
 
-  make_strafer(k .. "-", 2.0 * behemoth_scale, 4000, 2.4, 7.0, 30, 35, 40, {
-    mask = fade(gleba_mask_tint, 0.4),
-    mask_thigh = fade(gleba_mask_tint2, 0.2),
-    body = from_color(grey_overlay(gleba_body_tint, 0.1)),
-    projectile_mask = behemoth_wriggler_mask_tint, -- same as wriggler mask tint
-    projectile = behemoth_wriggler_body_tint       -- same as wriggler body tint
-  }, factoriopedia_gleba_enemy_strafer, space_age_sounds.strafer_pentapod.big)
-  make_stomper(k .. "-", 2.3 * behemoth_scale, 30000, 2.4, 2.8, {
-    mask = fade(gleba_mask_tint, 0.4),
-    mask_thigh = fade(gleba_mask_tint2, 0.3),
-    body = from_color(grey_overlay(gleba_body_tint, 0.1)),
-    body_thigh = lerp_color(gleba_body_tint, grey_overlay({ r = 250, g = 108, b = 0, a = 255 }, 0.7), 0.1) -- more orange/yellow
-  }, factoriopedia_gleba_enemy_stomper, space_age_sounds.stomper_pentapod.big)
-
-  make_wriggler(k .. "-", 1.2 * behemoth_scale, 600, 2.6, {
-      mask = fade(gleba_mask_tint, 0.5),
-      body = gleba_body_tint
-    }, factoriopedia_gleba_enemy_wriggler, factoriopedia_gleba_enemy_wriggler_premature,
-    space_age_sounds.wriggler_pentapod.big)
+    make_wriggler(k .. "-", 1.2 * behemoth_scale, 600, 2.6, {
+        mask = fade(gleba_mask_tint, 0.5),
+        body = gleba_body_tint
+      }, factoriopedia_gleba_enemy_wriggler, factoriopedia_gleba_enemy_wriggler_premature,
+      space_age_sounds.wriggler_pentapod.big)
 
 
-  data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
-  data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
-  data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
-  data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/enemies/" ..
-      k .. "-wriggler.png"
-  data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-wriggler.png"
-  data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/enemies/" ..
-      k .. "-wriggler-corpse.png"
-  data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
-  data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
-  data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
-      "-stomper.png"
-  data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
-      "-strafer.png"
+    data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/enemies/" ..
+    k .. "-strafer.png"
+    data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/enemies/" ..
+    k .. "-stomper.png"
+    data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
+    data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/enemies/" ..
+        k .. "-wriggler.png"
+    data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-wriggler.png"
+    data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/enemies/" ..
+        k .. "-wriggler-corpse.png"
+    data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
+    data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
+    data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
+        "-stomper.png"
+    data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
+        "-strafer.png"
+  end
 end
 
-local behemoth_stomper_pentapod_shell = data.raw["simple-entity"]["behemoth-stomper-shell"]
+local behemoth_stomper_pentapod_shell = table.deepcopy(data.raw["simple-entity"]["behemoth-stomper-shell"])
+behemoth_stomper_pentapod_shell.name = "virentis-behemoth-stomper-shell"
 behemoth_stomper_pentapod_shell.minable.results = {
   { type = "item", name = "kheast",       amount_min = 30, amount_max = 45 },
   { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
@@ -233,4 +237,5 @@ pentapod_spawner_small.autoplace = {
 data:extend({
   pentapod_spawner,
   pentapod_spawner_small,
+  behemoth_stomper_pentapod_shell,
 })
