@@ -65,20 +65,22 @@ if mods["behemoth-enemies"] == nil then
     factoriopedia_gleba_enemy_wriggler = { init = make_enemy(k .. "-wriggler-pentapod", 1.8) }
     factoriopedia_gleba_enemy_wriggler_premature = { init = make_enemy(k .. "-wriggler-pentapod-premature", 1.8) }
 
+    ---@diagnostic disable-next-line: undefined-global
     make_strafer(k .. "-", 2.0 * behemoth_scale, 4000, 2.4, 7.0, 30, 35, 40, {
       mask = fade(gleba_mask_tint, 0.4),
       mask_thigh = fade(gleba_mask_tint2, 0.2),
       body = from_color(grey_overlay(gleba_body_tint, 0.1)),
       projectile_mask = behemoth_wriggler_mask_tint, -- same as wriggler mask tint
-      projectile = behemoth_wriggler_body_tint     -- same as wriggler body tint
+      projectile = behemoth_wriggler_body_tint       -- same as wriggler body tint
     }, factoriopedia_gleba_enemy_strafer, space_age_sounds.strafer_pentapod.big)
+    ---@diagnostic disable-next-line: undefined-global
     make_stomper(k .. "-", 2.3 * behemoth_scale, 30000, 2.4, 2.8, {
       mask = fade(gleba_mask_tint, 0.4),
       mask_thigh = fade(gleba_mask_tint2, 0.3),
       body = from_color(grey_overlay(gleba_body_tint, 0.1)),
       body_thigh = lerp_color(gleba_body_tint, grey_overlay({ r = 250, g = 108, b = 0, a = 255 }, 0.7), 0.1) -- more orange/yellow
     }, factoriopedia_gleba_enemy_stomper, space_age_sounds.stomper_pentapod.big)
-
+    ---@diagnostic disable-next-line: undefined-global
     make_wriggler(k .. "-", 1.2 * behemoth_scale, 600, 2.6, {
         mask = fade(gleba_mask_tint, 0.5),
         body = gleba_body_tint
@@ -87,9 +89,9 @@ if mods["behemoth-enemies"] == nil then
 
 
     data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/enemies/" ..
-    k .. "-strafer.png"
+        k .. "-strafer.png"
     data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/enemies/" ..
-    k .. "-stomper.png"
+        k .. "-stomper.png"
     data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
     data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/enemies/" ..
         k .. "-wriggler.png"

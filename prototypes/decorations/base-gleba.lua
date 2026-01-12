@@ -651,5 +651,4 @@ data:extend {
   gleba_spawner_slime,
   knobbly_roots,
   knobbly_roots_orange,
-  kheast_stromatolite,
 }

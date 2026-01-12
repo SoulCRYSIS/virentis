@@ -28,6 +28,7 @@ require "prototypes.items.fluids"
 require "prototypes.items.foods"
 require "prototypes.items.environment-data"
 require "prototypes.items.microorganism"
+require "prototypes.items.meats"
 
 require "prototypes.recipes.recipe-categories"
 require "prototypes.recipes.trading"
@@ -67,7 +68,8 @@ require "prototypes.decorations.base-gleba"
 require "prototypes.decorations.town"
 require "prototypes.decorations.gleba-plants"
 
-require "prototypes.enemies.pentapod"
+require "prototypes.creatures.pentapod"
+require "prototypes.creatures.pentapus"
 
 require "prototypes.planet.controls"
 require "prototypes.planet.planet"

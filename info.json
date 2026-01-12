@@ -9,7 +9,7 @@
   "dependencies": [
     "space-age >= 2.0",
     "aai-vehicles-ironclad",
-    "? fishing-dock",
+    "fishing-dock",
     "? behemoth-enemies"
   ]
 }

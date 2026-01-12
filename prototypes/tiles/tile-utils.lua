@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local virentis_tile = {}
 
 virentis_tile.tile_lightening = 28

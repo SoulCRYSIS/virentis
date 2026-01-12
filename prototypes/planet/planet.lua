@@ -264,6 +264,7 @@ data:extend({
             ["lickmaw"] = {},
             ["sunnycomb"] = {},
             ["virentis-behemoth-stomper-shell"] = {},
+            ["pentapus"] = {},
           }
         }
       }
