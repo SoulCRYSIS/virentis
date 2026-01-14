@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2026-01-14
+  Bugfixes:
+    - Fix the kheast tech unlock with wrong trigger
+    - Fix where town and fertile soil sometime spawn on the river
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2026-01-14
   Bugfixes:

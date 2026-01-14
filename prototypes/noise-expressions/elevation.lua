@@ -10,7 +10,7 @@ data:extend(
       type = "noise-expression",
       name = "virentis_elevation",
       --intended_property = "elevation",
-      expression = "lerp(virentis_elevation_common, lowland_elevation, lowland_mask) - virentis_select(virentis_river_ridge, 0, 0.002, 0.03, 0, 1) * 180 + town_elevation",
+      expression = "lerp(virentis_elevation_common, lowland_elevation, lowland_mask) - virentis_river * 180 + town_elevation",
       local_expressions =
       {
         aux_high_contrast = "clamp(10 * (virentis_aux - 0.5) + 0.5, 0, 1)",
@@ -22,6 +22,11 @@ data:extend(
         transition_adjusted_mud_noise = "mixed_mud_noise * (1 + 0.3 * aux_adjustment_peak) + 0.1 * aux_adjustment_peak",
         town_elevation = "virentis_select(virentis_town_raw, 0.1, 1, 0.1, 0, 1) * 120"
       }
+    },
+    {
+      type = "noise-expression",
+      name = "virentis_river",
+      expression = "virentis_select(virentis_river_ridge, 0, 0.002, 0.03, 0, 1)"
     },
     {
       type = "noise-expression",
