@@ -435,6 +435,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "fishing-pentapus"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "fishing-kraken"
+        },
       },
       prerequisites = { "nutrients-pulp", "fishing-dock" },
       research_trigger = {

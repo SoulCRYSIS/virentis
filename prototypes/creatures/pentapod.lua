@@ -88,21 +88,21 @@ if mods["behemoth-enemies"] == nil then
       space_age_sounds.wriggler_pentapod.big)
 
 
-    data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/enemies/" ..
+    data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/creatures/" ..
         k .. "-strafer.png"
-    data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/enemies/" ..
+    data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/creatures/" ..
         k .. "-stomper.png"
-    data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
-    data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/enemies/" ..
+    data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-stomper.png"
+    data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/creatures/" ..
         k .. "-wriggler.png"
-    data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-wriggler.png"
-    data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/enemies/" ..
+    data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-wriggler.png"
+    data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/creatures/" ..
         k .. "-wriggler-corpse.png"
-    data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-stomper.png"
-    data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/enemies/" .. k .. "-strafer.png"
-    data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
+    data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-stomper.png"
+    data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-strafer.png"
+    data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/creatures/" .. k ..
         "-stomper.png"
-    data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/enemies/" .. k ..
+    data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/creatures/" .. k ..
         "-strafer.png"
   end
 end

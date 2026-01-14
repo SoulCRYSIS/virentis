@@ -32,7 +32,7 @@ data:extend(
         height = 128,
         shift = { 0, -0.5 },
       }
-    }
+    },
   }
 )
 
