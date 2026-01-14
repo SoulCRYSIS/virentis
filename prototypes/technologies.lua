@@ -199,7 +199,7 @@ data:extend(
       prerequisites = { "advanced-baking" },
       research_trigger = {
         type = "mine-entity",
-        entity = "behemoth-stomper-shell",
+        entity = "virentis-behemoth-stomper-shell",
       },
     },
     {

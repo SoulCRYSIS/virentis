@@ -27,6 +27,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 8,
+      auto_recycle = false,
       enabled = false,
     },
   }

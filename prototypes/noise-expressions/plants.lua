@@ -62,7 +62,7 @@ data:extend(
     type = "noise-expression",
     name = "virentis_fertile_solid",
     expression = "2 * abs(multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 2000000, octaves = 2, input_scale = 1/16})\z
-                  * virentis_fertile_spots_coastal"
+                  * virentis_fertile_spots_coastal - virentis_river * 5"
   },
   {
     type = "noise-expression",

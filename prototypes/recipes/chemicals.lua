@@ -29,6 +29,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 4,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     },
     {
@@ -51,6 +52,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 16,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     },
     {
@@ -70,6 +72,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 4,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     },
     {
@@ -89,6 +92,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 4,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     },
     {
@@ -107,6 +111,7 @@ data:extend(
       },
       energy_required = 16,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     },
     {
@@ -166,6 +171,7 @@ data:extend(
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 32,
+      auto_recycle = false,
       enabled = false,
     },
     {
@@ -186,6 +192,7 @@ data:extend(
       crafting_machine_tint = recipe_tints.red,
       energy_required = 16,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     }
   }
