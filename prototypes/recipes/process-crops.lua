@@ -21,6 +21,7 @@ data:extend(
       energy_required = 2,
       result_is_always_fresh = true,
       allow_productivity = true,
+      auto_recycle = false,
       enabled = false,
     },
     {

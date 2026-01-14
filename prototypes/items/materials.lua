@@ -46,7 +46,6 @@ data:extend(
       },
       weight = 10 * kg,
       default_import_location = "virentis",
-      
     },
     {
       type = "item",
@@ -91,6 +90,7 @@ data:extend(
       default_import_location = "virentis",
       fuel_category = "chemical",
       fuel_value = "12MJ",
+      auto_recycle = false,
     },
     {
       type = "item",
