@@ -66,7 +66,6 @@ data:extend(
       stack_size = 200,
       weight = 5 * kg,
       default_import_location = "virentis",
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -77,7 +76,6 @@ data:extend(
       stack_size = 200,
       weight = 5 * kg,
       default_import_location = "virentis",
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -90,7 +88,6 @@ data:extend(
       default_import_location = "virentis",
       fuel_category = "chemical",
       fuel_value = "12MJ",
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -105,7 +102,6 @@ data:extend(
       fuel_category = "nutrients",
       fuel_value = "10MJ",
       default_import_location = "virentis",
-      auto_recycle = false,
     },
     {
       type = "item",

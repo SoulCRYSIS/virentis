@@ -41,6 +41,7 @@ require "prototypes.recipes.environment-data"
 require "prototypes.recipes.giving"
 require "prototypes.recipes.microorganism"
 require "prototypes.recipes.husbandry"
+require "prototypes.recipes.recycle"
 
 require "prototypes.tiles.tile-utils"
 require "prototypes.tiles.data-updates"
