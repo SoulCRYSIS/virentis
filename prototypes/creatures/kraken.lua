@@ -17,28 +17,30 @@ local head_width = 448
 local head_height = 448
 local tentacle_width = 512
 local tentacle_height = 512
+local tentacle_remain_width = 320
+local tentacle_remain_height = 320
 
 local resistances = {
   {
     type = "physical",
-    decrease = 30,
-    percent = 90,
+    decrease = 20,
+    percent = 80,
   },
   {
     type = "laser",
-    percent = 95,
+    percent = 90,
   },
   {
     type = "electric",
-    percent = 95,
+    percent = 90,
   },
   {
-    type = "poison",
-    percent = 100,
+    type = "impact",
+    percent = 90,
   },
   {
     type = "explosion",
-    percent = 50,
+    percent = 40,
   },
 }
 
@@ -122,11 +124,11 @@ for _, streamer in pairs(kraken_lightning.graphics_set.ground_streamers) do
   streamer.tint_as_overlay = true
 end
 kraken_lightning.graphics_set.shader_configuration = {
-  { color = { 1, 0.0, 0.6, 0.8 }, distortion = 0.20, thickness = 0.20, power = 0.25 },
-  { color = { 1, 0.0, 0.6, 1.0 }, distortion = 0.40, thickness = 1.00, power = 0.25 },
-  { color = { 1, 0.2, 0.6, 1.0 }, distortion = 0.55, thickness = 1.00, power = 0.25 },
-  { color = { 1, 0.7, 0.6, 0.6 }, distortion = 0.70, thickness = 0.75, power = 0.25 },
-  { color = { 1, 0.4, 0.2, 0.3 }, distortion = 1.00, thickness = 0.50, power = 0.10 },
+  { color = { 1, 0.0, 0.6, 0.8 }, distortion = 0.20,  thickness = 0.20, power = 0.25 },
+  { color = { 1, 0.0, 0.6, 1.0 }, distortion = 0.40,  thickness = 1.00, power = 0.25 },
+  { color = { 1, 0.2, 0.6, 1.0 }, distortion = 0.55,  thickness = 1.00, power = 0.25 },
+  { color = { 1, 0.7, 0.6, 0.6 }, distortion = 0.70,  thickness = 0.75, power = 0.25 },
+  { color = { 1, 0.4, 0.2, 0.3 }, distortion = 1.00,  thickness = 0.50, power = 0.10 },
   { color = { 1, 0.0, 0.2, 0.0 }, distortion = 20.00, thickness = 0.50, power = 0.01 }
 }
 
@@ -139,18 +141,80 @@ data:extend({
     icon = "__virentis__/graphics/icons/creatures/kraken.png",
     subgroup = "virentis-creatures",
     order = "c",
-    collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
-    selection_box = { { -0.25, -0.25 }, { 0.25, 0.5 } },
+    collision_box = { { -0.5 * scale, -0.5 * scale }, { 0.5 * scale, 0.5 * scale } },
+    selection_box = { { -1 * scale, -1 * scale }, { 1 * scale, 1 * scale } },
     collision_mask = { layers = { object = true, ground_tile = true } }, -- object not player so can step in water
     flags = { "not-repairable", "placeable-off-grid", "not-on-map", "placeable-neutral" },
-    pictures = {
+    max_health = 10000,
+    healing_per_tick = 10,
+    resistances = {
       {
-        filename = "__virentis__/graphics/entities/creatures/kraken/tentacle.png",
-        width = tentacle_width,
-        height = tentacle_height,
-        scale = 0.5 * scale,
+        type = "physical",
+        percent = 100,
+      },
+      {
+        type = "laser",
+        percent = 100,
+      },
+      {
+        type = "electric",
+        percent = 100,
+      },
+      {
+        type = "poison",
+        percent = 100,
+      },
+      {
+        type = "explosion",
+        percent = 100,
+      },
+      {
+        type = "fire",
+        percent = 100,
+      },
+      {
+        type = "acid",
+        percent = 100,
+      },
+      {
+        type = "impact",
+        percent = 100,
+      },
+    },
+    pictures = {
+      layers = {
+        {
+          filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-remain.png",
+          width = tentacle_remain_width,
+          height = tentacle_remain_height,
+          scale = 0.5 * scale,
+          variation_count = 8,
+          line_length = 4,
+          lines_per_file = 2,
+        },
+        {
+          filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-remain-shadow.png",
+          width = tentacle_remain_width,
+          height = tentacle_remain_height,
+          scale = 0.5 * scale,
+          variation_count = 8,
+          line_length = 4,
+          lines_per_file = 2,
+          draw_as_shadow = true,
+        }
       }
-    }
+    },
+    water_reflection = {
+      pictures = {
+        filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-remain-water-reflection.png",
+        width = tentacle_remain_width,
+        height = tentacle_remain_height,
+        scale = 0.5 * scale,
+        variation_count = 8,
+        line_length = 4,
+        lines_per_file = 2,
+      },
+    },
   },
   ---@type data.SpiderLegPrototype
   {
@@ -184,16 +248,6 @@ data:extend({
       foot = {
         layers = {
           {
-            filename = "__virentis__/graphics/entities/creatures/kraken/tentacle.png",
-            width = tentacle_width,
-            height = tentacle_height,
-            direction_count = 64,
-            line_length = 8,
-            lines_per_file = 8,
-            scale = 0.5 * scale,
-            usage = "enemy",
-          },
-          {
             filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-shadow.png",
             width = tentacle_width,
             height = tentacle_height,
@@ -202,6 +256,16 @@ data:extend({
             lines_per_file = 8,
             scale = 0.5 * scale,
             draw_as_shadow = true,
+            usage = "enemy",
+          },
+          {
+            filename = "__virentis__/graphics/entities/creatures/kraken/tentacle.png",
+            width = tentacle_width,
+            height = tentacle_height,
+            direction_count = 64,
+            line_length = 8,
+            lines_per_file = 8,
+            scale = 0.5 * scale,
             usage = "enemy",
           },
           {
@@ -249,6 +313,7 @@ data:extend({
     repeat_count = 7,
     action = {
       type = "direct",
+      force = "enemy",
       action_delivery =
       {
         type = "instant",
@@ -277,7 +342,6 @@ data:extend({
                 target_effects =
                 {
                   type = "damage",
-                  force = "enemy",
                   damage = { amount = 50, type = "electric" }
                 },
               }
@@ -307,7 +371,7 @@ data:extend({
     torso_bob_speed = 0,
     collision_mask = { layers = { object = true } },
     flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable" },
-    max_health = 30000,
+    max_health = 50000,
     impact_category = "organic",
     resistances = resistances,
     healing_per_tick = 5,
@@ -316,17 +380,15 @@ data:extend({
     max_pursue_distance = 80,
     attack_parameters = {
       type = "beam",
-      cooldown = 180,
-      range = 30,
-      warmup = 60,
-      source_direction_count = 1,
-      source_offset = { 0, 3 },
+      cooldown = 240,
+      range = 15,
       range_mode = "bounding-box-to-bounding-box",
       ammo_category = "tesla",
       ammo_type = {
         target_type = "position",
         action = {
           type = "direct",
+          force = "enemy",
           action_delivery = {
             type = "delayed",
             delayed_trigger = "kraken-attack-lightning-area",
@@ -392,19 +454,18 @@ data:extend({
             usage = "enemy",
             counterclockwise = true,
           },
-          {
-            filename = "__virentis__/graphics/entities/creatures/kraken/head-shadow.png",
-            width = head_width,
-            height = head_height,
-            direction_count = 64,
-            line_length = 8,
-            lines_per_file = 8,
-            scale = 0.5 * scale,
-            usage = "enemy",
-            counterclockwise = true,
-            draw_as_shadow = true,
-          }
         }
+      },
+      shadow_animation = {
+        filename = "__virentis__/graphics/entities/creatures/kraken/head-shadow.png",
+        width = head_width,
+        height = head_height,
+        direction_count = 64,
+        line_length = 8,
+        lines_per_file = 8,
+        scale = 0.5 * scale,
+        usage = "enemy",
+        counterclockwise = true,
       },
       water_reflection = {
         rotate = true,
