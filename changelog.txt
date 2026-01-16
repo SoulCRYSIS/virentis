@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2026-01-17
+  Bugfixes:
+    - Remove auto-recycle for cooking and trading recipes
+    - Make foundation placeable on virentis water
+---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 2026-01-16
   Balancing:

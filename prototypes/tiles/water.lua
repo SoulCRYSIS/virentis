@@ -400,7 +400,7 @@ data:extend({
     walking_speed_modifier = 1,
     vehicle_friction_modifier = 1,
     trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
-    default_cover_tile = "landfill",
+    default_cover_tile = "foundation",
     fluid = "water",
     absorptions_per_second = virentis_tile.pollution_absorption.water,
   }

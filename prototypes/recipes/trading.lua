@@ -21,7 +21,6 @@ data:extend(
       energy_required = 1,
       enabled = false,
       allow_productivity = true,
-      auto_recycle = false,
     },
     {
       type = "recipe",
@@ -40,7 +39,6 @@ data:extend(
       energy_required = 1,
       enabled = false,
       allow_productivity = true,
-      auto_recycle = false,
     },
     {
       type = "recipe",
@@ -59,7 +57,6 @@ data:extend(
       energy_required = 2,
       enabled = false,
       allow_productivity = true,
-      auto_recycle = false,
     },
     {
       type = "recipe",
@@ -79,7 +76,6 @@ data:extend(
       energy_required = 4,
       enabled = false,
       allow_productivity = true,
-      auto_recycle = false,
     },
     {
       type = "recipe",
@@ -97,7 +93,6 @@ data:extend(
       energy_required = 2,
       enabled = false,
       allow_productivity = true,
-      auto_recycle = false,
     },
     {
       type = "recipe",
@@ -114,7 +109,6 @@ data:extend(
       },
       energy_required = 2,
       enabled = false,
-      auto_recycle = false,
     },
   }
 )

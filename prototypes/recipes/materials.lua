@@ -122,7 +122,6 @@ data:extend(
       crafting_machine_tint = recipe_tints.gray,
       energy_required = 16,
       allow_productivity = true,
-      auto_recycle = false,
       enabled = false,
     },
     {

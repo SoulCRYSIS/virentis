@@ -20,6 +20,7 @@ data:extend(
       energy_required = 32,
       allow_productivity = true,
       enabled = false,
+      auto_recycle = false,
     },
   }
 )

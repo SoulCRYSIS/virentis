@@ -93,7 +93,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -105,7 +104,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
       fuel_category = "chemical",
       fuel_value = "5MJ",
     },
@@ -119,7 +117,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
       fuel_category = "chemical",
       fuel_value = "5MJ",
     },
@@ -133,7 +130,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -145,7 +141,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -157,7 +152,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -169,7 +163,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -181,7 +174,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -193,7 +185,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -205,7 +196,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     ---@type data.CapsulePrototype
     {
@@ -219,7 +209,6 @@ data:extend(
       stack_size = 50,
       weight = 5 * kg,
       capsule_action = eat_action("berry-bliss-cookie-speed-sticker"),
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -231,7 +220,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "capsule",
@@ -244,7 +232,6 @@ data:extend(
       stack_size = 50,
       weight = 5 * kg,
       capsule_action = throw_grenade_action("mudland-medley-grenade"),
-      auto_recycle = false,
     },
     {
       type = "item",
@@ -256,7 +243,6 @@ data:extend(
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
-      auto_recycle = false,
     },
     {
       type = "capsule",
@@ -269,6 +255,5 @@ data:extend(
       stack_size = 50,
       weight = 5 * kg,
       capsule_action = eat_action("pentapod-souffle-omelette-speed-sticker"),
-      auto_recycle = false,
     },
   })

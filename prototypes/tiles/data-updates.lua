@@ -13,3 +13,12 @@ local landfillable_tiles = {
 for _, tile in pairs(landfillable_tiles) do
   table.insert(data.raw.item.landfill.place_as_tile.tile_condition, tile)
 end
+
+local foundationable_tiles = {
+  "virentis-deep-water",
+  table.unpack(landfillable_tiles),
+}
+
+for _, tile in pairs(foundationable_tiles) do
+  table.insert(data.raw.item.foundation.place_as_tile.tile_condition, tile)
+end
