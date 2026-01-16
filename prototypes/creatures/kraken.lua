@@ -2,7 +2,7 @@ local space_age_sounds = require("__space-age__.prototypes.entity.sounds")
 local sounds = space_age_sounds.stomper_pentapod.big
 
 local scale = 2
-local speed = 0.2
+local speed = 0.5
 local leg_orientations = { 0.90, 0.70, 0.50, 0.30, 0.10 }
 local leg_ground_position = { 0, -4.5 * scale } -- foot natural position
 local leg_mount_position = { 0, -2 * scale }    -- hip
@@ -10,7 +10,7 @@ local hip_flexibility = 0.1
 local knee_distance_factor = 0.3
 local knee_height = 0  -- tiles, in screen space, above the straight line between the leg's mount point and leg position
 local ankle_height = 0 -- tiles, in screen space, above the ground, the point at which the leg connects to the foot
-local stomp_damage = 30
+local stomp_damage = 300
 local stomp_area_radius = 3 * scale
 
 local head_width = 448
@@ -112,7 +112,12 @@ fishing_utils.create_fishing_content({
   },
 })
 
+local kraken_lightning = table.deepcopy(data.raw.lightning["lightning"])
+kraken_lightning.name = "kraken-lightning"
+kraken_lightning.damage = 100
+
 data:extend({
+  kraken_lightning,
   ---@type data.SimpleEntityPrototype
   {
     type = "simple-entity",
@@ -225,26 +230,53 @@ data:extend({
   {
     type = "delayed-active-trigger",
     name = "kraken-attack-lightning-area",
-    repeat_delay = 30,
-    repeat_count = 5,
+    delay = 1,
+    repeat_delay = 10,
+    repeat_count = 7,
     action = {
       type = "direct",
-      action_delivery = {
-        {
-          type = "instant",
-          target_effects = {
+      action_delivery =
+      {
+        type = "instant",
+        target_effects = {
+          {
+            type = "invoke-tile-trigger",
+            repeat_count = 1,
+          },
+          {
             type = "create-entity",
-            entity_name = "lightning",
+            entity_name = "behemoth-wriggler-pentapod-premature",
+            check_buildability = true,
+            find_non_colliding_position = true,
+            repeat_count = 2,
+            offset_deviation = { { -5.0, -5.0 }, { 5.0, 5.0 } },
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              radius = 7,
+              force = "enemy",
+              action_delivery =
+              {
+                type = "instant",
+                target_effects =
+                {
+                  type = "damage",
+                  damage = { amount = 50, type = "electric" }
+                },
+              }
+            }
+          },
+          {
+            type = "create-entity",
+            entity_name = "kraken-lightning",
+            as_enemy = true,
             offset_deviation = { { -10.0, -10.0 }, { 10.0, 10.0 } },
-          }
-        },
-        {
-          type = "projectile",
-          projectile = "behemoth-strafer-projectile",
-          starting_speed = 0.2,
-          max_range = 10 * scale
+          },
         }
-      }
+      },
     },
   },
   ---@type data.SpiderUnitPrototype
@@ -259,7 +291,7 @@ data:extend({
     selection_box = { { -2 * scale, -2 * scale }, { 2 * scale, 2 * scale } },
     drawing_box_vertical_extension = 0,
     torso_bob_speed = 0,
-    collision_mask = { layers = { object = true, ground_tile = true } },
+    collision_mask = { layers = { object = true } },
     flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable" },
     max_health = 30000,
     impact_category = "organic",
@@ -267,95 +299,28 @@ data:extend({
     healing_per_tick = 5,
     distraction_cooldown = 300,
     min_pursue_time = 300,
-    max_pursue_distance = 50,
+    max_pursue_distance = 100,
     attack_parameters = {
       type = "beam",
-      cooldown = 300,
-      range = 10 * scale,
-      range_mode = "center-to-bounding-box",
+      cooldown = 180,
+      range = 30,
+      warmup = 60,
       source_direction_count = 1,
-      source_offset = { 0, -1 },
+      source_offset = { 0, 3 },
+      range_mode = "bounding-box-to-bounding-box",
       ammo_category = "tesla",
-      ammo_type =
-      {
-        action =
-        {
+      ammo_type = {
+        target_type = "position",
+        action = {
           type = "direct",
-          action_delivery =
-          {
-            type = "instant",
-            target_effects =
-            {
-              -- Chain effect must go first in case the beam kills the target
-              {
-                type = "nested-result",
-                action =
-                {
-                  type = "direct",
-                  action_delivery =
-                  {
-                    type = "chain",
-                    chain = "town-tesla-turret-chain",
-                  }
-                }
-              },
-              {
-                type = "nested-result",
-                action =
-                {
-                  type = "direct",
-                  action_delivery =
-                  {
-                    type = "beam",
-                    beam = "town-tesla-turret-beam-start",
-                    max_length = 40,
-                    duration = 30,
-                    add_to_shooter = false,
-                    destroy_with_source_or_target = false,
-                    source_offset = { 0, -2.6 }
-                  }
-                }
-              }
-            }
+          action_delivery = {
+            type = "delayed",
+            delayed_trigger = "kraken-attack-lightning-area",
           }
         }
       }
     },
-    -- {
-    --   type = "projectile",
-    --   ammo_category = "biological",
-    --   cooldown = 60,
-    --   range = 10 * scale,
-    --   use_shooter_direction = false,
-    --   sound = space_age_sounds.strafer_projectile,
-    --   ammo_type =
-    --   {
-    --     action =
-    --     {
-    --       type = "direct",
-    --       action_delivery =
-    --       {
-    --         type = "projectile",
-    --         projectile = "behemoth-strafer-projectile",
-    --         starting_speed = 0.2,
-    --         max_range = 10 * scale
-    --       }
-    --     }
-    --   },
-    -- },
-    -- spitter_behemoth_attack_parameters(
-    --   {
-    --     acid_stream_name = "big-acid-stream-stomper",
-    --     range = 10 * scale, -- similar to leg reach for stomp + radius
-    --     min_attack_distance = 4 * scale,
-    --     cooldown = 20,
-    --     cooldown_deviation = 0.15,
-    --     damage_modifier = damage,
-    --     scale = 1.2 * scale, -- scale_spitter_behemoth
-    --     roarvolume = 0.8,
-    --     range_mode = "bounding-box-to-bounding-box"
-    --   }),
-    vision_distance = 25 * scale,
+    vision_distance = 80,
     ai_settings =
     {
       join_attacks = false,
@@ -385,7 +350,7 @@ data:extend({
     working_sound = sounds.working_sound,
     warcry = sounds.warcry,
     height = 0,
-    torso_rotation_speed = 0.01,
+    torso_rotation_speed = 0.02,
     graphics_set = {
       render_layer = "above-tiles",
       animation = {
