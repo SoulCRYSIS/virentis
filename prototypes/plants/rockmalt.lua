@@ -21,12 +21,12 @@ data:extend({
         {
           type = "item",
           name = "rockmalt-fruit",
-          amount = 2,
+          amount = 1,
         },
         {
           type = "item",
           name = "herb",
-          amount = 10,
+          amount = 5,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
@@ -44,7 +44,7 @@ data:extend({
       tile_restriction = { "rockmalt-fertile-soil" }
     },
     variations = virentis_plant.tree_variations("rockmalt", 6, 3, 0.8, 360, 256, false, util.by_pixel(32, -25)),
-    colors = virentis_plant.grey_tints(),
+    colors = virentis_plant.extreme_minor_tints(),
     ambient_sounds =
     {
       sound =

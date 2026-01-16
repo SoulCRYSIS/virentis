@@ -36,7 +36,7 @@ virentis_plant.sound_variations = function(filename_string, variations, volume_p
   return result
 end
 
-virentis_plant.default_emission = { spores = 10 }
+virentis_plant.default_emission = { spores = 20 }
 virentis_plant.default_flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" }
 virentis_plant.leaf_sound = sounds.tree_leaves
 virentis_plant.spoilage_sound = virentis_plant.sound_variations("__space-age__/sound/mining/spoilage", 3, 0)
@@ -642,6 +642,18 @@ virentis_plant.very_minor_tints = function() -- Only for leaves where very littl
     { r = 240, g = 240, b = 255 },
     { r = 255, g = 240, b = 240 },
     { r = 240, g = 255, b = 240 },
+  }
+end
+
+virentis_plant.extreme_minor_tints = function() -- Only for leaves where very little of the colour is baked in.
+  return {
+    { r = 255, g = 255, b = 255 },
+    { r = 250, g = 255, b = 255 },
+    { r = 255, g = 250, b = 255 },
+    { r = 255, g = 255, b = 250 },
+    { r = 252, g = 252, b = 255 },
+    { r = 255, g = 252, b = 252 },
+    { r = 252, g = 255, b = 252 },
   }
 end
 

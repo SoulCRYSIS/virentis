@@ -114,5 +114,6 @@ data:extend({
     close_sound = sounds.machine_close,
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
+    emissions_per_second = { spores = 10 },
   },
 })

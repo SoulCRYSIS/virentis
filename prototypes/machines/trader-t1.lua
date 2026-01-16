@@ -77,5 +77,6 @@ data:extend({
       probability_expression = "2 * max(virentis_town_rural, 0.1 * virentis_town_edge) * grid_random_shift(14, 10, 993)",
     },
     map_color = { 230, 230, 255},
+    emissions_per_second = { spores = 4 },
   },
 })

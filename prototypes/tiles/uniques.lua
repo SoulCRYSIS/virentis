@@ -49,7 +49,8 @@ data:extend(
       landing_steps_sound = tile_sounds.landing.semi_wet,
       build_sound = base_tile_sounds.building.landfill,
       map_color = { 185, 166, 5 },
-      scorch_mark_color = { r = 0.329, g = 0.242 * 2, b = 0.177, a = 1.000 }
+      scorch_mark_color = { r = 0.329, g = 0.242 * 2, b = 0.177, a = 1.000 },
+      absorptions_per_second = virentis_tile.pollution_absorption.water,
     },
     -- highland-yellow-rock
     {
@@ -137,7 +138,8 @@ data:extend(
       landing_steps_sound = tile_sounds.landing.oil,
       driving_sound = base_tile_sounds.driving.oil,
       map_color = { 185, 5, 166 },
-      scorch_mark_color = { r = 0.329, g = 0.242 * 2, b = 0.177, a = 1.000 }
+      scorch_mark_color = { r = 0.329, g = 0.242 * 2, b = 0.177, a = 1.000 },
+      absorptions_per_second = virentis_tile.pollution_absorption.water,
     },
     {
       type = "tile",
@@ -169,6 +171,7 @@ data:extend(
       scorch_mark_color = { r = 0.3, g = 0.3, b = 0.3, a = 1.000 },
       trigger_effect = tile_trigger_effects.sand_trigger_effect(),
       map_color = { 31, 7, 13 },
+      absorptions_per_second = virentis_tile.pollution_absorption.water,
     },
     {
       type = "tile",
@@ -190,7 +193,8 @@ data:extend(
       landing_steps_sound = tile_sounds.landing.concrete,
       map_color = { 100, 45, 45 },
       scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
-      trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
+      trigger_effect = tile_trigger_effects.dirt_2_trigger_effect(),
+      absorptions_per_second = virentis_tile.pollution_absorption.land,
     },
     {
       type = "tile",
@@ -213,6 +217,7 @@ data:extend(
       landing_steps_sound = tile_sounds.landing.concrete,
       map_color = { 100, 45, 45 },
       scorch_mark_color = { r = 0.373, g = 0.307, b = 0.243, a = 1.000 },
-      trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
+      trigger_effect = tile_trigger_effects.dirt_2_trigger_effect(),
+      absorptions_per_second = virentis_tile.pollution_absorption.land,
     },
   })
