@@ -1,3 +1,7 @@
+local flamethrower = data.raw["fluid-turret"]["flamethrower-turret"]
+table.insert(flamethrower.attack_parameters.fluids, { type = "methanol", damage_modifier = 1.5 })
+table.insert(flamethrower.attack_parameters.fluids, { type = "vegetable-oil", damage_modifier = 1.2 })
+
 data:extend(
   ---@type data.FluidPrototype[]
   {

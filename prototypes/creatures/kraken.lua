@@ -10,7 +10,7 @@ local hip_flexibility = 0.1
 local knee_distance_factor = 0.3
 local knee_height = 0  -- tiles, in screen space, above the straight line between the leg's mount point and leg position
 local ankle_height = 0 -- tiles, in screen space, above the ground, the point at which the leg connects to the foot
-local stomp_damage = 300
+local stomp_damage = 200
 local stomp_area_radius = 3 * scale
 
 local head_width = 448
@@ -22,7 +22,7 @@ local resistances = {
   {
     type = "physical",
     decrease = 30,
-    percent = 70,
+    percent = 90,
   },
   {
     type = "laser",
@@ -44,6 +44,49 @@ local resistances = {
 
 local walking_group = { 1, 3, 5, 2, 4 }
 local legs = {}
+local walk_effects = {
+  { type = "invoke-tile-trigger" },
+  {
+    type = "create-entity",
+    entity_name = "kraken-lightning",
+    offset_deviation = { { -10.0, -10.0 }, { 10.0, 10.0 } },
+  },
+  {
+    type = "create-trivial-smoke",
+    smoke_name = "stomper-stomp",
+    repeat_count = 1,
+    offsets = { { 0, 0.5 } },
+    offset_deviation = { { -0.0, -0.0 }, { 0.0, 0.0 } },
+    speed = { 0, 0 },
+    initial_height = 0.0,
+    speed_from_center = 0.000,
+    speed_from_center_deviation = 0.000,
+  },
+  {
+    type = "play-sound",
+    sound = sounds.stomp,
+  },
+  {
+    type = "nested-result",
+    action =
+    {
+      type = "area",
+      radius = stomp_area_radius,
+      force = "enemy",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "damage",
+            damage = { amount = stomp_damage, type = "impact" }
+          },
+        }
+      }
+    }
+  }
+}
 for i = 1, 5 do
   table.insert(
     legs,
@@ -52,50 +95,8 @@ for i = 1, 5 do
       mount_position = util.rotate_position(leg_mount_position, leg_orientations[i]),
       ground_position = util.rotate_position(leg_ground_position, leg_orientations[i]),
       walking_group = walking_group[i],
-      leg_hit_the_ground_trigger = get_leg_hit_the_ground_trigger(),
-      leg_hit_the_ground_when_attacking_trigger = {
-        { type = "invoke-tile-trigger" },
-        {
-          type = "create-entity",
-          entity_name = "lightning",
-          offset_deviation = { { -10.0, -10.0 }, { 10.0, 10.0 } },
-        },
-        {
-          type = "create-trivial-smoke",
-          smoke_name = "stomper-stomp",
-          repeat_count = 1,
-          offsets = { { 0, 0.5 } },
-          offset_deviation = { { -0.0, -0.0 }, { 0.0, 0.0 } },
-          speed = { 0, 0 },
-          initial_height = 0.0,
-          speed_from_center = 0.000,
-          speed_from_center_deviation = 0.000,
-        },
-        {
-          type = "play-sound",
-          sound = sounds.stomp,
-        },
-        {
-          type = "nested-result",
-          action =
-          {
-            type = "area",
-            radius = stomp_area_radius,
-            force = "enemy",
-            action_delivery =
-            {
-              type = "instant",
-              target_effects =
-              {
-                {
-                  type = "damage",
-                  damage = { amount = stomp_damage, type = "impact" }
-                },
-              }
-            }
-          }
-        }
-      },
+      leg_hit_the_ground_trigger = walk_effects,
+      leg_hit_the_ground_when_attacking_trigger = walk_effects,
     }
   )
 end
@@ -115,6 +116,19 @@ fishing_utils.create_fishing_content({
 local kraken_lightning = table.deepcopy(data.raw.lightning["lightning"])
 kraken_lightning.name = "kraken-lightning"
 kraken_lightning.damage = 100
+kraken_lightning.graphics_set.light = { intensity = 5.0, size = 50, color = { 1, 0.1, 0.15 } }
+for _, streamer in pairs(kraken_lightning.graphics_set.ground_streamers) do
+  streamer.tint = { 1, 0.1, 0.1 }
+  streamer.tint_as_overlay = true
+end
+kraken_lightning.graphics_set.shader_configuration = {
+  { color = { 1, 0.0, 0.6, 0.8 }, distortion = 0.20, thickness = 0.20, power = 0.25 },
+  { color = { 1, 0.0, 0.6, 1.0 }, distortion = 0.40, thickness = 1.00, power = 0.25 },
+  { color = { 1, 0.2, 0.6, 1.0 }, distortion = 0.55, thickness = 1.00, power = 0.25 },
+  { color = { 1, 0.7, 0.6, 0.6 }, distortion = 0.70, thickness = 0.75, power = 0.25 },
+  { color = { 1, 0.4, 0.2, 0.3 }, distortion = 1.00, thickness = 0.50, power = 0.10 },
+  { color = { 1, 0.0, 0.2, 0.0 }, distortion = 20.00, thickness = 0.50, power = 0.01 }
+}
 
 data:extend({
   kraken_lightning,
@@ -248,7 +262,6 @@ data:extend({
             entity_name = "behemoth-wriggler-pentapod-premature",
             check_buildability = true,
             find_non_colliding_position = true,
-            repeat_count = 2,
             offset_deviation = { { -5.0, -5.0 }, { 5.0, 5.0 } },
           },
           {
@@ -264,6 +277,7 @@ data:extend({
                 target_effects =
                 {
                   type = "damage",
+                  force = "enemy",
                   damage = { amount = 50, type = "electric" }
                 },
               }
@@ -299,7 +313,7 @@ data:extend({
     healing_per_tick = 5,
     distraction_cooldown = 300,
     min_pursue_time = 300,
-    max_pursue_distance = 100,
+    max_pursue_distance = 80,
     attack_parameters = {
       type = "beam",
       cooldown = 180,
@@ -326,7 +340,6 @@ data:extend({
       join_attacks = false,
       allow_try_return_to_spawner = false
     },
-    -- corpse = "kraken-corpse",
     dying_explosion = "big-stomper-pentapod-die",
     -- dying_trigger_effect =
     -- {
@@ -350,7 +363,7 @@ data:extend({
     working_sound = sounds.working_sound,
     warcry = sounds.warcry,
     height = 0,
-    torso_rotation_speed = 0.02,
+    torso_rotation_speed = 0.005,
     graphics_set = {
       render_layer = "above-tiles",
       animation = {
@@ -410,7 +423,7 @@ data:extend({
     },
     spider_engine =
     {
-      walking_group_overlap = 0.3,
+      walking_group_overlap = 0.5,
       legs = legs,
     }
   },
