@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2026-01-16
+  Balancing:
+    - Increase spores emission rate for plants and machines by a lot
+    - Reduce crops result amount to encourage expansion
+    - Increase crafting time of some recipes
+  Bugfixes:
+    - Virentis biolab can now be placed by blueprint
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2026-01-14
   Bugfixes:

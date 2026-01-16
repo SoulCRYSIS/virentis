@@ -50,7 +50,7 @@ data:extend(
         { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 16,
+      energy_required = 32,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -130,7 +130,7 @@ data:extend(
         { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 8,
+      energy_required = 16,
       enabled = false,
       allow_productivity = true,
     },

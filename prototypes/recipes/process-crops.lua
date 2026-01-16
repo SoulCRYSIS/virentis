@@ -36,7 +36,7 @@ data:extend(
       },
       results = {
         { type = "item", name = "rockmalt-bulb",  amount = 10 },
-        { type = "item", name = "rockmalt-scale", amount = 1 }
+        { type = "item", name = "rockmalt-scale", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
       energy_required = 32,
@@ -55,7 +55,7 @@ data:extend(
         { type = "item", name = "mangroove-fruit", amount = 2 }
       },
       results = {
-        { type = "item", name = "mangroove-seed",   amount = 1, probability = 0.1 },
+        { type = "item", name = "mangroove-seed",   amount = 1, probability = 0.2 },
         { type = "item", name = "mangroove-mashed", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
@@ -73,7 +73,7 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/crops/nyxoleum-sapling.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
-        { type = "fluid", name = "vegetable-oil", amount = 10 }
+        { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       results = {
         { type = "item", name = "nyxoleum-sapling", amount = 1 }

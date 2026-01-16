@@ -1,6 +1,7 @@
 local biolab = table.deepcopy(data.raw["lab"]["biolab"])
 biolab.name = "virentis-biolab"
 biolab.inputs = { "mudland-research-data" }
+biolab.placeable_by = { item = "biolab", count = 1 }
 biolab.energy_usage = "50MW"
 biolab.energy_source = {
   type = "burner",
@@ -9,6 +10,7 @@ biolab.energy_source = {
   burner_usage = "nutrients",
   fuel_inventory_size = 1,
 }
+biolab.science_pack_drain_rate_percent = 100
 biolab.energy_usage = "5MW"
 biolab.surface_conditions = {
   {
