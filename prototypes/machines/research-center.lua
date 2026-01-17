@@ -42,6 +42,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
+      emissions_per_minute = { spores = 30 },
     },
     crafting_categories = { "environment-research-data" },
     crafting_speed = 4,
@@ -114,6 +115,5 @@ data:extend({
     close_sound = sounds.machine_close,
     impact_category = "metal",
     working_sound = virentis.default_working_sound,
-    emissions_per_second = { spores = 10 },
   },
 })

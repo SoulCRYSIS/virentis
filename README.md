@@ -55,9 +55,9 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 
 ## Main challenges
 - Fertile soils and trader can't recreate or move, so you need to expand for more resource, forcing enormous usage of train. You may want to design your train system carefully, or you may regrets later.
+- Spores can be produce a lot by cooking machines, so you should prepare defense or be efficiency
 - While enemies here is tougher with Behemoth tier, and higher evolution rate.
 - Everything here is base on foods which are spoilable, if you hate Gleba, this mod is not for you.
-- The default settings is pretty challenging, about average of one town every ~500-1000 block, that mean you have to clear ~10-20 enemy bases
 
 ## Resource importing
 - Biochamber is a must to start here

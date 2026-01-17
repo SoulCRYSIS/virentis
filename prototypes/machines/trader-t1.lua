@@ -18,7 +18,8 @@ data:extend({
     circuit_connector = virentis.default_machine_circuit_connector,
     energy_usage = "10kW",
     energy_source = {
-      type = "void"
+      type = "void",
+      emissions_per_minute = { spores = 15 },
     },
     crafting_categories = { "trading-t1" },
     crafting_speed = 1,
@@ -77,6 +78,5 @@ data:extend({
       probability_expression = "2 * max(virentis_town_rural, 0.1 * virentis_town_edge) * grid_random_shift(14, 10, 993)",
     },
     map_color = { 230, 230, 255},
-    emissions_per_second = { spores = 4 },
   },
 })
