@@ -9,6 +9,7 @@
   "dependencies": [
     "space-age >= 2.0",
     "aai-vehicles-ironclad",
+    "quality-seeds",
     "? fishing-dock",
     "? behemoth-enemies"
   ]

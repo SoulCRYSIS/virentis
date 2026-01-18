@@ -45,13 +45,11 @@ virentis.pass_middle_fluid_box = {
     production_type = "input",
     volume = 100,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } } },
-    secondary_draw_orders = { north = -1 }
   },
   {
     production_type = "input",
     volume = 100,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } } },
-    secondary_draw_orders = { north = -1 }
   }
 }
 

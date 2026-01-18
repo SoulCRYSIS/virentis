@@ -17,7 +17,7 @@ data:extend(
         { type = "item", name = "herb",             amount = 1 },
       },
       results = {
-        { type = "item", name = "kheast", amount = 2 }
+        { type = "item", name = "kheast", amount = 2, ignored_by_stats = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 16,

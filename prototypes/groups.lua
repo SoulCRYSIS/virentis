@@ -71,13 +71,19 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-research",
     group = "virentis",
-    order = "h"
+    order = "i"
   },
   {
     type = "item-subgroup",
     name = "virentis-fluids",
     group = "virentis",
     order = "f"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-cultivation",
+    group = "virentis",
+    order = "h"
   },
   {
     type = "item-subgroup",
