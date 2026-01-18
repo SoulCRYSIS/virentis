@@ -20,7 +20,7 @@ data:extend({
         {
           type = "item",
           name = "nyxoleum-seed",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,

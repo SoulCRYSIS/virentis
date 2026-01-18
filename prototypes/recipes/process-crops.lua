@@ -35,10 +35,10 @@ data:extend(
       },
       results = {
         { type = "item", name = "rockmalt-bulb",  amount = 10 },
-        { type = "item", name = "rockmalt-scale", amount = 2 }
+        { type = "item", name = "rockmalt-scale", amount = 1, probability = 0.3 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 32,
+      energy_required = 16,
       result_is_always_fresh = false,
       allow_productivity = true,
       enabled = false,
@@ -54,11 +54,11 @@ data:extend(
         { type = "item", name = "mangroove-fruit", amount = 2 }
       },
       results = {
-        { type = "item", name = "mangroove-seed",   amount = 1, probability = 0.2 },
+        { type = "item", name = "mangroove-seed",   amount = 1, probability = 0.04 },
         { type = "item", name = "mangroove-mashed", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 8,
+      energy_required = 4,
       result_is_always_fresh = false,
       allow_productivity = true,
       enabled = false,
@@ -78,7 +78,7 @@ data:extend(
         { type = "item", name = "nyxoleum-sapling", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.black,
-      energy_required = 16,
+      energy_required = 32,
       result_is_always_fresh = true,
       enabled = false,
     },

@@ -20,12 +20,12 @@ data:extend({
         {
           type = "item",
           name = "mangroove-fruit",
-          amount = 10,
+          amount = 50,
         },
         {
           type = "item",
           name = "living-wood",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,

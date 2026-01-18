@@ -51,8 +51,8 @@ data:extend(
       order = "a",
       icons = give_icon("__virentis__/graphics/icons/recipes/housewarming-gift.png"),
       ingredients = {
-        { type = "item", name = "sweet-chili-sauce", amount = 30 },
-        { type = "item", name = "wild-taco",         amount = 30 }
+        { type = "item", name = "sweet-chili-sauce", amount = 50 },
+        { type = "item", name = "wild-taco",         amount = 50 }
       },
       results = {
         { type = "item", name = "eternal-lantern", amount = 1 }

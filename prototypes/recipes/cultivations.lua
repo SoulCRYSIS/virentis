@@ -11,7 +11,7 @@ data:extend(
       order = "aa",
       icon = "__virentis__/graphics/icons/items/cultivations/virentis-fertilizer.png",
       ingredients = {
-        { type = "item",  name = "kheast",         amount = 1 },
+        { type = "item",  name = "kheast",         amount = 2 },
         { type = "item",  name = "pentapod-egg",   amount = 1 },
         { type = "fluid", name = "nutrients-pulp", amount = 10 },
       },

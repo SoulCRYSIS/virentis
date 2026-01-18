@@ -22,12 +22,12 @@ data:extend({
         {
           type = "item",
           name = "redbloom-fruit",
-          amount = 10,
+          amount = 50,
         },
         {
           type = "item",
           name = "herb",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,

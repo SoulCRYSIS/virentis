@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 2026-01-19
+  Balancing:
+    - Rework crops output, make robot less viable
+  Features:
+    - Fully integrate quality-seeds mod
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2026-01-17
   Balancing:

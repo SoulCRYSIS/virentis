@@ -86,9 +86,9 @@ for _, plant in pairs(data.raw["plant"]) do
     data.raw["recipe"]["gmo-" .. plant.name] = nil
 
     if gleba_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 5 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 1 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 1 })
+      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 10 }
+      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
+      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
       if plant.name == "tree-plant" then
         cultivator.surface_conditions = {
           {
@@ -106,9 +106,9 @@ for _, plant in pairs(data.raw["plant"]) do
         }
       }
     elseif virentis_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 5 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 1 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 1 })
+      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 10 }
+      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
+      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
       cultivator.surface_conditions = {
         {
           property = "pressure",

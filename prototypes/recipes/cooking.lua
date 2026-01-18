@@ -19,7 +19,7 @@ data:extend(
         { type = "item", name = "dough", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.white,
-      energy_required = 8,
+      energy_required = 4,
       result_is_always_fresh = false,
       enabled = false,
       allow_productivity = true,
@@ -39,7 +39,7 @@ data:extend(
         { type = "item", name = "rockmalt-pudding", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 12,
+      energy_required = 6,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -57,7 +57,7 @@ data:extend(
         { type = "item", name = "red-sauce", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 4,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,
@@ -78,7 +78,7 @@ data:extend(
         { type = "item", name = "redbloom-buns", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 12,
+      energy_required = 6,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -96,7 +96,7 @@ data:extend(
         { type = "item", name = "mangroove-syrup", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 12,
+      energy_required = 6,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,
@@ -117,7 +117,7 @@ data:extend(
         { type = "item", name = "berry-bliss-cookie", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 16,
+      energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -130,13 +130,13 @@ data:extend(
       icon = "__virentis__/graphics/icons/items/foods/flatbread.png",
       ingredients = {
         { type = "item", name = "dough",  amount = 1 },
-        { type = "item", name = "kheast", amount = 1 }
+        { type = "item", name = "kheast", amount = 2 }
       },
       results = {
         { type = "item", name = "flatbread", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.white,
-      energy_required = 8,
+      energy_required = 4,
       result_is_always_fresh = true,
       allow_productivity = true,
       enabled = false,
@@ -159,7 +159,7 @@ data:extend(
         { type = "item", name = "wild-taco", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 16,
+      energy_required = 8,
       result_is_always_fresh = false,
       enabled = false,
     },
@@ -178,7 +178,7 @@ data:extend(
         { type = "item", name = "sweet-chili-sauce", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 12,
+      energy_required = 6,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,
@@ -199,7 +199,7 @@ data:extend(
         { type = "item", name = "sweet-doughnut", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 16,
+      energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -219,7 +219,7 @@ data:extend(
         { type = "item", name = "fried-dumpling-set", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 16,
+      energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -239,7 +239,7 @@ data:extend(
         { type = "item", name = "soft-cooked-pentapod-egg", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 16,
+      energy_required = 12,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,
@@ -261,7 +261,7 @@ data:extend(
         { type = "item", name = "pentapod-souffle-omelette", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 24,
+      energy_required = 16,
       result_is_always_fresh = true,
       enabled = false,
     },
@@ -283,7 +283,7 @@ data:extend(
         { type = "item", name = "mudland-medley", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 24,
+      energy_required = 16,
       result_is_always_fresh = true,
       enabled = false,
     }

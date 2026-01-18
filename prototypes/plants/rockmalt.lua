@@ -21,12 +21,12 @@ data:extend({
         {
           type = "item",
           name = "rockmalt-fruit",
-          amount = 1,
+          amount = 5,
         },
         {
           type = "item",
           name = "herb",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
