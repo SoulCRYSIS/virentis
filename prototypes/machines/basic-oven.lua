@@ -12,7 +12,7 @@ data:extend {
     category = "crafting",
     subgroup = "virentis-machines",
     order = "aa",
-    icon = "__virentis__/graphics/icons/machines/basic-oven.png",
+    icon = "__virentis-graphics__/icons/machines/basic-oven.png",
     ingredients = {
       { type = "item", name = "rockmalt-scale", amount = 2 },
       { type = "item", name = "stone-brick",    amount = 5 },
@@ -27,7 +27,7 @@ data:extend {
   {
     type = "assembling-machine",
     name = "basic-oven",
-    icon = "__virentis__/graphics/icons/machines/basic-oven.png",
+    icon = "__virentis-graphics__/icons/machines/basic-oven.png",
     subgroup = "virentis-machines",
     order = "aa",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -96,7 +96,7 @@ data:extend {
         layers =
         {
           {
-            filename = "__virentis__/graphics/entities/machines/basic-oven/basic-oven.png",
+            filename = "__virentis-graphics__/entities/machines/basic-oven/basic-oven.png",
             priority = "extra-high",
             width = 151,
             height = 146,

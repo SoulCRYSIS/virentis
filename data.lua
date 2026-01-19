@@ -52,7 +52,7 @@ require "prototypes.tiles.highland"
 require "prototypes.tiles.effects"
 
 require "prototypes.noise-expressions.noise-utils"
-require "prototypes.noise-expressions.aux"
+require "prototypes.noise-expressions.aux-noise"
 require "prototypes.noise-expressions.elevation"
 require "prototypes.noise-expressions.temperature"
 require "prototypes.noise-expressions.moisture"

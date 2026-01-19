@@ -17,7 +17,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-chemicals",
       order = "cb",
-      icon = "__virentis__/graphics/icons/recipes/pentapod-from-nutrients-pulp.png",
+      icon = "__virentis-graphics__/icons/recipes/pentapod-from-nutrients-pulp.png",
       ingredients = {
         { type = "item",  name = "pentapod-egg",   amount = 1, ignored_by_stats = 1 },
         { type = "fluid", name = "nutrients-pulp", amount = 30 },

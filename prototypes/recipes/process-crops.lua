@@ -10,7 +10,7 @@ data:extend(
       category = "organic-or-hand-crafting",
       subgroup = "virentis-crops",
       order = "a",
-      icon = "__virentis__/graphics/icons/recipes/nutrients-from-herb.png",
+      icon = "__virentis-graphics__/icons/recipes/nutrients-from-herb.png",
       ingredients = {
         { type = "item", name = "herb", amount = 1 },
       },
@@ -29,7 +29,7 @@ data:extend(
       category = "organic-or-hand-crafting",
       subgroup = "virentis-crops",
       order = "b",
-      icon = "__virentis__/graphics/icons/items/crops/rockmalt-bulb.png",
+      icon = "__virentis-graphics__/icons/items/crops/rockmalt-bulb.png",
       ingredients = {
         { type = "item", name = "rockmalt-fruit", amount = 1 }
       },
@@ -49,7 +49,7 @@ data:extend(
       category = "organic-or-hand-crafting",
       subgroup = "virentis-crops",
       order = "c",
-      icon = "__virentis__/graphics/icons/items/crops/mangroove-mashed.png",
+      icon = "__virentis-graphics__/icons/items/crops/mangroove-mashed.png",
       ingredients = {
         { type = "item", name = "mangroove-fruit", amount = 2 }
       },
@@ -69,7 +69,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-crops",
       order = "d",
-      icon = "__virentis__/graphics/icons/items/crops/nyxoleum-sapling.png",
+      icon = "__virentis-graphics__/icons/items/crops/nyxoleum-sapling.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
         { type = "fluid", name = "vegetable-oil", amount = 50 }

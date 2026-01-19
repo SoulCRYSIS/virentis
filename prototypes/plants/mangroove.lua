@@ -4,7 +4,7 @@ data:extend({
   {
     type = "plant",
     name = "mangroove-tree",
-    icon = "__virentis__/graphics/icons/plants/mangroove-tree.png",
+    icon = "__virentis-graphics__/icons/plants/mangroove-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",

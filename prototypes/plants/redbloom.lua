@@ -6,7 +6,7 @@ data:extend({
   {
     type = "plant",
     name = "redbloom-tree",
-    icon = "__virentis__/graphics/icons/plants/redbloom-tree.png",
+    icon = "__virentis-graphics__/icons/plants/redbloom-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",

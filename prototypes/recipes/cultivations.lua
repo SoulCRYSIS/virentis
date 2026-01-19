@@ -9,7 +9,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-cultivation",
       order = "aa",
-      icon = "__virentis__/graphics/icons/items/cultivations/virentis-fertilizer.png",
+      icon = "__virentis-graphics__/icons/items/cultivations/virentis-fertilizer.png",
       ingredients = {
         { type = "item",  name = "kheast",         amount = 2 },
         { type = "item",  name = "pentapod-egg",   amount = 1 },
@@ -30,7 +30,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-cultivation",
       order = "ab",
-      icon = "__virentis__/graphics/icons/items/cultivations/gleba-fertilizer.png",
+      icon = "__virentis-graphics__/icons/items/cultivations/gleba-fertilizer.png",
       ingredients = {
         { type = "item",  name = "bioflux",        amount = 1 },
         { type = "item",  name = "pentapod-egg",   amount = 1 },

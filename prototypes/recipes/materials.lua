@@ -29,7 +29,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-materials-advanced",
       order = "aa",
-      icon = "__virentis__/graphics/icons/items/materials/heart-of-nature.png",
+      icon = "__virentis-graphics__/icons/items/materials/heart-of-nature.png",
       ingredients = {
         { type = "item", name = "virentis-resin", amount = 2 },
         { type = "item", name = "siltcore",       amount = 1 },
@@ -72,7 +72,7 @@ data:extend(
       category = "advanced-crafting",
       subgroup = "virentis-materials-advanced",
       order = "ab",
-      icon = "__virentis__/graphics/icons/recipes/low-density-structure-from-graphene.png",
+      icon = "__virentis-graphics__/icons/recipes/low-density-structure-from-graphene.png",
       ingredients = {
         { type = "item", name = "copper-plate", amount = 5 },
         { type = "item", name = "iron-plate",   amount = 5 },
@@ -93,7 +93,7 @@ data:extend(
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-materials",
       order = "ba",
-      icon = "__virentis__/graphics/icons/items/materials/nutrients-bar.png",
+      icon = "__virentis-graphics__/icons/items/materials/nutrients-bar.png",
       ingredients = {
         { type = "fluid", name = "nutrients-pulp", amount = 25 },
       },
@@ -110,7 +110,7 @@ data:extend(
       category = "electronics",
       subgroup = "virentis-materials",
       order = "cb",
-      icon = "__virentis__/graphics/icons/items/materials/graphene.png",
+      icon = "__virentis-graphics__/icons/items/materials/graphene.png",
       ingredients = {
         { type = "item", name = "carbon",     amount = 2 },
         { type = "item", name = "phosphorus", amount = 1 },
@@ -130,7 +130,7 @@ data:extend(
       category = "electronics",
       subgroup = "virentis-materials",
       order = "cb",
-      icon = "__virentis__/graphics/icons/items/materials/sylva-core.png",
+      icon = "__virentis-graphics__/icons/items/materials/sylva-core.png",
       ingredients = {
         { type = "item",  name = "graphene",        amount = 4 },
         { type = "item",  name = "processing-unit", amount = 4 },
@@ -152,7 +152,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-materials",
       order = "ca",
-      icon = "__virentis__/graphics/icons/recipes/carbon-from-creosote.png",
+      icon = "__virentis-graphics__/icons/recipes/carbon-from-creosote.png",
       ingredients = {
         { type = "item",  name = "creosote", amount = 1 },
         { type = "item",  name = "wood",     amount = 2 },

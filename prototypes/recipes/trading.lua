@@ -46,7 +46,7 @@ data:extend(
       category = "trading-t1",
       subgroup = "virentis-trades",
       order = "ac",
-      icon = "__virentis__/graphics/icons/items/materials/firebrick.png",
+      icon = "__virentis-graphics__/icons/items/materials/firebrick.png",
       ingredients = {
         { type = "item", name = "berry-bliss-cookie", amount = 2 }
       },
@@ -64,7 +64,7 @@ data:extend(
       category = "trading-t1",
       subgroup = "virentis-trades",
       order = "ad",
-      icon = "__virentis__/graphics/icons/items/materials/siltcore.png",
+      icon = "__virentis-graphics__/icons/items/materials/siltcore.png",
       ingredients = {
         { type = "item", name = "sweet-doughnut",     amount = 5 },
         { type = "item", name = "fried-dumpling-set", amount = 5 }
@@ -83,7 +83,7 @@ data:extend(
       category = "trading-t1",
       subgroup = "virentis-trades",
       order = "ae",
-      icon = "__virentis__/graphics/icons/items/materials/phosphorus.png",
+      icon = "__virentis-graphics__/icons/items/materials/phosphorus.png",
       ingredients = {
         { type = "item", name = "pentapod-souffle-omelette", amount = 1 }
       },

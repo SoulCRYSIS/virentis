@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item-group",
     name = "virentis",
-    icon = "__virentis__/graphics/icons/misc/virentis-icon.png",
+    icon = "__virentis-graphics__/icons/misc/virentis-icon.png",
     order = "v",
     icon_size = 256,
     localised_name = "Virentis"

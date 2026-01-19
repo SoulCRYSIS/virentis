@@ -9,7 +9,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-microorganism",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/microorganism/kheast.png",
+      icon = "__virentis-graphics__/icons/items/microorganism/kheast.png",
       ingredients = {
         { type = "item", name = "kheast",           amount = 1 },
         { type = "item", name = "mangroove-mashed", amount = 1 },

@@ -1,0 +1,9 @@
+{
+  "name": "virentis-graphics",
+  "version": "0.1.0",
+  "title": "Planet Virentis [Graphics]",
+  "author": "SoulCRYSIS",
+  "factorio_version": "2.0",
+  "description": "Graphics for Virentis mod.",
+  "dependencies": []
+}

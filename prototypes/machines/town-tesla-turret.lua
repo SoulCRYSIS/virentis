@@ -10,7 +10,7 @@ local height = 384
 local shift = { 1.5, -1 }
 
 local base_animation = {
-  filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret.png",
+  filename = "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret.png",
   priority = "extra-high",
   width = width,
   height = height,
@@ -24,7 +24,7 @@ local base_animation = {
   animation_speed = 0.2,
 }
 local base_glow_animation = {
-  filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-glow.png",
+  filename = "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret-glow.png",
   priority = "extra-high",
   width = width,
   height = height,
@@ -40,7 +40,7 @@ local base_glow_animation = {
   animation_speed = 0.2,
 }
 local charging_animation = {
-  filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-charging-glow.png",
+  filename = "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret-charging-glow.png",
   priority = "extra-high",
   width = width,
   height = height,
@@ -53,7 +53,7 @@ local charging_animation = {
   animation_speed = 0.2,
 }
 local attacking_animation = {
-  filenames = { "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-attacking-glow.png" },
+  filenames = { "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret-attacking-glow.png" },
   width = width,
   height = height,
   shift = shift,
@@ -112,7 +112,7 @@ data:extend({
     },
     turret_base_has_direction = true,
     folded_animation = {
-      filename = "__virentis__/graphics/mocks/empty-icon.png",
+      filename = "__virentis-graphics__/mocks/empty-icon.png",
       priority = "low",
       width = 16,
       height = 16,

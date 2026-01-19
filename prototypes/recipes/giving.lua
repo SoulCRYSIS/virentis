@@ -27,7 +27,7 @@ local function give_icon(path)
       icon_size = 64,
     },
     {
-      icon = "__virentis__/graphics/icons/misc/gift.png",
+      icon = "__virentis-graphics__/icons/misc/gift.png",
       icon_size = 64,
       draw_background = true,
     }
@@ -49,7 +49,7 @@ data:extend(
       category = "trading-t1",
       subgroup = "virentis-mock",
       order = "a",
-      icons = give_icon("__virentis__/graphics/icons/recipes/housewarming-gift.png"),
+      icons = give_icon("__virentis-graphics__/icons/recipes/housewarming-gift.png"),
       ingredients = {
         { type = "item", name = "sweet-chili-sauce", amount = 50 },
         { type = "item", name = "wild-taco",         amount = 50 }

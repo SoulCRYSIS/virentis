@@ -4,7 +4,7 @@ data:extend(
     {
       type = "item",
       name = "virentis-resin",
-      icon = "__virentis__/graphics/icons/items/materials/resin.png",
+      icon = "__virentis-graphics__/icons/items/materials/resin.png",
       subgroup = "virentis-materials",
       order = "ab",
       stack_size = 200,
@@ -14,7 +14,7 @@ data:extend(
     {
       type = "item",
       name = "heart-of-nature",
-      icon = "__virentis__/graphics/icons/items/materials/heart-of-nature.png",
+      icon = "__virentis-graphics__/icons/items/materials/heart-of-nature.png",
       subgroup = "virentis-materials",
       order = "ad",
       stack_size = 50,
@@ -50,7 +50,7 @@ data:extend(
     {
       type = "item",
       name = "siltcore",
-      icon = "__virentis__/graphics/icons/items/materials/siltcore.png",
+      icon = "__virentis-graphics__/icons/items/materials/siltcore.png",
       subgroup = "virentis-materials",
       order = "ac",
       stack_size = 50,
@@ -60,7 +60,7 @@ data:extend(
     {
       type = "item",
       name = "firebrick",
-      icon = "__virentis__/graphics/icons/items/materials/firebrick.png",
+      icon = "__virentis-graphics__/icons/items/materials/firebrick.png",
       subgroup = "virentis-materials",
       order = "aa",
       stack_size = 200,
@@ -70,7 +70,7 @@ data:extend(
     {
       type = "item",
       name = "phosphorus",
-      icon = "__virentis__/graphics/icons/items/materials/phosphorus.png",
+      icon = "__virentis-graphics__/icons/items/materials/phosphorus.png",
       subgroup = "virentis-materials",
       order = "ae",
       stack_size = 200,
@@ -80,7 +80,7 @@ data:extend(
     {
       type = "item",
       name = "creosote",
-      icon = "__virentis__/graphics/icons/items/materials/creosote.png",
+      icon = "__virentis-graphics__/icons/items/materials/creosote.png",
       subgroup = "virentis-materials",
       order = "af",
       stack_size = 200,
@@ -92,7 +92,7 @@ data:extend(
     {
       type = "item",
       name = "nutrients-bar",
-      icon = "__virentis__/graphics/icons/items/materials/nutrients-bar.png",
+      icon = "__virentis-graphics__/icons/items/materials/nutrients-bar.png",
       subgroup = "virentis-materials",
       order = "ah",
       stack_size = 200,
@@ -106,7 +106,7 @@ data:extend(
     {
       type = "item",
       name = "graphene",
-      icon = "__virentis__/graphics/icons/items/materials/graphene.png",
+      icon = "__virentis-graphics__/icons/items/materials/graphene.png",
       subgroup = "virentis-materials",
       order = "ag",
       stack_size = 200,
@@ -116,7 +116,7 @@ data:extend(
     {
       type = "item",
       name = "sylva-core",
-      icon = "__virentis__/graphics/icons/items/materials/sylva-core.png",
+      icon = "__virentis-graphics__/icons/items/materials/sylva-core.png",
       subgroup = "virentis-materials",
       order = "ah",
       stack_size = 50,

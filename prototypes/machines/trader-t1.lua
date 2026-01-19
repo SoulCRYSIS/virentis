@@ -10,7 +10,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "trader-t1",
-    icon = "__virentis__/graphics/icons/machines/trader-t1.png",
+    icon = "__virentis-graphics__/icons/machines/trader-t1.png",
     subgroup = "virentis-machines",
     order = "za",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -35,14 +35,14 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__virentis__/graphics/entities/machines/trader-t1/trader-t1.png",
+            filename = "__virentis-graphics__/entities/machines/trader-t1/trader-t1.png",
             priority = "very-low",
             width = width,
             height = height,
             scale = 0.5,
           },
           {
-            filename = "__virentis__/graphics/entities/machines/trader-t1/trader-t1-shadow.png",
+            filename = "__virentis-graphics__/entities/machines/trader-t1/trader-t1-shadow.png",
             priority = "very-low",
             width = width,
             height = height,
@@ -57,7 +57,7 @@ data:extend({
           apply_recipe_tint = "primary",
           effect = "flicker",
           animation = {
-            filename = "__virentis__/graphics/entities/machines/trader-t1/trader-t1-working-glow.png",
+            filename = "__virentis-graphics__/entities/machines/trader-t1/trader-t1-working-glow.png",
             priority = "very-low",
             width = width,
             height = height,

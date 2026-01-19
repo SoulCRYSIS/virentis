@@ -4,7 +4,7 @@ data:extend(
     {
       type = "fluid",
       name = "vegetable-oil",
-      icon = "__virentis__/graphics/icons/items/fluids/vegetable-oil.png",
+      icon = "__virentis-graphics__/icons/items/fluids/vegetable-oil.png",
       subgroup = "virentis-fluids",
       default_temperature = 25,
       base_color = {0.70, 0.50, 0.05},
@@ -14,7 +14,7 @@ data:extend(
     {
       type = "fluid",
       name = "methanol",
-      icon = "__virentis__/graphics/icons/items/fluids/methanol.png",
+      icon = "__virentis-graphics__/icons/items/fluids/methanol.png",
       subgroup = "virentis-fluids",
       default_temperature = 25,
       base_color = {0.3, 0.6, 0.9},
@@ -24,7 +24,7 @@ data:extend(
     {
       type = "fluid",
       name = "tar",
-      icon = "__virentis__/graphics/icons/items/fluids/tar.png",
+      icon = "__virentis-graphics__/icons/items/fluids/tar.png",
       subgroup = "virentis-fluids",
       order = "ac",
       default_temperature = 25,
@@ -34,7 +34,7 @@ data:extend(
     {
       type = "fluid",
       name = "nutrients-pulp",
-      icon = "__virentis__/graphics/icons/items/fluids/nutrients-pulp.png",
+      icon = "__virentis-graphics__/icons/items/fluids/nutrients-pulp.png",
       subgroup = "virentis-fluids",
       order = "ba",
       default_temperature = 25,

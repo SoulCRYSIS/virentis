@@ -4,7 +4,7 @@ data:extend({
   {
     type = "plant",
     name = "nyxoleum-tree",
-    icon = "__virentis__/graphics/icons/plants/nyxoleum-tree.png",
+    icon = "__virentis-graphics__/icons/plants/nyxoleum-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",

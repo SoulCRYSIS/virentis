@@ -94,7 +94,7 @@ data:extend(
       autoplace = { probability_expression = "virentis_starting_redbloom * 10 + ( virentis_fertile_spots_coastal_raw(3, 32) + 0.4 ) * virentis_midland * virentis_select(virentis_aux, 0.8, 1, 0.15, 0, 1) * (0.93 + 0.1 * virentis_select(virentis_moisture, 0.5, 0.5, 0.25, 0, 1) - 0.1 * virentis_temperature_normalised)" },
       sprite_usage_surface = "gleba",
       variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
-        "__virentis__/graphics/tiles/redbloom-fertile-soil.png",
+        "__virentis-graphics__/tiles/redbloom-fertile-soil.png",
         "__space-age__/graphics/terrain/effect-maps/water-gleba-mask.png",
         {
           max_size = 4,

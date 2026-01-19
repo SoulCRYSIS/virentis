@@ -181,7 +181,7 @@ virentis_plant.tree_variations = function(name, variation_count, per_row, scale_
     ---@type data.TreeVariation
     local variation = {
       trunk                             = {
-        filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. ".png", -- use same graphics for now
+        filename = "__virentis-graphics__/entities/plants/" .. name .. "/" .. name .. ".png", -- use same graphics for now
         flags = { "mipmap" },
         surface = "gleba",
         width = width,
@@ -193,7 +193,7 @@ virentis_plant.tree_variations = function(name, variation_count, per_row, scale_
         scale = 0.5 * scale_multiplier
       },
       leaves                            = {
-        filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-harvest.png",
+        filename = "__virentis-graphics__/entities/plants/" .. name .. "/" .. name .. "-harvest.png",
         flags = { "mipmap" },
         surface = "gleba",
         width = width,
@@ -205,7 +205,7 @@ virentis_plant.tree_variations = function(name, variation_count, per_row, scale_
         scale = 0.5 * scale_multiplier
       },
       normal                            = {
-        filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-normal.png",
+        filename = "__virentis-graphics__/entities/plants/" .. name .. "/" .. name .. "-normal.png",
         surface = "gleba",
         width = width,
         height = height,
@@ -223,8 +223,8 @@ virentis_plant.tree_variations = function(name, variation_count, per_row, scale_
         surface = "gleba",
         filenames =
         {
-          "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-harvest-shadow.png",
-          "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-shadow.png",
+          "__virentis-graphics__/entities/plants/" .. name .. "/" .. name .. "-harvest-shadow.png",
+          "__virentis-graphics__/entities/plants/" .. name .. "/" .. name .. "-shadow.png",
         },
         width = width,
         height = height,
@@ -271,7 +271,7 @@ virentis_plant.tree_variations = function(name, variation_count, per_row, scale_
         {
           variation.leaves,
           {
-            filename = "__virentis__/graphics/entities/plants/" .. name .. "/" .. name .. "-glow.png",
+            filename = "__virentis-graphics__/entities/plants/" .. name .. "/" .. name .. "-glow.png",
             flags = { "mipmap" },
             surface = "gleba",
             width = width,

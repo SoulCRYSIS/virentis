@@ -9,7 +9,7 @@ data:extend({
     category = "organic",
     subgroup = "virentis-machines",
     order = "ba",
-    icon = "__virentis__/graphics/icons/machines/living-inserter.png",
+    icon = "__virentis-graphics__/icons/machines/living-inserter.png",
     ingredients = {
       { type = "item",  name = "heart-of-nature", amount = 1 },
       { type = "item",  name = "sylva-core",      amount = 1 },
@@ -29,7 +29,7 @@ data:extend({
     name = "living-inserter",
     subgroup = "virentis-machines",
     order = "ba",
-    icon = "__virentis__/graphics/icons/machines/living-inserter.png",
+    icon = "__virentis-graphics__/icons/machines/living-inserter.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     stack_size_bonus = 6,
     bulk = true,
@@ -60,21 +60,21 @@ data:extend({
     close_sound = sounds.inserter_close,
     working_sound = sounds.inserter_fast,
     hand_base_picture = {
-      filename = "__virentis__/graphics/entities/machines/living-inserter/living-inserter-hand-base.png",
+      filename = "__virentis-graphics__/entities/machines/living-inserter/living-inserter-hand-base.png",
       priority = "extra-high",
       width = 32,
       height = 136,
       scale = 0.25
     },
     hand_closed_picture = {
-      filename = "__virentis__/graphics/entities/machines/living-inserter/living-inserter-hand-closed.png",
+      filename = "__virentis-graphics__/entities/machines/living-inserter/living-inserter-hand-closed.png",
       priority = "extra-high",
       width = 112,
       height = 164,
       scale = 0.25
     },
     hand_open_picture = {
-      filename = "__virentis__/graphics/entities/machines/living-inserter/living-inserter-hand-open.png",
+      filename = "__virentis-graphics__/entities/machines/living-inserter/living-inserter-hand-open.png",
       priority = "extra-high",
       width = 134,
       height = 164,
@@ -104,7 +104,7 @@ data:extend({
     platform_picture = {
       sheet =
       {
-        filename = "__virentis__/graphics/entities/machines/living-inserter/living-inserter-platform.png",
+        filename = "__virentis-graphics__/entities/machines/living-inserter/living-inserter-platform.png",
         priority = "extra-high",
         width = 105,
         height = 79,

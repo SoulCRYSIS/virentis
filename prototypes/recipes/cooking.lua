@@ -10,7 +10,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-foods-basic",
       order = "aa",
-      icon = "__virentis__/graphics/icons/items/foods/dough.png",
+      icon = "__virentis-graphics__/icons/items/foods/dough.png",
       ingredients = {
         { type = "fluid", name = "water",         amount = 50 },
         { type = "item",  name = "rockmalt-bulb", amount = 2 }
@@ -30,7 +30,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-foods-trade-item",
       order = "ba",
-      icon = "__virentis__/graphics/icons/items/foods/rockmalt-pudding.png",
+      icon = "__virentis-graphics__/icons/items/foods/rockmalt-pudding.png",
       ingredients = {
         { type = "item", name = "red-sauce",     amount = 2 },
         { type = "item", name = "rockmalt-bulb", amount = 4 }
@@ -49,7 +49,7 @@ data:extend(
       category = "basic-cooking",
       subgroup = "virentis-foods-basic",
       order = "ab",
-      icon = "__virentis__/graphics/icons/items/foods/red-sauce.png",
+      icon = "__virentis-graphics__/icons/items/foods/red-sauce.png",
       ingredients = {
         { type = "item", name = "redbloom-fruit", amount = 2 }
       },
@@ -69,7 +69,7 @@ data:extend(
       additional_categories = { "smelting" },
       subgroup = "virentis-foods-trade-item",
       order = "bb",
-      icon = "__virentis__/graphics/icons/items/foods/redbloom-buns.png",
+      icon = "__virentis-graphics__/icons/items/foods/redbloom-buns.png",
       ingredients = {
         { type = "item", name = "redbloom-fruit", amount = 4 },
         { type = "item", name = "dough",          amount = 2 }
@@ -88,7 +88,7 @@ data:extend(
       category = "basic-cooking",
       subgroup = "virentis-foods-basic",
       order = "ac",
-      icon = "__virentis__/graphics/icons/items/foods/mangroove-syrup.png",
+      icon = "__virentis-graphics__/icons/items/foods/mangroove-syrup.png",
       ingredients = {
         { type = "item", name = "mangroove-mashed", amount = 4 },
       },
@@ -107,7 +107,7 @@ data:extend(
       category = "basic-cooking",
       subgroup = "virentis-foods-trade-item",
       order = "bc",
-      icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
+      icon = "__virentis-graphics__/icons/items/foods/berry-bliss-cookie.png",
       ingredients = {
         { type = "item", name = "dough",           amount = 2 },
         { type = "item", name = "red-sauce",       amount = 2 },
@@ -127,7 +127,7 @@ data:extend(
       category = "baking",
       subgroup = "virentis-foods-basic",
       order = "ad",
-      icon = "__virentis__/graphics/icons/items/foods/flatbread.png",
+      icon = "__virentis-graphics__/icons/items/foods/flatbread.png",
       ingredients = {
         { type = "item", name = "dough",  amount = 1 },
         { type = "item", name = "kheast", amount = 2 }
@@ -147,7 +147,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-foods-trade-item",
       order = "bd",
-      icon = "__virentis__/graphics/icons/items/foods/wild-taco.png",
+      icon = "__virentis-graphics__/icons/items/foods/wild-taco.png",
       ingredients = {
         { type = "item",  name = "flatbread",        amount = 1 },
         { type = "item",  name = "herb",             amount = 2 },
@@ -169,7 +169,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-foods-basic",
       order = "ae",
-      icon = "__virentis__/graphics/icons/items/foods/sweet-chili-sauce.png",
+      icon = "__virentis-graphics__/icons/items/foods/sweet-chili-sauce.png",
       ingredients = {
         { type = "item", name = "red-sauce",       amount = 2 },
         { type = "item", name = "mangroove-syrup", amount = 2 }
@@ -189,7 +189,7 @@ data:extend(
       category = "frying",
       subgroup = "virentis-foods-trade-item",
       order = "be",
-      icon = "__virentis__/graphics/icons/items/foods/sweet-doughnut.png",
+      icon = "__virentis-graphics__/icons/items/foods/sweet-doughnut.png",
       ingredients = {
         { type = "item",  name = "mangroove-syrup", amount = 2 },
         { type = "item",  name = "dough",           amount = 2 },
@@ -209,7 +209,7 @@ data:extend(
       category = "frying",
       subgroup = "virentis-foods-trade-item",
       order = "bf",
-      icon = "__virentis__/graphics/icons/items/foods/fried-dumpling-set.png",
+      icon = "__virentis-graphics__/icons/items/foods/fried-dumpling-set.png",
       ingredients = {
         { type = "item",  name = "flatbread",         amount = 2 },
         { type = "item",  name = "sweet-chili-sauce", amount = 2 },
@@ -229,7 +229,7 @@ data:extend(
       category = "baking",
       subgroup = "virentis-foods-basic",
       order = "af",
-      icon = "__virentis__/graphics/icons/items/foods/soft-cooked-pentapod-egg.png",
+      icon = "__virentis-graphics__/icons/items/foods/soft-cooked-pentapod-egg.png",
       ingredients = {
         { type = "item", name = "kheast",       amount = 2 },
         { type = "item", name = "pentapod-egg", amount = 2 },
@@ -250,7 +250,7 @@ data:extend(
       category = "frying",
       subgroup = "virentis-foods-trade-item",
       order = "bg",
-      icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
+      icon = "__virentis-graphics__/icons/items/foods/pentapod-souffle-omelette.png",
       ingredients = {
         { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
         { type = "item",  name = "sweet-chili-sauce",        amount = 1 },
@@ -271,7 +271,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-foods-trade-item",
       order = "bh",
-      icon = "__virentis__/graphics/icons/items/foods/mudland-medley.png",
+      icon = "__virentis-graphics__/icons/items/foods/mudland-medley.png",
       ingredients = {
         { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
         { type = "item",  name = "rockmalt-bulb",            amount = 2 },
