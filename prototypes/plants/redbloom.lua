@@ -27,7 +27,7 @@ data:extend({
         {
           type = "item",
           name = "herb",
-          amount = 10,
+          amount = 20,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
