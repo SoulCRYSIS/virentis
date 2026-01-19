@@ -1,4 +1,5 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
+local virentis = require("prototypes.utils")
 
 data:extend({
   {
@@ -61,5 +62,6 @@ data:extend({
       primary = { 56, 36, 52, 255 },
       secondary = { 32, 22, 29, 255 },
     },
-  },
+    surface_conditions = virentis.surface_condition
+  }
 })

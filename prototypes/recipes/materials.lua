@@ -15,10 +15,10 @@ data:extend(
         { type = "item", name = "rockmalt-scale", amount = 1 }
       },
       results = {
-        { type = "item", name = "stone", amount = 5 }
+        { type = "item", name = "stone", amount = 10 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 16,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,

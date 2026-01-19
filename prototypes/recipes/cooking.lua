@@ -96,7 +96,7 @@ data:extend(
         { type = "item", name = "mangroove-syrup", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 6,
+      energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,

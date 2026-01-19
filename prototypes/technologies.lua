@@ -436,7 +436,7 @@ data:extend(
           recipe = "sylva-core"
         },
       },
-      prerequisites = { "nutrients-pulp" },
+      prerequisites = { "nutrients-pulp", "promethium-science-pack" },
       unit = {
         count = 1000,
         ingredients = 

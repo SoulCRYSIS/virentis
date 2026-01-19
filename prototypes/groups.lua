@@ -87,6 +87,18 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "virentis-cultivating",
+    group = "virentis",
+    order = "ha"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-cultivating-space",
+    group = "virentis",
+    order = "hb"
+  },
+  {
+    type = "item-subgroup",
     name = "virentis-tiles",
     group = "virentis",
     order = "z"

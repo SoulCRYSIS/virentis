@@ -16,7 +16,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
       { type = "item", name = "firebrick",   amount = 16 },
-      { type = "item", name = "heat-pipe",   amount = 2 }
+      { type = "item", name = "heat-pipe",   amount = 2 },
+      { type = "item", name = "basic-oven", amount = 1 }
     },
     results = {
       { type = "item", name = "oven", amount = 1 }

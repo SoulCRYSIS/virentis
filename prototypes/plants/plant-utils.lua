@@ -95,11 +95,11 @@ local virentis_tree_particle_effects =
   --   crop_1 = "yumako-leaf-particle",
   --   trunk_1 = "yumako-branch-particle",
   -- },
-  ["rockmalt"] = {
+  ["redbloom"] = {
     crop_1 = "yumako-leaf-particle",
     trunk_1 = "yumako-branch-particle",
   },
-  ["redbloom"] = {
+  ["rockmalt"] = {
     crop_1 = "sunnycomb-leaf-particle",
     spongy = "sunnycomb-branch-particle"
   },

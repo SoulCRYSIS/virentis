@@ -1,4 +1,5 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
+local virentis = require("prototypes.utils")
 
 data:extend({
   {
@@ -7,7 +8,6 @@ data:extend({
     icon = "__virentis-graphics__/icons/plants/rockmalt-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
-
     order = "c",
     flags = virentis_plant.default_flags,
     growth_ticks = 5 * minute,
@@ -67,5 +67,6 @@ data:extend({
       primary = { 253, 255, 209, 255 },
       secondary = { 244, 245, 228, 255 },
     },
+    surface_conditions = virentis.surface_condition
   },
 })

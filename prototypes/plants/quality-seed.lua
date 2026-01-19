@@ -13,6 +13,12 @@ local virentis_plants = {
   ["rockmalt-tree"] = true,
 }
 
+if mods["wayward-seas"] then
+  gleba_plants["sunnycomb-plant"] = true
+  gleba_plants["cuttlepop-plant"] = true
+  gleba_plants["water-cane-plant"] = true
+end
+
 local ignore_set = {}
 for _, name in pairs(quality_seeds.ignore_plants or {}) do
   ignore_set[name] = true
@@ -43,11 +49,12 @@ for _, plant in pairs(data.raw["plant"]) do
       table.unpack(virentis.pass_middle_fluid_box),
     }
     cultivator.subgroup = "virentis-cultivation"
-    cultivator.order = "b"
-
+    cultivator.order = "c"
+    cultivator.surface_conditions = plant.surface_conditions
+    
     local cultivator_item = data.raw["item"][cultivator.name]
     cultivator_item.subgroup = "virentis-cultivation"
-    cultivator_item.order = "b"
+    cultivator_item.order = "c"
 
     local cultivator_recipe = data.raw["recipe"][cultivator.name]
     cultivator_recipe.ingredients[4] = { type = "item", name = "sylva-core", amount = 1 }
@@ -55,11 +62,11 @@ for _, plant in pairs(data.raw["plant"]) do
     table.insert(cultivator_recipe.ingredients, { type = "item", name = "firebrick", amount = 4 })
     cultivator_recipe.surface_conditions = nil
     cultivator_recipe.subgroup = "virentis-cultivation"
-    cultivator_recipe.order = "b"
+    cultivator_recipe.order = "c"
     cultivator_recipe.energy_required = 10
 
     local cultivate_recipe = data.raw["recipe"]["cultivate-" .. plant.name]
-    cultivate_recipe.subgroup = "virentis-cultivation"
+    cultivate_recipe.subgroup = "virentis-cultivating"
     cultivate_recipe.energy_required = plant.growth_ticks / 60
     cultivate_recipe.order = "ca"
     if plant.name == "nyxoleum-tree" then
@@ -70,15 +77,15 @@ for _, plant in pairs(data.raw["plant"]) do
     if plant.harvest_emissions and plant.harvest_emissions.spores then
       spore_emmisions = plant.harvest_emissions.spores
     end
-    if spore_emmisions > 0 then
-      table.insert(plant_harvest_results, { type = "fluid", name = "spores", amount = spore_emmisions * 60 })
-    end
     cultivate_recipe.results = plant_harvest_results
-
+    if spore_emmisions > 0 then
+      table.insert(cultivate_recipe.results, { type = "fluid", name = "spores", amount = spore_emmisions * 100 })
+    end
 
     local cultivate_space_recipe = data.raw["recipe"]["cultivate-space-" .. plant.name]
-    cultivate_space_recipe.subgroup = "virentis-cultivation"
+    cultivate_space_recipe.subgroup = "virentis-cultivating-space"
     cultivate_space_recipe.order = "cb"
+    cultivate_space_recipe.results = plant_harvest_results
     if plant.name == "nyxoleum-tree" then
       cultivate_space_recipe.ingredients[2] = { type = "fluid", name = "tar", amount = 50 }
     end
@@ -89,33 +96,10 @@ for _, plant in pairs(data.raw["plant"]) do
       cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 10 }
       table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
       table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
-      if plant.name == "tree-plant" then
-        cultivator.surface_conditions = {
-          {
-            property = "pressure",
-            min = 1000,
-            max = 1000
-          }
-        }
-      end
-      cultivator.surface_conditions = {
-        {
-          property = "pressure",
-          min = 2000,
-          max = 2000
-        }
-      }
     elseif virentis_plants[plant.name] then
       cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 10 }
       table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
       table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
-      cultivator.surface_conditions = {
-        {
-          property = "pressure",
-          min = 1200,
-          max = 1200
-        }
-      }
     end
   end
 end
@@ -147,7 +131,7 @@ cultivation_tech.effects = unlocks
 
 local space_cultivator = data.raw["assembling-machine"]["space-cultivator"]
 space_cultivator.subgroup = "virentis-cultivation"
-space_cultivator.order = "c"
+space_cultivator.order = "b"
 space_cultivator.energy_source.effectivity = 1
 space_cultivator.energy_usage = "100kW"
 space_cultivator.effect_receiver.base_effect = {
@@ -156,7 +140,7 @@ space_cultivator.effect_receiver.base_effect = {
 
 local space_cultivator_item = data.raw["item"][space_cultivator.name]
 space_cultivator_item.subgroup = "virentis-cultivation"
-space_cultivator_item.order = "c"
+space_cultivator_item.order = "b"
 
 local spore_tower = data.raw["furnace"]["spore-tower"]
 spore_tower.subgroup = "virentis-cultivation"

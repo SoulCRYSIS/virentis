@@ -112,11 +112,22 @@ behemoth_stomper_pentapod_shell.minable.results = {
   { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
   { type = "item", name = "pentapod-egg", amount_min = 3,  amount_max = 5, percent_spoiled = 0.5 },
 }
-behemoth_stomper_pentapod_shell.remains_when_mined = {
-  "behemoth-wriggler-pentapod-premature",
-  "behemoth-wriggler-pentapod-premature",
-  "behemoth-wriggler-pentapod-premature",
+behemoth_stomper_pentapod_shell.minable.mining_trigger = {
+  type = "direct",
+  action_delivery = {
+    type = "instant",
+    target_effects = {
+      { 
+        type = "create-entity",
+        entity_name = "behemoth-wriggler-pentapod-premature",
+        as_enemy = true,
+        find_non_colliding_position = true,
+        offset_deviation = { { -5, -5 }, { 5, 5 } },
+      }
+    }
+  }
 }
+behemoth_stomper_pentapod_shell.minable.mining_time = 5
 behemoth_stomper_pentapod_shell.autoplace = {
   force = "enemy",
   probability_expression =
