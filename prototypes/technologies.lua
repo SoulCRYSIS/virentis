@@ -4,7 +4,7 @@ local trading_recipes = {
   "trade-firebrick",
   "trade-siltcore",
   "trade-phosphorus",
-  "trade-processing-unit",
+  "trade-advanced-circuit",
 }
 
 local trading_recipes_effects = {}
@@ -78,6 +78,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "trade-copper-plate"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "sulfuric-acid-from-redbloom"
+        }
       },
       research_trigger = {
         type = "mine-entity",
@@ -230,7 +234,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "trade-processing-unit"
+          recipe = "trade-advanced-circuit"
         },
         {
           type = "unlock-recipe",

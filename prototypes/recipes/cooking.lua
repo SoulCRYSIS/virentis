@@ -130,7 +130,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/foods/flatbread.png",
       ingredients = {
         { type = "item", name = "dough",  amount = 1 },
-        { type = "item", name = "kheast", amount = 2 }
+        { type = "item", name = "kheast", amount = 1 }
       },
       results = {
         { type = "item", name = "flatbread", amount = 1 }
@@ -232,14 +232,14 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/foods/soft-cooked-pentapod-egg.png",
       ingredients = {
         { type = "item", name = "kheast",       amount = 2 },
-        { type = "item", name = "pentapod-egg", amount = 2 },
-        { type = "item", name = "herb",         amount = 2 },
+        { type = "item", name = "pentapod-egg", amount = 1 },
+        { type = "item", name = "herb",         amount = 4 },
       },
       results = {
         { type = "item", name = "soft-cooked-pentapod-egg", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 12,
+      energy_required = 8,
       result_is_always_fresh = true,
       enabled = false,
       allow_productivity = true,
@@ -254,7 +254,7 @@ data:extend(
       ingredients = {
         { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
         { type = "item",  name = "sweet-chili-sauce",        amount = 1 },
-        { type = "item",  name = "flatbread",                amount = 1 },
+        { type = "item",  name = "flatbread",                amount = 2 },
         { type = "fluid", name = "vegetable-oil",            amount = 100 },
       },
       results = {

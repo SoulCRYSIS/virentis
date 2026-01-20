@@ -51,14 +51,14 @@ data:extend(
       order = "c",
       icon = "__virentis-graphics__/icons/items/crops/mangroove-mashed.png",
       ingredients = {
-        { type = "item", name = "mangroove-fruit", amount = 2 }
+        { type = "item", name = "mangroove-fruit", amount = 1 }
       },
       results = {
-        { type = "item", name = "mangroove-seed",   amount = 1, probability = 0.04 },
+        { type = "item", name = "mangroove-seed",   amount = 1, probability = 0.02 },
         { type = "item", name = "mangroove-mashed", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.purple,
-      energy_required = 4,
+      energy_required = 2,
       result_is_always_fresh = false,
       allow_productivity = true,
       enabled = false,

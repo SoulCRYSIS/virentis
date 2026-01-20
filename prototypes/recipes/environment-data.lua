@@ -10,7 +10,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/environment-data/mudland-data.png",
       ingredients = {
         { type = "item", name = "heart-of-nature", amount = 1 },
-        { type = "item", name = "mudland-medley",  amount = 4 },
+        { type = "item", name = "mudland-medley",  amount = 1 },
         { type = "item", name = "firebrick",       amount = 4 },
         { type = "item", name = "graphene",        amount = 4 },
       },

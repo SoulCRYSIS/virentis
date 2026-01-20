@@ -15,7 +15,7 @@ data:extend(
         { type = "item", name = "rockmalt-pudding", amount = 1 }
       },
       results = {
-        { type = "item", name = "iron-plate", amount = 2 }
+        { type = "item", name = "iron-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.gray,
       energy_required = 0.5,
@@ -33,7 +33,7 @@ data:extend(
         { type = "item", name = "redbloom-buns", amount = 1 }
       },
       results = {
-        { type = "item", name = "copper-plate", amount = 2 }
+        { type = "item", name = "copper-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 0.5,
@@ -48,7 +48,7 @@ data:extend(
       order = "ac",
       icon = "__virentis-graphics__/icons/items/materials/firebrick.png",
       ingredients = {
-        { type = "item", name = "berry-bliss-cookie", amount = 2 }
+        { type = "item", name = "berry-bliss-cookie", amount = 1 }
       },
       results = {
         { type = "item", name = "firebrick", amount = 1 }
@@ -66,8 +66,8 @@ data:extend(
       order = "ad",
       icon = "__virentis-graphics__/icons/items/materials/siltcore.png",
       ingredients = {
-        { type = "item", name = "sweet-doughnut",     amount = 5 },
-        { type = "item", name = "fried-dumpling-set", amount = 5 }
+        { type = "item", name = "sweet-doughnut",     amount = 2 },
+        { type = "item", name = "fried-dumpling-set", amount = 2 }
       },
       results = {
         { type = "item", name = "siltcore", amount = 1 }
@@ -88,7 +88,7 @@ data:extend(
         { type = "item", name = "pentapod-souffle-omelette", amount = 1 }
       },
       results = {
-        { type = "item", name = "phosphorus", amount = 1 }
+        { type = "item", name = "phosphorus", amount = 5 }
       },
       energy_required = 2,
       enabled = false,
@@ -96,16 +96,16 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "trade-processing-unit",
+      name = "trade-advanced-circuit",
       category = "trading-t1",
       subgroup = "virentis-trades",
       order = "af",
-      icon = "__base__/graphics/icons/processing-unit.png",
+      icon = "__base__/graphics/icons/advanced-circuit.png",
       ingredients = {
         { type = "item", name = "wild-taco", amount = 1 }
       },
       results = {
-        { type = "item", name = "processing-unit", amount = 1 }
+        { type = "item", name = "advanced-circuit", amount = 5 }
       },
       energy_required = 2,
       enabled = false,

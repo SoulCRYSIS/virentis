@@ -172,6 +172,7 @@ data:extend(
       trigger_effect = tile_trigger_effects.sand_trigger_effect(),
       map_color = { 31, 7, 13 },
       absorptions_per_second = virentis_tile.pollution_absorption.water,
+      default_cover_tile = "landfill",
     },
     {
       type = "tile",

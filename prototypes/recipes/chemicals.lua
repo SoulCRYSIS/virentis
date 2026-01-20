@@ -24,10 +24,31 @@ data:extend(
         { type = "item", name = "nyxoleum-seed", amount = 1 },
       },
       results = {
-        { type = "item", name = "solid-fuel", amount = 1 }
+        { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 4,
+      energy_required = 6,
+      allow_productivity = true,
+      auto_recycle = false,
+      enabled = false,
+    },
+    {
+      type = "recipe",
+      name = "sulfuric-acid-from-redbloom",
+      category = "organic-or-chemistry",
+      subgroup = "virentis-chemicals",
+      order = "ab",
+      icon = "__virentis-graphics__/icons/recipes/sulfuric-acid-from-redbloom.png",
+      ingredients = {
+        { type = "item", name = "redbloom-fruit", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 1 },
+        { type = "fluid", name = "water", amount = 30 },
+      },
+      results = {
+        { type = "fluid", name = "sulfuric-acid", amount = 30 }
+      },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 2,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -42,7 +63,7 @@ data:extend(
       ingredients = {
         { type = "fluid", name = "tar",           amount = 20 },
         { type = "fluid", name = "vegetable-oil", amount = 50 },
-        { type = "item",  name = "phosphorus",    amount = 4 }
+        { type = "item",  name = "phosphorus",    amount = 2 }
       },
       results = {
         { type = "item",  name = "virentis-resin", amount = 2 },
@@ -50,7 +71,7 @@ data:extend(
         { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 32,
+      energy_required = 8,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -117,20 +138,20 @@ data:extend(
     {
       type = "recipe",
       name = "vegetable-oil",
-      category = "organic-or-hand-crafting",
+      category = "organic",
       subgroup = "virentis-chemicals",
       order = "ab",
       icon = "__virentis-graphics__/icons/items/fluids/vegetable-oil.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
         { type = "item",  name = "kheast",        amount = 1 },
-        { type = "fluid", name = "water",         amount = 20 }
+        { type = "fluid", name = "water",         amount = 30 }
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 20 }
+        { type = "fluid", name = "vegetable-oil", amount = 30 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 8,
+      energy_required = 6,
       enabled = false,
       allow_productivity = true,
     },
@@ -143,7 +164,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/fluids/nutrients-pulp.png",
       ingredients = {
         { type = "item",  name = "nutrients",     amount = 10 },
-        { type = "item",  name = "phosphorus",    amount = 2 },
+        { type = "item",  name = "phosphorus",    amount = 1 },
         { type = "fluid", name = "vegetable-oil", amount = 50 },
       },
       results = {
@@ -187,7 +208,7 @@ data:extend(
         { type = "item",  name = "phosphorus", amount = 1 },
       },
       results = {
-        { type = "item", name = "explosives", amount = 4 }
+        { type = "item", name = "explosives", amount = 6 }
       },
       crafting_machine_tint = recipe_tints.red,
       energy_required = 16,
