@@ -36,7 +36,7 @@ virentis_plant.sound_variations = function(filename_string, variations, volume_p
   return result
 end
 
-virentis_plant.default_emission = { spores = 5 }
+virentis_plant.default_emission = { spores = 7 }
 virentis_plant.default_flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" }
 virentis_plant.leaf_sound = sounds.tree_leaves
 virentis_plant.spoilage_sound = virentis_plant.sound_variations("__space-age__/sound/mining/spoilage", 3, 0)

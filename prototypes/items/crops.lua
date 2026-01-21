@@ -124,7 +124,7 @@ data:extend(
       order = "dc",
       spoil_ticks = 20 * minute,
       spoil_result = "wood",
-      stack_size = 50,
+      stack_size = 100,
       weight = 5 * kg,
     },
   })

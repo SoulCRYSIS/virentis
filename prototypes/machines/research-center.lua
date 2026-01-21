@@ -42,7 +42,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = { spores = 30 },
+      emissions_per_minute = { spores = 20 },
     },
     crafting_categories = { "environment-research-data" },
     crafting_speed = 4,

@@ -25,7 +25,7 @@ data:extend(
                               y = y + wobble_noise_y * 15,\z
                               seed0 = map_seed,\z
                               seed1 = seed,\z
-                              candidate_spot_count = 80,\z
+                              candidate_spot_count = 20,\z
                               suggested_minimum_candidate_point_spacing = spot_radius * 4,\z
                               skip_span = 1,\z
                               skip_offset = 0,\z
@@ -56,7 +56,7 @@ data:extend(
   {
     type = "noise-expression",
     name = "virentis_fertile_spots_coastal_raw_default",
-    expression = "virentis_fertile_spots_coastal_raw(1, 32)"
+    expression = "virentis_fertile_spots_coastal_raw(1, 48)"
   },
   {
     type = "noise-expression",

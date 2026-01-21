@@ -26,7 +26,7 @@ data:extend(
         { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 8,
+      energy_required = 6,
       auto_recycle = false,
       enabled = false,
     },

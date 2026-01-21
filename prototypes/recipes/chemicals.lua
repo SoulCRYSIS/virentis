@@ -91,7 +91,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 4,
+      energy_required = 2,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -111,7 +111,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 4,
+      energy_required = 2,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -130,7 +130,7 @@ data:extend(
       results = {
         { type = "item", name = "rocket-fuel", amount = 1 }
       },
-      energy_required = 16,
+      energy_required = 8,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -171,7 +171,7 @@ data:extend(
         { type = "fluid", name = "nutrients-pulp", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 32,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
     },
@@ -191,7 +191,7 @@ data:extend(
         { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 32,
+      energy_required = 8,
       auto_recycle = false,
       enabled = false,
     },
@@ -208,10 +208,10 @@ data:extend(
         { type = "item",  name = "phosphorus", amount = 1 },
       },
       results = {
-        { type = "item", name = "explosives", amount = 6 }
+        { type = "item", name = "explosives", amount = 4 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 16,
+      energy_required = 12,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,

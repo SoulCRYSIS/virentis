@@ -72,7 +72,7 @@ data:extend(
           --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
         }
       ),
-      autoplace = { probability_expression = "max(virentis_starting_rockmalt * 10, (virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2, 32) * 50000 - 30000)" },
+      autoplace = { probability_expression = "max(virentis_starting_rockmalt * 10, (virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2, 48) * 50000 - 30000)" },
       transitions = virentis_tile.lava_stone_transitions,
       transitions_between_transitions = virentis_tile.lava_stone_transitions_between_transitions,
       walking_sound = tile_sounds.walking.dry_rock,
@@ -91,7 +91,7 @@ data:extend(
       collision_mask = tile_collision_masks.ground(),
       layer_group = "ground-natural",
       layer = virentis_tile.tile_offset + 12,
-      autoplace = { probability_expression = "virentis_starting_redbloom * 10 + ( virentis_fertile_spots_coastal_raw(3, 32) + 0.4 ) * virentis_midland * virentis_select(virentis_aux, 0.8, 1, 0.15, 0, 1) * (0.93 + 0.1 * virentis_select(virentis_moisture, 0.5, 0.5, 0.25, 0, 1) - 0.1 * virentis_temperature_normalised)" },
+      autoplace = { probability_expression = "virentis_starting_redbloom * 10 + ( virentis_fertile_spots_coastal_raw(3, 48) + 0.4 ) * virentis_midland * virentis_select(virentis_aux, 0.8, 1, 0.15, 0, 1) * (0.93 + 0.1 * virentis_select(virentis_moisture, 0.5, 0.5, 0.25, 0, 1) - 0.1 * virentis_temperature_normalised)" },
       sprite_usage_surface = "gleba",
       variants = virentis_tile.tile_variations_template_with_transitions_and_effect_map(
         "__virentis-graphics__/tiles/redbloom-fertile-soil.png",

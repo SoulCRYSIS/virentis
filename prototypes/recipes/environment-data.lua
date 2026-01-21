@@ -17,7 +17,7 @@ data:extend(
       results = {
         { type = "item", name = "mudland-research-data", amount = 1 }
       },
-      energy_required = 32,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
       auto_recycle = false,

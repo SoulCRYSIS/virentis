@@ -82,7 +82,7 @@ data:extend(
         { type = "item", name = "low-density-structure", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 8,
+      energy_required = 4,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -95,13 +95,13 @@ data:extend(
       order = "ba",
       icon = "__virentis-graphics__/icons/items/materials/nutrients-bar.png",
       ingredients = {
-        { type = "fluid", name = "nutrients-pulp", amount = 25 },
+        { type = "fluid", name = "nutrients-pulp", amount = 10 },
       },
       results = {
         { type = "item", name = "nutrients-bar", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 2,
+      energy_required = 0.5,
       enabled = false,
     },
     {
@@ -120,7 +120,7 @@ data:extend(
         { type = "item", name = "graphene", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 16,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
     },
