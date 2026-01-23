@@ -1,10 +1,14 @@
 local no_recycle_recipe_subgroups = {
   "virentis-crops",
+  "virentis-cultivation",
   "virentis-foods-basic",
   "virentis-foods-trade-item",
   "virentis-microorganism",
   "virentis-trades",
   "virentis-fluids",
+  "virentis-chemicals-organic",
+  "virentis-butching",
+  "virentis-giving",
 }
 
 for _, subgroup in pairs(no_recycle_recipe_subgroups) do

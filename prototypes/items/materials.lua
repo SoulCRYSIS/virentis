@@ -1,3 +1,51 @@
+local sounds = require("__base__.prototypes.entity.sounds")
+
+local function throw_grenade_action(projectile_name)
+  return {
+    type = "throw",
+    attack_parameters = {
+      type = "projectile",
+      activation_type = "throw",
+      ammo_category = "grenade",
+      cooldown = 60,
+      projectile_creation_distance = 0.6,
+      range = 30,
+      ammo_type = {
+        target_type = "position",
+        action = {
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "projectile",
+              projectile = projectile_name,
+              starting_speed = 0.3
+            }
+          },
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                {
+                  type = "play-sound",
+                  sound = sounds.throw_projectile
+                },
+                {
+                  type = "play-sound",
+                  sound = sounds.throw_grenade
+                },
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+end
+
 data:extend(
 ---@type data.ItemPrototype[]
   {
@@ -15,7 +63,7 @@ data:extend(
       type = "item",
       name = "heart-of-nature",
       icon = "__virentis-graphics__/icons/items/materials/heart-of-nature.png",
-      subgroup = "virentis-materials",
+      subgroup = "virentis-materials-advanced",
       order = "ad",
       stack_size = 50,
       spoil_ticks = 60 * minute,
@@ -51,11 +99,12 @@ data:extend(
       type = "item",
       name = "siltcore",
       icon = "__virentis-graphics__/icons/items/materials/siltcore.png",
-      subgroup = "virentis-materials",
+      subgroup = "virentis-materials-advanced",
       order = "ac",
       stack_size = 50,
       weight = 10 * kg,
       default_import_location = "virentis",
+      capsule_action = throw_grenade_action("siltcore-grenade"),
     },
     {
       type = "item",
@@ -93,9 +142,9 @@ data:extend(
       type = "item",
       name = "nutrients-bar",
       icon = "__virentis-graphics__/icons/items/materials/nutrients-bar.png",
-      subgroup = "virentis-materials",
-      order = "ah",
-      stack_size = 200,
+      subgroup = "virentis-materials-organic",
+      order = "ab",
+      stack_size = 50,
       spoil_result = "spoilage",
       spoil_ticks = 15 * minute,
       weight = 5 * kg,
@@ -115,13 +164,35 @@ data:extend(
     },
     {
       type = "item",
+      name = "virta-neuron",
+      icon = "__virentis-graphics__/icons/items/materials/virta-neuron.png",
+      subgroup = "virentis-materials-organic",
+      order = "ac",
+      stack_size = 50,
+      weight = 5 * kg,
+      default_import_location = "virentis",
+      spoil_result = nil,
+      spoil_ticks = 30 * minute,
+    },
+    {
+      type = "item",
       name = "sylva-core",
       icon = "__virentis-graphics__/icons/items/materials/sylva-core.png",
-      subgroup = "virentis-materials",
-      order = "ah",
+      subgroup = "virentis-materials-advanced",
+      order = "ai",
       stack_size = 50,
       weight = 10 * kg,
       default_import_location = "virentis",
     },
+    {
+      type = "item",
+      name = "fish-bones",
+      icon = "__virentis-graphics__/icons/items/materials/fish-bones.png",
+      subgroup = "virentis-materials-organic",
+      order = "aa",
+      stack_size = 50,
+      weight = 5 * kg,
+      default_import_location = "virentis",
+    }
   }
 )

@@ -93,13 +93,13 @@ for _, plant in pairs(data.raw["plant"]) do
     data.raw["recipe"]["gmo-" .. plant.name] = nil
 
     if gleba_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 10 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
+      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 5 }
+      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 1 })
+      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 1 })
     elseif virentis_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 10 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
+      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 5 }
+      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 1 })
+      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 1 })
     end
   end
 end
@@ -128,6 +128,9 @@ table.insert(unlocks, {
   recipe = "gleba-fertilizer"
 })
 cultivation_tech.effects = unlocks
+
+local space_cultivation_tech = data.raw["technology"]["space-cultivation"]
+table.insert(space_cultivation_tech.prerequisites, "promethium-science-pack")
 
 local space_cultivator = data.raw["assembling-machine"]["space-cultivator"]
 space_cultivator.subgroup = "virentis-cultivation"

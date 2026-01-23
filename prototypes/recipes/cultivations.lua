@@ -12,15 +12,14 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/cultivations/virentis-fertilizer.png",
       ingredients = {
         { type = "item",  name = "kheast",         amount = 2 },
-        { type = "item",  name = "pentapod-egg",   amount = 1 },
-        { type = "fluid", name = "nutrients-pulp", amount = 10 },
+        { type = "item",  name = "fish-bones",     amount = 1 },
+        { type = "fluid", name = "fish-oil",       amount = 50 },
       },
       results = {
-        { type = "item", name = "virentis-fertilizer", amount = 1 }
+        { type = "item", name = "virentis-fertilizer", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 8,
-      auto_recycle = false,
       enabled = false,
       allow_productivity = true,
     },
@@ -34,14 +33,13 @@ data:extend(
       ingredients = {
         { type = "item",  name = "bioflux",        amount = 1 },
         { type = "item",  name = "pentapod-egg",   amount = 1 },
-        { type = "fluid", name = "nutrients-pulp", amount = 10 },
+        { type = "fluid", name = "nutrients-pulp", amount = 50 },
       },
       results = {
-        { type = "item", name = "gleba-fertilizer", amount = 1 }
+        { type = "item", name = "gleba-fertilizer", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.green,
       energy_required = 8,
-      auto_recycle = false,
       enabled = false,
       allow_productivity = true,
     }

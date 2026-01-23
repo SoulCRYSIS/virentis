@@ -7,6 +7,7 @@ Date: 2026-01-24
     - Many recipes changes
   Features:
     - Fully integrate quality-seeds mod
+    - New fishes production line
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2026-01-17

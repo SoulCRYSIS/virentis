@@ -47,7 +47,7 @@ data:extend(
       type = "recipe",
       name = "housewarming-gift",
       category = "trading-t1",
-      subgroup = "virentis-mock",
+      subgroup = "virentis-giving",
       order = "a",
       icons = give_icon("__virentis-graphics__/icons/recipes/housewarming-gift.png"),
       ingredients = {
@@ -64,23 +64,38 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "give-explosive-rocket",
-      localised_name = give_recipe_localised("explosive-rocket"),
+      name = "weapons-supply",
       category = "trading-t1",
-      subgroup = "virentis-mock",
+      subgroup = "virentis-giving",
       order = "b",
-      icons = give_icon("__base__/graphics/icons/explosive-rocket.png"),
+      icons = give_icon("__virentis-graphics__/icons/recipes/weapons-supply.png"),
       ingredients = {
-        { type = "item", name = "explosive-rocket", amount = 1 }
+        { type = "item", name = "explosive-rocket", amount = 10 },
+        { type = "item", name = "siltcore",         amount = 1 },
       },
       results = {
-        { type = "item", name = "gived-explosive-rocket", amount = 1 }
+        { type = "item", name = "gived-weapons-supply", amount = 1 }
       },
       hide_from_player_crafting = true,
       hide_from_signal_gui = true,
-      energy_required = 0.2,
+      energy_required = 1,
       enabled = false,
     },
-    gived_mock_item("explosive-rocket", "ammo"),
+    {
+      type = "item",
+      name = "gived-weapons-supply",
+      localised_name = { "virentis-misc.gived", { "item-name.weapons-supply" } },
+      flags = { "ignore-spoil-time-modifier" },
+      icon = "__virentis-graphics__/icons/recipes/weapons-supply.png",
+      subgroup = "virentis-mock",
+      order = "z",
+      stack_size = 100,
+      weight = 10000 * kg,
+      spoil_ticks = 2,
+      spoil_result = nil,
+      hidden = true,
+      hidden_in_factoriopedia = true,
+      auto_recycle = false,
+    },
   }
 )

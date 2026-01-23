@@ -40,8 +40,9 @@ require "prototypes.recipes.environment-data"
 require "prototypes.recipes.giving"
 require "prototypes.recipes.microorganism"
 require "prototypes.recipes.husbandry"
-require "prototypes.recipes.recycle"
 require "prototypes.recipes.cultivations"
+require "prototypes.recipes.butching"
+require "prototypes.recipes.recycle" -- Must be last
 
 require "prototypes.tiles.tile-utils"
 require "prototypes.tiles.uniques"

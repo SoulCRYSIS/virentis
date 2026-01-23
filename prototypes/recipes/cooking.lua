@@ -185,46 +185,6 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "sweet-doughnut",
-      category = "frying",
-      subgroup = "virentis-foods-trade-item",
-      order = "be",
-      icon = "__virentis-graphics__/icons/items/foods/sweet-doughnut.png",
-      ingredients = {
-        { type = "item",  name = "mangroove-syrup", amount = 2 },
-        { type = "item",  name = "dough",           amount = 2 },
-        { type = "fluid", name = "vegetable-oil",   amount = 50 }
-      },
-      results = {
-        { type = "item", name = "sweet-doughnut", amount = 1 }
-      },
-      crafting_machine_tint = recipe_tints.purple,
-      energy_required = 8,
-      result_is_always_fresh = true,
-      enabled = false,
-    },
-    {
-      type = "recipe",
-      name = "fried-dumpling-set",
-      category = "frying",
-      subgroup = "virentis-foods-trade-item",
-      order = "bf",
-      icon = "__virentis-graphics__/icons/items/foods/fried-dumpling-set.png",
-      ingredients = {
-        { type = "item",  name = "flatbread",         amount = 2 },
-        { type = "item",  name = "sweet-chili-sauce", amount = 2 },
-        { type = "fluid", name = "vegetable-oil",     amount = 50 },
-      },
-      results = {
-        { type = "item", name = "fried-dumpling-set", amount = 1 }
-      },
-      crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
-      result_is_always_fresh = true,
-      enabled = false,
-    },
-    {
-      type = "recipe",
       name = "soft-cooked-pentapod-egg",
       category = "baking",
       subgroup = "virentis-foods-basic",
@@ -286,6 +246,70 @@ data:extend(
       energy_required = 16,
       result_is_always_fresh = true,
       enabled = false,
-    }
+    },
+    {
+      type = "recipe",
+      name = "taiyaki-royale",
+      category = "frying",
+      subgroup = "virentis-foods-trade-item",
+      order = "bi",
+      icon = "__virentis-graphics__/icons/items/foods/taiyaki-royale.png",
+      ingredients = {
+        { type = "item",  name = "flatbread",         amount = 2 },
+        { type = "item",  name = "fish-fillet",         amount = 2 },
+        { type = "item",  name = "sweet-chili-sauce", amount = 1 },
+        { type = "fluid", name = "fish-oil",          amount = 50 },
+      },
+      results = {
+        { type = "item", name = "taiyaki-royale", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.yellow,
+      energy_required = 16,
+      result_is_always_fresh = true,
+      enabled = false,
+    },
+    {
+      type = "recipe",
+      name = "citrus-sashimi",
+      category = "organic",
+      subgroup = "virentis-foods-trade-item",
+      order = "bi",
+      icon = "__virentis-graphics__/icons/items/foods/citrus-sashimi.png",
+      ingredients = {
+        { type = "item",  name = "fish-fillet",      amount = 5 },
+        { type = "item",  name = "redbloom-fruit", amount = 2 },
+        { type = "item",  name = "herb",           amount = 2 },
+        { type = "fluid", name = "fish-oil",       amount = 20 },
+      },
+      results = {
+        { type = "item", name = "citrus-sashimi", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 16,
+      result_is_always_fresh = true,
+      enabled = false,
+    },
+    {
+      type = "recipe",
+      name = "pentapod-bouillon",
+      category = "frying",
+      subgroup = "virentis-foods-trade-item",
+      order = "bi",
+      icon = "__virentis-graphics__/icons/items/foods/pentapod-bouillon.png",
+      ingredients = {
+        { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
+        { type = "item",  name = "fish-fillet",                amount = 2 },
+        { type = "item",  name = "fish-bones",               amount = 1 },
+        { type = "item",  name = "herb",                     amount = 2 },
+        { type = "fluid", name = "water",                    amount = 100 },
+      },
+      results = {
+        { type = "item", name = "pentapod-bouillon", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.orange,
+      energy_required = 16,
+      result_is_always_fresh = true,
+      enabled = false,
+    },
   }
 )

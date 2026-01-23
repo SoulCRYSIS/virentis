@@ -5,6 +5,7 @@ local trading_recipes = {
   "trade-siltcore",
   "trade-phosphorus",
   "trade-advanced-circuit",
+  "trade-virta-neuron",
 }
 
 local trading_recipes_effects = {}
@@ -313,7 +314,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "give-explosive-rocket"
+          recipe = "weapons-supply"
         },
       },
       prerequisites = { "frying" },
@@ -324,24 +325,44 @@ data:extend(
     },
     {
       type = "technology",
+      name = "cooking-fish",
+      order = "veb",
+      subgroup = "virentis-technologies", 
+      icon = "__virentis-graphics__/icons/technologies/cooking-fish.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "fish-butchering"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-oil"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "pentapod-bouillon"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "trade-siltcore"
+        },
+      },
+      prerequisites = { "frying", "fishing-dock" },
+      research_trigger = {
+        type = "craft-item",
+        item = "fishing-result-fish",
+        count = 1,
+      },
+    },
+    {
+      type = "technology",
       name = "environment-research-center",
       order = "vfa",
       subgroup = "virentis-technologies", 
       icon = "__virentis-graphics__/icons/technologies/environment-research-center.png",
       icon_size = 256,
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "sweet-doughnut"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fried-dumpling-set"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "trade-siltcore"
-        },
         {
           type = "unlock-recipe",
           recipe = "heart-of-nature"
@@ -363,11 +384,11 @@ data:extend(
           recipe = "mudland-medley"
         },
       },
-      prerequisites = { "tar-processing" },
+      prerequisites = { "tar-processing", "cooking-fish" },
       research_trigger = {
         type = "craft-item",
-        item = "gived-explosive-rocket",
-        count = 2000,
+        item = "gived-weapons-supply",
+        count = 100,
       },
     },
     {
@@ -439,8 +460,20 @@ data:extend(
           type = "unlock-recipe",
           recipe = "sylva-core"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "citrus-sashimi"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "taiyaki-royale"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "trade-virta-neuron"
+        },
       },
-      prerequisites = { "nutrients-pulp", "promethium-science-pack" },
+      prerequisites = { "nutrients-pulp" },
       unit = {
         count = 1000,
         ingredients = 

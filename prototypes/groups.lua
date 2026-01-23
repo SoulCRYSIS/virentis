@@ -27,9 +27,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "virentis-butching",
+    group = "virentis",
+    order = "cab"
+  },
+  {
+    type = "item-subgroup",
     name = "virentis-foods-basic",
     group = "virentis",
-    order = "ca"
+    order = "caa"
   },
   {
     type = "item-subgroup",
@@ -47,13 +53,25 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-trades",
     group = "virentis",
-    order = "t"
+    order = "ta"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-giving",
+    group = "virentis",
+    order = "tb"
   },
   {
     type = "item-subgroup",
     name = "virentis-chemicals",
     group = "virentis",
-    order = "e"
+    order = "ea"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-chemicals-organic",
+    group = "virentis",
+    order = "eb"
   },
   {
     type = "item-subgroup",
@@ -66,6 +84,12 @@ data:extend({
     name = "virentis-materials-advanced",
     group = "virentis",
     order = "gb"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-materials-organic",
+    group = "virentis",
+    order = "gc"
   },
   {
     type = "item-subgroup",

@@ -133,10 +133,11 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/materials/sylva-core.png",
       ingredients = {
         { type = "item",  name = "graphene",        amount = 4 },
-        { type = "item",  name = "processing-unit", amount = 4 },
+        { type = "item",  name = "processing-unit", amount = 2 },
         { type = "item",  name = "virentis-resin",  amount = 4 },
+        { type = "item",  name = "virta-neuron",    amount = 8 },
         { type = "item",  name = "siltcore",        amount = 1 },
-        { type = "fluid", name = "nutrients-pulp",  amount = 10 }
+        { type = "fluid", name = "nutrients-pulp",  amount = 20 }
       },
       results = {
         { type = "item", name = "sylva-core", amount = 1 }

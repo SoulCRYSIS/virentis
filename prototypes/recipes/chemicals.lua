@@ -40,9 +40,9 @@ data:extend(
       order = "ab",
       icon = "__virentis-graphics__/icons/recipes/sulfuric-acid-from-redbloom.png",
       ingredients = {
-        { type = "item", name = "redbloom-fruit", amount = 5 },
-        { type = "item", name = "iron-plate", amount = 1 },
-        { type = "fluid", name = "water", amount = 30 },
+        { type = "item",  name = "redbloom-fruit", amount = 5 },
+        { type = "item",  name = "iron-plate",     amount = 1 },
+        { type = "fluid", name = "water",          amount = 30 },
       },
       results = {
         { type = "fluid", name = "sulfuric-acid", amount = 30 }
@@ -139,8 +139,8 @@ data:extend(
       type = "recipe",
       name = "vegetable-oil",
       category = "organic",
-      subgroup = "virentis-chemicals",
-      order = "ab",
+      subgroup = "virentis-chemicals-organic",
+      order = "aa",
       icon = "__virentis-graphics__/icons/items/fluids/vegetable-oil.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
@@ -159,7 +159,7 @@ data:extend(
       type = "recipe",
       name = "nutrients-pulp",
       category = "organic",
-      subgroup = "virentis-chemicals",
+      subgroup = "virentis-chemicals-organic",
       order = "ca",
       icon = "__virentis-graphics__/icons/items/fluids/nutrients-pulp.png",
       ingredients = {
@@ -179,8 +179,8 @@ data:extend(
       type = "recipe",
       name = "vegetable-oil-gleba",
       category = "organic",
-      subgroup = "virentis-chemicals",
-      order = "cc",
+      subgroup = "virentis-chemicals-organic",
+      order = "ab",
       icon = "__virentis-graphics__/icons/recipes/vegetable-oil-gleba.png",
       ingredients = {
         { type = "item",  name = "phosphorus", amount = 1 },
@@ -215,6 +215,26 @@ data:extend(
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
-    }
+    },
+    {
+      type = "recipe",
+      name = "fish-oil",
+      category = "organic",
+      subgroup = "virentis-chemicals-organic",
+      order = "ba",
+      icon = "__virentis-graphics__/icons/items/fluids/fish-oil.png",
+      ingredients = {
+        { type = "item",  name = "fish-fillet",     amount = 1 },
+        { type = "fluid", name = "vegetable-oil", amount = 20 },
+      },
+      results = {
+        { type = "fluid", name = "fish-oil", amount = 20 }
+      },
+      crafting_machine_tint = recipe_tints.orange,
+      energy_required = 8,
+      allow_productivity = true,
+      auto_recycle = false,
+      enabled = false,
+    },
   }
 )
