@@ -57,7 +57,7 @@ for _, plant in pairs(data.raw["plant"]) do
     cultivator_item.order = "c"
 
     local cultivator_recipe = data.raw["recipe"][cultivator.name]
-    cultivator_recipe.ingredients[4] = { type = "item", name = "sylva-core", amount = 1 }
+    cultivator_recipe.ingredients[4] = { type = "item", name = "sylva-core", amount = 2 }
     cultivator_recipe.ingredients[5] = { type = "item", name = "landfill", amount = 8 }
     table.insert(cultivator_recipe.ingredients, { type = "item", name = "firebrick", amount = 4 })
     cultivator_recipe.surface_conditions = nil

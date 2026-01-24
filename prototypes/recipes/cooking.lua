@@ -13,7 +13,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/foods/dough.png",
       ingredients = {
         { type = "fluid", name = "water",         amount = 50 },
-        { type = "item",  name = "rockmalt-bulb", amount = 2 }
+        { type = "item",  name = "rockmalt-bulb", amount = 3 }
       },
       results = {
         { type = "item", name = "dough", amount = 1 }
@@ -129,7 +129,7 @@ data:extend(
       order = "ad",
       icon = "__virentis-graphics__/icons/items/foods/flatbread.png",
       ingredients = {
-        { type = "item", name = "dough",  amount = 1 },
+        { type = "item", name = "dough",  amount = 2 },
         { type = "item", name = "kheast", amount = 1 }
       },
       results = {
@@ -213,7 +213,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/foods/pentapod-souffle-omelette.png",
       ingredients = {
         { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
-        { type = "item",  name = "sweet-chili-sauce",        amount = 1 },
+        { type = "item",  name = "sweet-chili-sauce",        amount = 2 },
         { type = "item",  name = "flatbread",                amount = 2 },
         { type = "fluid", name = "vegetable-oil",            amount = 100 },
       },
@@ -256,9 +256,9 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/foods/taiyaki-royale.png",
       ingredients = {
         { type = "item",  name = "flatbread",         amount = 2 },
-        { type = "item",  name = "fish-fillet",         amount = 2 },
-        { type = "item",  name = "sweet-chili-sauce", amount = 1 },
-        { type = "fluid", name = "fish-oil",          amount = 50 },
+        { type = "item",  name = "fish-fillet",       amount = 2 },
+        { type = "item",  name = "sweet-chili-sauce", amount = 2 },
+        { type = "fluid", name = "fish-oil",          amount = 100 },
       },
       results = {
         { type = "item", name = "taiyaki-royale", amount = 1 }
@@ -278,7 +278,7 @@ data:extend(
       ingredients = {
         { type = "item",  name = "fish-fillet",      amount = 5 },
         { type = "item",  name = "redbloom-fruit", amount = 2 },
-        { type = "item",  name = "herb",           amount = 2 },
+        { type = "item",  name = "herb",           amount = 5 },
         { type = "fluid", name = "fish-oil",       amount = 20 },
       },
       results = {
@@ -298,7 +298,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/foods/pentapod-bouillon.png",
       ingredients = {
         { type = "item",  name = "soft-cooked-pentapod-egg", amount = 2 },
-        { type = "item",  name = "fish-fillet",                amount = 2 },
+        { type = "item",  name = "fish-fillet",              amount = 2 },
         { type = "item",  name = "fish-bones",               amount = 1 },
         { type = "item",  name = "herb",                     amount = 2 },
         { type = "fluid", name = "water",                    amount = 100 },

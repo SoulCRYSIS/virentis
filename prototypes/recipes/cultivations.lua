@@ -32,7 +32,7 @@ data:extend(
       icon = "__virentis-graphics__/icons/items/cultivations/gleba-fertilizer.png",
       ingredients = {
         { type = "item",  name = "bioflux",        amount = 1 },
-        { type = "item",  name = "pentapod-egg",   amount = 1 },
+        { type = "item",  name = "pentapod-egg",   amount = 2 },
         { type = "fluid", name = "nutrients-pulp", amount = 50 },
       },
       results = {

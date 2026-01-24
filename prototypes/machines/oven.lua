@@ -42,7 +42,7 @@ data:extend({
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      emissions_per_minute = { spores = 5 },
+      emissions_per_minute = { spores = 8 },
       specific_heat = "2MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
@@ -66,7 +66,7 @@ data:extend({
     },
     crafting_categories = { "baking", "basic-cooking" },
     crafting_speed = 2,
-    module_slots = 3,
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {
       mining_time = 1,

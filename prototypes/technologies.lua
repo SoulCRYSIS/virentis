@@ -379,6 +379,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "mudland-medley"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "low-density-structure-from-graphene"
+        },
       },
       prerequisites = { "tar-processing", "cooking-fish" },
       research_trigger = {

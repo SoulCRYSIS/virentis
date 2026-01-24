@@ -70,7 +70,7 @@ data:extend {
       fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      emissions_per_minute = { spores = 3 },
+      emissions_per_minute = { spores = 5 },
       light_flicker =
       {
         color = { 0, 0, 0 },

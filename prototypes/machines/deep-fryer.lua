@@ -42,7 +42,7 @@ data:extend({
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      emissions_per_minute = { spores = 3 },
+      emissions_per_minute = { spores = 8 },
       specific_heat = "2MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
@@ -94,7 +94,7 @@ data:extend({
     fluid_boxes_off_when_no_fluid_recipe = false,
     crafting_categories = { "frying" },
     crafting_speed = 2,
-    module_slots = 3,
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     allowed_module_categories = { "efficiency", "productivity", "speed" },
     minable = {

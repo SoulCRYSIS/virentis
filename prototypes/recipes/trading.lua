@@ -19,7 +19,7 @@ data:extend(
         { type = "item", name = "iron-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 0.5,
+      energy_required = 1,
       enabled = false,
       allow_productivity = true,
     },
@@ -38,7 +38,7 @@ data:extend(
         { type = "item", name = "copper-plate", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 0.5,
+      energy_required = 1,
       enabled = false,
       allow_productivity = true,
     },
@@ -92,7 +92,7 @@ data:extend(
         { type = "item", name = "pentapod-souffle-omelette", amount = 1 }
       },
       results = {
-        { type = "item", name = "phosphorus", amount = 5 }
+        { type = "item", name = "phosphorus", amount = 3 }
       },
       energy_required = 2,
       enabled = false,
@@ -112,7 +112,7 @@ data:extend(
       results = {
         { type = "item", name = "advanced-circuit", amount = 5 }
       },
-      energy_required = 2,
+      energy_required = 4,
       enabled = false,
     },
     {
@@ -131,7 +131,7 @@ data:extend(
         { type = "item", name = "virta-neuron", amount = 5 }
       },
       crafting_machine_tint = recipe_tints.blue,
-      energy_required = 2,
+      energy_required = 4,
       enabled = false,
       allow_productivity = true,
     },

@@ -11,7 +11,7 @@ data:extend({
     order = "ba",
     icon = "__virentis-graphics__/icons/machines/living-inserter.png",
     ingredients = {
-      { type = "item",  name = "heart-of-nature", amount = 1 },
+      { type = "item",  name = "siltcore",        amount = 1 },
       { type = "item",  name = "sylva-core",      amount = 1 },
       { type = "item",  name = "virentis-resin",  amount = 4 },
       { type = "item",  name = "stack-inserter",  amount = 1 },

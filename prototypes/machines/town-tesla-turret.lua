@@ -81,7 +81,7 @@ data:extend({
     healing_per_tick = 1,
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
+    -- collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box_vertical_extension = 2,
     start_attacking_only_when_can_shoot = true,
@@ -131,7 +131,7 @@ data:extend({
     {
       base_visualisation = {
         {
-          render_layer = "higher-object-under",
+          render_layer = "lower-object",
           animation = virentis.load_sprite_4way({
             base_animation,
             base_glow_animation,
@@ -209,7 +209,7 @@ data:extend({
     {
       pictures =
       {
-        filename = "__space-age__/graphics/entity/lightning-rod/lightning-rod.png",
+        filename = "__space-age__/graphics/entity/lightning-rod/lightning-rod-reflection.png",
         priority = "extra-high",
         width = 12,
         height = 28,

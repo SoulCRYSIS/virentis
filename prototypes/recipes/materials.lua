@@ -135,7 +135,7 @@ data:extend(
         { type = "item",  name = "graphene",        amount = 4 },
         { type = "item",  name = "processing-unit", amount = 2 },
         { type = "item",  name = "virentis-resin",  amount = 4 },
-        { type = "item",  name = "virta-neuron",    amount = 8 },
+        { type = "item",  name = "virta-neuron",    amount = 16 },
         { type = "item",  name = "heart-of-nature", amount = 1 },
         { type = "fluid", name = "nutrients-pulp",  amount = 20 }
       },
@@ -143,7 +143,7 @@ data:extend(
         { type = "item", name = "sylva-core", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 24,
+      energy_required = 32,
       allow_productivity = true,
       enabled = false,
     },

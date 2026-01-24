@@ -146,7 +146,7 @@ data:extend(
       order = "ab",
       stack_size = 50,
       spoil_result = "spoilage",
-      spoil_ticks = 15 * minute,
+      spoil_ticks = 60 * minute,
       weight = 5 * kg,
       fuel_category = "nutrients",
       fuel_value = "10MJ",

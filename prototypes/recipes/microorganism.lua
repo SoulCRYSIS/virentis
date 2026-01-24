@@ -13,7 +13,7 @@ data:extend(
       ingredients = {
         { type = "item", name = "kheast",           amount = 1 },
         { type = "item", name = "mangroove-mashed", amount = 1 },
-        { type = "item", name = "rockmalt-bulb",   amount = 1 },
+        { type = "item", name = "rockmalt-bulb",    amount = 2 },
         { type = "item", name = "herb",             amount = 1 },
       },
       results = {

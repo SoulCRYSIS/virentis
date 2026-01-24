@@ -19,7 +19,7 @@ data:extend({
     energy_usage = "10kW",
     energy_source = {
       type = "void",
-      emissions_per_minute = { spores = 10 },
+      emissions_per_minute = { spores = 15 },
     },
     crafting_categories = { "trading-t1" },
     crafting_speed = 1,

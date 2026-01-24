@@ -13,7 +13,7 @@ data:extend({
     order = "aa",
     icon = "__virentis-graphics__/icons/machines/eternal-lantern.png",
     ingredients = {
-      { type = "item",  name = "heart-of-nature",     amount = 1 },
+      { type = "item",  name = "siltcore",            amount = 1 },
       { type = "item",  name = "sylva-core",          amount = 1 },
       { type = "item",  name = "firebrick",           amount = 4 },
       { type = "item",  name = "living-wood",         amount = 8 },

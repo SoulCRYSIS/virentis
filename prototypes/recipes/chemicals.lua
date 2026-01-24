@@ -61,7 +61,7 @@ data:extend(
       order = "ba",
       icon = "__virentis-graphics__/icons/recipes/tar-processing.png",
       ingredients = {
-        { type = "fluid", name = "tar",           amount = 20 },
+        { type = "fluid", name = "tar",           amount = 100 },
         { type = "fluid", name = "vegetable-oil", amount = 50 },
         { type = "item",  name = "phosphorus",    amount = 2 }
       },
@@ -165,10 +165,10 @@ data:extend(
       ingredients = {
         { type = "item",  name = "nutrients",     amount = 10 },
         { type = "item",  name = "phosphorus",    amount = 1 },
-        { type = "fluid", name = "vegetable-oil", amount = 50 },
+        { type = "fluid", name = "vegetable-oil", amount = 30 },
       },
       results = {
-        { type = "fluid", name = "nutrients-pulp", amount = 50 }
+        { type = "fluid", name = "nutrients-pulp", amount = 30 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 8,

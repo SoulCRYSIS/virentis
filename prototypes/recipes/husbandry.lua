@@ -25,10 +25,12 @@ data:extend(
       results = {
         { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1 }
       },
-      crafting_machine_tint = recipe_tints.orange,
+      crafting_machine_tint = data.raw["recipe"]["pentapod-egg"].crafting_machine_tint,
       energy_required = 6,
       auto_recycle = false,
+      allow_productivity = true,
       enabled = false,
+      result_is_always_fresh = true,
     },
   }
 )
