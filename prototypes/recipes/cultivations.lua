@@ -16,7 +16,7 @@ data:extend(
         { type = "fluid", name = "fish-oil",       amount = 50 },
       },
       results = {
-        { type = "item", name = "virentis-fertilizer", amount = 5 }
+        { type = "item", name = "virentis-fertilizer", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
       energy_required = 8,
@@ -36,7 +36,7 @@ data:extend(
         { type = "fluid", name = "nutrients-pulp", amount = 50 },
       },
       results = {
-        { type = "item", name = "gleba-fertilizer", amount = 5 }
+        { type = "item", name = "gleba-fertilizer", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
       energy_required = 8,

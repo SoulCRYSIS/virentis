@@ -31,10 +31,10 @@ data:extend(
       order = "aa",
       icon = "__virentis-graphics__/icons/items/materials/heart-of-nature.png",
       ingredients = {
-        { type = "item", name = "virentis-resin", amount = 2 },
-        { type = "item", name = "siltcore",       amount = 1 },
+        { type = "item", name = "virentis-resin", amount = 4 },
+        { type = "item", name = "siltcore",       amount = 2 },
         { type = "item", name = "living-wood",    amount = 4 },
-        { type = "item", name = "pentapod-egg",   amount = 1 }
+        { type = "item", name = "pentapod-egg",   amount = 2 }
       },
       results = {
         { type = "item", name = "heart-of-nature", amount = 1 }
@@ -136,14 +136,14 @@ data:extend(
         { type = "item",  name = "processing-unit", amount = 2 },
         { type = "item",  name = "virentis-resin",  amount = 4 },
         { type = "item",  name = "virta-neuron",    amount = 8 },
-        { type = "item",  name = "siltcore",        amount = 1 },
+        { type = "item",  name = "heart-of-nature", amount = 1 },
         { type = "fluid", name = "nutrients-pulp",  amount = 20 }
       },
       results = {
         { type = "item", name = "sylva-core", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 16,
+      energy_required = 24,
       allow_productivity = true,
       enabled = false,
     },
@@ -163,7 +163,7 @@ data:extend(
         { type = "item", name = "carbon", amount = 6 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 8,
+      energy_required = 12,
       result_is_always_fresh = true,
       allow_productivity = true,
       auto_recycle = false,

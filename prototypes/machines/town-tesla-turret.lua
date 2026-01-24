@@ -83,6 +83,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
     damaged_trigger_effect = hit_effects.entity(),
+    drawing_box_vertical_extension = 2,
     start_attacking_only_when_can_shoot = true,
     rotation_speed = 0.05,
     preparing_speed = 0.1,

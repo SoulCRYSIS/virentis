@@ -14,7 +14,7 @@ data:extend(
         { type = "item", name = "kheast",           amount = 1 },
         { type = "item", name = "mangroove-mashed", amount = 1 },
         { type = "item", name = "rockmalt-bulb",   amount = 1 },
-        { type = "item", name = "herb",             amount = 2 },
+        { type = "item", name = "herb",             amount = 1 },
       },
       results = {
         { type = "item", name = "kheast", amount = 2, ignored_by_stats = 1 }

@@ -33,7 +33,7 @@ data:extend(
         { type = "item", name = "fish-fillet",  amount = 5 },
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 2,
+      energy_required = 8,
       result_is_always_fresh = false,
       allow_productivity = true,
       enabled = false,

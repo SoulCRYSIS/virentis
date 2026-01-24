@@ -191,9 +191,9 @@ data:extend(
       order = "af",
       icon = "__virentis-graphics__/icons/items/foods/soft-cooked-pentapod-egg.png",
       ingredients = {
-        { type = "item", name = "kheast",       amount = 2 },
+        { type = "item", name = "kheast",       amount = 1 },
         { type = "item", name = "pentapod-egg", amount = 1 },
-        { type = "item", name = "herb",         amount = 4 },
+        { type = "item", name = "herb",         amount = 2 },
       },
       results = {
         { type = "item", name = "soft-cooked-pentapod-egg", amount = 1 }

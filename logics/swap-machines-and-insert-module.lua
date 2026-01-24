@@ -30,6 +30,10 @@ local to_process = {
   "trader-t1",
 }
 
+local ghost_to_process = {
+  "eternal-lantern",
+}
+
 local quality_list = {
   "normal",
   "uncommon",
@@ -43,6 +47,10 @@ local function apply_variant(event)
   if not (entity and entity.valid) then return end
 
   local name = entity.name
+  if entity.type == "entity-ghost" then
+    entity.insert_plan = {}
+    return
+  end
 
   ---@type LuaEntity
   local new_entity = entity
@@ -157,9 +165,12 @@ local function on_chunk_generated(event)
   end
 end
 
-local filters = {}
+local filters = { }
 for _, name in ipairs(to_process) do
   table.insert(filters, { filter = "name", name = name })
+end
+for _, name in ipairs(ghost_to_process) do
+  table.insert(filters, { filter = "ghost_name", ghost_name = name, name = name })
 end
 
 script.on_event(defines.events.on_built_entity, apply_variant, filters)

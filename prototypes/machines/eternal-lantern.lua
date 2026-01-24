@@ -47,7 +47,7 @@ data:extend({
     damaged_trigger_effect = virentis.default_damaged_trigger_effect,
     drawing_box_vertical_extension = 0.5,
     allowed_effects = { "consumption", "pollution" },
-    create_ghost_on_death = false,
+    distribution_effectivity_bonus_per_quality_level = 0.3,
     stateless_visualisation = {
       {
         light = { shift = { 0, 0 }, color = { 0.8, 0.7, 0.5 }, intensity = 0.9, size = 28, minimum_darkness = 0.3 },

@@ -18,7 +18,7 @@ data:extend({
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     damaged_trigger_effect = virentis.default_damaged_trigger_effect,
-    drawing_box_vertical_extension = 0.5,
+    drawing_box_vertical_extension = 5,
     allowed_effects = { "productivity" },
     graphics_set = {
       module_icons_suppressed = true,

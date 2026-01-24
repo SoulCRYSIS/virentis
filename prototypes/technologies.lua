@@ -337,10 +337,6 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "fish-oil"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "pentapod-bouillon"
         },
         {
@@ -471,6 +467,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "trade-virta-neuron"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-oil"
         },
       },
       prerequisites = { "nutrients-pulp" },

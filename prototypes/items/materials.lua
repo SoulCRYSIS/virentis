@@ -96,7 +96,7 @@ data:extend(
       default_import_location = "virentis",
     },
     {
-      type = "item",
+      type = "capsule",
       name = "siltcore",
       icon = "__virentis-graphics__/icons/items/materials/siltcore.png",
       subgroup = "virentis-materials-advanced",
