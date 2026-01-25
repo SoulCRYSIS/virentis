@@ -6,8 +6,8 @@ Date: 2026-01-24
     - Rework map generation, plants now more grouped together
     - Many recipes changes
   Features:
-    - Fully integrate quality-seeds mod
-    - New fishes production line
+    - Fully integrate quality-seeds mod (custom extend)
+    - New cooking fish production line
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2026-01-17

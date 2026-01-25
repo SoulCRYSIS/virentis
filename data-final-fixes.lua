@@ -1,3 +1,2 @@
-if mods["quality-seeds"] then
-  require "prototypes.plants.quality-seed"
-end
+
+require "prototypes.overhauls.quality-seed"

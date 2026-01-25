@@ -76,4 +76,5 @@ require "prototypes.planet.controls"
 require "prototypes.planet.planet"
 require "prototypes.planet.connections"
 
-require "prototypes.base-game-changes"
+require "prototypes.overhauls.base-game-changes"
+require "prototypes.overhauls.fishing"

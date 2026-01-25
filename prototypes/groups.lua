@@ -95,7 +95,7 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-research",
     group = "virentis",
-    order = "i"
+    order = "j"
   },
   {
     type = "item-subgroup",
@@ -107,19 +107,25 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-cultivation",
     group = "virentis",
-    order = "h"
+    order = "i"
   },
   {
     type = "item-subgroup",
     name = "virentis-cultivating",
     group = "virentis",
-    order = "ha"
+    order = "ia"
   },
   {
     type = "item-subgroup",
     name = "virentis-cultivating-space",
     group = "virentis",
-    order = "hb"
+    order = "ib"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-fishing",
+    group = "virentis",
+    order = "h"
   },
   {
     type = "item-subgroup",

@@ -33,6 +33,10 @@ for _, plant in pairs(data.raw["plant"]) do
     local cultivator = data.raw["assembling-machine"][plant.name .. "-greenhouse"]
     cultivator.energy_source.effectivity = 1
     cultivator.energy_usage = "200kW"
+    cultivator.crafting_speed = 0.2
+    cultivator.effect_receiver.base_effect = {
+      speed = 4,
+    }
     cultivator.fluid_boxes = {
       {
         production_type = "output",
@@ -51,6 +55,12 @@ for _, plant in pairs(data.raw["plant"]) do
     cultivator.subgroup = "virentis-cultivation"
     cultivator.order = "c"
     cultivator.surface_conditions = plant.surface_conditions
+    cultivator.energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+    }
+    cultivator.allowed_effects = { "consumption", "quality", "productivity", "pollution" }
+    cultivator.allowed_module_categories = { "efficiency", "productivity", "quality" }
     
     local cultivator_item = data.raw["item"][cultivator.name]
     cultivator_item.subgroup = "virentis-cultivation"
@@ -65,6 +75,7 @@ for _, plant in pairs(data.raw["plant"]) do
     cultivator_recipe.order = "c"
     cultivator_recipe.energy_required = 10
 
+
     local cultivate_recipe = data.raw["recipe"]["cultivate-" .. plant.name]
     cultivate_recipe.subgroup = "virentis-cultivating"
     cultivate_recipe.energy_required = plant.growth_ticks / 60
@@ -77,7 +88,7 @@ for _, plant in pairs(data.raw["plant"]) do
     if plant.harvest_emissions and plant.harvest_emissions.spores then
       spore_emmisions = plant.harvest_emissions.spores
     end
-    cultivate_recipe.results = plant_harvest_results
+    cultivate_recipe.results = table.deepcopy(plant_harvest_results)
     if spore_emmisions > 0 then
       table.insert(cultivate_recipe.results, { type = "fluid", name = "spores", amount = spore_emmisions * 100 })
     end
@@ -86,6 +97,8 @@ for _, plant in pairs(data.raw["plant"]) do
     cultivate_space_recipe.subgroup = "virentis-cultivating-space"
     cultivate_space_recipe.order = "cb"
     cultivate_space_recipe.results = plant_harvest_results
+    cultivate_space_recipe.energy_required = cultivate_recipe.energy_required / 6
+
     if plant.name == "nyxoleum-tree" then
       cultivate_space_recipe.ingredients[2] = { type = "fluid", name = "tar", amount = 50 }
     end
@@ -93,13 +106,13 @@ for _, plant in pairs(data.raw["plant"]) do
     data.raw["recipe"]["gmo-" .. plant.name] = nil
 
     if gleba_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 5 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 1 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 1 })
+      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 10 }
+      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
+      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
     elseif virentis_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 5 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 1 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 1 })
+      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 10 }
+      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
+      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
     end
   end
 end
@@ -136,9 +149,21 @@ local space_cultivator = data.raw["assembling-machine"]["space-cultivator"]
 space_cultivator.subgroup = "virentis-cultivation"
 space_cultivator.order = "b"
 space_cultivator.energy_source.effectivity = 1
-space_cultivator.energy_usage = "100kW"
+space_cultivator.energy_usage = "1MW"
+space_cultivator.ingredient_count = 4
+space_cultivator.max_item_product_count = 4
+space_cultivator.forced_symmetry = "horizontal"
+space_cultivator.fluid_boxes_off_when_no_fluid_recipe = false
+space_cultivator.allowed_effects = { "consumption", "quality", "productivity", "pollution" }
+space_cultivator.allowed_module_categories = { "efficiency", "productivity", "quality" }
+space_cultivator.crafting_speed = 0.2
+space_cultivator.energy_source = {
+  type = "electric",
+  usage_priority = "secondary-input",
+}
 space_cultivator.effect_receiver.base_effect = {
   productivity = 1,
+  speed = 4,
 }
 
 local space_cultivator_item = data.raw["item"][space_cultivator.name]
