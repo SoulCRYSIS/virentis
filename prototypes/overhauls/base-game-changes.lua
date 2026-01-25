@@ -30,3 +30,5 @@ data.raw["recipe"]["biochamber"].surface_conditions = {
     max = 2000
   }
 }
+
+data.raw["recipe"]["fish-breeding"].allow_quality = false

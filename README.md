@@ -39,7 +39,10 @@ Including fish cooking production line.
 
 ### *NEW!* Huge overall rebalance/rework
 
-Now, the mod is much more balance than beta1
+Now, the mod is much more balance than beta1.
+
+Your old save may not work anymore, sorry about that.
+
 - Adjust many ingredients ratio
 - Change some trade input/output
 - Integrate fish production line

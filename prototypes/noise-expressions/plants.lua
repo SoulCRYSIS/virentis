@@ -21,24 +21,25 @@ data:extend(
     type = "noise-function",
     name = "virentis_fertile_spots_coastal_raw",
     parameters = { "seed", "spot_radius" },
-    expression = "spot_noise{ x = x + wobble_noise_x * 15,\z
-                              y = y + wobble_noise_y * 15,\z
+    expression = "spot_noise{ x = x + wobble_noise_x * 10,\z
+                              y = y + wobble_noise_y * 10,\z
                               seed0 = map_seed,\z
                               seed1 = seed,\z
                               candidate_spot_count = 20,\z
-                              suggested_minimum_candidate_point_spacing = spot_radius * 4,\z
+                              suggested_minimum_candidate_point_spacing = scaled_radius * 4,\z
                               skip_span = 1,\z
                               skip_offset = 0,\z
                               region_size = 1024,\z
                               density_expression = 80,\z
-                              spot_quantity_expression = spot_radius * spot_radius,\z
-                              spot_radius_expression = spot_radius,\z
+                              spot_quantity_expression = scaled_radius * scaled_radius,\z
+                              spot_radius_expression = scaled_radius,\z
                               hard_region_target_quantity = 0,\z
                               spot_favorability_expression = 60,\z
                               basement_value = -0.5,\z
-                              maximum_spot_basement_radius = spot_radius * 4}",
+                              maximum_spot_basement_radius = scaled_radius * 4}",
     local_expressions =
     {
+      scaled_radius = "spot_radius * sqrt(control:virentis_plants:size)",
       wobble_noise_x = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 3000000 + seed, octaves = 2, input_scale = 1/20}",
       wobble_noise_y = "multioctave_noise{x = x, y = y, persistence = 0.5, seed0 = map_seed, seed1 = 4000000 + seed, octaves = 2, input_scale = 1/20}"
     }
