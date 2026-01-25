@@ -8,6 +8,8 @@ Date: 2026-01-24
   Features:
     - Fully integrate quality-seeds mod (custom extend)
     - New cooking fish production line
+  Graphics:
+    - Move all graphics to virentis-graphics mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2026-01-17
