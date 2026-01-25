@@ -20,17 +20,43 @@ I suggested you to play this mod again or wait for final version.
 
 ## Features
 
+### *NEW!* Plants cultivator
+Extend from [Quality Seeds](https://mods.factorio.com/mod/quality-seeds)
+
+Add machines to grow plants in controlled environment, with ability to grow quality trees using fertillizer.
+
+Now, you can grow legendary plants in space.
+
+![](https://files.catbox.moe/m0m17m.png)
+
+### *NEW!* Fishing dock
+
+Extend from [Fishing dock](https://mods.factorio.com/mod/fishing-dock)
+
+Including fish cooking production line.
+
+![](https://files.catbox.moe/cm6f7e.png)
+
+### *NEW!* Huge overall rebalance/rework
+
+Now, the mod is much more balance than beta1
+- Adjust many ingredients ratio
+- Change some trade input/output
+- Integrate fish production line
+- Revise map generation, make fertile tiles more grouping
+- Rebalance pollution and evolution rate
+
 ### Town
 The fulgaran move to live here, they are your allies, cooperate with them to clear out the pentapods.
 
 ![](https://files.catbox.moe/s3ay8t.mp4)
 
-### New machines
+### More machines
 - Oven
 - Deep fryer
 - Environment research center: virentis's unique lab
 
-### New type of plants and microorganisms
+### More type of plants and microorganisms
 - Redbloom: citric berry
 - Rockmalt: carbohydrate base tuber plant
 - Mangroove: sweet fruit with strange branches
@@ -83,5 +109,5 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 ## Disclaimers
 
 - If you want any blender files, I'm happy to share, just contact me.
-- Most assets are generated from AI, you can follow my process here https://www.notion.so/3D-model-to-Factorio-sprites-2b36be37c4c08009a8c0deeea1b82904
+- Most assets are generated from AI, you can follow my process here (just updated to v2) https://www.notion.so/3D-model-to-Factorio-sprites-2b36be37c4c08009a8c0deeea1b82904
 
