@@ -78,3 +78,4 @@ require "prototypes.planet.connections"
 
 require "prototypes.overhauls.base-game-changes"
 require "prototypes.overhauls.fishing"
+require "prototypes.overhauls.quality-seed"

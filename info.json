@@ -1,6 +1,6 @@
 {
   "name": "virentis",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "title": "Planet Virentis [Beta1]",
   "author": "SoulCRYSIS",
   "factorio_version": "2.0",
@@ -9,10 +9,11 @@
   "dependencies": [
     "space-age >= 2.0",
     "aai-vehicles-ironclad",
-    "quality-seeds",
     "virentis-graphics",
     "fishing-dock",
+    "quality-seeds-fork",
     "? behemoth-enemies",
-    "? wayward-seas"
+    "? wayward-seas",
+    "! quality-seeds"
   ]
 }

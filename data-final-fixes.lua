@@ -1,2 +1,1 @@
-
-require "prototypes.overhauls.quality-seed"
+require "prototypes.overhauls.quality-seed-final-fixes"

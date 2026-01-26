@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2026-01-26
+  Compatibility:
+    - Migrate "quality-seeds" dependency to my custom fork "quality-seeds-fork"
+    - Disable quality-seeds for other mods's plants by default
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
-Date: 2026-01-17
+Date: 2026-01-26
   Changes:
     - Tweaks map gen
     - Disable fish breeding quality, to encourage fishing dock usage
