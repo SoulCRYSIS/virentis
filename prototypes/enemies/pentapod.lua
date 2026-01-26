@@ -91,8 +91,10 @@ if mods["behemoth-enemies"] == nil then
     data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis-graphics__/icons/enemies/" ..
     k .. "-stomper.png"
     data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis-graphics__/icons/enemies/" .. k .. "-stomper.png"
-    data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis-graphics__/icons/enemies/" ..
-        k .. "-wriggler.png"
+    if data.raw["unit"][k .. "-wriggler-pentapod-premature"] then
+      data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis-graphics__/icons/enemies/" ..
+          k .. "-wriggler.png"
+    end
     data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis-graphics__/icons/enemies/" .. k .. "-wriggler.png"
     data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis-graphics__/icons/enemies/" ..
         k .. "-wriggler-corpse.png"
@@ -112,6 +114,7 @@ behemoth_stomper_pentapod_shell.minable.results = {
   { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
   { type = "item", name = "pentapod-egg", amount_min = 3,  amount_max = 5, percent_spoiled = 0.5 },
 }
+local premature_wriggler = data.raw["unit"]["behemoth-wriggler-pentapod-premature"] or data.raw["unit"]["behemoth-wriggler-pentapod"]
 behemoth_stomper_pentapod_shell.minable.mining_trigger = {
   type = "direct",
   action_delivery = {
@@ -119,7 +122,7 @@ behemoth_stomper_pentapod_shell.minable.mining_trigger = {
     target_effects = {
       { 
         type = "create-entity",
-        entity_name = "behemoth-wriggler-pentapod-premature",
+        entity_name = premature_wriggler.name,
         as_enemy = true,
         find_non_colliding_position = true,
         offset_deviation = { { -5, -5 }, { 5, 5 } },
