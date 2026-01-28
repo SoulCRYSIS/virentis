@@ -12,7 +12,7 @@ data:extend({
     category = "crafting",
     subgroup = "virentis-machines",
     order = "ca",
-    icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
+    icon = "__virentis-graphics__/icons/machines/environment-research-center.png",
     ingredients = {
       { type = "item", name = "firebrick",       amount = 20 },
       { type = "item", name = "steel-plate",     amount = 20 },
@@ -31,7 +31,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "environment-research-center",
-    icon = "__virentis__/graphics/icons/machines/environment-research-center.png",
+    icon = "__virentis-graphics__/icons/machines/environment-research-center.png",
     subgroup = "virentis-machines",
     order = "ca",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -63,14 +63,14 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__virentis__/graphics/entities/machines/research-center/research-center.png",
+            filename = "__virentis-graphics__/entities/machines/research-center/research-center.png",
             priority = "very-low",
             width = width,
             height = height,
             scale = 0.7,
           },
           {
-            filename = "__virentis__/graphics/entities/machines/research-center/research-center-shadow.png",
+            filename = "__virentis-graphics__/entities/machines/research-center/research-center-shadow.png",
             priority = "very-low",
             width = 480,
             height = 480,
@@ -82,7 +82,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__virentis__/graphics/entities/machines/research-center/research-center.png",
+            filename = "__virentis-graphics__/entities/machines/research-center/research-center.png",
             priority = "very-low",
             width = width,
             height = height,
@@ -97,7 +97,7 @@ data:extend({
           apply_recipe_tint = "primary",
           effect = "flicker",
           animation = {
-            filename = "__virentis__/graphics/entities/machines/research-center/research-center-glow.png",
+            filename = "__virentis-graphics__/entities/machines/research-center/research-center-glow.png",
             priority = "very-low",
             width = width,
             height = height,

@@ -1,6 +1,6 @@
 local recipe_to_disable = {
   ["frying"] = "housewarming-gift",
-  ["environment-research-center"] = "give-explosive-rocket",
+  ["environment-research-center"] = "weapons-supply",
 }
 
 script.on_event(defines.events.on_research_finished, function(event)

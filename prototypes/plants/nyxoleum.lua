@@ -1,10 +1,11 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
+local virentis = require("prototypes.utils")
 
 data:extend({
   {
     type = "plant",
     name = "nyxoleum-tree",
-    icon = "__virentis__/graphics/icons/plants/nyxoleum-tree.png",
+    icon = "__virentis-graphics__/icons/plants/nyxoleum-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",
@@ -20,7 +21,7 @@ data:extend({
         {
           type = "item",
           name = "nyxoleum-seed",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
@@ -61,5 +62,6 @@ data:extend({
       primary = { 56, 36, 52, 255 },
       secondary = { 32, 22, 29, 255 },
     },
-  },
+    surface_conditions = virentis.surface_condition
+  }
 })

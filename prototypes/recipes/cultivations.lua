@@ -1,0 +1,47 @@
+local virentis = require("prototypes.utils")
+local recipe_tints = virentis.recipe_tints
+
+data:extend(
+  {
+    {
+      type = "recipe",
+      name = "virentis-fertilizer",
+      category = "organic",
+      subgroup = "virentis-cultivation",
+      order = "aa",
+      icon = "__virentis-graphics__/icons/items/cultivations/virentis-fertilizer.png",
+      ingredients = {
+        { type = "item",  name = "kheast",         amount = 2 },
+        { type = "item",  name = "fish-bones",     amount = 1 },
+        { type = "fluid", name = "fish-oil",       amount = 50 },
+      },
+      results = {
+        { type = "item", name = "virentis-fertilizer", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.orange,
+      energy_required = 8,
+      enabled = false,
+      allow_productivity = true,
+    },
+    {
+      type = "recipe",
+      name = "gleba-fertilizer",
+      category = "organic",
+      subgroup = "virentis-cultivation",
+      order = "ab",
+      icon = "__virentis-graphics__/icons/items/cultivations/gleba-fertilizer.png",
+      ingredients = {
+        { type = "item",  name = "bioflux",        amount = 1 },
+        { type = "item",  name = "pentapod-egg",   amount = 2 },
+        { type = "fluid", name = "nutrients-pulp", amount = 50 },
+      },
+      results = {
+        { type = "item", name = "gleba-fertilizer", amount = 1 }
+      },
+      crafting_machine_tint = recipe_tints.green,
+      energy_required = 8,
+      enabled = false,
+      allow_productivity = true,
+    }
+  }
+)

@@ -1,12 +1,12 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
 local recipe_tints = require("prototypes.utils").recipe_tints
-
+local virentis = require("prototypes.utils")
 
 data:extend({
   {
     type = "plant",
     name = "redbloom-tree",
-    icon = "__virentis__/graphics/icons/plants/redbloom-tree.png",
+    icon = "__virentis-graphics__/icons/plants/redbloom-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",
@@ -22,12 +22,12 @@ data:extend({
         {
           type = "item",
           name = "redbloom-fruit",
-          amount = 10,
+          amount = 50,
         },
         {
           type = "item",
           name = "herb",
-          amount = 5,
+          amount = 20,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
@@ -68,5 +68,6 @@ data:extend({
       primary = { 214, 45, 45, 255 },
       secondary = { 184, 59, 59, 255 },
     },
+    surface_conditions = virentis.surface_condition
   },
 })

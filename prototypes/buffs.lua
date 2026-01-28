@@ -8,7 +8,7 @@ data:extend(
       name = "berry-bliss-cookie-speed-sticker",
       duration_in_ticks = 10 * minute,
       target_movement_modifier = 1.5,
-      icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
+      icon = "__virentis-graphics__/icons/items/foods/berry-bliss-cookie.png",
       flags = { "not-on-map" },
     },
     {
@@ -21,7 +21,7 @@ data:extend(
         type = "fire"
       },
       target_movement_modifier = 5,
-      icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
+      icon = "__virentis-graphics__/icons/items/foods/pentapod-souffle-omelette.png",
       flags = { "not-on-map" },
       animation = {
         filename = "__base__/graphics/entity/fire-flame/fire-flame-01.png",

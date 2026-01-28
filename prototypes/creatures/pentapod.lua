@@ -86,23 +86,30 @@ if mods["behemoth-enemies"] == nil then
         body = gleba_body_tint
       }, factoriopedia_gleba_enemy_wriggler, factoriopedia_gleba_enemy_wriggler_premature,
       space_age_sounds.wriggler_pentapod.big)
+      
+    if not data.raw["unit"][k .. "-wriggler-pentapod-premature"] then
+      local premature_wriggler = table.deepcopy(data.raw["unit"][k .. "-wriggler-pentapod"])
+      premature_wriggler.name = k .. "-wriggler-pentapod-premature"
+      premature_wriggler.healing_per_tick = -premature_wriggler.max_health / 50 / 60
+      premature_wriggler.absorptions_to_join_attack = { spores = 0 }
+      data:extend({ premature_wriggler })
+    end
 
-
-    data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis__/graphics/icons/creatures/" ..
+    data.raw["spider-unit"][k .. "-strafer-pentapod"].icon = "__virentis-graphics__/icons/enemies/" ..
         k .. "-strafer.png"
-    data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis__/graphics/icons/creatures/" ..
+    data.raw["spider-unit"][k .. "-stomper-pentapod"].icon = "__virentis-graphics__/icons/enemies/" ..
         k .. "-stomper.png"
-    data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-stomper.png"
-    data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis__/graphics/icons/creatures/" ..
+    data.raw["simple-entity"][k .. "-stomper-shell"].icon = "__virentis-graphics__/icons/enemies/" .. k .. "-stomper.png"
+    data.raw["unit"][k .. "-wriggler-pentapod-premature"].icon = "__virentis-graphics__/icons/enemies/" ..
         k .. "-wriggler.png"
-    data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-wriggler.png"
-    data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis__/graphics/icons/creatures/" ..
+    data.raw["unit"][k .. "-wriggler-pentapod"].icon = "__virentis-graphics__/icons/enemies/" .. k .. "-wriggler.png"
+    data.raw["corpse"][k .. "-wriggler-pentapod-corpse"].icon = "__virentis-graphics__/icons/enemies/" ..
         k .. "-wriggler-corpse.png"
-    data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-stomper.png"
-    data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis__/graphics/icons/creatures/" .. k .. "-strafer.png"
-    data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis__/graphics/icons/creatures/" .. k ..
+    data.raw["corpse"][k .. "-stomper-corpse"].icon = "__virentis-graphics__/icons/enemies/" .. k .. "-stomper.png"
+    data.raw["corpse"][k .. "-strafer-corpse"].icon = "__virentis-graphics__/icons/enemies/" .. k .. "-strafer.png"
+    data.raw["spider-leg"][k .. "-stomper-pentapod-leg"].icon = "__virentis-graphics__/icons/enemies/" .. k ..
         "-stomper.png"
-    data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis__/graphics/icons/creatures/" .. k ..
+    data.raw["spider-leg"][k .. "-strafer-pentapod-leg"].icon = "__virentis-graphics__/icons/enemies/" .. k ..
         "-strafer.png"
   end
 end
@@ -114,11 +121,22 @@ behemoth_stomper_pentapod_shell.minable.results = {
   { type = "item", name = "stone",        amount_min = 20, amount_max = 30 },
   { type = "item", name = "pentapod-egg", amount_min = 3,  amount_max = 5, percent_spoiled = 0.5 },
 }
-behemoth_stomper_pentapod_shell.remains_when_mined = {
-  "behemoth-wriggler-pentapod-premature",
-  "behemoth-wriggler-pentapod-premature",
-  "behemoth-wriggler-pentapod-premature",
+behemoth_stomper_pentapod_shell.minable.mining_trigger = {
+  type = "direct",
+  action_delivery = {
+    type = "instant",
+    target_effects = {
+      {
+        type = "create-entity",
+        entity_name = "behemoth-wriggler-pentapod-premature",
+        as_enemy = true,
+        find_non_colliding_position = true,
+        offset_deviation = { { -5, -5 }, { 5, 5 } },
+      }
+    }
+  }
 }
+behemoth_stomper_pentapod_shell.minable.mining_time = 5
 behemoth_stomper_pentapod_shell.autoplace = {
   force = "enemy",
   probability_expression =

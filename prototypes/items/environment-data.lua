@@ -6,7 +6,7 @@ data:extend(
     {
       type = "tool",
       name = "mudland-research-data",
-      icon = "__virentis__/graphics/icons/items/environment-data/mudland-data.png",
+      icon = "__virentis-graphics__/icons/items/environment-data/mudland-data.png",
       subgroup = "virentis-research",
       order = "a",
       stack_size = 200,

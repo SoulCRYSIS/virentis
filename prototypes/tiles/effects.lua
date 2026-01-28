@@ -15,7 +15,7 @@ data:extend({
           height = 512
         },
         {
-          filename = "__virentis__/graphics/tiles/mudland-slime-shader.png",
+          filename = "__virentis-graphics__/tiles/mudland-slime-shader.png",
           width = 512 * 4,
           height = 512 * 2
         }
@@ -57,7 +57,7 @@ data:extend({
           height = 512
         },
         {
-          filename = "__virentis__/graphics/tiles/tar-puddle-shader.png",
+          filename = "__virentis-graphics__/tiles/tar-puddle-shader.png",
           width = 512 * 4,
           height = 512 * 2
         },
@@ -110,7 +110,7 @@ data:extend({
   --         height = 512 * 2
   --       },
   --       {
-  --         filename = "__virentis__/graphics/tiles/oil-water-shader.png",
+  --         filename = "__virentis-graphics__/tiles/oil-water-shader.png",
   --         width = 512 * 4,
   --         height = 512 * 2
   --       },

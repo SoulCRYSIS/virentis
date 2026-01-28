@@ -12,11 +12,12 @@ data:extend({
     category = "crafting",
     subgroup = "virentis-machines",
     order = "ab",
-    icon = "__virentis__/graphics/icons/machines/oven.png",
+    icon = "__virentis-graphics__/icons/machines/oven.png",
     ingredients = {
       { type = "item", name = "steel-plate", amount = 8 },
       { type = "item", name = "firebrick",   amount = 16 },
-      { type = "item", name = "heat-pipe",   amount = 2 }
+      { type = "item", name = "heat-pipe",   amount = 2 },
+      { type = "item", name = "basic-oven", amount = 1 }
     },
     results = {
       { type = "item", name = "oven", amount = 1 }
@@ -28,7 +29,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "oven",
-    icon = "__virentis__/graphics/icons/machines/oven.png",
+    icon = "__virentis-graphics__/icons/machines/oven.png",
     subgroup = "virentis-machines",
     order = "ab",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -41,19 +42,19 @@ data:extend({
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      emissions_per_minute = { spores = 5 },
+      emissions_per_minute = { spores = 8 },
       specific_heat = "2MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
         apply_heat_pipe_glow({
-          filename = "__virentis__/graphics/entities/machines/oven/oven-heated-pipe-horizontal.png",
+          filename = "__virentis-graphics__/entities/machines/oven/oven-heated-pipe-horizontal.png",
           width = 192,
           height = 192,
           fadeout = true,
           scale = 0.5,
         }),
         apply_heat_pipe_glow({
-          filename = "__virentis__/graphics/entities/machines/oven/oven-heated-pipe-vertical.png",
+          filename = "__virentis-graphics__/entities/machines/oven/oven-heated-pipe-vertical.png",
           width = 192,
           height = 192,
           fadeout = true,
@@ -65,7 +66,7 @@ data:extend({
     },
     crafting_categories = { "baking", "basic-cooking" },
     crafting_speed = 2,
-    module_slots = 3,
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     minable = {
       mining_time = 1,
@@ -96,21 +97,21 @@ data:extend({
         {
           layers = {
             {
-              filename = "__virentis__/graphics/entities/machines/heatpipe/heatpipe-3x3-horizontal.png",
+              filename = "__virentis-graphics__/entities/machines/heatpipe/heatpipe-3x3-horizontal.png",
               priority = "very-low",
               width = 192,
               height = 192,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/oven/oven.png",
+              filename = "__virentis-graphics__/entities/machines/oven/oven.png",
               priority = "very-low",
               width = width,
               height = height,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/oven/oven-shadow.png",
+              filename = "__virentis-graphics__/entities/machines/oven/oven-shadow.png",
               priority = "very-low",
               width = width,
               height = height,
@@ -122,21 +123,21 @@ data:extend({
         {
           layers = {
             {
-              filename = "__virentis__/graphics/entities/machines/heatpipe/heatpipe-3x3-vertical.png",
+              filename = "__virentis-graphics__/entities/machines/heatpipe/heatpipe-3x3-vertical.png",
               priority = "very-low",
               width = 192,
               height = 192,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/oven/oven.png",
+              filename = "__virentis-graphics__/entities/machines/oven/oven.png",
               priority = "very-low",
               width = width,
               height = height,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/oven/oven-shadow.png",
+              filename = "__virentis-graphics__/entities/machines/oven/oven-shadow.png",
               priority = "very-low",
               width = width,
               height = height,
@@ -157,7 +158,7 @@ data:extend({
           apply_recipe_tint = "primary",
           effect = "flicker",
           animation = {
-            filename = "__virentis__/graphics/entities/machines/oven/oven-working-glow.png",
+            filename = "__virentis-graphics__/entities/machines/oven/oven-working-glow.png",
             width = width,
             height = height,
             draw_as_glow = true,

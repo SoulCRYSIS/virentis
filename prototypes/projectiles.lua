@@ -92,6 +92,6 @@ end
 
 data:extend(
   {
-    grenade_projectile("mudland-medley-grenade", 50, 6.5),
+    grenade_projectile("siltcore-grenade", 200, 9.5),
   }
 )

@@ -1,10 +1,11 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
+local virentis = require("prototypes.utils")
 
 data:extend({
   {
     type = "plant",
     name = "mangroove-tree",
-    icon = "__virentis__/graphics/icons/plants/mangroove-tree.png",
+    icon = "__virentis-graphics__/icons/plants/mangroove-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
     order = "c",
@@ -20,12 +21,12 @@ data:extend({
         {
           type = "item",
           name = "mangroove-fruit",
-          amount = 10,
+          amount = 50,
         },
         {
           type = "item",
           name = "living-wood",
-          amount = 5,
+          amount = 10,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
@@ -66,5 +67,6 @@ data:extend({
       primary = { 13, 112, 18, 255 },
       secondary = { 34, 64, 26, 255 },
     },
+    surface_conditions = virentis.surface_condition
   },
 })

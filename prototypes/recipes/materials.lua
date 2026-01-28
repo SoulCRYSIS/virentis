@@ -15,10 +15,10 @@ data:extend(
         { type = "item", name = "rockmalt-scale", amount = 1 }
       },
       results = {
-        { type = "item", name = "stone", amount = 5 }
+        { type = "item", name = "stone", amount = 10 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 8,
+      energy_required = 16,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -29,12 +29,12 @@ data:extend(
       category = "organic",
       subgroup = "virentis-materials-advanced",
       order = "aa",
-      icon = "__virentis__/graphics/icons/items/materials/heart-of-nature.png",
+      icon = "__virentis-graphics__/icons/items/materials/heart-of-nature.png",
       ingredients = {
-        { type = "item", name = "virentis-resin", amount = 2 },
-        { type = "item", name = "siltcore",       amount = 1 },
+        { type = "item", name = "virentis-resin", amount = 4 },
+        { type = "item", name = "siltcore",       amount = 2 },
         { type = "item", name = "living-wood",    amount = 4 },
-        { type = "item", name = "pentapod-egg",   amount = 1 }
+        { type = "item", name = "pentapod-egg",   amount = 2 }
       },
       results = {
         { type = "item", name = "heart-of-nature", amount = 1 }
@@ -72,7 +72,7 @@ data:extend(
       category = "advanced-crafting",
       subgroup = "virentis-materials-advanced",
       order = "ab",
-      icon = "__virentis__/graphics/icons/recipes/low-density-structure-from-graphene.png",
+      icon = "__virentis-graphics__/icons/recipes/low-density-structure-from-graphene.png",
       ingredients = {
         { type = "item", name = "copper-plate", amount = 5 },
         { type = "item", name = "iron-plate",   amount = 5 },
@@ -82,7 +82,7 @@ data:extend(
         { type = "item", name = "low-density-structure", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 8,
+      energy_required = 4,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -93,15 +93,15 @@ data:extend(
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-materials",
       order = "ba",
-      icon = "__virentis__/graphics/icons/items/materials/nutrients-bar.png",
+      icon = "__virentis-graphics__/icons/items/materials/nutrients-bar.png",
       ingredients = {
-        { type = "fluid", name = "nutrients-pulp", amount = 25 },
+        { type = "fluid", name = "nutrients-pulp", amount = 10 },
       },
       results = {
         { type = "item", name = "nutrients-bar", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 2,
+      energy_required = 0.5,
       enabled = false,
     },
     {
@@ -110,7 +110,7 @@ data:extend(
       category = "electronics",
       subgroup = "virentis-materials",
       order = "cb",
-      icon = "__virentis__/graphics/icons/items/materials/graphene.png",
+      icon = "__virentis-graphics__/icons/items/materials/graphene.png",
       ingredients = {
         { type = "item", name = "carbon",     amount = 2 },
         { type = "item", name = "phosphorus", amount = 1 },
@@ -120,7 +120,7 @@ data:extend(
         { type = "item", name = "graphene", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.gray,
-      energy_required = 16,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
     },
@@ -130,19 +130,20 @@ data:extend(
       category = "electronics",
       subgroup = "virentis-materials",
       order = "cb",
-      icon = "__virentis__/graphics/icons/items/materials/sylva-core.png",
+      icon = "__virentis-graphics__/icons/items/materials/sylva-core.png",
       ingredients = {
-        { type = "item",  name = "graphene",        amount = 2 },
+        { type = "item",  name = "graphene",        amount = 4 },
         { type = "item",  name = "processing-unit", amount = 2 },
         { type = "item",  name = "virentis-resin",  amount = 4 },
-        { type = "item",  name = "siltcore",        amount = 1 },
-        { type = "fluid", name = "nutrients-pulp",  amount = 10 }
+        { type = "item",  name = "virta-neuron",    amount = 16 },
+        { type = "item",  name = "heart-of-nature", amount = 1 },
+        { type = "fluid", name = "nutrients-pulp",  amount = 20 }
       },
       results = {
         { type = "item", name = "sylva-core", amount = 1 }
       },
       crafting_machine_tint = recipe_tints.green,
-      energy_required = 16,
+      energy_required = 32,
       allow_productivity = true,
       enabled = false,
     },
@@ -152,7 +153,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-materials",
       order = "ca",
-      icon = "__virentis__/graphics/icons/recipes/carbon-from-creosote.png",
+      icon = "__virentis-graphics__/icons/recipes/carbon-from-creosote.png",
       ingredients = {
         { type = "item",  name = "creosote", amount = 1 },
         { type = "item",  name = "wood",     amount = 2 },
@@ -162,7 +163,7 @@ data:extend(
         { type = "item", name = "carbon", amount = 6 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 8,
+      energy_required = 12,
       result_is_always_fresh = true,
       allow_productivity = true,
       auto_recycle = false,

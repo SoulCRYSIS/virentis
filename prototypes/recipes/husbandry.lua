@@ -17,7 +17,7 @@ data:extend(
       category = "organic",
       subgroup = "virentis-chemicals",
       order = "cb",
-      icon = "__virentis__/graphics/icons/recipes/pentapod-from-nutrients-pulp.png",
+      icon = "__virentis-graphics__/icons/recipes/pentapod-from-nutrients-pulp.png",
       ingredients = {
         { type = "item",  name = "pentapod-egg",   amount = 1, ignored_by_stats = 1 },
         { type = "fluid", name = "nutrients-pulp", amount = 30 },
@@ -25,10 +25,12 @@ data:extend(
       results = {
         { type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1 }
       },
-      crafting_machine_tint = recipe_tints.orange,
-      energy_required = 8,
+      crafting_machine_tint = data.raw["recipe"]["pentapod-egg"].crafting_machine_tint,
+      energy_required = 6,
       auto_recycle = false,
+      allow_productivity = true,
       enabled = false,
+      result_is_always_fresh = true,
     },
   }
 )

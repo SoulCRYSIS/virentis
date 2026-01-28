@@ -1,13 +1,13 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
+local virentis = require("prototypes.utils")
 
 data:extend({
   {
     type = "plant",
     name = "rockmalt-tree",
-    icon = "__virentis__/graphics/icons/plants/rockmalt-tree.png",
+    icon = "__virentis-graphics__/icons/plants/rockmalt-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
-
     order = "c",
     flags = virentis_plant.default_flags,
     growth_ticks = 5 * minute,
@@ -21,12 +21,12 @@ data:extend({
         {
           type = "item",
           name = "rockmalt-fruit",
-          amount = 1,
+          amount = 5,
         },
         {
           type = "item",
           name = "herb",
-          amount = 5,
+          amount = 20,
         },
       },
       mining_trigger = virentis_plant.leaf_sound_trigger,
@@ -67,5 +67,6 @@ data:extend({
       primary = { 253, 255, 209, 255 },
       secondary = { 244, 245, 228, 255 },
     },
+    surface_conditions = virentis.surface_condition
   },
 })

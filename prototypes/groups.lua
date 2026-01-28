@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item-group",
     name = "virentis",
-    icon = "__virentis__/graphics/icons/misc/virentis-icon.png",
+    icon = "__virentis-graphics__/icons/misc/virentis-icon.png",
     order = "v",
     icon_size = 256,
     localised_name = "Virentis"
@@ -27,9 +27,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "virentis-butching",
+    group = "virentis",
+    order = "cab"
+  },
+  {
+    type = "item-subgroup",
     name = "virentis-foods-basic",
     group = "virentis",
-    order = "bba"
+    order = "caa"
   },
   {
     type = "item-subgroup",
@@ -47,17 +53,25 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-trades",
     group = "virentis",
-    order = "t"
+    order = "ta"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-giving",
+    group = "virentis",
+    order = "tb"
   },
   {
     type = "item-subgroup",
     name = "virentis-chemicals",
     group = "virentis",
-    order = "ca"
+    order = "ea"
+    name = "virentis-chemicals-organic",
+    group = "virentis",
+    order = "eb"
   },
   {
     type = "item-subgroup",
-    name = "virentis-materials",
     group = "virentis",
     order = "da"
   },
@@ -81,15 +95,45 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "virentis-materials-organic",
+    group = "virentis",
+    order = "gc"
+  },
+  {
+    type = "item-subgroup",
     name = "virentis-research",
     group = "virentis",
-    order = "r"
+    order = "j"
   },
   {
     type = "item-subgroup",
     name = "virentis-fluids",
     group = "virentis",
     order = "f"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-cultivation",
+    group = "virentis",
+    order = "i"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-cultivating",
+    group = "virentis",
+    order = "ia"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-cultivating-space",
+    group = "virentis",
+    order = "ib"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-fishing",
+    group = "virentis",
+    order = "h"
   },
   {
     type = "item-subgroup",

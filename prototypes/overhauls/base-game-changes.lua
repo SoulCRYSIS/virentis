@@ -22,3 +22,13 @@ local foundationable_tiles = {
 for _, tile in pairs(foundationable_tiles) do
   table.insert(data.raw.item.foundation.place_as_tile.tile_condition, tile)
 end
+
+data.raw["recipe"]["biochamber"].surface_conditions = {
+  {
+    property = "pressure",
+    min = 1200,
+    max = 2000
+  }
+}
+
+table.insert(data.raw["recipe"]["fish-breeding"].ingredients, { type = "item", name = "biter-egg", amount = 1 })

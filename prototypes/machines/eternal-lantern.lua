@@ -11,9 +11,9 @@ data:extend({
     category = "organic",
     subgroup = "virentis-decors",
     order = "aa",
-    icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
+    icon = "__virentis-graphics__/icons/machines/eternal-lantern.png",
     ingredients = {
-      { type = "item",  name = "heart-of-nature",     amount = 1 },
+      { type = "item",  name = "siltcore",            amount = 1 },
       { type = "item",  name = "sylva-core",          amount = 1 },
       { type = "item",  name = "firebrick",           amount = 4 },
       { type = "item",  name = "living-wood",         amount = 8 },
@@ -31,7 +31,7 @@ data:extend({
   {
     type = "beacon",
     name = "eternal-lantern",
-    icon = "__virentis__/graphics/icons/machines/eternal-lantern.png",
+    icon = "__virentis-graphics__/icons/machines/eternal-lantern.png",
     subgroup = "virentis-decors",
     order = "aa",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -47,13 +47,13 @@ data:extend({
     damaged_trigger_effect = virentis.default_damaged_trigger_effect,
     drawing_box_vertical_extension = 0.5,
     allowed_effects = { "consumption", "pollution" },
-    create_ghost_on_death = false,
+    distribution_effectivity_bonus_per_quality_level = 0.3,
     stateless_visualisation = {
       {
         light = { shift = { 0, 0 }, color = { 0.8, 0.7, 0.5 }, intensity = 0.9, size = 28, minimum_darkness = 0.3 },
         animation = {
           sheet = {
-            filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern.png",
+            filename = "__virentis-graphics__/entities/machines/eternal-lantern/eternal-lantern.png",
             variation_count = 4,
             line_length = 4,
             width = width,
@@ -65,7 +65,7 @@ data:extend({
       {
         animation = {
           sheet = {
-            filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-shadow.png",
+            filename = "__virentis-graphics__/entities/machines/eternal-lantern/eternal-lantern-shadow.png",
             variation_count = 4,
             line_length = 4,
             width = width,
@@ -79,7 +79,7 @@ data:extend({
         animation = {
           sheet = {
             effect = "flicker",
-            filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-glow.png",
+            filename = "__virentis-graphics__/entities/machines/eternal-lantern/eternal-lantern-glow.png",
             variation_count = 4,
             line_length = 4,
             width = width,
@@ -113,7 +113,7 @@ data:extend({
     {
       pictures =
       {
-        filename = "__virentis__/graphics/entities/machines/eternal-lantern/eternal-lantern-water-reflection.png",
+        filename = "__virentis-graphics__/entities/machines/eternal-lantern/eternal-lantern-water-reflection.png",
         priority = "extra-high",
         width = width,
         height = height,
@@ -127,7 +127,7 @@ data:extend({
   {
     type = "module",
     name = "eternal-lantern-module",
-    icon = "__virentis__/graphics/mocks/empty-icon.png",
+    icon = "__virentis-graphics__/mocks/empty-icon.png",
     subgroup = "module",
     category = "efficiency",
     tier = 1,

@@ -9,18 +9,18 @@ data:extend(
       category = "organic",
       subgroup = "virentis-microorganism",
       order = "a",
-      icon = "__virentis__/graphics/icons/items/microorganism/kheast.png",
+      icon = "__virentis-graphics__/icons/items/microorganism/kheast.png",
       ingredients = {
         { type = "item", name = "kheast",           amount = 1 },
         { type = "item", name = "mangroove-mashed", amount = 1 },
-        { type = "item", name = "redbloom-fruit",   amount = 1 },
+        { type = "item", name = "rockmalt-bulb",    amount = 2 },
         { type = "item", name = "herb",             amount = 1 },
       },
       results = {
-        { type = "item", name = "kheast", amount = 2 }
+        { type = "item", name = "kheast", amount = 2, ignored_by_stats = 1 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 16,
+      energy_required = 4,
       result_is_always_fresh = true,
       allow_productivity = true,
       enabled = false,

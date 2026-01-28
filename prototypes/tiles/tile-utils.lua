@@ -70,7 +70,7 @@ end
 
 virentis_tile.pollution_absorption = {
   land = { spores = 0.000010 },
-  water = { spores = 0.000030 },
+  water = { spores = 0.000025 },
 }
 
 virentis_tile.transition_masks = {

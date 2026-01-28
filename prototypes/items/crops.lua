@@ -4,7 +4,7 @@ data:extend(
     {
       type = "item",
       name = "rockmalt-fruit",
-      icon = "__virentis__/graphics/icons/items/crops/rockmalt-fruit.png",
+      icon = "__virentis-graphics__/icons/items/crops/rockmalt-fruit.png",
       subgroup = "virentis-crops",
       order = "ba",
       spoil_ticks = 30 * minute,
@@ -15,10 +15,10 @@ data:extend(
     {
       type = "item",
       name = "rockmalt-bulb",
-      icon = "__virentis__/graphics/icons/items/crops/rockmalt-bulb.png",
+      icon = "__virentis-graphics__/icons/items/crops/rockmalt-bulb.png",
       subgroup = "virentis-crops",
       order = "bb",
-      spoil_ticks = 10 * minute,
+      spoil_ticks = 20 * minute,
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
@@ -28,7 +28,7 @@ data:extend(
     {
       type = "item",
       name = "rockmalt-scale",
-      icon = "__virentis__/graphics/icons/items/crops/rockmalt-scale.png",
+      icon = "__virentis-graphics__/icons/items/crops/rockmalt-scale.png",
       subgroup = "virentis-crops",
       localised_name = { "item-name.rockmalt-scale" },
       order = "bc",
@@ -40,7 +40,7 @@ data:extend(
     {
       type = "item",
       name = "herb",
-      icon = "__virentis__/graphics/icons/items/crops/herb.png",
+      icon = "__virentis-graphics__/icons/items/crops/herb.png",
       subgroup = "virentis-crops",
       order = "aa",
       spoil_ticks = 30 * minute,
@@ -51,7 +51,7 @@ data:extend(
     {
       type = "item",
       name = "redbloom-fruit",
-      icon = "__virentis__/graphics/icons/items/crops/redbloom-fruit.png",
+      icon = "__virentis-graphics__/icons/items/crops/redbloom-fruit.png",
       subgroup = "virentis-crops",
       localised_name = { "item-name.redbloom-fruit" },
       order = "ca",
@@ -67,11 +67,11 @@ data:extend(
     {
       type = "item",
       name = "nyxoleum-sapling",
-      icon = "__virentis__/graphics/icons/items/crops/nyxoleum-sapling.png",
+      icon = "__virentis-graphics__/icons/items/crops/nyxoleum-sapling.png",
       subgroup = "virentis-crops",
       localised_name = { "item-name.nyxoleum-sapling" },
       order = "ea",
-      spoil_ticks = 30 * minute,
+      spoil_ticks = 60 * minute,
       spoil_result = "spoilage",
       stack_size = 50,
       weight = 5 * kg,
@@ -81,7 +81,7 @@ data:extend(
     {
       type = "item",
       name = "nyxoleum-seed",
-      icon = "__virentis__/graphics/icons/items/crops/nyxoleum-seed.png",
+      icon = "__virentis-graphics__/icons/items/crops/nyxoleum-seed.png",
       subgroup = "virentis-crops",
       order = "eb",
       stack_size = 50,
@@ -92,7 +92,7 @@ data:extend(
     {
       type = "item",
       name = "mangroove-seed",
-      icon = "__virentis__/graphics/icons/items/crops/mangroove-seed.png",
+      icon = "__virentis-graphics__/icons/items/crops/mangroove-seed.png",
       subgroup = "virentis-crops",
       localised_name = { "item-name.mangroove-seed" },
       order = "da",
@@ -105,10 +105,10 @@ data:extend(
       type = "item",
       name = "mangroove-fruit",
       pictures = {
-        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-1.png", size = 64 , scale = 0.5 },
-        { filename = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png", size = 64 , scale = 0.5 }
+        { filename = "__virentis-graphics__/icons/items/crops/mangroove-fruit-1.png", size = 64 , scale = 0.5 },
+        { filename = "__virentis-graphics__/icons/items/crops/mangroove-fruit-2.png", size = 64 , scale = 0.5 }
       },
-      icon = "__virentis__/graphics/icons/items/crops/mangroove-fruit-2.png",
+      icon = "__virentis-graphics__/icons/items/crops/mangroove-fruit-2.png",
       subgroup = "virentis-crops",
       order = "db",
       spoil_ticks = 30 * minute,
@@ -119,12 +119,12 @@ data:extend(
     {
       type = "item",
       name = "living-wood",
-      icon = "__virentis__/graphics/icons/items/crops/living-wood.png",
+      icon = "__virentis-graphics__/icons/items/crops/living-wood.png",
       subgroup = "virentis-crops",
       order = "dc",
-      spoil_ticks = 20 * minute,
+      spoil_ticks = 30 * minute,
       spoil_result = "wood",
-      stack_size = 50,
+      stack_size = 100,
       weight = 5 * kg,
     },
   })

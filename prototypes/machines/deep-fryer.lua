@@ -10,7 +10,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "virentis-machines",
     order = "ac",
-    icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
+    icon = "__virentis-graphics__/icons/machines/deep-fryer.png",
     ingredients = {
       { type = "item",  name = "steel-plate",     amount = 8 },
       { type = "item",  name = "pipe",            amount = 4 },
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "deep-fryer",
-    icon = "__virentis__/graphics/icons/machines/deep-fryer.png",
+    icon = "__virentis-graphics__/icons/machines/deep-fryer.png",
     subgroup = "virentis-machines",
     order = "ac",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -42,14 +42,14 @@ data:extend({
       max_temperature = 400,
       max_transfer = "1GW",
       min_working_temperature = 240,
-      emissions_per_minute = { spores = 5 },
+      emissions_per_minute = { spores = 8 },
       specific_heat = "2MJ",
       connections = virentis.two_line_connections,
       heat_picture = virentis.sprite_2way_to_4way(
         {
           layers = {
             {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heated-horizontal.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-heated-horizontal.png",
               width = 320,
               height = 320,
               draw_as_glow = true,
@@ -58,7 +58,7 @@ data:extend({
               scale = 0.5,
             },
             apply_heat_pipe_glow({
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heated-pipe-horizontal.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-heated-pipe-horizontal.png",
               width = 192,
               height = 192,
               fadeout = true,
@@ -69,7 +69,7 @@ data:extend({
         {
           layers = {
             {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heated-vertical.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-heated-vertical.png",
               width = 320,
               height = 320,
               draw_as_glow = true,
@@ -78,7 +78,7 @@ data:extend({
               scale = 0.5,
             },
             apply_heat_pipe_glow({
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-heated-pipe-vertical.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-heated-pipe-vertical.png",
               width = 192,
               height = 192,
               fadeout = true,
@@ -94,7 +94,7 @@ data:extend({
     fluid_boxes_off_when_no_fluid_recipe = false,
     crafting_categories = { "frying" },
     crafting_speed = 2,
-    module_slots = 3,
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     allowed_module_categories = { "efficiency", "productivity", "speed" },
     minable = {
@@ -126,21 +126,21 @@ data:extend({
         {
           layers = {
             {
-              filename = "__virentis__/graphics/entities/machines/heatpipe/heatpipe-3x3-horizontal.png",
+              filename = "__virentis-graphics__/entities/machines/heatpipe/heatpipe-3x3-horizontal.png",
               priority = "very-low",
               width = 192,
               height = 192,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-horizontal.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-horizontal.png",
               priority = "very-low",
               width = 320,
               height = 320,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-shadow-horizontal.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-shadow-horizontal.png",
               priority = "very-low",
               width = 320,
               height = 320,
@@ -152,21 +152,21 @@ data:extend({
         {
           layers = {
             {
-              filename = "__virentis__/graphics/entities/machines/heatpipe/heatpipe-3x3-vertical.png",
+              filename = "__virentis-graphics__/entities/machines/heatpipe/heatpipe-3x3-vertical.png",
               priority = "very-low",
               width = 192,
               height = 192,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-vertical.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-vertical.png",
               priority = "very-low",
               width = 320,
               height = 320,
               scale = 0.5,
             },
             {
-              filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-shadow-vertical.png",
+              filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-shadow-vertical.png",
               priority = "very-low",
               width = 320,
               height = 320,
@@ -185,7 +185,7 @@ data:extend({
         {
           fadeout = true,
           animation = {
-            filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-working-animation.png",
+            filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-working-animation.png",
             priority = "very-low",
             width = 128,
             height = 128,
@@ -200,7 +200,7 @@ data:extend({
           fadeout = true,
           apply_recipe_tint = "primary",
           animation = {
-            filename = "__virentis__/graphics/entities/machines/deep-fryer/deep-fryer-working-glow.png",
+            filename = "__virentis-graphics__/entities/machines/deep-fryer/deep-fryer-working-glow.png",
             priority = "very-low",
             width = 320,
             height = 320,

@@ -45,13 +45,11 @@ virentis.pass_middle_fluid_box = {
     production_type = "input",
     volume = 100,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } } },
-    secondary_draw_orders = { north = -1 }
   },
   {
     production_type = "input",
     volume = 100,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } } },
-    secondary_draw_orders = { north = -1 }
   }
 }
 
@@ -113,7 +111,7 @@ virentis.default_machine_item_prototype = function(name, stack_size)
     type = "item",
     name = name,
     place_result = name,
-    icon = "__virentis__/graphics/icons/machines/" .. name .. ".png",
+    icon = "__virentis-graphics__/icons/machines/" .. name .. ".png",
     subgroup = "virentis-machines",
     order = "a",
     inventory_move_sound = item_sounds.mechanical_large_inventory_move,
@@ -149,7 +147,7 @@ virentis.surface_condition = {
 virentis.default_damaged_trigger_effect = hit_effects.entity()
 
 virentis.decor_radius_visualisation_picture = {
-  filename = "__virentis__/graphics/entities/machines/decor-radius-visualization.png",
+  filename = "__virentis-graphics__/entities/machines/decor-radius-visualization.png",
   priority = "extra-high-no-scale",
   width = 10,
   height = 10

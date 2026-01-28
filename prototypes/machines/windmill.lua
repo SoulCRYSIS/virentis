@@ -7,7 +7,7 @@ data:extend({
   {
     type = "beacon",
     name = "windmill",
-    icon = "__virentis__/graphics/icons/machines/windmill.png",
+    icon = "__virentis-graphics__/icons/machines/windmill.png",
     subgroup = "virentis-decors",
     order = "ba",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -18,7 +18,7 @@ data:extend({
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     damaged_trigger_effect = virentis.default_damaged_trigger_effect,
-    drawing_box_vertical_extension = 0.5,
+    drawing_box_vertical_extension = 5,
     allowed_effects = { "productivity" },
     graphics_set = {
       module_icons_suppressed = true,
@@ -32,7 +32,7 @@ data:extend({
             layers =
             {
               {
-                filename = "__virentis__/graphics/entities/machines/windmill/windmill.png",
+                filename = "__virentis-graphics__/entities/machines/windmill/windmill.png",
                 width = width,
                 height = height,
                 scale = 0.7,
@@ -41,7 +41,7 @@ data:extend({
                 animation_speed = 0.1,
               },
               {
-                filename = "__virentis__/graphics/entities/machines/windmill/windmill-shadow.png",
+                filename = "__virentis-graphics__/entities/machines/windmill/windmill-shadow.png",
                 width = width,
                 height = height,
                 scale = 0.7,
@@ -52,7 +52,7 @@ data:extend({
               },
               {
                 effect = "flicker",
-                filename = "__virentis__/graphics/entities/machines/windmill/windmill-glow.png",
+                filename = "__virentis-graphics__/entities/machines/windmill/windmill-glow.png",
                 width = width,
                 height = height,
                 scale = 0.7,
@@ -86,7 +86,7 @@ data:extend({
     {
       pictures =
       {
-        filename = "__virentis__/graphics/entities/machines/windmill/windmill-water-reflection.png",
+        filename = "__virentis-graphics__/entities/machines/windmill/windmill-water-reflection.png",
         priority = "extra-high",
         width = width,
         height = height,
@@ -100,7 +100,7 @@ data:extend({
   {
     type = "module",
     name = "windmill-module",
-    icon = "__virentis__/graphics/mocks/empty-icon.png",
+    icon = "__virentis-graphics__/mocks/empty-icon.png",
     subgroup = "module",
     category = "productivity",
     tier = 1,

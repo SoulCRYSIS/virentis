@@ -19,7 +19,7 @@ data:extend(
       category = "organic-or-hand-crafting",
       subgroup = "virentis-chemicals",
       order = "aa",
-      icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-nyxoleum-seed.png",
+      icon = "__virentis-graphics__/icons/recipes/solid-fuel-from-nyxoleum-seed.png",
       ingredients = {
         { type = "item", name = "nyxoleum-seed", amount = 1 },
       },
@@ -27,7 +27,28 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 4,
+      energy_required = 6,
+      allow_productivity = true,
+      auto_recycle = false,
+      enabled = false,
+    },
+    {
+      type = "recipe",
+      name = "sulfuric-acid-from-redbloom",
+      category = "organic-or-chemistry",
+      subgroup = "virentis-chemicals",
+      order = "ab",
+      icon = "__virentis-graphics__/icons/recipes/sulfuric-acid-from-redbloom.png",
+      ingredients = {
+        { type = "item",  name = "redbloom-fruit", amount = 5 },
+        { type = "item",  name = "iron-plate",     amount = 1 },
+        { type = "fluid", name = "water",          amount = 30 },
+      },
+      results = {
+        { type = "fluid", name = "sulfuric-acid", amount = 30 }
+      },
+      crafting_machine_tint = recipe_tints.red,
+      energy_required = 2,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -38,11 +59,11 @@ data:extend(
       category = "oil-processing",
       subgroup = "virentis-chemicals",
       order = "ba",
-      icon = "__virentis__/graphics/icons/recipes/tar-processing.png",
+      icon = "__virentis-graphics__/icons/recipes/tar-processing.png",
       ingredients = {
-        { type = "fluid", name = "tar",           amount = 20 },
+        { type = "fluid", name = "tar",           amount = 100 },
         { type = "fluid", name = "vegetable-oil", amount = 50 },
-        { type = "item",  name = "phosphorus",    amount = 4 }
+        { type = "item",  name = "phosphorus",    amount = 2 }
       },
       results = {
         { type = "item",  name = "virentis-resin", amount = 2 },
@@ -50,7 +71,7 @@ data:extend(
         { type = "fluid", name = "methanol",       amount = 50 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 32,
+      energy_required = 8,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -61,7 +82,7 @@ data:extend(
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
       order = "bb",
-      icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-methanol.png",
+      icon = "__virentis-graphics__/icons/recipes/solid-fuel-from-methanol.png",
       ingredients = {
         { type = "fluid", name = "methanol",      amount = 10 },
         { type = "fluid", name = "vegetable-oil", amount = 5 }
@@ -70,7 +91,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 4,
+      energy_required = 2,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -81,7 +102,7 @@ data:extend(
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
       order = "bc",
-      icon = "__virentis__/graphics/icons/recipes/solid-fuel-from-creosote.png",
+      icon = "__virentis-graphics__/icons/recipes/solid-fuel-from-creosote.png",
       ingredients = {
         { type = "item",  name = "creosote",      amount = 1 },
         { type = "fluid", name = "vegetable-oil", amount = 5 }
@@ -90,7 +111,7 @@ data:extend(
         { type = "item", name = "solid-fuel", amount = 2 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 4,
+      energy_required = 2,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -109,7 +130,7 @@ data:extend(
       results = {
         { type = "item", name = "rocket-fuel", amount = 1 }
       },
-      energy_required = 16,
+      energy_required = 8,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
@@ -117,20 +138,20 @@ data:extend(
     {
       type = "recipe",
       name = "vegetable-oil",
-      category = "organic-or-hand-crafting",
-      subgroup = "virentis-chemicals",
-      order = "ab",
-      icon = "__virentis__/graphics/icons/items/fluids/vegetable-oil.png",
+      category = "organic",
+      subgroup = "virentis-chemicals-organic",
+      order = "aa",
+      icon = "__virentis-graphics__/icons/items/fluids/vegetable-oil.png",
       ingredients = {
         { type = "item",  name = "nyxoleum-seed", amount = 1 },
         { type = "item",  name = "kheast",        amount = 1 },
-        { type = "fluid", name = "water",         amount = 50 }
+        { type = "fluid", name = "water",         amount = 30 }
       },
       results = {
-        { type = "fluid", name = "vegetable-oil", amount = 50 }
+        { type = "fluid", name = "vegetable-oil", amount = 30 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 16,
+      energy_required = 6,
       enabled = false,
       allow_productivity = true,
     },
@@ -138,19 +159,19 @@ data:extend(
       type = "recipe",
       name = "nutrients-pulp",
       category = "organic",
-      subgroup = "virentis-chemicals",
+      subgroup = "virentis-chemicals-organic",
       order = "ca",
-      icon = "__virentis__/graphics/icons/items/fluids/nutrients-pulp.png",
+      icon = "__virentis-graphics__/icons/items/fluids/nutrients-pulp.png",
       ingredients = {
         { type = "item",  name = "nutrients",     amount = 10 },
-        { type = "item",  name = "phosphorus",    amount = 2 },
-        { type = "fluid", name = "vegetable-oil", amount = 50 },
+        { type = "item",  name = "phosphorus",    amount = 1 },
+        { type = "fluid", name = "vegetable-oil", amount = 30 },
       },
       results = {
-        { type = "fluid", name = "nutrients-pulp", amount = 50 }
+        { type = "fluid", name = "nutrients-pulp", amount = 30 }
       },
       crafting_machine_tint = recipe_tints.orange,
-      energy_required = 32,
+      energy_required = 8,
       allow_productivity = true,
       enabled = false,
     },
@@ -158,9 +179,9 @@ data:extend(
       type = "recipe",
       name = "vegetable-oil-gleba",
       category = "organic",
-      subgroup = "virentis-chemicals",
-      order = "cc",
-      icon = "__virentis__/graphics/icons/recipes/vegetable-oil-gleba.png",
+      subgroup = "virentis-chemicals-organic",
+      order = "ab",
+      icon = "__virentis-graphics__/icons/recipes/vegetable-oil-gleba.png",
       ingredients = {
         { type = "item",  name = "phosphorus", amount = 1 },
         { type = "item",  name = "jelly",      amount = 5 },
@@ -170,7 +191,7 @@ data:extend(
         { type = "fluid", name = "vegetable-oil", amount = 50 }
       },
       crafting_machine_tint = recipe_tints.yellow,
-      energy_required = 32,
+      energy_required = 8,
       auto_recycle = false,
       enabled = false,
     },
@@ -180,7 +201,7 @@ data:extend(
       category = "chemistry-or-cryogenics",
       subgroup = "virentis-chemicals",
       order = "be",
-      icon = "__virentis__/graphics/icons/recipes/explosive-from-methanol.png",
+      icon = "__virentis-graphics__/icons/recipes/explosive-from-methanol.png",
       ingredients = {
         { type = "fluid", name = "methanol",   amount = 10 },
         { type = "item",  name = "carbon",     amount = 1 },
@@ -190,10 +211,30 @@ data:extend(
         { type = "item", name = "explosives", amount = 4 }
       },
       crafting_machine_tint = recipe_tints.red,
-      energy_required = 16,
+      energy_required = 12,
       allow_productivity = true,
       auto_recycle = false,
       enabled = false,
-    }
+    },
+    {
+      type = "recipe",
+      name = "fish-oil",
+      category = "organic",
+      subgroup = "virentis-chemicals-organic",
+      order = "ba",
+      icon = "__virentis-graphics__/icons/items/fluids/fish-oil.png",
+      ingredients = {
+        { type = "item",  name = "fish-fillet",     amount = 1 },
+        { type = "fluid", name = "vegetable-oil", amount = 20 },
+      },
+      results = {
+        { type = "fluid", name = "fish-oil", amount = 20 }
+      },
+      crafting_machine_tint = recipe_tints.orange,
+      energy_required = 8,
+      allow_productivity = true,
+      auto_recycle = false,
+      enabled = false,
+    },
   }
 )

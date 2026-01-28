@@ -4,7 +4,8 @@ local trading_recipes = {
   "trade-firebrick",
   "trade-siltcore",
   "trade-phosphorus",
-  "trade-processing-unit",
+  "trade-advanced-circuit",
+  "trade-virta-neuron",
 }
 
 local trading_recipes_effects = {}
@@ -24,7 +25,7 @@ data:extend(
       name = "planet-discovery-virentis",
       order = "va",
       subgroup = "virentis-technologies", 
-      icons = util.technology_icon_constant_planet("__virentis__/graphics/icons/misc/virentis-icon.png"),
+      icons = util.technology_icon_constant_planet("__virentis-graphics__/icons/misc/virentis-icon.png"),
       icon_size = 256,
       essential = true,
       effects =
@@ -57,7 +58,7 @@ data:extend(
       name = "redbloom-processing",
       order = "vba",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/redbloom-processing.png",
+      icon = "__virentis-graphics__/icons/technologies/redbloom-processing.png",
       icon_size = 256,
       essential = true,
       effects =
@@ -78,6 +79,10 @@ data:extend(
           type = "unlock-recipe",
           recipe = "trade-copper-plate"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "sulfuric-acid-from-redbloom"
+        }
       },
       research_trigger = {
         type = "mine-entity",
@@ -90,7 +95,7 @@ data:extend(
       name = "rockmalt-processing",
       order = "vbb",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/rockmalt-processing.png",
+      icon = "__virentis-graphics__/icons/technologies/rockmalt-processing.png",
       icon_size = 256,
       essential = true,
       effects =
@@ -131,7 +136,7 @@ data:extend(
       name = "mangroove-processing",
       order = "vbc",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/mangroove-processing.png",
+      icon = "__virentis-graphics__/icons/technologies/mangroove-processing.png",
       icon_size = 256,
       essential = true,
       effects =
@@ -160,7 +165,7 @@ data:extend(
       name = "advanced-baking",
       order = "vca",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/advanced-baking.png",
+      icon = "__virentis-graphics__/icons/technologies/advanced-baking.png",
       icon_size = 256,
       essential = true,
       effects = {
@@ -176,7 +181,7 @@ data:extend(
       prerequisites = { "mangroove-processing", "rockmalt-processing", "redbloom-processing" },
       research_trigger = {
         type = "scripted",
-        icon = "__virentis__/graphics/icons/items/foods/berry-bliss-cookie.png",
+        icon = "__virentis-graphics__/icons/items/foods/berry-bliss-cookie.png",
       },
     },
     {
@@ -184,7 +189,7 @@ data:extend(
       name = "kheast-processing",
       order = "vcb",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/kheast-processing.png",
+      icon = "__virentis-graphics__/icons/technologies/kheast-processing.png",
       icon_size = 256,
       effects = {
         {
@@ -207,7 +212,7 @@ data:extend(
       name = "nyxoleum-processing",
       order = "vcc",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/nyxoleum-processing.png",
+      icon = "__virentis-graphics__/icons/technologies/nyxoleum-processing.png",
       icon_size = 256,
       essential = true,
       effects =
@@ -230,7 +235,7 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "trade-processing-unit"
+          recipe = "trade-advanced-circuit"
         },
         {
           type = "unlock-recipe",
@@ -252,7 +257,7 @@ data:extend(
       name = "frying",
       order = "vdb",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/frying.png",
+      icon = "__virentis-graphics__/icons/technologies/frying.png",
       icon_size = 256,
       effects = {
         {
@@ -280,7 +285,7 @@ data:extend(
       name = "tar-processing",
       order = "vea",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/tar-processing.png",
+      icon = "__virentis-graphics__/icons/technologies/tar-processing.png",
       icon_size = 256,
       effects = {
         {
@@ -309,13 +314,41 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "give-explosive-rocket"
+          recipe = "weapons-supply"
         },
       },
       prerequisites = { "frying" },
       research_trigger = {
         type = "scripted",
-        icon = "__virentis__/graphics/icons/items/foods/pentapod-souffle-omelette.png",
+        icon = "__virentis-graphics__/icons/items/foods/pentapod-souffle-omelette.png",
+      },
+    },
+    {
+      type = "technology",
+      name = "cooking-fish",
+      order = "veb",
+      subgroup = "virentis-technologies", 
+      icon = "__virentis-graphics__/icons/technologies/cooking-fish.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "fish-butchering"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "pentapod-bouillon"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "trade-siltcore"
+        },
+      },
+      prerequisites = { "frying", "fishing-dock" },
+      research_trigger = {
+        type = "craft-item",
+        item = "fishing-result-fish",
+        count = 1,
       },
     },
     {
@@ -323,21 +356,9 @@ data:extend(
       name = "environment-research-center",
       order = "vfa",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/environment-research-center.png",
+      icon = "__virentis-graphics__/icons/technologies/environment-research-center.png",
       icon_size = 256,
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "sweet-doughnut"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fried-dumpling-set"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "trade-siltcore"
-        },
         {
           type = "unlock-recipe",
           recipe = "heart-of-nature"
@@ -358,12 +379,16 @@ data:extend(
           type = "unlock-recipe",
           recipe = "mudland-medley"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "low-density-structure-from-graphene"
+        },
       },
-      prerequisites = { "tar-processing" },
+      prerequisites = { "tar-processing", "cooking-fish" },
       research_trigger = {
         type = "craft-item",
-        item = "gived-explosive-rocket",
-        count = 2000,
+        item = "gived-weapons-supply",
+        count = 100,
       },
     },
     {
@@ -371,7 +396,7 @@ data:extend(
       name = "carbon-from-creosote",
       order = "vfb",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/carbon-from-creosote.png",
+      icon = "__virentis-graphics__/icons/technologies/carbon-from-creosote.png",
       icon_size = 256,
       effects = {
         {
@@ -393,7 +418,7 @@ data:extend(
       name = "nutrients-pulp",
       order = "vga",
       subgroup = "virentis-technologies",
-      icon = "__virentis__/graphics/icons/technologies/nutrients-pulp.png",
+      icon = "__virentis-graphics__/icons/technologies/nutrients-pulp.png",
       icon_size = 256,
       effects = {
         {
@@ -451,12 +476,28 @@ data:extend(
       name = "nature-control",
       order = "vha",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/nature-control.png",
+      icon = "__virentis-graphics__/icons/technologies/nature-control.png",
       icon_size = 256,
       effects = {
         {
           type = "unlock-recipe",
           recipe = "sylva-core"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "citrus-sashimi"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "taiyaki-royale"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "trade-virta-neuron"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fish-oil"
         },
       },
       prerequisites = { "nutrients-pulp" },
@@ -474,7 +515,7 @@ data:extend(
       name = "living-inserter",
       order = "vga",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/machines/living-inserter.png",
+      icon = "__virentis-graphics__/icons/machines/living-inserter.png",
       icon_size = 64,
       effects = {
         {
@@ -497,7 +538,7 @@ data:extend(
       name = "eternal-lantern",
       order = "vgb",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/eternal-lantern.png",
+      icon = "__virentis-graphics__/icons/technologies/eternal-lantern.png",
       icon_size = 256,
       effects = {
         {
@@ -549,7 +590,7 @@ data:extend(
       name = "trading-productivity",
       order = "vgd",
       subgroup = "virentis-technologies", 
-      icons = util.technology_icon_constant_recipe_productivity("__virentis__/graphics/icons/technologies/trading-productivity.png"),
+      icons = util.technology_icon_constant_recipe_productivity("__virentis-graphics__/icons/technologies/trading-productivity.png"),
       icon_size = 256,
       effects = trading_recipes_effects,
       prerequisites = { "environment-research-center" },

@@ -10,7 +10,7 @@ local height = 384
 local shift = { 1.5, -1 }
 
 local base_animation = {
-  filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret.png",
+  filename = "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret.png",
   priority = "extra-high",
   width = width,
   height = height,
@@ -24,7 +24,7 @@ local base_animation = {
   animation_speed = 0.2,
 }
 local base_glow_animation = {
-  filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-glow.png",
+  filename = "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret-glow.png",
   priority = "extra-high",
   width = width,
   height = height,
@@ -40,7 +40,7 @@ local base_glow_animation = {
   animation_speed = 0.2,
 }
 local charging_animation = {
-  filename = "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-charging-glow.png",
+  filename = "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret-charging-glow.png",
   priority = "extra-high",
   width = width,
   height = height,
@@ -53,7 +53,7 @@ local charging_animation = {
   animation_speed = 0.2,
 }
 local attacking_animation = {
-  filenames = { "__virentis__/graphics/entities/machines/town-tesla-turret/town-tesla-turret-attacking-glow.png" },
+  filenames = { "__virentis-graphics__/entities/machines/town-tesla-turret/town-tesla-turret-attacking-glow.png" },
   width = width,
   height = height,
   shift = shift,
@@ -79,10 +79,11 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     max_health = 4000,
     healing_per_tick = 1,
-    collision_box = { { -1, -1 }, { 1, 1 } },
-    selection_box = { { -0.75, -0.75 }, { 0.75, 0.75 } },
-    collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
+    selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    -- collision_mask = { layers = { item = true, object = true, player = true, water_tile = true, is_object = true, is_lower_object = true } },
     damaged_trigger_effect = hit_effects.entity(),
+    drawing_box_vertical_extension = 2,
     start_attacking_only_when_can_shoot = true,
     rotation_speed = 0.05,
     preparing_speed = 0.1,
@@ -112,7 +113,7 @@ data:extend({
     },
     turret_base_has_direction = true,
     folded_animation = {
-      filename = "__virentis__/graphics/mocks/empty-icon.png",
+      filename = "__virentis-graphics__/mocks/empty-icon.png",
       priority = "low",
       width = 16,
       height = 16,
@@ -130,7 +131,7 @@ data:extend({
     {
       base_visualisation = {
         {
-          render_layer = "higher-object-under",
+          render_layer = "lower-object",
           animation = virentis.load_sprite_4way({
             base_animation,
             base_glow_animation,
@@ -208,7 +209,7 @@ data:extend({
     {
       pictures =
       {
-        filename = "__space-age__/graphics/entity/lightning-rod/lightning-rod.png",
+        filename = "__space-age__/graphics/entity/lightning-rod/lightning-rod-reflection.png",
         priority = "extra-high",
         width = 12,
         height = 28,
