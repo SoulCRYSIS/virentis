@@ -1,6 +1,6 @@
 {
   "name": "virentis",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "title": "Planet Virentis [Beta1]",
   "author": "SoulCRYSIS",
   "factorio_version": "2.0",
@@ -12,6 +12,7 @@
     "virentis-graphics",
     "fishing-dock",
     "quality-seeds-fork",
+    "? PI-Virentis-Music",
     "? behemoth-enemies",
     "? wayward-seas",
     "! quality-seeds"

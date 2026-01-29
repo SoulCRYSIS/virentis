@@ -123,6 +123,10 @@ data:extend(
         {
           type = "unlock-recipe",
           recipe = "stone-from-rockmalt-scale"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "virentis-concrete"
         }
       },
       research_trigger = {

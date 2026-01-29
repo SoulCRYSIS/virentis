@@ -16,7 +16,7 @@ data:extend({
     gravity_pull = 10,
     distance = 25,
     orientation = 0.17,
-    solar_power_in_space = 100,
+    solar_power_in_space = 50,
     magnitude = 0.8,
     order = "ca",
     subgroup = "planets",
@@ -273,7 +273,7 @@ data:extend({
     {
       ["day-night-cycle"] = 5 * minute,
       ["magnetic-field"] = 25,
-      ["solar-power"] = 30,
+      ["solar-power"] = 10,
       pressure = 1200,
       gravity = 10
     },

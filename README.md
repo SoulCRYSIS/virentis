@@ -8,6 +8,7 @@ This planet require to complete Gleba first. Easier than Aquilo, but harder than
 
 Concept is simple, you plant, you cook, and you trade for unique materials.
 
+---
 
 ## IMPORTANT
 
@@ -17,6 +18,8 @@ Some items may not much useful, because it's plan to use in further update.
 
 When a major update come, it has a very high chance that you need to regenerate the map.
 I suggested you to play this mod again or wait for final version.
+
+---
 
 ## Features
 
@@ -82,6 +85,8 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - Eternal lantern: provide large area 50% efficiency (increase with quality)
 - Tesla turret shooting speed
 
+---
+
 ## Main challenges
 - Fertile soils and trader can't recreate or move, so you need to expand for more resource, forcing enormous usage of train. You may want to design your train system carefully, or you may regrets later.
 - Spores can be produce a lot by cooking machines, so you should prepare defense or be efficiency
@@ -93,7 +98,7 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - Some basic stuff like Red chip, Sulfur, Plastic, etc, can't produce here. Eventhough it not use in the main production line, but it use to produce base-game high tier machines. So you may want to import basic machines like Assembling machine, Modules, Bots.
 
 ## Todo list
-- Fishing system
+
 - Husbandry age
 - More biomes and its production line: frozen, lava, mycelia
 - Add some cooking recipe to other planets
@@ -101,13 +106,19 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - More rewards (maybe unique turret)
 - Another planet (maybe moon)
 
+---
+
 ## Recommended mods
-- If you struggle to deal with spoiling: https://mods.factorio.com/mod/simple_refrigerator
+
+- Beautiful music mod, created solely for this planet: https://mods.factorio.com/mod/PI-Virentis-Music
+
+---
 
 ## Credits
 
 - Town turret graphics: https://mods.factorio.com/mod/aai-vehicles-ironclad
 - Behemoth Pentapod: https://mods.factorio.com/mod/behemoth-enemies
+- Quality seeds: https://mods.factorio.com/mod/quality-seeds
 
 ## Disclaimers
 

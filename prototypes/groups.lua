@@ -65,13 +65,17 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-chemicals",
     group = "virentis",
-    order = "ea"
+    order = "ea",
+  },
+  {
+    type = "item-subgroup",
     name = "virentis-chemicals-organic",
     group = "virentis",
     order = "eb"
   },
   {
     type = "item-subgroup",
+    name = "virentis-materials",
     group = "virentis",
     order = "da"
   },

@@ -45,25 +45,22 @@ data:extend(
     }
   },
   {
-    type = "noise-expression",
+    type = "noise-function",
     name = "virentis_fertile_spots_coastal",
+    parameters = { "seed", "spot_radius" },
     expression = "max(min(1, virentis_starting_fertile * 4),\z
-                      min(exclude_middle, virentis_fertile_spots_coastal_raw_default) - max(0, -(elevation + 2) / 5) - max(0, (elevation - 10) / 5))",
+                      min(exclude_middle, virentis_fertile_spots_coastal_raw(seed, spot_radius)) - max(0, -(elevation + 2) / 5) - max(0, (elevation - 10) / 5))",
     local_expressions =
     {
       exclude_middle = "(distance / virentis_starting_area_multiplier / 150) - 2.2"
     }
   },
   {
-    type = "noise-expression",
-    name = "virentis_fertile_spots_coastal_raw_default",
-    expression = "virentis_fertile_spots_coastal_raw(1, 48)"
-  },
-  {
-    type = "noise-expression",
+    type = "noise-function",
     name = "virentis_fertile_solid",
+    parameters = { "seed", "spot_radius" },
     expression = "2 * abs(multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 2000000, octaves = 2, input_scale = 1/16})\z
-                  * virentis_fertile_spots_coastal - virentis_river * 5"
+                  * virentis_fertile_spots_coastal(seed, spot_radius) - virentis_river * 5"
   },
   {
     type = "noise-expression",
