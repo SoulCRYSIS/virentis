@@ -32,7 +32,7 @@ watchtower.graphics_set.animation = {
         blend_mode = "additive",
       },
       {
-        filename = "__virentis-graphics__/graphics/entities/machines/watchtower/radius-visualization.png",
+        filename = "__virentis-graphics__/entities/machines/watchtower/radius-visualization.png",
         width = 2048,
         height = 2048,
         scale = 2,
@@ -66,7 +66,7 @@ watchtower.graphics_set.animation = {
         blend_mode = "additive",
       },
       {
-        filename = "__virentis-graphics__/graphics/entities/machines/watchtower/radius-visualization.png",
+        filename = "__virentis-graphics__/entities/machines/watchtower/radius-visualization.png",
         width = 2048,
         height = 2048,
         x = 2048,
@@ -101,7 +101,7 @@ watchtower.graphics_set.animation = {
         blend_mode = "additive",
       },
       {
-        filename = "__virentis-graphics__/graphics/entities/machines/watchtower/radius-visualization.png",
+        filename = "__virentis-graphics__/entities/machines/watchtower/radius-visualization.png",
         width = 2048,
         height = 2048,
         x = 2048 * 2,
@@ -136,7 +136,7 @@ watchtower.graphics_set.animation = {
         blend_mode = "additive",
       },
       {
-        filename = "__virentis-graphics__/graphics/entities/machines/watchtower/radius-visualization.png",
+        filename = "__virentis-graphics__/entities/machines/watchtower/radius-visualization.png",
         width = 2048,
         height = 2048,
         x = 2048 * 3,

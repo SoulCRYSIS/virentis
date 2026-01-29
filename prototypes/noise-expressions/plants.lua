@@ -45,6 +45,11 @@ data:extend(
     }
   },
   {
+    type = "noise-expression",
+    name = "virentis_fertile_spots_coastal_default",
+    expression = "virentis_fertile_spots_coastal(1, 64)"
+  },
+  {
     type = "noise-function",
     name = "virentis_fertile_spots_coastal",
     parameters = { "seed", "spot_radius" },

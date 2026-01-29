@@ -150,7 +150,7 @@ data:extend(
       layer_group = "water",
       autoplace = {
         probability_expression =
-        "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask"
+        "virentis_fertile_spots_coastal_default * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask"
       },
       lowland_fog = false,
       effect = "oil-deep",

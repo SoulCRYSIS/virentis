@@ -9,8 +9,8 @@ data:extend(
     {
       type = "noise-function",
       name = "virentis_select",
-      parameters = { "input", "from", "to", "slope", "min", "max" },
-      expression = "clamp(min(input - (from - slope), to + slope - input) / slope, min, max)"
+      parameters = { "input", "from", "to", "slope", "output_min", "output_max" },
+      expression = "clamp(min(input - (from - slope), to + slope - input) / slope, output_min, output_max)"
     },
     {
       type = "noise-function",

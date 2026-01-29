@@ -102,7 +102,7 @@ data:extend({
     name = "virentis-wetland-mud",
     subgroup = "virentis-water-tiles",
     collision_mask = tile_collision_masks.shallow_water(),
-    autoplace = { probability_expression = "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_green) * virentis_above_deep_water_mask" },
+    autoplace = { probability_expression = "virentis_fertile_spots_coastal_default * 5000 * (1 - virentis_biome_mask_green) * virentis_above_deep_water_mask" },
     default_cover_tile = "landfill",
     lowland_fog = true,
     effect = "mudland-slime",
