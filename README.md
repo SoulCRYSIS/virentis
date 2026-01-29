@@ -119,6 +119,7 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - Town turret graphics: https://mods.factorio.com/mod/aai-vehicles-ironclad
 - Behemoth Pentapod: https://mods.factorio.com/mod/behemoth-enemies
 - Quality seeds: https://mods.factorio.com/mod/quality-seeds
+- Terraria: for living wood icon
 
 ## Disclaimers
 

@@ -64,38 +64,41 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "weapons-supply",
+      name = "give-explosive-rocket",
       category = "trading-t1",
       subgroup = "virentis-giving",
-      order = "b",
-      icons = give_icon("__virentis-graphics__/icons/recipes/weapons-supply.png"),
+      order = "ba",
+      icons = give_icon("__base__/graphics/icons/explosive-rocket.png"),
       ingredients = {
-        { type = "item", name = "explosive-rocket", amount = 10 },
-        { type = "item", name = "siltcore",         amount = 1 },
+        { type = "item", name = "explosive-rocket", amount = 1 },
       },
       results = {
-        { type = "item", name = "gived-weapons-supply", amount = 1 }
+        { type = "item", name = "gived-explosive-rocket", amount = 1 }
       },
       hide_from_player_crafting = true,
       hide_from_signal_gui = true,
-      energy_required = 1,
+      energy_required = 0.5,
       enabled = false,
     },
+    gived_mock_item("explosive-rocket", "ammo"),
     {
-      type = "item",
-      name = "gived-weapons-supply",
-      localised_name = { "virentis-misc.gived", { "item-name.weapons-supply" } },
-      flags = { "ignore-spoil-time-modifier" },
-      icon = "__virentis-graphics__/icons/recipes/weapons-supply.png",
-      subgroup = "virentis-mock",
-      order = "z",
-      stack_size = 100,
-      weight = 10000 * kg,
-      spoil_ticks = 2,
-      spoil_result = nil,
-      hidden = true,
-      hidden_in_factoriopedia = true,
-      auto_recycle = false,
+      type = "recipe",
+      name = "give-heart-of-nature",
+      category = "trading-t1",
+      subgroup = "virentis-giving",
+      order = "bb",
+      icons = give_icon("__virentis-graphics__/icons/items/materials/heart-of-nature.png"),
+      ingredients = {
+        { type = "item", name = "heart-of-nature", amount = 1 }
+      },
+      results = {
+        { type = "item", name = "gived-heart-of-nature", amount = 1 }
+      },
+      hide_from_player_crafting = true,
+      hide_from_signal_gui = true,
+      energy_required = 2,
+      enabled = false,
     },
+    gived_mock_item("heart-of-nature"),
   }
 )

@@ -24,7 +24,7 @@ data:extend(
       type = "technology",
       name = "planet-discovery-virentis",
       order = "va",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icons = util.technology_icon_constant_planet("__virentis-graphics__/icons/misc/virentis-icon.png"),
       icon_size = 256,
       essential = true,
@@ -57,7 +57,7 @@ data:extend(
       type = "technology",
       name = "redbloom-processing",
       order = "vba",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/redbloom-processing.png",
       icon_size = 256,
       essential = true,
@@ -94,7 +94,7 @@ data:extend(
       type = "technology",
       name = "rockmalt-processing",
       order = "vbb",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/rockmalt-processing.png",
       icon_size = 256,
       essential = true,
@@ -139,7 +139,7 @@ data:extend(
       type = "technology",
       name = "mangroove-processing",
       order = "vbc",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/mangroove-processing.png",
       icon_size = 256,
       essential = true,
@@ -168,7 +168,7 @@ data:extend(
       type = "technology",
       name = "advanced-baking",
       order = "vca",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/advanced-baking.png",
       icon_size = 256,
       essential = true,
@@ -192,7 +192,7 @@ data:extend(
       type = "technology",
       name = "kheast-processing",
       order = "vcb",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/kheast-processing.png",
       icon_size = 256,
       effects = {
@@ -215,7 +215,7 @@ data:extend(
       type = "technology",
       name = "nyxoleum-processing",
       order = "vcc",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/nyxoleum-processing.png",
       icon_size = 256,
       essential = true,
@@ -260,7 +260,7 @@ data:extend(
       type = "technology",
       name = "frying",
       order = "vdb",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/frying.png",
       icon_size = 256,
       effects = {
@@ -287,8 +287,8 @@ data:extend(
     {
       type = "technology",
       name = "tar-processing",
-      order = "vea",
-      subgroup = "virentis-technologies", 
+      order = "veaa",
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/tar-processing.png",
       icon_size = 256,
       effects = {
@@ -310,15 +310,15 @@ data:extend(
         },
         {
           type = "unlock-recipe",
-          recipe = "virentis-rocket-fuel"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "explosive-from-methanol"
         },
         {
           type = "unlock-recipe",
-          recipe = "weapons-supply"
+          recipe = "graphene"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "give-explosive-rocket"
         },
       },
       prerequisites = { "frying" },
@@ -329,9 +329,46 @@ data:extend(
     },
     {
       type = "technology",
+      name = "virentis-rocket-silo",
+      order = "veab",
+      subgroup = "virentis-technologies",
+      essential = true,
+      icons = {
+        {
+          icon = "__base__/graphics/technology/rocket-silo.png",
+          icon_size = 256,
+        },
+        {
+          icon = "__virentis-graphics__/icons/misc/virentis-icon.png",
+          icon_size = 256,
+          scale = 0.2,
+          shift = { 35, 35 },
+          floating = true,
+        },
+      },
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "virentis-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "low-density-structure-from-graphene"
+        },
+      },
+      prerequisites = { "tar-processing" },
+      research_trigger = {
+        type = "craft-item",
+        item = "gived-explosive-rocket",
+        count = 1000,
+      },
+    },
+    {
+      type = "technology",
       name = "cooking-fish",
       order = "veb",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/cooking-fish.png",
       icon_size = 256,
       effects = {
@@ -347,6 +384,14 @@ data:extend(
           type = "unlock-recipe",
           recipe = "trade-siltcore"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "heart-of-nature"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "give-heart-of-nature"
+        },
       },
       prerequisites = { "frying", "fishing-dock" },
       research_trigger = {
@@ -359,18 +404,10 @@ data:extend(
       type = "technology",
       name = "environment-research-center",
       order = "vfa",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/environment-research-center.png",
       icon_size = 256,
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "heart-of-nature"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "graphene"
-        },
         {
           type = "unlock-recipe",
           recipe = "environment-research-center"
@@ -383,23 +420,19 @@ data:extend(
           type = "unlock-recipe",
           recipe = "mudland-medley"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "low-density-structure-from-graphene"
-        },
       },
       prerequisites = { "tar-processing", "cooking-fish" },
       research_trigger = {
         type = "craft-item",
-        item = "gived-weapons-supply",
-        count = 100,
+        item = "gived-heart-of-nature",
+        count = 50,
       },
     },
     {
       type = "technology",
       name = "carbon-from-creosote",
       order = "vfb",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/carbon-from-creosote.png",
       icon_size = 256,
       effects = {
@@ -479,7 +512,7 @@ data:extend(
       type = "technology",
       name = "nature-control",
       order = "vha",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/nature-control.png",
       icon_size = 256,
       effects = {
@@ -507,7 +540,7 @@ data:extend(
       prerequisites = { "nutrients-pulp" },
       unit = {
         count = 1000,
-        ingredients = 
+        ingredients =
         {
           { "mudland-research-data", 1 },
         },
@@ -518,7 +551,7 @@ data:extend(
       type = "technology",
       name = "living-inserter",
       order = "vga",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/machines/living-inserter.png",
       icon_size = 64,
       effects = {
@@ -541,7 +574,7 @@ data:extend(
       type = "technology",
       name = "eternal-lantern",
       order = "vgb",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/eternal-lantern.png",
       icon_size = 256,
       effects = {
@@ -564,7 +597,7 @@ data:extend(
       type = "technology",
       name = "tesla-weapons-speed",
       order = "vgc",
-      subgroup = "virentis-technologies", 
+      subgroup = "virentis-technologies",
       icons = util.technology_icon_constant_speed("__space-age__/graphics/technology/electric-weapons-damage.png"),
       effects =
       {
@@ -573,13 +606,13 @@ data:extend(
           ammo_category = "tesla",
           icon = "__space-age__/graphics/icons/tesla-ammo.png",
           icon_size = 64,
-          modifier = 0.1
+          modifier = 0.05
         },
       },
       prerequisites = { "environment-research-center", "tesla-weapons" },
       unit =
       {
-        count_formula = "2000 * 2 ^ (L - 1)",
+        count_formula = "1000 * 2 ^ (L - 1)",
         ingredients =
         {
           { "mudland-research-data", 1 },
@@ -593,8 +626,9 @@ data:extend(
       type = "technology",
       name = "trading-productivity",
       order = "vgd",
-      subgroup = "virentis-technologies", 
-      icons = util.technology_icon_constant_recipe_productivity("__virentis-graphics__/icons/technologies/trading-productivity.png"),
+      subgroup = "virentis-technologies",
+      icons = util.technology_icon_constant_recipe_productivity(
+      "__virentis-graphics__/icons/technologies/trading-productivity.png"),
       icon_size = 256,
       effects = trading_recipes_effects,
       prerequisites = { "environment-research-center" },
