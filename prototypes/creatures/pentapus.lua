@@ -5,7 +5,7 @@ data:extend(
     {
       type = "fish",
       name = "pentapus",
-      icon = "__virentis__/graphics/icons/items/meats/pentapus.png",
+      icon = "__virentis-graphics__/graphics/icons/items/meats/pentapus.png",
       flags = { "placeable-neutral", "not-on-map" },
       subgroup = "virentis-creatures",
       order = "a",
@@ -26,7 +26,7 @@ data:extend(
         tile_restriction = { "virentis-deep-water" }
       },
       pictures = {
-        filename = "__virentis__/graphics/entities/creatures/pentapus.png",
+        filename = "__virentis-graphics__/graphics/entities/creatures/pentapus.png",
         priority = "extra-high",
         width = 96,
         height = 128,
@@ -38,7 +38,7 @@ data:extend(
 
 fishing_utils.create_fishing_content({
   fish_name = "pentapus",
-  icon = "__virentis__/graphics/icons/items/meats/pentapus.png",
+  icon = "__virentis-graphics__/graphics/icons/items/meats/pentapus.png",
   energy = 10,
   order = "aa",
   subgroup = "virentis-fishing",

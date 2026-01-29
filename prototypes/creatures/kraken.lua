@@ -106,7 +106,7 @@ end
 local fishing_utils = require("__fishing-dock__.prototypes.utils")
 fishing_utils.create_fishing_content({
   fish_name = "kraken",
-  icon = "__virentis__/graphics/icons/creatures/kraken.png",
+  icon = "__virentis-graphics__/graphics/icons/creatures/kraken.png",
   energy = 30,
   order = "ab",
   subgroup = "virentis-fishing",
@@ -138,7 +138,7 @@ data:extend({
   {
     type = "simple-entity",
     name = "kraken-tentacle-remain",
-    icon = "__virentis__/graphics/icons/creatures/kraken.png",
+    icon = "__virentis-graphics__/graphics/icons/creatures/kraken.png",
     subgroup = "virentis-creatures",
     order = "c",
     collision_box = { { -0.5 * scale, -0.5 * scale }, { 0.5 * scale, 0.5 * scale } },
@@ -184,7 +184,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-remain.png",
+          filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle-remain.png",
           width = tentacle_remain_width,
           height = tentacle_remain_height,
           scale = 0.5 * scale,
@@ -193,7 +193,7 @@ data:extend({
           lines_per_file = 2,
         },
         {
-          filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-remain-shadow.png",
+          filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle-remain-shadow.png",
           width = tentacle_remain_width,
           height = tentacle_remain_height,
           scale = 0.5 * scale,
@@ -206,7 +206,7 @@ data:extend({
     },
     water_reflection = {
       pictures = {
-        filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-remain-water-reflection.png",
+        filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle-remain-water-reflection.png",
         width = tentacle_remain_width,
         height = tentacle_remain_height,
         scale = 0.5 * scale,
@@ -227,7 +227,7 @@ data:extend({
     collision_mask = { layers = { object = true, ground_tile = true } }, -- object not player so can step in water
     -- legs breathe air so that poison works. alternatively, change torsos to collide with poison clouds.
     flags = { "not-repairable" },
-    icon = "__virentis__/graphics/icons/creatures/kraken.png",
+    icon = "__virentis-graphics__/graphics/icons/creatures/kraken.png",
     walking_sound_volume_modifier = sounds.walking_sound_volume_modifier,
     walking_sound_speed_modifier = sounds.walking_sound_speed_modifier,
     target_position_randomisation_distance = 0.05 * scale,
@@ -248,7 +248,7 @@ data:extend({
       foot = {
         layers = {
           {
-            filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-shadow.png",
+            filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle-shadow.png",
             width = tentacle_width,
             height = tentacle_height,
             direction_count = 64,
@@ -259,7 +259,7 @@ data:extend({
             usage = "enemy",
           },
           {
-            filename = "__virentis__/graphics/entities/creatures/kraken/tentacle.png",
+            filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle.png",
             width = tentacle_width,
             height = tentacle_height,
             direction_count = 64,
@@ -269,7 +269,7 @@ data:extend({
             usage = "enemy",
           },
           {
-            filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-glow.png",
+            filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle-glow.png",
             width = tentacle_width,
             height = tentacle_height,
             direction_count = 64,
@@ -285,7 +285,7 @@ data:extend({
       water_reflection = {
         rotate = true,
         pictures = {
-          filename = "__virentis__/graphics/entities/creatures/kraken/tentacle-water-reflection.png",
+          filename = "__virentis-graphics__/graphics/entities/creatures/kraken/tentacle-water-reflection.png",
           width = tentacle_width + 40,
           height = tentacle_height + 40,
           variation_count = 16,
@@ -361,7 +361,7 @@ data:extend({
   {
     type = "spider-unit",
     name = "kraken",
-    icon = "__virentis__/graphics/icons/creatures/kraken.png",
+    icon = "__virentis-graphics__/graphics/icons/creatures/kraken.png",
     subgroup = "virentis-enemies",
     order = "c",
     collision_box = { { -2.5 * scale, -2.5 * scale }, { 2.5 * scale, 2.5 * scale } },
@@ -431,7 +431,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__virentis__/graphics/entities/creatures/kraken/head.png",
+            filename = "__virentis-graphics__/graphics/entities/creatures/kraken/head.png",
             width = head_width,
             height = head_height,
             direction_count = 64,
@@ -442,7 +442,7 @@ data:extend({
             counterclockwise = true,
           },
           {
-            filename = "__virentis__/graphics/entities/creatures/kraken/head-glow.png",
+            filename = "__virentis-graphics__/graphics/entities/creatures/kraken/head-glow.png",
             width = head_width,
             height = head_height,
             direction_count = 64,
@@ -457,7 +457,7 @@ data:extend({
         }
       },
       shadow_animation = {
-        filename = "__virentis__/graphics/entities/creatures/kraken/head-shadow.png",
+        filename = "__virentis-graphics__/graphics/entities/creatures/kraken/head-shadow.png",
         width = head_width,
         height = head_height,
         direction_count = 64,
@@ -470,7 +470,7 @@ data:extend({
       water_reflection = {
         rotate = true,
         pictures = {
-          filename = "__virentis__/graphics/entities/creatures/kraken/head-water-reflection.png",
+          filename = "__virentis-graphics__/graphics/entities/creatures/kraken/head-water-reflection.png",
           width = head_width + 40,
           height = head_height + 40,
           variation_count = 16,

@@ -490,7 +490,7 @@ data:extend(
       name = "pentapus",
       order = "vgb",
       subgroup = "virentis-technologies", 
-      icon = "__virentis__/graphics/icons/technologies/pentapus.png",
+      icon = "__virentis-graphics__/graphics/icons/technologies/pentapus.png",
       icon_size = 256,
       effects = {
         {

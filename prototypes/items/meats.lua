@@ -3,7 +3,7 @@ data:extend(
     {
       type = "item",
       name = "pentapus",
-      icon = "__virentis__/graphics/icons/items/meats/pentapus.png",
+      icon = "__virentis-graphics__/graphics/icons/items/meats/pentapus.png",
       subgroup = "virentis-fishing",
       order = "a",
       stack_size = 50,
