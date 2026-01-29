@@ -153,7 +153,7 @@ data:extend(
         "virentis_fertile_spots_coastal * 5000 * (1 - virentis_biome_mask_red) * virentis_above_deep_water_mask"
       },
       lowland_fog = false,
-      effect = "tar-puddle",
+      effect = "oil-deep",
       fluid = "tar",
       effect_color = { 85, 64, 88 },
       effect_color_secondary = { 60, 60, 40 },

@@ -1,5 +1,18 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.2.3
+Version: 0.2.7
+Date: 2026-01-30
+  Changes:
+    - Adjust tech tree to make rocket-silo available before fish-cooking
+    - Balance tesla weapons speed tech
+  Compatibility:
+    - Adjust variables name to match new version of quality-seeds and fishing-dock
+---------------------------------------------------------------------------------------------------
+Version: 0.2.6
+Date: 2026-01-28
+  Bugfixes:
+    - Add way to unlock virentis concrete recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
 Date: 2026-01-26
   Bugfixes:
     - Game crash with pentapod error

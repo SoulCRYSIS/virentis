@@ -3,9 +3,6 @@ local allow_plants = {
   "redbloom-tree",
   "nyxoleum-tree",
   "mangroove-tree",
-  "yumako-tree",
-  "jellystem",
-  "tree-plant",
 }
 
 for _, plant in ipairs(allow_plants) do
