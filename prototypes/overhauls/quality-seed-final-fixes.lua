@@ -6,6 +6,10 @@ local gleba_plants = {
   ["tree-plant"] = true,
 }
 
+if mods["boompuff-agriculture"] then
+  gleba_plants["boompuff-plant"] = true
+end
+
 local virentis_plants = {
   ["redbloom-tree"] = true,
   ["nyxoleum-tree"] = true,
@@ -27,92 +31,94 @@ end
 -- Change cultivator ingredients to sylva core
 for _, plant in pairs(data.raw["plant"]) do
   if not ignore_set[plant.name] and data.raw["recipe-category"]["cultivation-" .. plant.name] then
-    local recipe_category = data.raw["recipe-category"]["cultivation-" .. plant.name]
-    recipe_category.subgroup = "virentis-cultivation"
+    if virentis_plants[plant.name] or gleba_plants[plant.name] then
+      local recipe_category = data.raw["recipe-category"]["cultivation-" .. plant.name]
+      recipe_category.subgroup = "virentis-cultivation"
 
-    local cultivator = data.raw["assembling-machine"][plant.name .. "-greenhouse"]
-    cultivator.energy_source.effectivity = 1
-    cultivator.energy_usage = "200kW"
-    cultivator.crafting_speed = 0.4
-    cultivator.effect_receiver.base_effect = {
-      speed = 4,
-    }
-    cultivator.fluid_boxes = {
-      {
-        production_type = "output",
-        volume = 100,
-        pipe_connections =
+      local cultivator = data.raw["assembling-machine"][plant.name .. "-greenhouse"]
+      cultivator.energy_source.effectivity = 1
+      cultivator.energy_usage = "200kW"
+      cultivator.crafting_speed = 0.4
+      cultivator.effect_receiver.base_effect = {
+        speed = 4,
+      }
+      cultivator.fluid_boxes = {
         {
+          production_type = "output",
+          volume = 100,
+          pipe_connections =
           {
-            flow_direction = "output",
-            direction = defines.direction.south,
-            position = { 0, 1 }
+            {
+              flow_direction = "output",
+              direction = defines.direction.south,
+              position = { 0, 1 }
+            }
           }
-        }
-      },
-      table.unpack(virentis.pass_middle_fluid_box),
-    }
-    cultivator.subgroup = "virentis-cultivation"
-    cultivator.order = "c"
-    cultivator.surface_conditions = plant.surface_conditions
-    cultivator.energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-    }
-    cultivator.allowed_effects = { "consumption", "quality", "productivity", "pollution" }
-    cultivator.allowed_module_categories = { "efficiency", "productivity", "quality" }
-    
-    local cultivator_item = data.raw["item"][cultivator.name]
-    cultivator_item.subgroup = "virentis-cultivation"
-    cultivator_item.order = "c"
+        },
+        table.unpack(virentis.pass_middle_fluid_box),
+      }
+      cultivator.subgroup = "virentis-cultivation"
+      cultivator.order = "c"
+      cultivator.surface_conditions = plant.surface_conditions
+      cultivator.energy_source = {
+        type = "electric",
+        usage_priority = "secondary-input",
+      }
+      cultivator.allowed_effects = { "consumption", "quality", "productivity", "pollution" }
+      cultivator.allowed_module_categories = { "efficiency", "productivity", "quality" }
 
-    local cultivator_recipe = data.raw["recipe"][cultivator.name]
-    cultivator_recipe.ingredients[4] = { type = "item", name = "sylva-core", amount = 2 }
-    cultivator_recipe.ingredients[5] = { type = "item", name = "landfill", amount = 8 }
-    table.insert(cultivator_recipe.ingredients, { type = "item", name = "firebrick", amount = 4 })
-    cultivator_recipe.surface_conditions = nil
-    cultivator_recipe.subgroup = "virentis-cultivation"
-    cultivator_recipe.order = "c"
-    cultivator_recipe.energy_required = 10
+      local cultivator_item = data.raw["item"][cultivator.name]
+      cultivator_item.subgroup = "virentis-cultivation"
+      cultivator_item.order = "c"
+
+      local cultivator_recipe = data.raw["recipe"][cultivator.name]
+      cultivator_recipe.ingredients[4] = { type = "item", name = "sylva-core", amount = 2 }
+      cultivator_recipe.ingredients[5] = { type = "item", name = "landfill", amount = 8 }
+      table.insert(cultivator_recipe.ingredients, { type = "item", name = "firebrick", amount = 4 })
+      cultivator_recipe.surface_conditions = nil
+      cultivator_recipe.subgroup = "virentis-cultivation"
+      cultivator_recipe.order = "c"
+      cultivator_recipe.energy_required = 10
 
 
-    local cultivate_recipe = data.raw["recipe"]["cultivate-" .. plant.name]
-    cultivate_recipe.subgroup = "virentis-cultivating"
-    cultivate_recipe.energy_required = plant.growth_ticks / 60
-    cultivate_recipe.order = "ca"
-    if plant.name == "nyxoleum-tree" then
-      cultivate_recipe.ingredients[2] = { type = "fluid", name = "tar", amount = 50 }
-    end
-    local plant_harvest_results = table.deepcopy(plant.minable.results)
-    local spore_emmisions = 0
-    if plant.harvest_emissions and plant.harvest_emissions.spores then
-      spore_emmisions = plant.harvest_emissions.spores
-    end
-    cultivate_recipe.results = table.deepcopy(plant_harvest_results)
-    if spore_emmisions > 0 then
-      table.insert(cultivate_recipe.results, { type = "fluid", name = "spores", amount = spore_emmisions * 100 })
-    end
+      local cultivate_recipe = data.raw["recipe"]["cultivate-" .. plant.name]
+      cultivate_recipe.subgroup = "virentis-cultivating"
+      cultivate_recipe.energy_required = plant.growth_ticks / 60
+      cultivate_recipe.order = "ca"
+      if plant.name == "nyxoleum-tree" then
+        cultivate_recipe.ingredients[2] = { type = "fluid", name = "tar", amount = 50 }
+      end
+      local plant_harvest_results = table.deepcopy(plant.minable.results)
+      local spore_emmisions = 0
+      if plant.harvest_emissions and plant.harvest_emissions.spores then
+        spore_emmisions = plant.harvest_emissions.spores
+      end
+      cultivate_recipe.results = table.deepcopy(plant_harvest_results)
+      if spore_emmisions > 0 then
+        table.insert(cultivate_recipe.results, { type = "fluid", name = "spores", amount = spore_emmisions * 100 })
+      end
 
-    local cultivate_space_recipe = data.raw["recipe"]["cultivate-space-" .. plant.name]
-    cultivate_space_recipe.subgroup = "virentis-cultivating-space"
-    cultivate_space_recipe.order = "cb"
-    cultivate_space_recipe.results = plant_harvest_results
-    cultivate_space_recipe.energy_required = cultivate_recipe.energy_required
+      local cultivate_space_recipe = data.raw["recipe"]["cultivate-space-" .. plant.name]
+      cultivate_space_recipe.subgroup = "virentis-cultivating-space"
+      cultivate_space_recipe.order = "cb"
+      cultivate_space_recipe.results = plant_harvest_results
+      cultivate_space_recipe.energy_required = cultivate_recipe.energy_required
 
-    if plant.name == "nyxoleum-tree" then
-      cultivate_space_recipe.ingredients[2] = { type = "fluid", name = "tar", amount = 50 }
-    end
+      if plant.name == "nyxoleum-tree" then
+        cultivate_space_recipe.ingredients[2] = { type = "fluid", name = "tar", amount = 50 }
+      end
 
-    data.raw["recipe"]["gmo-" .. plant.name] = nil
+      data.raw["recipe"]["gmo-" .. plant.name] = nil
 
-    if gleba_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 10 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
-    elseif virentis_plants[plant.name] then
-      cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 10 }
-      table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
-      table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
+      if gleba_plants[plant.name] then
+        cultivator_recipe.ingredients[1] = { type = "item", name = "gleba-fertilizer", amount = 10 }
+        table.insert(cultivate_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
+        table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "gleba-fertilizer", amount = 5 })
+      elseif virentis_plants[plant.name] then
+        cultivator_recipe.ingredients[1] = { type = "item", name = "virentis-fertilizer", amount = 10 }
+        table.insert(cultivate_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
+        table.insert(cultivate_space_recipe.ingredients, { type = "item", name = "virentis-fertilizer", amount = 5 })
+      end
     end
   end
 end
@@ -183,3 +189,13 @@ spore_tower_item.order = "ac"
 local spores = data.raw["fluid"]["spores"]
 spores.subgroup = "virentis-fluids"
 spores.order = "c"
+
+if mods["boompuff-agriculture"] then
+  local unlocks = {}
+  for _, effect in pairs(data.raw.technology["boompuff-ascension"].effects) do
+    if effect.recipe ~= "gmo-boompuff-plant" then
+      table.insert(unlocks, effect)
+    end
+  end
+  data.raw.technology["boompuff-ascension"].effects = unlocks
+end

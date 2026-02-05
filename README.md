@@ -32,6 +32,8 @@ Now, you can grow legendary plants in space.
 
 ![](https://files.catbox.moe/m0m17m.png)
 
+Note that it now customize to use fertillize only for gleba and virentis plants, others will use default recipe from quality-seeds.
+
 ### *NEW!* Fishing dock
 
 Extend from [Fishing dock](https://mods.factorio.com/mod/fishing-dock)
