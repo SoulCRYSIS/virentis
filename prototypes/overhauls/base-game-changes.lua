@@ -31,4 +31,4 @@ data.raw["recipe"]["biochamber"].surface_conditions = {
   }
 }
 
-table.insert(data.raw["recipe"]["fish-breeding"].ingredients, { type = "item", name = "biter-egg", amount = 1 })
+-- table.insert(data.raw["recipe"]["fish-breeding"].ingredients, { type = "item", name = "biter-egg", amount = 1 })
