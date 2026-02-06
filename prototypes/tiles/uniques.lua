@@ -221,4 +221,50 @@ data:extend(
       trigger_effect = tile_trigger_effects.dirt_2_trigger_effect(),
       absorptions_per_second = virentis_tile.pollution_absorption.land,
     },
+    {
+      type = "tile",
+      name = "brineleaf-fertile-soil",
+      subgroup = "virentis-water-tiles",
+      collision_mask = tile_collision_masks.shallow_water(),
+      autoplace = { probability_expression = "virentis_brineleaf * 200" },
+      lowland_fog = true,
+      effect = "wetland-blue-slime",
+      effect_color = { 40, 63, 65 },
+      effect_color_secondary = { 44, 80, 11 },
+      particle_tints = tile_graphics.gleba_shallow_water_particle_tints,
+      layer = 1,
+      layer_group = "water-overlay",
+      sprite_usage_surface = "gleba",
+      variants =
+      {
+        main =
+        {
+          {
+            picture = "__base__/graphics/terrain/water/water1.png",
+            count = 1,
+            scale = 0.5,
+            size = 1
+          }
+        },
+        -- empty_transitions = true,
+        transition = tile_graphics.generic_masked_tile_transitions1
+      },
+      transitions = { virentis_tile.lava_to_out_of_map_transition },
+      transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions,
+      walking_sound = virentis_tile.sound_variations("__base__/sound/walking/shallow-water", 7, 1),
+      landing_steps_sound = tile_sounds.landing.wet,
+      driving_sound = tile_sounds.driving.wetland,
+      ambient_sounds =
+      {
+        tile_sounds.ambient.waterlap,
+        tile_sounds.ambient.rain_on_water,
+      },
+      map_color = { 36, 74, 68 },
+      walking_speed_modifier = 0.8,
+      vehicle_friction_modifier = 8.0,
+      trigger_effect = tile_trigger_effects.shallow_water_trigger_effect(),
+      default_cover_tile = "landfill",
+      fluid = "water",
+      absorptions_per_second = virentis_tile.pollution_absorption.water,
+    },
   })

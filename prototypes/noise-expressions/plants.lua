@@ -74,5 +74,10 @@ data:extend(
     type = "noise-expression",
     name = "virentis_fertile_soil_divider",
     expression = "virentis_select(virentis_mud_channels, 0.5, 3, 0.2, 0, 1)"
+  },
+  {
+    type = "noise-expression",
+    name = "virentis_brineleaf",
+    expression = "virentis_select(virentis_fertile_spots_coastal_raw(4, 40), 0.2, 1, 0.2, 0, 0.05) * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1)"
   }
 })

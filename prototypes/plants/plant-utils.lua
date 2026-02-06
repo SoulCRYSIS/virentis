@@ -37,6 +37,9 @@ virentis_plant.sound_variations = function(filename_string, variations, volume_p
 end
 
 virentis_plant.default_emission = { spores = 7 }
+virentis_plant.default_emission_scale = function(factor)
+  return { spores = factor * 7 }
+end
 virentis_plant.default_flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" }
 virentis_plant.leaf_sound = sounds.tree_leaves
 virentis_plant.spoilage_sound = virentis_plant.sound_variations("__space-age__/sound/mining/spoilage", 3, 0)
@@ -110,6 +113,10 @@ local virentis_tree_particle_effects =
   ["nyxoleum"] = {
     water_cane_top = "water-cane-branch-particle",
     water_cane = "water-cane-branch-particle",
+  },
+  ["brineleaf"] = {
+    crop_1 = "sunnycomb-leaf-particle",
+    spongy = "sunnycomb-branch-particle"
   },
   -- ["jellystem"] =     { sap = "jellystem-leaf-particle",
   --                       jellystem = "jellystem-branch-particle"

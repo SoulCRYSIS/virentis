@@ -9,6 +9,7 @@ require "prototypes.plants.rockmalt"
 require "prototypes.plants.redbloom"
 require "prototypes.plants.nyxoleum"
 require "prototypes.plants.mangroove"
+require "prototypes.plants.brineleaf"
 
 require "prototypes.machines.oven"
 require "prototypes.machines.research-center"
