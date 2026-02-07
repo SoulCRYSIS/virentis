@@ -60,7 +60,6 @@ data:extend(
       subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/redbloom-processing.png",
       icon_size = 256,
-      essential = true,
       effects =
       {
         {
@@ -97,7 +96,6 @@ data:extend(
       subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/rockmalt-processing.png",
       icon_size = 256,
-      essential = true,
       effects =
       {
         {
@@ -142,7 +140,6 @@ data:extend(
       subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/mangroove-processing.png",
       icon_size = 256,
-      essential = true,
       effects =
       {
         {
@@ -171,7 +168,6 @@ data:extend(
       subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/advanced-baking.png",
       icon_size = 256,
-      essential = true,
       effects = {
         {
           type = "unlock-recipe",
@@ -218,7 +214,6 @@ data:extend(
       subgroup = "virentis-technologies",
       icon = "__virentis-graphics__/icons/technologies/nyxoleum-processing.png",
       icon_size = 256,
-      essential = true,
       effects =
       {
         {
@@ -332,7 +327,6 @@ data:extend(
       name = "virentis-rocket-silo",
       order = "veab",
       subgroup = "virentis-technologies",
-      essential = true,
       icons = {
         {
           icon = "__base__/graphics/technology/rocket-silo.png",
@@ -405,6 +399,7 @@ data:extend(
       name = "environment-research-center",
       order = "vfa",
       subgroup = "virentis-technologies",
+      essential = true,
       icon = "__virentis-graphics__/icons/technologies/environment-research-center.png",
       icon_size = 256,
       effects = {
@@ -597,7 +592,7 @@ data:extend(
         time = 60
       },
       upgrade = true,
-      max_level = "infinite"
+      max_level = 20
     },
     {
       type = "technology",

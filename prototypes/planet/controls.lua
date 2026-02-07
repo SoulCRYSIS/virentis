@@ -6,14 +6,12 @@ data:extend(
       name = "virentis_plants",
       order = "ea",
       category = "terrain",
-      can_be_disabled = false
     },
     {
       type = "autoplace-control",
       name = "virentis_water",
       order = "eb",
       category = "terrain",
-      can_be_disabled = false
     },
     {
       type = "autoplace-control",
@@ -25,14 +23,13 @@ data:extend(
       type = "autoplace-control",
       name = "virentis_town",
       order = "ea",
-      category = "resource",
-      can_be_disabled = false
+      category = "terrain",
+      icon = "__virentis-graphics__/icons/machines/trader-t1.png",
     },
     {
       type = "autoplace-control",
       name = "virentis_enemy_base",
       order = "ea",
       category = "enemy",
-      can_be_disabled = false
     },
   })
