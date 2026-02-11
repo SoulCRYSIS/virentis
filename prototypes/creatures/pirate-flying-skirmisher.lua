@@ -20,8 +20,10 @@ vehicle_leg.walking_sound_volume_modifier = 0
 vehicle_leg.selectable_in_game = false
 
 local scale = 1
-local width = 576
-local height = 576
+local shadow_width = 576
+local shadow_height = 576
+local width = 448
+local height = 448
 
 data:extend({
   vehicle_leg,
@@ -91,34 +93,45 @@ data:extend({
       shadow_animation = {
         filename =
         "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-shadow.png",
-        width = width,
-        height = height,
-        direction_count = 64,
+        width = shadow_width,
+        height = shadow_height,
+        direction_count = 32,
         line_length = 8,
-        lines_per_file = 8,
+        lines_per_file = 4,
         scale = 0.5 * scale,
         usage = "enemy",
       },
       animation = {
         layers = {
           {
-            filename = "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher.png",
+            filenames = {
+              "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-1.png",
+              "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-2.png",
+            },
             width = width,
             height = height,
-            direction_count = 64,
-            line_length = 8,
-            lines_per_file = 8,
+            direction_count = 32,
+            line_length = 16,
+            lines_per_file = 16,
+            frame_count = 16,
+            animation_speed = 0.2,
+            run_mode = "forward-then-backward",
             scale = 0.5 * scale,
             usage = "enemy",
           },
           {
-            filename =
-            "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-glow.png",
+            filenames = {
+              "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-glow-1.png",
+              "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-glow-2.png",
+            },
             width = width,
             height = height,
-            direction_count = 64,
-            line_length = 8,
-            lines_per_file = 8,
+            direction_count = 32,
+            line_length = 16,
+            lines_per_file = 16,
+            frame_count = 16,
+            animation_speed = 0.2,
+            run_mode = "forward-then-backward",
             scale = 0.5 * scale,
             draw_as_glow = true,
             blend_mode = "additive",
@@ -131,8 +144,8 @@ data:extend({
         pictures = {
           filename =
           "__virentis-graphics__/entities/creatures/pirate-flying-skirmisher/pirate-flying-skirmisher-water-reflection.png",
-          width = width + 40,
-          height = height + 40,
+          width = shadow_width + 40,
+          height = shadow_height + 40,
           variation_count = 16,
           line_length = 4,
           lines_per_file = 4,
