@@ -76,7 +76,6 @@ require "prototypes.decorations.gleba-plants"
 require "prototypes.creatures.pentapod"
 require "prototypes.creatures.pentapus"
 require "prototypes.creatures.kraken"
-require "prototypes.creatures.pirate-flying-skirmisher"
 
 require "prototypes.planet.controls"
 require "prototypes.planet.planet"
