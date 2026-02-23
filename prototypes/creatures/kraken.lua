@@ -32,7 +32,7 @@ local resistances = {
   },
   {
     type = "electric",
-    percent = 90,
+    percent = 100,
   },
   {
     type = "impact",
@@ -40,8 +40,12 @@ local resistances = {
   },
   {
     type = "explosion",
-    percent = 40,
+    percent = 50,
   },
+  {
+    type = "piercing",
+    percent = -20,
+  }
 }
 
 local walking_group = { 1, 3, 5, 2, 4 }
@@ -51,6 +55,7 @@ local walk_effects = {
   {
     type = "create-entity",
     entity_name = "kraken-lightning",
+    as_enemy = true,
     offset_deviation = { { -10.0, -10.0 }, { 10.0, 10.0 } },
   },
   {
@@ -325,6 +330,7 @@ data:extend({
           {
             type = "create-entity",
             entity_name = "behemoth-wriggler-pentapod-premature",
+            as_enemy = true,
             check_buildability = true,
             find_non_colliding_position = true,
             offset_deviation = { { -5.0, -5.0 }, { 5.0, 5.0 } },
@@ -383,7 +389,7 @@ data:extend({
       cooldown = 240,
       range = 15,
       range_mode = "bounding-box-to-bounding-box",
-      ammo_category = "tesla",
+      ammo_category = "melee",
       ammo_type = {
         target_type = "position",
         action = {
