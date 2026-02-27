@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.11
+Date: 2026-02-23
+  Compatibility:
+    - Reduce tile-effect to 1 (from 3) to fix limit exceeded on huge mod pack
+    - Add PI-Virentis-Music as required dependency
+---------------------------------------------------------------------------------------------------
 Version: 0.2.10
 Date: 2026-02-07
   Gui:

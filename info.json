@@ -12,7 +12,7 @@
     "virentis-graphics >= 0.2.0",
     "fishing-dock >= 0.1.7",
     "quality-seeds-fork >= 1.0.2",
-    "? PI-Virentis-Music",
+    "PI-Virentis-Music",
     "(?) behemoth-enemies",
     "(?) wayward-seas"
   ]
