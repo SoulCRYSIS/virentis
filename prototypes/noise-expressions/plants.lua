@@ -30,7 +30,7 @@ data:extend(
                               skip_span = 1,\z
                               skip_offset = 0,\z
                               region_size = 1024,\z
-                              density_expression = 80,\z
+                              density_expression = 80 - virentis_starting_area * 100,\z
                               spot_quantity_expression = scaled_radius * scaled_radius,\z
                               spot_radius_expression = scaled_radius,\z
                               hard_region_target_quantity = 0,\z
@@ -57,7 +57,7 @@ data:extend(
   {
     type = "noise-expression",
     name = "virentis_fertile_spots_coastal_raw_default",
-    expression = "virentis_fertile_spots_coastal_raw(1, 48)"
+    expression = "virentis_fertile_spots_coastal_raw(1,48)"
   },
   {
     type = "noise-expression",
@@ -70,4 +70,14 @@ data:extend(
     name = "virentis_plants_probability",
     expression = "min(0.2, 0.3 * (1 - virentis_plants_noise) * control:virentis_plants:size)"
   },
+  {
+    type = "noise-expression",
+    name = "virentis_fertile_soil_divider",
+    expression = "virentis_select(virentis_mud_channels, 0.5, 3, 0.2, 0, 1)"
+  },
+  {
+    type = "noise-expression",
+    name = "virentis_brineleaf",
+    expression = "virentis_select(virentis_fertile_spots_coastal_raw(4, 40), 0.2, 1, 0.2, 0, 0.05) * virentis_select(virentis_elevation, virentis_deep_water_level, -4, 0.5, 0, 1)"
+  }
 })

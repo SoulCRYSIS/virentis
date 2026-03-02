@@ -58,8 +58,8 @@ data:extend(
       expression = "max(0, starting_spot_at_angle{ angle = virentis_starting_angle + 40 * virentis_starting_direction,\z
                                             distance = 130 * virentis_starting_area_multiplier,\z
                                             radius = 32 * virentis_starting_area_multiplier,\z
-                                            x_distortion = virentis_wobble_x * 15,\z
-                                            y_distortion = virentis_wobble_x * 15})"
+                                            x_distortion = virentis_wobble_x * 10,\z
+                                            y_distortion = virentis_wobble_x * 10})"
     },
     {
       type = "noise-expression",
@@ -67,8 +67,8 @@ data:extend(
       expression = "max(0, starting_spot_at_angle{ angle = virentis_starting_angle + 340 * virentis_starting_direction,\z
                                             distance = 100 * virentis_starting_area_multiplier,\z
                                             radius = 32 * virentis_starting_area_multiplier,\z
-                                            x_distortion = virentis_wobble_x * 15,\z
-                                            y_distortion = virentis_wobble_x * 15})"
+                                            x_distortion = virentis_wobble_x * 10,\z
+                                            y_distortion = virentis_wobble_x * 10})"
     },
     {
       type = "noise-expression",
@@ -110,14 +110,14 @@ data:extend(
                                                         y_distortion = virentis_wobble_x * 15}",
         starting_highland_small = "starting_spot_at_angle{angle = virentis_starting_angle + 40 * virentis_starting_direction,\z
                                                         distance = 130 * virentis_starting_area_multiplier,\z
-                                                        radius = 65 * virentis_starting_area_multiplier,\z
-                                                        x_distortion = virentis_wobble_x * 15,\z
-                                                        y_distortion = virentis_wobble_x * 15}",
+                                                        radius = 80 * virentis_starting_area_multiplier,\z
+                                                        x_distortion = virentis_wobble_x * 10,\z
+                                                        y_distortion = virentis_wobble_x * 10}",
       }
     },
     {
       type = "noise-expression",
       name = "virentis_starting_area",
       expression = "distance_from_nearest_point{x = x, y = y, points = starting_positions} < 512"
-    }
+    },
   })

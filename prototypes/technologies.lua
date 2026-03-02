@@ -482,6 +482,29 @@ data:extend(
     },
     {
       type = "technology",
+      name = "pentapus",
+      order = "vgb",
+      subgroup = "virentis-technologies", 
+      icon = "__virentis-graphics__/icons/technologies/pentapus.png",
+      icon_size = 256,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "fishing-pentapus"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "fishing-kraken"
+        },
+      },
+      prerequisites = { "nutrients-pulp", "fishing-dock" },
+      research_trigger = {
+        type = "mine-entity",
+        entity = "pentapus",
+      },
+    },
+    {
+      type = "technology",
       name = "nature-control",
       order = "vha",
       subgroup = "virentis-technologies",

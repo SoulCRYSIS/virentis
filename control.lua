@@ -3,7 +3,7 @@
 require("logics.swap-machines-and-insert-module")
 require("logics.research-on-eat")
 require("logics.disable-on-researched")
-
+require("logics.fishing")
 
 
 -- -------------------------------------------------------------------------------

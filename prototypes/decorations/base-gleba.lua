@@ -94,7 +94,7 @@ honeycomb_fungus_decayed.autoplace = {
 local green_lettuce_lichen_1x1 = table.deepcopy(data.raw["optimized-decorative"]["green-lettuce-lichen-1x1"])
 green_lettuce_lichen_1x1.name = "virentis-green-lettuce-lichen-1x1"
 green_lettuce_lichen_1x1.autoplace = { -- process: survival_chance + subtype_selection_band_of: (region_box - small_scale_knockout)
-  tile_restriction = virentis_tile.land_tiles_exclude_town,
+  tile_restriction = virentis_tile.land_tiles_excludeq_town,
   probability_expression =
   "grpi(0.3) + virentis_select(virentis_green_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1)"
 }
@@ -120,7 +120,7 @@ green_lettuce_lichen_water_1x1.name = "virentis-green-lettuce-lichen-water-1x1"
 green_lettuce_lichen_water_1x1.autoplace = { -- process: survival_chance + subtype_selection_band_of: (region_box - small_scale_knockout)
   order = "d[decorative]-c[trivial]-c[cover]-c[outer]",
   probability_expression =
-  "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1)"
+  "max(grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.7 * clamp(virentis_decorative_knockout, 0, 1), -0.5, 0.1, 0.1, 0, 1), virentis_brineleaf)"
 }
 
 local green_lettuce_lichen_water_3x3 = table.deepcopy(data.raw["optimized-decorative"]["green-lettuce-lichen-water-3x3"])
@@ -129,7 +129,7 @@ green_lettuce_lichen_water_3x3.autoplace = {
   order = "d[decorative]-c[trivial]-c[cover]-b[mid-ring]",
   tile_restriction = virentis_tile.all_tiles_exclude_oil_and_town,
   probability_expression =
-  "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.1, 0.4, 0.1, 0, 1)"
+  "max(grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.8 * clamp(virentis_decorative_knockout, 0, 1), 0.1, 0.4, 0.1, 0, 1), virentis_brineleaf * 0.8)"
 }
 
 local green_lettuce_lichen_water_6x6 = table.deepcopy(data.raw["optimized-decorative"]["green-lettuce-lichen-water-6x6"])
@@ -138,7 +138,7 @@ green_lettuce_lichen_water_6x6.autoplace = {
   order = "d[decorative]-c[trivial]-c[cover]-a[inner]",
   tile_restriction = virentis_tile.all_tiles_exclude_oil_and_town,
   probability_expression =
-  "grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1)"
+  "max(grpi(0.3) + virentis_water_plant_ramp * virentis_select(virentis_green_lettuce - 0.9 * clamp(virentis_decorative_knockout, 0, 1), 0.4, 2, 0.1, 0, 1), virentis_brineleaf * 0.5)"
 }
 
 local split_gill_1x1 = table.deepcopy(data.raw["optimized-decorative"]["split-gill-1x1"])
@@ -256,6 +256,13 @@ green_cup.autoplace = {
   "grpi(0.6) + virentis_select(virentis_green_cup - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.2, 0, 1)"
 }
 
+local green_cup_brineleaf = table.deepcopy(green_cup)
+green_cup_brineleaf.name = "virentis-green-cup-brineleaf"
+green_cup_brineleaf.collision_mask = data.raw["optimized-decorative"]["curly-roots-grey"].collision_mask
+green_cup_brineleaf.autoplace = {
+  probability_expression = "virentis_brineleaf * 2"
+}
+
 local mycelium = table.deepcopy(data.raw["optimized-decorative"]["mycelium"])
 mycelium.name = "virentis-mycelium"
 mycelium.autoplace = {
@@ -362,7 +369,7 @@ curly_roots_orange.autoplace = {
 local curly_roots_grey = table.deepcopy(data.raw["optimized-decorative"]["curly-roots-grey"])
 curly_roots_grey.name = "virentis-curly-roots-grey"
 curly_roots_grey.autoplace = {
-  probability_expression = 0
+  probability_expression = "virentis_brineleaf * 0.2"
 }
 
 local pale_lettuce_lichen_cups_1x1 = table.deepcopy(data.raw["optimized-decorative"]["pale-lettuce-lichen-cups-1x1"])
@@ -612,6 +619,7 @@ data:extend {
   black_sceptre,
   pink_phalanges,
   green_cup,
+  green_cup_brineleaf,
   mycelium,
   veins,
   veins_small,
@@ -651,5 +659,4 @@ data:extend {
   gleba_spawner_slime,
   knobbly_roots,
   knobbly_roots_orange,
-  kheast_stromatolite,
 }

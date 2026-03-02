@@ -1,5 +1,4 @@
 local virentis_plant = require("prototypes.plants.plant-utils")
-local recipe_tints = require("prototypes.utils").recipe_tints
 local virentis = require("prototypes.utils")
 
 data:extend({
@@ -9,7 +8,7 @@ data:extend({
     icon = "__virentis-graphics__/icons/plants/redbloom-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
-    order = "c",
+    order = "a",
     flags = virentis_plant.default_flags,
     growth_ticks = 5 * minute,
     harvest_emissions = virentis_plant.default_emission,

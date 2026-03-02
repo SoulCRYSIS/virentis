@@ -8,7 +8,7 @@ data:extend({
     icon = "__virentis-graphics__/icons/plants/nyxoleum-tree.png",
     subgroup = "virentis-plants",
     impact_category = "tree",
-    order = "c",
+    order = "b",
     flags = virentis_plant.default_flags,
     growth_ticks = 5 * minute,
     harvest_emissions = virentis_plant.default_emission,

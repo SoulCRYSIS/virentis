@@ -17,13 +17,13 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-crops",
     group = "virentis",
-    order = "b"
+    order = "ba"
   },
   {
     type = "item-subgroup",
     name = "virentis-foods",
     group = "virentis",
-    order = "c"
+    order = "bb"
   },
   {
     type = "item-subgroup",
@@ -41,13 +41,13 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-foods-trade-item",
     group = "virentis",
-    order = "cb"
+    order = "bbb"
   },
   {
     type = "item-subgroup",
     name = "virentis-microorganism",
     group = "virentis",
-    order = "d"
+    order = "bc"
   },
   {
     type = "item-subgroup",
@@ -65,7 +65,7 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-chemicals",
     group = "virentis",
-    order = "ea"
+    order = "ea",
   },
   {
     type = "item-subgroup",
@@ -77,13 +77,25 @@ data:extend({
     type = "item-subgroup",
     name = "virentis-materials",
     group = "virentis",
-    order = "ga"
+    order = "da"
   },
   {
     type = "item-subgroup",
     name = "virentis-materials-advanced",
     group = "virentis",
-    order = "gb"
+    order = "db"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-creatures",
+    group = "virentis",
+    order = "bd"
+  },
+  {
+    type = "item-subgroup",
+    name = "virentis-fishing",
+    group = "virentis",
+    order = "be"
   },
   {
     type = "item-subgroup",

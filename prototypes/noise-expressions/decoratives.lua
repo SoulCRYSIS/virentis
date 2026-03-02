@@ -451,7 +451,7 @@ data:extend(
       type = "noise-expression",
       name = "virentis_green_pita_probability",
       expression =
-      "grpi(0.5) + virentis_select(virentis_green_pita - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)"
+      "max(grpi(0.5) + virentis_select(virentis_green_pita - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1), virentis_brineleaf * 0.5)"
     },
 
     -- B-pattern (billows)
@@ -545,7 +545,7 @@ data:extend(
       type = "noise-expression",
       name = "virentis_green_bush_probability",
       expression =
-      "grpi(0.5) + virentis_select(virentis_green_bush - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1)"
+      "max(grpi(0.5) + virentis_select(virentis_green_bush - clamp(virentis_decorative_knockout, 0, 1), 0.2, 2, 0.1, 0, 1), virentis_brineleaf)"
     },
     {
       type = "noise-expression",
@@ -665,12 +665,12 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_green_carpet_grass_probability",
-      expression = "grpi(0.3) + 0.3 * virentis_select(virentis_clubnub_grass, 0.7, 2, 0.2, 0, 1)"
+      expression = "max(grpi(0.3) + 0.3 * virentis_select(virentis_clubnub_grass, 0.7, 2, 0.2, 0, 1), virentis_brineleaf)"
     },
     {
       type = "noise-expression",
       name = "virentis_green_hairy_grass_probability",
-      expression = "grpi(0.5) + 0.8 * virentis_select(virentis_clubnub_grass, 0.8, 2, 0.2, 0, 1)"
+      expression = "max(grpi(0.5) + 0.8 * virentis_select(virentis_clubnub_grass, 0.8, 2, 0.2, 0, 1), virentis_brineleaf)"
     },
 
 
@@ -1069,7 +1069,7 @@ data:extend(
     {
       type = "noise-expression",
       name = "virentis_rockmalt_decorate_area",
-      expression = "max((virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2, 32) - 0.5, virentis_starting_rockmalt)"
+      expression = "max((virentis_highland - virentis_town_raw) * virentis_fertile_spots_coastal_raw(2, 64) - 0.5, virentis_starting_rockmalt)"
     },
     {
       type = "noise-expression",
