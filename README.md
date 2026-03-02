@@ -1,3 +1,6 @@
+[![](https://img.shields.io/badge/Discord-Community-blue?style=for-the-badge)](https://discord.gg/FhUZpcvUhn)
+^^^  Feedbacks are very welcome, make the mod great together
+
 ## Welcome to planet Virentis!!!
 
 The planet of agriculturing, cooking, and trading.
@@ -107,6 +110,11 @@ While adding aesthetics to the terrain. Now, your factory will look like a real 
 - Spoil too fast? Planet too hard? Use this mod: https://mods.factorio.com/mod/cargo_crates
 
 ---
+
+## Supported translation
+
+- English: me
+- Russion: [Akimos](https://mods.factorio.com/user/Akimos)
 
 ## Credits
 
